@@ -145,7 +145,6 @@ const sidebars: SidebarsConfig = {
             "tour/vscode",
             "tour/vim",
             "tour/obsidian",
-            "tour/slack",
             "tour/discord",
           ],
         },
