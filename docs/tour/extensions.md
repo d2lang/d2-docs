@@ -11,7 +11,6 @@ Officially developed and maintained by the creators of D2.
 - [VSCode extension](/tour/vscode/)
 - [Vim plugin](/tour/vim/)
 - [Obsidian plugin](/tour/obsidian/)
-- [D2 app for Slack](/tour/slack/)
 - [Discord plugin](/tour/discord/)
 
 ## Community
