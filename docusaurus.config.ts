@@ -41,10 +41,7 @@ const config: Config = {
           name: "Terrastruct",
           url: "https://terrastruct.com",
         },
-        sameAs: [
-          "https://github.com/d2lang/d2",
-          "https://discord.com/invite/pbUXgvmTpU",
-        ],
+        sameAs: ["https://github.com/d2lang/d2", "https://discord.com/invite/pbUXgvmTpU"],
       }),
     },
     {
