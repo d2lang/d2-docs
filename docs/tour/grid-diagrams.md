@@ -108,7 +108,7 @@ It would do the opposite.
 :::info
 These animations are also pure D2, so you can animate grid diagrams being built-up. Use
 the `animate-interval` flag with this
-[code](https://github.com/terrastruct/d2-docs/blob/f5c762223ce192338d9d7865df3ca8533d683cdc/static/bespoke-d2/grid-row-dominant.d2#L1).
+[code](https://github.com/d2lang/d2-docs/blob/f5c762223ce192338d9d7865df3ca8533d683cdc/static/bespoke-d2/grid-row-dominant.d2#L1).
 More on this later, in the [composition](/tour/composition/) section.
 :::
 
@@ -131,7 +131,7 @@ Setting `grid-gap` is equivalent to setting both `vertical-gap` and `horizontal-
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/japan.svg2')}}></div>
 
-> [D2 source](https://github.com/terrastruct/d2/blob/master/docs/examples/japan-grid/japan.d2)
+> [D2 source](https://github.com/d2lang/d2/blob/master/docs/examples/japan-grid/japan.d2)
 
 #### Or a table of data
 
@@ -160,7 +160,7 @@ Connections for grids themselves work normally as you'd expect.
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/grid-connected.svg2')}}></div>
 
-> Source code [here](https://github.com/terrastruct/d2-docs/blob/eda2d8739ce21c656e7608be48cb9067df36eb53/static/d2/grid-connected.d2).
+> Source code [here](https://github.com/d2lang/d2-docs/blob/eda2d8739ce21c656e7608be48cb9067df36eb53/static/d2/grid-connected.d2).
 
 ### Connections between grid cells
 
@@ -171,11 +171,11 @@ i.e., no path-finding.
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/grid-connections.svg2')}}></div>
 
-> Source code [here](https://github.com/terrastruct/d2/blob/master/e2etests/testdata/files/simple_grid_edges.d2).
+> Source code [here](https://github.com/d2lang/d2/blob/master/e2etests/testdata/files/simple_grid_edges.d2).
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/grid-nested-connections.svg2')}}></div>
 
-> Source code [here](https://github.com/terrastruct/d2/blob/master/docs/examples/vector-grid/vector-grid.d2).
+> Source code [here](https://github.com/d2lang/d2/blob/master/docs/examples/vector-grid/vector-grid.d2).
 
 ## Nesting
 

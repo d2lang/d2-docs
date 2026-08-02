@@ -8,7 +8,7 @@ This is a single SVG file created purely through D2 text:
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/animated.svg2')}}></div>
 
-> D2 source to reproduce this is here: [here](https://github.com/terrastruct/d2-docs/blob/master/static/bespoke-d2/animated.d2), rendered with [these parameters](https://github.com/terrastruct/d2-docs/blob/master/ci/render.sh#L12).
+> D2 source to reproduce this is here: [here](https://github.com/d2lang/d2-docs/blob/master/static/bespoke-d2/animated.d2), rendered with [these parameters](https://github.com/d2lang/d2-docs/blob/master/ci/render.sh#L12).
 
 
 Brief factsheet:
@@ -52,11 +52,11 @@ Or a journey to build up to something.
 
 D2 is not yet 1.0. Of the many things planned in the near term, better ergonomics for
 creating these are a priority. The source code for all of these diagrams can be found
-[here](https://github.com/terrastruct/d2-docs/tree/master/static/bespoke-d2). Some of
+[here](https://github.com/d2lang/d2-docs/tree/master/static/bespoke-d2). Some of
 these are currently verbose and repetitive. We've released early to get feedback from the
 community, but in-progress things like globs (being able to target objects with `*`) and
 classes will make creating these animations much easier than they currently are.
 
 `--animate-interval` is available to use in D2 0.3.0 ([install
-here](https://github.com/terrastruct/d2#install)), hope you can check it out and let us
+here](https://github.com/d2lang/d2#install)), hope you can check it out and let us
 know what you think!

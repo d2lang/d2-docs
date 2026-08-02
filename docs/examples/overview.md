@@ -26,4 +26,4 @@ and more. Some of these examples originally were split into multiple files, and 
 combined for a simplified gallery.
 
 We welcome contributions. These are all open-source; simply submit a PR
-[here](https://github.com/terrastruct/d2-docs/tree/master/ci/examples).
+[here](https://github.com/d2lang/d2-docs/tree/master/ci/examples).

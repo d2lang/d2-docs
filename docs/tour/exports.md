@@ -62,7 +62,7 @@ npm install -g @playwright
 npx playwright install --with-deps chromium
 ```
 
-See [#744](https://github.com/terrastruct/d2/issues/744#issuecomment-1446641870) for more.
+See [#744](https://github.com/d2lang/d2/issues/744#issuecomment-1446641870) for more.
 :::
 
 ## PDF

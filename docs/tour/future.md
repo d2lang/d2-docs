@@ -3,7 +3,7 @@
 import WebPImage from '@site/src/components/WebPImage';
 
 :::info TLDR
-[https://github.com/terrastruct/d2/issues?q=is%3Aopen+is%3Aissue+label%3Afeature](https://github.com/terrastruct/d2/issues?q=is%3Aopen+is%3Aissue+label%3Afeature)
+[https://github.com/d2lang/d2/issues?q=is%3Aopen+is%3Aissue+label%3Afeature](https://github.com/d2lang/d2/issues?q=is%3Aopen+is%3Aissue+label%3Afeature)
 :::
 
 D2's long-term goal is to significantly reduce the amount of time and effort it takes to
@@ -152,7 +152,7 @@ unforeseen ones for the infinite workflows out there.
 D2's plugin system further makes the language extensible. These allow you to add "hooks"
 to stages of D2 compilation. For example, while not core to D2, a hypothetical set of
 plugins can add a styled border, add your signature/credits, make everything [look
-hand-drawn](https://github.com/terrastruct/d2/pull/91), then increase contrast for
+hand-drawn](https://github.com/d2lang/d2/pull/91), then increase contrast for
 accessibility.
 
 ### How success is measured
@@ -185,7 +185,7 @@ unplanned usage.
 ## Your feedback
 
 If you have any suggestions or feedback, we'd love to hear from you! Please open an issue
-on [Github](https://github.com/terrastruct/d2).
+on [Github](https://github.com/d2lang/d2).
 
 ## Notes
 
@@ -203,7 +203,7 @@ widely released and their live editor still won't allow it.
 visit [https://terrastruct.com/tala](https://terrastruct.com/tala).
 
 [4] If you still miss the hand-drawn aesthetic, D2 has just the thing:
-https://github.com/terrastruct/d2/pull/492
+https://github.com/d2lang/d2/pull/492
 
 [5] Actually, gopls single-handedly brings my machine back to 2005 speeds with how much
 CPU it consumes. Not the fault of vim-go though!

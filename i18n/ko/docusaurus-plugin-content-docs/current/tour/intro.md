@@ -76,8 +76,8 @@ D2의 사용법을 알아보는 이 과정은 약 5~10분 안에 끝낼 수 있�
 
 :::info
 D2의 소스 코드는 다음에서 호스팅됩니다.
-[https://github.com/terrastruct/d2](https://github.com/terrastruct/d2).
+[https://github.com/d2lang/d2](https://github.com/d2lang/d2).
 
 이 문서의 소스 코드는 다음과 같습니다.
-[https://github.com/terrastruct/d2-docs](https://github.com/terrastruct/d2-docs).
+[https://github.com/d2lang/d2-docs](https://github.com/d2lang/d2-docs).
 :::

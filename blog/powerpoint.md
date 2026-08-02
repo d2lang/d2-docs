@@ -4,7 +4,7 @@ title: Text to PowerPoint
 description: Creating PowerPoint presentations from text with diagrams
 slug: powerpoint
 tags: [powerpoint, show-and-tell]
-image: https://raw.githubusercontent.com/terrastruct/d2-docs/master/static/img/screenshots/wcc_pptx.png
+image: https://raw.githubusercontent.com/d2lang/d2-docs/master/static/img/screenshots/wcc_pptx.png
 hide_table_of_contents: false
 ---
 import CodeBlock from '@theme/CodeBlock';
@@ -16,7 +16,7 @@ create full PowerPoint presentations with just text.
 
 It's not D2's primary function, but rather a natural byproduct of a powerful language. D2
 built features for grid diagrams and animations, and users built [pixel
-art](https://github.com/terrastruct/d2/issues/1218#issuecomment-1512628007). And now, with
+art](https://github.com/d2lang/d2/issues/1218#issuecomment-1512628007). And now, with
 Markdown and Powerpoint, D2 is the easiest way to programmatically create PowerPoint
 presentations.
 
@@ -52,7 +52,7 @@ Be sure to go into Present mode to click on objects and navigate around.
 - Download: [wcc.pptx](pathname:///img/generated/wcc.pptx)
 - Google Slides: [https://docs.google.com/presentation/d/18rRh4izu3k_43On8PXtVYdqRxmoQJd4y/view](https://docs.google.com/presentation/d/18rRh4izu3k_43On8PXtVYdqRxmoQJd4y/view)
 
-The source code for this is a bit longer, and can be found [here](https://github.com/terrastruct/d2/blob/master/docs/examples/wcc/wcc.d2).
+The source code for this is a bit longer, and can be found [here](https://github.com/d2lang/d2/blob/master/docs/examples/wcc/wcc.d2).
 
 ## Limitations
 

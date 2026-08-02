@@ -12,4 +12,4 @@ Currently it only supports rendering of D2 diagrams.
 
 
 **Github:**
-[https://github.com/terrastruct/d2-obsidian](https://github.com/terrastruct/d2-obsidian)
+[https://github.com/d2lang/d2-obsidian](https://github.com/d2lang/d2-obsidian)

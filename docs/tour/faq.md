@@ -56,12 +56,12 @@ instructions and examples so you can include it in your browser projects.
 ...e.g., an item in the middle of a venn diagram.
 
 Not currently and not in the near future. See
-[discussion](https://github.com/terrastruct/d2/discussions/328) for more.
+[discussion](https://github.com/d2lang/d2/discussions/328) for more.
 
 ### Can I specify ports?
 
 Not currently, but in the near future. See
-[discussion](https://github.com/terrastruct/d2/discussions/605) for more.
+[discussion](https://github.com/d2lang/d2/discussions/605) for more.
 
 ## Exports
 
@@ -107,4 +107,3 @@ tldr; when it's treated as an image, the interactivity is lost.
     </tr>
   </tbody>
 </table>
-

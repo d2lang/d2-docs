@@ -14,7 +14,7 @@ const moreFeatures = [
     description:
       "MacOS, Linux, and Windows. D2 is included in many popular package managers like Homebrew and Winget.",
     icon: "os.svg",
-    href: "https://github.com/terrastruct/d2/releases",
+    href: "https://github.com/d2lang/d2/releases",
   },
   {
     title: "VSCode and Vim",

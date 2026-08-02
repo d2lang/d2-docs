@@ -121,7 +121,7 @@ grid-rows: 4
 :::info
 위의 애니메이션은 D2만으로 구현되었습니다.
 즉, 그리드 다이어그램의 구성 과정을 애니메이션화 할 수 있습니다.
-이 [코드](https://github.com/terrastruct/d2-docs/blob/f5c762223ce192338d9d7865df3ca8533d683cdc/static/bespoke-d2/grid-row-dominant.d2)와 함께 `animate-interval` 플래그를 사용하세요.
+이 [코드](https://github.com/d2lang/d2-docs/blob/f5c762223ce192338d9d7865df3ca8533d683cdc/static/bespoke-d2/grid-row-dominant.d2)와 함께 `animate-interval` 플래그를 사용하세요.
 이에 대한 자세한 내용은 뒤에 나오는 [composition](/tour/composition/) 섹션에서 확인하세요.
 :::
 
@@ -143,7 +143,7 @@ grid-rows: 4
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/japan.svg2')}}></div>
 
-> [소스 코드](https://github.com/terrastruct/d2/blob/master/docs/examples/japan-grid/japan.d2)
+> [소스 코드](https://github.com/d2lang/d2/blob/master/docs/examples/japan-grid/japan.d2)
 
 ### 또는 테이블형 데이터에도 저장 가능합니다.
 
@@ -189,7 +189,7 @@ D2의 일반 객체처럼 그리드와 다른 객체를 연결할 수 있습니�
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/grid-connected.svg2')}}></div>
 
-> [소스 코드](https://github.com/terrastruct/d2-docs/blob/eda2d8739ce21c656e7608be48cb9067df36eb53/static/d2/grid-connected.d2)
+> [소스 코드](https://github.com/d2lang/d2-docs/blob/eda2d8739ce21c656e7608be48cb9067df36eb53/static/d2/grid-connected.d2)
 
 ## 중첩
 

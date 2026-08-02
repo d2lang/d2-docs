@@ -1,7 +1,7 @@
 # Contributing
 
 Contributions are welcome! Please see the full doc on contributing on D2's Github:
-[https://github.com/terrastruct/d2/blob/master/docs/CONTRIBUTING.md](https://github.com/terrastruct/d2/blob/master/docs/CONTRIBUTING.md).
+[https://github.com/d2lang/d2/blob/master/docs/CONTRIBUTING.md](https://github.com/d2lang/d2/blob/master/docs/CONTRIBUTING.md).
 
 ## Help wanted
 
@@ -12,11 +12,11 @@ Below is a list of features that could use your help. If you're interested in ta
 initiative, feel free to just start, or you can comment on a GitHub issue, discuss in
 Discord, or email us (alex at terrastruct).
 
-- [ownCloud Infinite Scale Extension](https://github.com/terrastruct/d2/issues/1422)
-- [IntelliJ plugin](https://github.com/terrastruct/d2/issues/747)
-- [Chocolatey package](https://github.com/terrastruct/d2/issues/154)
-- [Docusaurus plugin](https://github.com/terrastruct/d2/issues/1448)
-- [Visual Studio Extension](https://github.com/terrastruct/d2/discussions/237)
-- [PrismJS highlighter](https://github.com/terrastruct/d2-docs/issues/185)
+- [ownCloud Infinite Scale Extension](https://github.com/d2lang/d2/issues/1422)
+- [IntelliJ plugin](https://github.com/d2lang/d2/issues/747)
+- [Chocolatey package](https://github.com/d2lang/d2/issues/154)
+- [Docusaurus plugin](https://github.com/d2lang/d2/issues/1448)
+- [Visual Studio Extension](https://github.com/d2lang/d2/discussions/237)
+- [PrismJS highlighter](https://github.com/d2lang/d2-docs/issues/185)
 
 Want to add something to this wishlist? Just make an Issue on D2's GitHub!

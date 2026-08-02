@@ -36,10 +36,10 @@ href="/tour/hello-world/">Getting Started</a> takes
 
 :::info
 The source code for D2 is hosted here:
-[https://github.com/terrastruct/d2](https://github.com/terrastruct/d2).
+[https://github.com/d2lang/d2](https://github.com/d2lang/d2).
 
 The source code for these docs are here:
-[https://github.com/terrastruct/d2-docs](https://github.com/terrastruct/d2-docs).
+[https://github.com/d2lang/d2-docs](https://github.com/d2lang/d2-docs).
 :::
 
 :::info

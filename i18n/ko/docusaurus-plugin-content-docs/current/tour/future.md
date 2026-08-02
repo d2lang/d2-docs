@@ -3,7 +3,7 @@
 import WebPImage from '@site/src/components/WebPImage';
 
 :::info 간략 요약
-D2 프로젝트의 현재 작업들에 대한 자세한 내용은 [여기](https://github.com/terrastruct/d2/issues?q=is%3Aopen+is%3Aissue+label%3Afeature)를 확인하세요.
+D2 프로젝트의 현재 작업들에 대한 자세한 내용은 [여기](https://github.com/d2lang/d2/issues?q=is%3Aopen+is%3Aissue+label%3Afeature)를 확인하세요.
 :::
 
 D2 프로젝트의 장기적인 목표는 실무에서 쓰이는 높은 수준의 다이어그램을 만들고 유지하는 데 소요되는 시간과 노력을 크게 줄이는 것입니다.
@@ -130,7 +130,7 @@ D2에는 공식 Vim 및 VSCode 확장이 있습니다.
 
 D2의 플러그인 시스템은 이 언어를 더욱 확장 가능하게 만듭니다.
 이를 통해 사용자는 D2 컴파일 과정의 여러 단계에 "훅(hooks)"을 추가할 수 있습니다.
-예를 들어, D2의 핵심 기능은 아니지만, 가상의 플러그인 세트를 사용하여 스타일이 있는 테두리를 추가하고, 사용자의 서명이나 크레딧을 추가하며, 모든 것을 [손으로 그린 것처럼 보이게](https://github.com/terrastruct/d2/pull/91)<sup><a id="sup4" href="#note4">[4]</a></sup> 할 수 있고, 접근성을 높이기 위해 대비를 증가시킬 수 있습니다.
+예를 들어, D2의 핵심 기능은 아니지만, 가상의 플러그인 세트를 사용하여 스타일이 있는 테두리를 추가하고, 사용자의 서명이나 크레딧을 추가하며, 모든 것을 [손으로 그린 것처럼 보이게](https://github.com/d2lang/d2/pull/91)<sup><a id="sup4" href="#note4">[4]</a></sup> 할 수 있고, 접근성을 높이기 위해 대비를 증가시킬 수 있습니다.
 
 ### 평가 방법
 
@@ -167,7 +167,7 @@ D2의 플러그인이 그렇게 되어서는 안되겠죠.
 ## 여러분의 피드백
 
 제안 사항이나 피드백이 있으시면 언제든지 알려주세요!
-[Github](https://github.com/terrastruct/d2)에서 이슈를 열어주세요.
+[Github](https://github.com/d2lang/d2)에서 이슈를 열어주세요.
 
 ## 주석
 
@@ -195,7 +195,7 @@ MermaidJS는 컨테이너에 대한 지원도 구현한 것으로 보이지만 �
 
 <a id="note4" href="#sup4">[4] </a>
 
-수작업의 ​​낭만을 원한다면 D2에서 도와드릴 수 있습니다. [링크](https://github.com/terrastruct/d2/pull/492)를 참고하세요.
+수작업의 ​​낭만을 원한다면 D2에서 도와드릴 수 있습니다. [링크](https://github.com/d2lang/d2/pull/492)를 참고하세요.
 
 <a id="note5" href="#sup5">[5] </a>
 

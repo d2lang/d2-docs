@@ -5,7 +5,7 @@ pagination_next: tour/hello-world
 
 :::tip
 There are more detailed install instructions for Mac, Windows, and Linux, using a variety of
-methods, [here](https://github.com/terrastruct/d2/blob/master/docs/INSTALL.md). This page
+methods, [here](https://github.com/d2lang/d2/blob/master/docs/INSTALL.md). This page
 is an abridged version.
 :::
 
@@ -44,7 +44,7 @@ go install oss.terrastruct.com/d2@latest
 :::info
 You can also download precompiled binaries specific to your OS on the Github releases
 page:
-[https://github.com/terrastruct/d2/releases](https://github.com/terrastruct/d2/releases).
+[https://github.com/d2lang/d2/releases](https://github.com/d2lang/d2/releases).
 :::
 
 # Try it out
