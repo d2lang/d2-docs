@@ -5,7 +5,7 @@ pagination_next: tour/hello-world
 # 설치하기
 
 :::tip
-[여기](https://github.com/terrastruct/d2/blob/master/docs/INSTALL.md)에 Mac, Windows 및 Linux에서의 다양하고 자세한 설치 지침이 있습니다.
+[여기](https://github.com/d2lang/d2/blob/master/docs/INSTALL.md)에 Mac, Windows 및 Linux에서의 다양하고 자세한 설치 지침이 있습니다.
 이 페이지는 그에 대한 요약 버전입니다.
 :::
 
@@ -41,7 +41,7 @@ go install oss.terrastruct.com/d2@latest
 ```
 
 :::info
-[Github 릴리스 페이지](https://github.com/terrastruct/d2/releases)에서 OS에 맞게 미리 컴파일된 바이너리 파일을 다운로드할 수도 있습니다.
+[Github 릴리스 페이지](https://github.com/d2lang/d2/releases)에서 OS에 맞게 미리 컴파일된 바이너리 파일을 다운로드할 수도 있습니다.
 :::
 
 # 사용해보기

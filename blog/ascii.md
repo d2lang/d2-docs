@@ -17,7 +17,7 @@ d2 in.d2 out.txt
 
 <!-- truncate -->
 
-Here is an example of their rendering from the [D2 Vim extension](https://github.com/terrastruct/d2-vim). The user opens a `.d2` file and opens a preview window, which updates upon every save.
+Here is an example of their rendering from the [D2 Vim extension](https://github.com/d2lang/d2-vim). The user opens a `.d2` file and opens a preview window, which updates upon every save.
 
 ![D2 Vim preview](/blog/ascii/preview.gif)
 
@@ -44,7 +44,7 @@ the flag `--ascii-mode=standard`.
 Note that the ASCII renderer should be considered in alpha stage. There will be many
 corner cases, areas of improvements, and outright bugs. If you enjoy using it, we'd
 appreciate you taking the time to file any issues you run into:
-[https://github.com/terrastruct/d2/issues](https://github.com/terrastruct/d2/issues).
+[https://github.com/d2lang/d2/issues](https://github.com/d2lang/d2/issues).
 :::
 
 The ASCII renderer is a downscale of the layout determined by the ELK layout engine with

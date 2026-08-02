@@ -13,5 +13,4 @@ The syntax highlighting will even catch basic errors for you if your color theme
 highlights illegal syntax.
 
 **Github:**
-[https://github.com/terrastruct/d2-vscode](https://github.com/terrastruct/d2-vscode)
-
+[https://github.com/d2lang/d2-vscode](https://github.com/d2lang/d2-vscode)

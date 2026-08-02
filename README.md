@@ -1,12 +1,12 @@
 # D2 Documentation
 
-[![ci](https://github.com/terrastruct/d2-docs/actions/workflows/ci.yml/badge.svg)](https://github.com/terrastruct/d2-docs/actions/workflows/ci.yml)
-[![daily](https://github.com/terrastruct/d2-docs/actions/workflows/daily.yml/badge.svg)](https://github.com/terrastruct/d2-docs/actions/workflows/daily.yml)
-[![license](https://img.shields.io/github/license/terrastruct/d2-docs?color=9cf)](./LICENSE)
+[![ci](https://github.com/d2lang/d2-docs/actions/workflows/ci.yml/badge.svg)](https://github.com/d2lang/d2-docs/actions/workflows/ci.yml)
+[![daily](https://github.com/d2lang/d2-docs/actions/workflows/daily.yml/badge.svg)](https://github.com/d2lang/d2-docs/actions/workflows/daily.yml)
+[![license](https://img.shields.io/github/license/d2lang/d2-docs?color=9cf)](./LICENSE)
 
 This is language documentation for D2, a modern, open-source text-to-diagram DSL. The
 source repository for that is here:
-[https://github.com/terrastruct/d2](https://github.com/terrastruct/d2).
+[https://github.com/d2lang/d2](https://github.com/d2lang/d2).
 
 Deployed at [https://d2lang.com](https://d2lang.com).
 

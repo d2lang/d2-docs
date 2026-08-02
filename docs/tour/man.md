@@ -60,7 +60,7 @@ OPTIONS
 		 Be aware that explicit styles set in D2 code will still be
 		 applied and this may produce unexpected results. We plan on
 		 resolving this by making style maps in D2 light/dark mode
-		 specific. See https://github.com/terrastruct/d2/issues/831.
+		 specific. See https://github.com/d2lang/d2/issues/831.
 
      -s, --sketch false
 		 Renders the diagram to look like it was sketched by hand.
