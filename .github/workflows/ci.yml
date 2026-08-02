@@ -63,6 +63,12 @@ jobs:
     needs: [ci, nofixups, spell-check, alt-tags-check, webp-versions-check]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      D2_DOCS_S3_BUCKET: s3://d2lang-docs-278852893615
+      D2_DOCS_CLOUDFRONT_ID: E2NLB7I775SAF
     steps:
       - uses: actions/checkout@v3
         with:
@@ -76,14 +82,11 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::278852893615:role/d2lang-docs-deploy
           aws-region: us-west-1
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Deploy to production
         run: ./ci/deploy.sh
         env:
-          D2_DOCS_S3_BUCKET: ${{ secrets.D2_DOCS_S3_BUCKET }}
-          D2_DOCS_CLOUDFRONT_ID: ${{ secrets.D2_DOCS_CLOUDFRONT_ID }}
           D2_DOCS_ALGOLIA_CRAWLER_API_KEY: ${{ secrets.D2_DOCS_ALGOLIA_CRAWLER_API_KEY }}
