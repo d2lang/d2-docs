@@ -10,7 +10,7 @@ import IconsImage from '@site/static/d2/icons-image.d2';
 
 :::tip
 We host a collection of icons commonly found in software architecture diagrams for free to
-help you get started: [https://icons.terrastruct.com](https://icons.terrastruct.com).
+help you get started: [https://icons.d2lang.com](https://icons.d2lang.com).
 :::
 
 Icons and images are an essential part of production-ready diagrams.
@@ -49,4 +49,3 @@ Icons can be positioned with the `near` keyword [introduced later](/tour/positio
 </CodeBlock>
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/icons-image.svg2')}}></div>
-

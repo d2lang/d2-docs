@@ -10,7 +10,7 @@ import IconsImage from '@site/static/d2/icons-image.d2';
 # 아이콘
 
 :::tip
-저희는 여러분들이 이 언어를 좀 더 쉽게 시작할 수 있도록 소프트웨어 아키텍처 다이어그램에서 흔히 볼 수 있는 아이콘 모음을 무료로 호스팅하고 있습니다: [https://icons.terrastruct.com](https://icons.terrastruct.com).
+저희는 여러분들이 이 언어를 좀 더 쉽게 시작할 수 있도록 소프트웨어 아키텍처 다이어그램에서 흔히 볼 수 있는 아이콘 모음을 무료로 호스팅하고 있습니다: [https://icons.d2lang.com](https://icons.d2lang.com).
 :::
 
 아이콘과 이미지는 개발 시 작성하는 다이어그램의 필수 요소입니다.
@@ -19,7 +19,7 @@ import IconsImage from '@site/static/d2/icons-image.d2';
 
 ```d2
 my network: {
-  icon: https://icons.terrastruct.com/infra/019-network.svg
+  icon: https://icons.d2lang.com/infra/019-network.svg
 }
 ```
 
@@ -39,7 +39,7 @@ D2 CLI를 로컬에서 사용하시나요? `icon: ./my_cat.png`와 같이 로컬
 
 ```d2
 vpc: VPC 1 10.1.0.0./16 {
-  icon: https://icons.terrastruct.com/aws%2F_Group%20Icons%2FVirtual-private-cloud-VPC_light-bg.svg
+  icon: https://icons.d2lang.com/aws%2F_Group%20Icons%2FVirtual-private-cloud-VPC_light-bg.svg
 
   style: {
     stroke: green
@@ -56,7 +56,7 @@ vpc: VPC 1 10.1.0.0./16 {
     }
 
     firewall: Firewall Subnet A {
-      icon: https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-Route-53_Hosted-Zone_light-bg.svg
+      icon: https://icons.d2lang.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-Route-53_Hosted-Zone_light-bg.svg
 
       style: {
         stroke: purple
@@ -65,7 +65,7 @@ vpc: VPC 1 10.1.0.0./16 {
       }
 
       ec2: EC2 Instance {
-        icon: https://icons.terrastruct.com/aws%2FCompute%2F_Instance%2FAmazon-EC2_C4-Instance_light-bg.svg
+        icon: https://icons.d2lang.com/aws%2FCompute%2F_Instance%2FAmazon-EC2_C4-Instance_light-bg.svg
       }
     }
   }
@@ -83,12 +83,12 @@ vpc: VPC 1 10.1.0.0./16 {
 ```d2
 server: {
   shape: image
-  icon: https://icons.terrastruct.com/tech/022-server.svg
+  icon: https://icons.d2lang.com/tech/022-server.svg
 }
 
 github: {
   shape: image
-  icon: https://icons.terrastruct.com/dev/github.svg
+  icon: https://icons.d2lang.com/dev/github.svg
 }
 
 server -> github
