@@ -1,5 +1,8 @@
 name: ci
 on: [push, pull_request]
+permissions:
+  actions: read
+  contents: read
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
   cancel-in-progress: true
@@ -17,7 +20,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - run: COLOR=1 ./make.sh
         env:
-          GITHUB_TOKEN: ${{ secrets._GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DOCUSAURUS_IGNORE_SSG_WARNINGS: true
   nofixups:
@@ -27,7 +30,7 @@ jobs:
       - run: git submodule update --init
       - run: COLOR=1 ./ci/sub/bin/nofixups.sh
         env:
-          GITHUB_TOKEN: ${{ secrets._GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
   spell-check:
     runs-on: ubuntu-latest
