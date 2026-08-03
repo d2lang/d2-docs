@@ -10,7 +10,7 @@ things that the core team don't have the bandwidth to do (until D2 reaches 1.0, 
 aggressively prioritizing improvements that make D2 better for the majority of users).
 Below is a list of features that could use your help. If you're interested in taking the
 initiative, feel free to just start, or you can comment on a GitHub issue, discuss in
-Discord, or email us (alex at terrastruct).
+Discord, or email [alex@d2lang.com](mailto:alex@d2lang.com).
 
 - [ownCloud Infinite Scale Extension](https://github.com/d2lang/d2/issues/1422)
 - [IntelliJ plugin](https://github.com/d2lang/d2/issues/747)

@@ -7,9 +7,7 @@ pagination_next: tour/man
 D2 has an API built on top of its AST for **programmatically creating diagrams in Go**.
 This package is `d2/d2oracle`.
 
-This API is exercised heavily by Terrastruct to implement [bidirectional edits](https://youtu.be/EhxVVkxv2Ns?t=150). We have [comprehensive test coverage](https://github.com/d2lang/d2/blob/master/d2oracle/edit_test.go) of these functions. If there's any confusion from the docs, there's almost certainly a test that answers your question. (We're also happy to help, just file a GitHub issue!)
-
-For a blog post detailing an example usage (building a SQL table diagram), see [https://terrastruct.com/blog/post/generate-diagrams-programmatically/](https://terrastruct.com/blog/post/generate-diagrams-programmatically/).
+D2 has [comprehensive test coverage](https://github.com/d2lang/d2/blob/master/d2oracle/edit_test.go) of these functions. If there's any confusion from the docs, there's almost certainly a test that answers your question. (We're also happy to help, just file a GitHub issue!)
 
 :::info No mutations
 All functions in `d2oracle` are pure: they do not mutate the original graph, they return a new one. If you are chaining calls, don't forget to use the resulting graph from the previous call.

@@ -26,12 +26,24 @@ function Footer() {
         </div>
       </div>
       <div className="Footer__Right">
-        <a className="Footer__Link" href="https://terrastruct.com">
-          <span>
-            Created by <img src="/img/terrastruct_logo.svg" alt="Terrastruct logo" />
-          </span>
-        </a>
-        |<span>© 2025 Terrastruct, Inc.</span>
+        <span className="Footer__Sponsorship">
+          D2 is an independent open-source project fiscally sponsored by{" "}
+          <a className="Footer__Link" href="https://hackclub.com/fiscal-sponsorship/">
+            Hack Club
+          </a>
+          .
+        </span>
+        <div className="Footer__Links">
+          <a className="Footer__Link" href="https://hcb.hackclub.com/donations/start/d2">
+            Donate
+          </a>
+          <a className="Footer__Link" href="https://github.com/d2lang/d2">
+            GitHub
+          </a>
+          <a className="Footer__Link" href="https://discord.com/invite/pbUXgvmTpU">
+            Discord
+          </a>
+        </div>
       </div>
       <div className="Footer__Mobile">
         <div className="Footer__Mobile--Bar">

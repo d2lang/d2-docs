@@ -38,8 +38,8 @@ const config: Config = {
         },
         author: {
           "@type": "Organization",
-          name: "Terrastruct",
-          url: "https://terrastruct.com",
+          name: "D2",
+          url: "https://d2lang.com",
         },
         sameAs: ["https://github.com/d2lang/d2", "https://discord.com/invite/pbUXgvmTpU"],
       }),
@@ -95,7 +95,7 @@ const config: Config = {
             type: "all",
             title: "D2 Blog Feed",
             description: "Stay updated with the latest D2 news and tutorials",
-            copyright: `Copyright © 2026 Terrastruct, Inc.`,
+            copyright: `Copyright © 2026 D2 contributors.`,
             language: "en",
           },
         },
@@ -116,7 +116,7 @@ const config: Config = {
       },
       {
         name: "author",
-        content: "Terrastruct",
+        content: "D2 contributors",
       },
       {
         property: "og:type",
@@ -129,14 +129,6 @@ const config: Config = {
       {
         name: "twitter:card",
         content: "summary_large_image",
-      },
-      {
-        name: "twitter:site",
-        content: "@terrastruct",
-      },
-      {
-        name: "twitter:creator",
-        content: "@terrastruct",
       },
     ],
     docs: {
@@ -212,7 +204,7 @@ const config: Config = {
       darkTheme: themes.dracula,
     },
     footer: {
-      copyright: `Copyright © 2026 <a href="https://terrastruct.com">Terrastruct, Inc.</a>`,
+      copyright: `Copyright © 2026 D2 contributors.`,
     },
     algolia: {
       appId: "DWAXJIMTZU",

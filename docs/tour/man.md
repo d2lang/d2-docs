@@ -36,7 +36,7 @@ DESCRIPTION
      See more docs, the source code and license at
      https://oss.terrastruct.com/d2.
 
-     Hosted icons at https://icons.terrastruct.com.
+     Hosted icons at https://icons.d2lang.com.
 
      Playground runner at https://play.d2lang.com.
 

@@ -269,7 +269,7 @@ any docker compatible runtime: {
     font-color: black
     stroke-width: 8
   }
-  icon: https://icons.terrastruct.com/dev%2Fdocker.svg
+  icon: https://icons.d2lang.com/dev%2Fdocker.svg
 }
 
 any ci: {
