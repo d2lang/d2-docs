@@ -105,6 +105,44 @@ img {
   border: 1px solid var(--border);
 }
 
+.sponsorSubtitle {
+  max-width: 46rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.4;
+}
+
+.sponsorActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 11rem;
+    min-width: 11rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sponsorSubtitle {
+    font-size: 1.25rem;
+  }
+
+  .sponsorActions {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .button {
+      width: 100%;
+      min-width: 0;
+      white-space: normal;
+    }
+  }
+}
+
 // Alerts
 :root {
   .alert--success {

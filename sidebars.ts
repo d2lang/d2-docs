@@ -157,6 +157,11 @@ const sidebars: SidebarsConfig = {
     "tour/faq",
     "tour/troubleshoot",
     "tour/help",
+    {
+      type: "doc",
+      id: "sponsor",
+      label: "Sponsor D2",
+    },
   ],
   releasesSidebar: [
     {
