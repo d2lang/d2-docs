@@ -37,7 +37,7 @@ curl -fsSL https://d2lang.com/install.sh | sh -s -- --uninstall
 소스 파일로 설치할 수도 있습니다.
 
 ```shell
-go install oss.terrastruct.com/d2@latest
+go install github.com/d2lang/d2@latest
 ```
 
 :::info
