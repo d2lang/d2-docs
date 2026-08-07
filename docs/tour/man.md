@@ -34,7 +34,7 @@ DESCRIPTION
      iteration on a broken diagram.
 
      See more docs, the source code and license at
-     https://oss.terrastruct.com/d2.
+     https://github.com/d2lang/d2.
 
      Hosted icons at https://icons.d2lang.com.
 
