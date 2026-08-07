@@ -34,7 +34,7 @@ function Footer() {
           .
         </span>
         <div className="Footer__Links">
-          <a className="Footer__Link" href="https://hcb.hackclub.com/donations/start/d2">
+          <a className="Footer__Link" href="/sponsor/">
             Donate
           </a>
           <a className="Footer__Link" href="https://github.com/d2lang/d2">
