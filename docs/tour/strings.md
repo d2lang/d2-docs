@@ -1,5 +1,5 @@
 ---
-pagination_next: tour/comments
+pagination_next: tour/vars
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Strings2 from '@site/static/d2/strings-2.d2';
