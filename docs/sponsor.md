@@ -2,7 +2,7 @@
 
 <p className="hero__subtitle sponsorSubtitle margin-bottom--lg">
   {
-    "D2 is fiscally sponsored by Hack Club (501(c)(3)). All donations are tax-deductible in the United States."
+    "D2 is fiscally sponsored by The Hack Foundation, the 501(c)(3) nonprofit behind Hack Club. Donations made without receiving goods or services are tax-deductible in the United States."
   }
 </p>
 
@@ -29,17 +29,16 @@ Donations support:
 
 - Keeping d2lang.com, the Playground, icons, and other public tools online.
 - Maintaining build, package, and distribution infrastructure.
+- Paying contributors for approved project work.
 - Supporting open-source projects that D2 depends on.
 
-Fund usage is transparent. D2 was created by Alexander Wang and Anmol Sethi,
-and Alexander is currently the maintainer. It was originally developed as part
-of our work in a for-profit company, Terrastruct, but is now split into its own
-independent project, funded purely through donations. Nothing will go towards
-either of us; I work on D2 out of passion, not as a source of income.
+Fund usage is transparent. D2 was created by Anmol Sethi and me at Terrastruct. In August
+2026, I [donated D2 to Hack Club](/blog/d2-non-profit/) so it could continue as an
+independent nonprofit project. I still lead development, but neither Anmol nor I will
+receive money from the fund.
 
-Hack Club charges a 7% fee for maintaining the nonprofit organization. They do
-wonderful work providing community, programs, and events for teenagers to
-participate in real world tech.
+Donations are subject to Hack Club's 7% fiscal-sponsorship fee, which includes payment
+processing.
 
 ## How the fund works
 
