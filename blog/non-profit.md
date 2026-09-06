@@ -22,7 +22,8 @@ development and am excited for the roadmap ahead.
 If you have interest in becoming a maintainer, please email me at
 [alex@d2lang.com](mailto:alex@d2lang.com). High-quality maintenance and contributions
 may be invited to enter into a paid contributor contract, funded by donations to
-the non-profit.
+the non-profit. This would be ideal for a driven early-careerist with open-source
+experience.
 
 <!-- truncate -->
 
