@@ -24,9 +24,6 @@ If you have interest in becoming a maintainer, please email me at
 may be invited to enter into a paid contributor contract, funded by donations to
 the non-profit.
 
-If you'd like to donate to D2, please see [this page](/sponsor/) on how to do so and
-what the fund is used for.
-
 ## Direction
 
 D2 has accumulated a large backlog and roadmap, and I have some pretty cool ideas
@@ -50,8 +47,6 @@ it has. I of course know this is controversial and has
 recommending anything to anyone; I just wanted to be transparent about my plans to
 the community and those who rely on D2. It's all open-source, so you may pin or
 fork v0.7.1, which is untainted by AI.
-
-End of AI disclaimer.
 
 ## What's next
 
@@ -99,3 +94,6 @@ It's always a leap of faith to adopt some new language with unknown motives and
 continuity. I'm really happy about this direction for D2 and that the value of
 this excellent IDE and layout algorithm can be shared with more people. I'm
 excited for what's next.
+
+If you'd like to donate to D2, please see [this page](https://d2lang.com/sponsor/)
+on how to do so and what the fund is used for.
