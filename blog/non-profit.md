@@ -7,62 +7,59 @@ tags: [announcement, community]
 hide_table_of_contents: false
 ---
 
-Hello, I wanted to share some news about the future of D2.
+Hello, I'm happy to share the news that D2 is now fiscally sponsored by
+[Hack Club](https://hackclub.com/)!
 
-The creation and development of this project was funded by a for-profit company,
-Terrastruct. We made money through selling an IDE and a closed-source layout engine
-for D2.
-
-Terrastruct is winding down, and D2 has been transferred to
-[Hack Club](https://hackclub.com/) to continue running as a non-profit, open-source
-project. The previously paid components, the layout engine (TALA) and the IDE
-(D2 Studio), will be open-sourced.
+The project was born and thus far developed as an open-core arm of a for-profit
+company. The development of open-source D2 was funded by the closed-source IDE
+(D2 Studio) and proprietary layout algorithm (TALA). The company is shutting down,
+and D2 will continue as an independent, completely open-source, non-profit project
+through Hack Club.
 
 I will continue to maintain and improve D2. But my time commitment will be limited.
+It's not my primary focus anymore, but I remain committed to its continued
+development and am excited for the roadmap ahead.
 If you have interest in becoming a maintainer, please email me at
 [alex@d2lang.com](mailto:alex@d2lang.com). High-quality maintenance and contributions
 may be invited to enter into a paid contributor contract, funded by donations to
 the non-profit.
 
-## Direction
-
-D2 has accumulated a large backlog and roadmap, and I have some pretty cool ideas
-for features. But first, a disclaimer:
-
-I am very pro-AI usage. My contributions towards D2's development will all be made
-with AI. I invite AI contributions, and will use AI to help me review your AI.
-
 <!-- truncate -->
-
-Up until now, D2 has been a project of no AI. Not by choice; it just wasn't good
-enough until recently. Pre-good-AI days, I embedded a JavaScript runner in D2's Go
-runtime to run some critical dependencies that were only available in JavaScript.
-It was massive bloat, it was ugly, and slow, and there was no other way.
-Post-good-AI, I just converted all of those JavaScript libraries to Go; it runs 9x
-to 50x faster.
-
-In this manner, D2 will evolve at a rate that is orders of magnitude faster than
-it has. I of course know this is controversial and has
-[downsides](https://neilalexander.dev/2026/06/30/flooding-contributions), and I'm not
-recommending anything to anyone; I just wanted to be transparent about my plans to
-the community and those who rely on D2. It's all open-source, so you may pin or
-fork v0.7.1, which is untainted by AI.
 
 ## What's next
 
-Directionally, there's 2 things I'll prioritize:
+D2 thus far has been a product of handcrafted code. That era is over. This next
+phase of D2 will be driven by AI. By this, I mean that all of my contributions will
+use AI. I welcome AI contributions and will use AI to review your AI, etc. The
+exception is writing -- I will author all blog posts and comms without AI.
+
+In this manner, D2 will evolve at a rate that is orders of magnitude faster than
+it has. Models will find ways to squeeze every millisecond of performance in a way
+I could not. It'll make into reality the features that were daydreams pre-AI
+because of limited engineering bandwidth, e.g. an isometric renderer, transpilers
+from other diagramming languages, etc.
+
+If you've invested a tiny part of your stack into D2, I hope this is received with
+optimism more than concern. I wrote code ~every day for 10+ years, and have not
+written any in the past year even though I'm working with software every day.
+I know where the limitations are and have no intention of the project devolving
+into slop.
+
+I of course know this is somewhat controversial and has
+[downsides](https://neilalexander.dev/2026/06/30/flooding-contributions), and I'm not
+recommending anything to anyone; I just wanted to be transparent about my plans to
+the community and those who rely on D2.
+
+Some top of mind goals:
 
 1. Get rendering support from popular platforms
    1. Natively integrated onto GitHub, Notion, Linear, etc.
-2. Be the most powerful harness for agents
+2. Cut a stable 1.0 with formalized grammar/featureset
+3. Be the most powerful harness for agents
    1. They're really good at making almost-perfect diagrams, but it's still too
       non-deterministic, uncustomizable, imprecise, etc. I think that'll last the
       foreseeable future, so you still want some text-based source to back the
       artifact. Kind of like HTML for web pages instead of drawing every pixel.
-
-But I want to have fun with it along the way. Squeeze out every millisecond of
-performance. Add an isometric renderer. Rewrite some subset to make a native
-JavaScript version instead of having to pay the cost of Go WASM runtime.
 
 ## Non-goals
 
@@ -79,7 +76,7 @@ code or whatever you want and turn it into a `.d2` file. There doesn't need to b
 yet another thinly tuned LLM interface for D2 to provide.
 
 Since D2 is non-profit, we won't be supporting things that need servers. No MCP,
-no API, no user accounts, no server rendering. D2 Studio will be purely
+no API, no user accounts, no server rendering, no multiplayer. D2 Studio will be purely
 client-side, usable completely offline.
 
 ## More soon
