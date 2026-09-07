@@ -1,0 +1,51 @@
+vars: {d2-config: {layout-engine: tala}}
+classes: {
+  auto: {
+    width: 160
+    height: 82
+    label.near: center-center
+    style: {fill: "#FFFFFF"; stroke: "#CBC7BD"; font-color: "#272724"; font-size: 19; bold: false; border-radius: 6; stroke-width: 1}
+  }
+  icon: {
+    width: 155
+    height: 115
+    icon.near: top-center
+    label.near: bottom-center
+  }
+}
+(** -> **)[*].style: {stroke: "#665F50"; font-color: "#665F50"; font-size: 15; stroke-width: 2}
+style.fill: "#F7F4EC"
+direction: right
+prepress: "01 / PREPRESS" {
+  style: {fill: "#F0ECDD"; stroke: "#D2CABB"; font-color: "#5E594D"; font-size: 18; border-radius: 0}
+  manuscript: "Manuscript" {class: [auto; icon]; icon: ./icons/paper.svg}
+  proof: "Color proof" {class: auto}
+  plates: "Plate imaging" {class: [auto; icon]; icon: ./icons/print.svg}
+  manuscript -> proof -> plates
+}
+press: "02 / FOUR-COLOR PRESS" {
+  style: {fill: "#FFFEF9"; stroke: "#BBB7AD"; font-color: "#272724"; font-size: 18; border-radius: 0}
+  c: "C\nCYAN" {left: 0; top: 180; width: 135; height: 170; style: {fill: "#15B7D1"; stroke: "#008DA4"; stroke-width: 3; font-size: 26; bold: true; font-color: "#00363F"}}
+  m: "M\nMAGENTA" {left: 280; top: 180; width: 135; height: 170; style: {fill: "#EC63A5"; stroke: "#AF2267"; stroke-width: 3; font-size: 26; bold: true; font-color: "#5E1736"}}
+  y: "Y\nYELLOW" {left: 560; top: 180; width: 135; height: 170; style: {fill: "#F2D24A"; stroke: "#B89600"; stroke-width: 3; font-size: 26; bold: true; font-color: "#524100"}}
+  k: "K\nBLACK" {left: 840; top: 180; width: 135; height: 170; style: {fill: "#292925"; stroke: "#111111"; stroke-width: 3; font-size: 26; bold: true; font-color: "#FFFFFF"}}
+  feed: "Paper feed" {class: [auto; icon]; icon: ./icons/paper.svg}
+  registration: "Registration\ncontroller" {class: [auto; icon]; icon: ./icons/gear.svg}
+  camera: "Alignment camera" {class: [auto; icon]; icon: ./icons/eye.svg}
+  dryer: "IR dryer" {class: auto}
+  feed -> c -> m -> y -> k -> dryer: {style: {stroke: "#262624"; stroke-width: 3}}
+  camera -> registration: "offset"
+  registration -> c: {style.stroke-dash: 4}
+  registration -> m: {style.stroke-dash: 4}
+  registration -> y: {style.stroke-dash: 4}
+  registration -> k: {style.stroke-dash: 4}
+}
+finishing: "03 / FINISHING" {
+  style: {fill: "#F0ECDD"; stroke: "#D2CABB"; font-color: "#5E594D"; font-size: 18; border-radius: 0}
+  trim: "Guillotine trim" {class: auto}
+  bind: "Perfect binding" {class: auto}
+  edition: "First edition" {class: [auto; icon]; icon: ./icons/paper.svg; style.fill: "#E6EAD6"}
+  trim -> bind -> edition
+}
+prepress.plates -> press.registration: "separations"
+press.dryer -> finishing.trim

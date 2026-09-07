@@ -1,0 +1,136 @@
+.comparison {
+  margin: 1.25rem 0 2.5rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.views {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.views button {
+  appearance: none;
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  font: inherit;
+  padding: 0.4rem 0.7rem;
+}
+
+.views button:hover {
+  background: var(--button-hover);
+}
+
+.views button[aria-pressed="true"] {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+:global([data-theme="dark"]) .views button[aria-pressed="true"] {
+  color: #0a0f25;
+}
+
+.comparison :is(button, a):focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.single {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.figure {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.caption a {
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.preview,
+.detail {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0;
+  padding: 0.6rem;
+  background: #fff;
+  cursor: zoom-in;
+}
+
+.preview {
+  height: 280px;
+}
+
+.detail {
+  min-height: 320px;
+}
+
+.comparison img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+}
+
+.detail img {
+  height: auto;
+  max-height: 720px;
+}
+
+.hint {
+  margin: 0.6rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .preview {
+    height: 300px;
+  }
+}

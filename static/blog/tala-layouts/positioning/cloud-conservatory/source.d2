@@ -1,0 +1,202 @@
+vars: {d2-config: {layout-engine: tala}}
+style.fill: "#F7F5EB"
+kicker: "FIELD NOTES  /  021                          SYSTEMS THAT GROW" {
+  shape: text
+  left: 0
+  top: 0
+  width: 1250
+  height: 30
+  style: {font-color: "#35584A"; font-size: 16; bold: true}
+}
+title: "Cloud Conservatory" {
+  shape: text
+  left: 0
+  top: 53
+  width: 1200
+  height: 75
+  style: {font-color: "#35584A"; font-size: 49; bold: true}
+}
+subtitle: "A production platform, cultivated in three connected habitats." {
+  shape: text
+  left: 0
+  top: 141
+  width: 1150
+  height: 35
+  style: {font-color: "#35584A"; font-size: 21; bold: false}
+}
+sun: "" {
+  left: 1220
+  top: 55
+  width: 66
+  height: 66
+  shape: rectangle
+  style: {fill: "#F7F5EB"; stroke: "#F7F5EB"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+  icon: ./icons/sun.svg
+  icon.near: top-center
+  label.near: bottom-center
+}
+west: "01  /  PROPAGATION HOUSE" {
+  left: 0
+  top: 264
+  width: 380
+  height: 610
+  label.near: top-left
+  style: {fill: "#EFF1E5"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 19; bold: true; border-radius: 18; stroke-dash: 0}
+  nursery: "GERMINATION" {
+    left: 0
+    top: 32
+    width: 260
+    height: 420
+    label.near: top-left
+    style: {fill: "#E7EDDC"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 19; bold: true; border-radius: 12; stroke-dash: 0}
+    seed: "Source\ncuttings" {
+      left: 0
+      top: 0
+      width: 140
+      height: 110
+      shape: rectangle
+      style: {fill: "#F7F5EB"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+      icon: ./icons/sprout.svg
+      icon.near: top-center
+      label.near: bottom-center
+    }
+    graft: "Build\ngrafts" {
+      left: 0
+      top: 190
+      width: 140
+      height: 110
+      shape: rectangle
+      style: {fill: "#F7F5EB"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+      icon: ./icons/branch.svg
+      icon.near: top-center
+      label.near: bottom-center
+    }
+    seed -> graft: {style: {stroke: "#35584A"; stroke-width: 2; stroke-dash: 0; font-color: "#35584A"; font-size: 15}}
+  }
+}
+central: "02  /  GROWING HOUSE" {
+  left: 470
+  top: 264
+  width: 500
+  height: 545
+  label.near: top-left
+  style: {fill: "#DEE7D5"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 19; bold: true; border-radius: 18; stroke-dash: 0}
+  api: "API canopy" {
+    left: 0
+    top: 26
+    width: 150
+    height: 125
+    shape: rectangle
+    style: {fill: "#FDFCF6"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+    icon: ./icons/leaf.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+  workers: "Worker bees" {
+    left: 230
+    top: 26
+    width: 150
+    height: 125
+    shape: rectangle
+    style: {fill: "#FDFCF6"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+    icon: ./icons/bee.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+  mesh: "Service trellis" {
+    left: 115
+    top: 257
+    width: 150
+    height: 125
+    shape: rectangle
+    style: {fill: "#FDFCF6"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+    icon: ./icons/flower.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+  api -> mesh: {style: {stroke: "#35584A"; stroke-width: 2; stroke-dash: 0; font-color: "#35584A"; font-size: 15}}
+  workers -> mesh: {style: {stroke: "#35584A"; stroke-width: 2; stroke-dash: 0; font-color: "#35584A"; font-size: 15}}
+}
+east: "03  /  RESERVOIR" {
+  left: 1060
+  top: 264
+  width: 260
+  height: 510
+  label.near: top-left
+  style: {fill: "#E4EEEA"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 19; bold: true; border-radius: 18; stroke-dash: 0}
+  lake: "Object lake" {
+    left: 0
+    top: 10
+    width: 140
+    height: 115
+    shape: rectangle
+    style: {fill: "#F5F8F1"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+    icon: ./icons/water.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+  roots: "Root store" {
+    left: 0
+    top: 219
+    width: 140
+    height: 115
+    shape: rectangle
+    style: {fill: "#F5F8F1"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+    icon: ./icons/db.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+  lake -> roots: {style: {stroke: "#35584A"; stroke-width: 2; stroke-dash: 0; font-color: "#35584A"; font-size: 15}}
+}
+control: "THE GROUNDSKEEPER  /  SHARED OPERATIONS" {
+  left: 470
+  top: 954
+  width: 840
+  height: 225
+  label.near: top-left
+  style: {fill: "#F0EBDE"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 19; bold: true; border-radius: 18; stroke-dash: 0}
+  climate: "Climate / SLO" {
+    left: 0
+    top: 0
+    width: 220
+    height: 105
+    shape: rectangle
+    style: {fill: "#F7F5EB"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+    icon: ./icons/chart.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+  gate: "Biosecurity / IAM" {
+    left: 450
+    top: 0
+    width: 240
+    height: 105
+    shape: rectangle
+    style: {fill: "#F7F5EB"; stroke: "#7E9680"; stroke-width: 1; font-color: "#35584A"; font-size: 18; border-radius: 0}
+    icon: ./icons/shield.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+}
+west.nursery.graft -> central.api: "release" {style: {stroke: "#35584A"; stroke-width: 2; stroke-dash: 0; font-color: "#35584A"; font-size: 15}}
+central.workers -> east.lake: "harvest" {style: {stroke: "#35584A"; stroke-width: 2; stroke-dash: 0; font-color: "#35584A"; font-size: 15}}
+central.mesh -> east.roots: "read / write" {style: {stroke: "#35584A"; stroke-width: 2; stroke-dash: 0; font-color: "#35584A"; font-size: 15}}
+control.climate -> central.mesh: {style: {stroke: "#7E9680"; stroke-width: 2; stroke-dash: 4; font-color: "#7E9680"; font-size: 15}}
+control.gate -> east.roots: {style: {stroke: "#7E9680"; stroke-width: 2; stroke-dash: 4; font-color: "#7E9680"; font-size: 15}}
+control.label.near: bottom-left
+note: "ROOTS IN DATA.\nROOM TO GROW." {
+  shape: text
+  left: 0
+  top: 998
+  width: 370
+  height: 114
+  style: {font-color: "#35584A"; font-size: 31; bold: true}
+}
+foot: "SOLID  /  application flow       ·       DASHED  /  stewardship" {
+  shape: text
+  left: 0
+  top: 1260
+  width: 1200
+  height: 28
+  style: {font-color: "#35584A"; font-size: 15; bold: false}
+}

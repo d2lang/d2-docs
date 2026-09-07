@@ -1,0 +1,43 @@
+# The positions are the drawing: a bell, a nervous system, and five drifting tentacles.
+vars: {d2-config: {layout-engine: tala; theme-id: 0}}
+style: {fill: "#051C2C"}
+classes: {
+  title: {shape: text; style: {font-color: "#D7FBF4"; font-size: 38; bold: true}}
+  note: {shape: text; style: {font-color: "#72A6B4"; font-size: 17}}
+  relay: {shape: circle; label.near: center-center; width: 114; height: 114; style: {fill: "#0B3849"; stroke: "#46DDCF"; stroke-width: 2; font-color: "#C5FFF5"; font-size: 18}}
+  tip: {shape: circle; label.near: center-center; width: 96; height: 96; style: {fill: "#15364B"; stroke: "#A7A0F2"; stroke-width: 2; font-color: "#DAD6FF"; font-size: 15}}
+  signal: {style: {stroke: "#45CBBE"; stroke-width: 2; opacity: 0.8}}
+  bubble: {shape: circle; label: ""; width: 11; height: 11; style: {fill: "#1C6B77"; stroke-width: 0}}
+}
+title: THE INTERNET IS A JELLYFISH {class: title; top: 0; left: 0; width: 980; height: 54}
+subtitle: "One soft cloud. A thousand things happening underneath." {class: note; top: 66; left: 0; width: 860; height: 28}
+bell: THE INTERNET {shape: cloud; top: 132; left: 337; width: 400; height: 206; style: {fill: "#B1F6E2"; stroke: "#B1F6E2"; font-color: "#082B3A"; font-size: 28; bold: true}}
+dns: DNS {class: relay; top: 368; left: 96}
+cdn: CDN {class: relay; top: 405; left: 319}
+api: API {class: relay; top: 438; left: 514}
+events: EVENTS {class: relay; top: 405; left: 710}
+archive: ARCHIVE {class: relay; top: 368; left: 920}
+lookup: resolve {class: relay; top: 555; left: 42; width: 90; height: 90}
+cache: cache {class: relay; top: 603; left: 264; width: 90; height: 90}
+workers: workers {class: relay; top: 635; left: 525; width: 90; height: 90}
+queue: queue {class: relay; top: 589; left: 773; width: 90; height: 90}
+store: store {class: relay; top: 538; left: 983; width: 90; height: 90}
+hello: hello.world {class: tip; top: 737; left: 92}
+video: cat videos {class: tip; top: 812; left: 306}
+checkout: checkout {class: tip; top: 852; left: 506}
+notifications: "you've got\nmail" {class: tip; top: 791; left: 727}
+backups: memories {class: tip; top: 724; left: 923}
+bell -> dns: {class: signal}
+bell -> cdn: {class: signal}
+bell -> api: {class: signal}
+bell -> events: {class: signal}
+bell -> archive: {class: signal}
+dns -> lookup -> hello: {class: signal}
+cdn -> cache -> video: {class: signal}
+api -> workers -> checkout: {class: signal}
+events -> queue -> notifications: {class: signal}
+archive -> store -> backups: {class: signal}
+b1: {class: bubble; top: 200; left: 104}
+b2: {class: bubble; top: 270; left: 872; width: 17; height: 17}
+b3: {class: bubble; top: 688; left: 667}
+footer: "ABYSSAL NETWORKS  /  ALWAYS ONLINE, MOSTLY INVISIBLE" {class: note; top: 1000; left: 0; width: 1000; height: 30}

@@ -1,0 +1,42 @@
+# Six worlds, one coffee order. The solar system runs on numeric coordinates.
+vars: {d2-config: {layout-engine: tala; theme-id: 0}}
+style: {fill: "#101222"}
+classes: {
+  title: {shape: text; style: {font-color: "#FAF3DB"; font-size: 39; bold: true}}
+  note: {shape: text; style: {font-color: "#9D9CB8"; font-size: 18}}
+  planet: {shape: circle; label.near: center-center; width: 154; height: 154; style: {stroke-width: 0; font-size: 20; font-color: "#171628"; bold: true}}
+  moon: {shape: circle; label.near: center-center; width: 90; height: 90; style: {fill: "#252940"; stroke: "#6F7394"; stroke-width: 1; font-size: 16; font-color: "#DAD9E6"}}
+  route: {style: {stroke: "#9693BA"; stroke-width: 2; font-color: "#BBB7D2"; italic: false}}
+  supply: {style: {stroke: "#686781"; stroke-width: 1; stroke-dash: 4; font-color: "#ABA8C2"; italic: false}}
+  star: {shape: circle; label: ""; width: 5; height: 5; style: {fill: "#747596"; stroke-width: 0}}
+}
+title: ORBITAL COFFEE LOGISTICS {class: title; top: 0; left: 0; width: 1080; height: 54}
+subtitle: "Estimated delivery: 8 light-minutes. Please have your mug ready." {class: note; top: 66; left: 0; width: 1000; height: 30}
+mercury: "MERCURY\nroast" {class: planet; top: 176; left: 222; style.fill: "#EAA58B"}
+venus: "VENUS\ngrind" {class: planet; top: 176; left: 730; style.fill: "#E7C789"}
+earth: "EARTH\nbrew" {class: planet; top: 462; left: 936; style.fill: "#80C9B7"}
+mars: "MARS\ndeliver" {class: planet; top: 754; left: 730; style.fill: "#D88798"}
+pluto: "PLUTO\ndecaf" {class: planet; top: 754; left: 222; style.fill: "#AFA7D7"}
+saturn: "SATURN\nfroth" {class: planet; top: 462; left: 12; style.fill: "#D3B695"}
+sun: "ESPRESSO\nSOLAR CORE" {class: planet; top: 409; left: 438; width: 224; height: 224; style: {fill: "#F8D66D"; font-size: 24}}
+oat: "OAT\nMOON" {class: moon; top: 335; left: 98}
+ice: "ICE\nRING" {class: moon; top: 671; left: 967}
+payments: "TIPS\nSATELLITE" {class: moon; top: 770; left: 502}
+beans: "BEAN\nBELT" {class: moon; top: 168; left: 12}
+asleep: "SLEEP\nSTATION" {class: moon; top: 918; left: 84}
+mercury -> venus: roasted beans {class: route}
+venus -> earth: grounds {class: route}
+earth -> sun: extraction {class: route}
+sun -> mars: launch {class: route}
+saturn -> sun: microfoam {class: route}
+mercury -> pluto: special order {class: supply}
+oat -> saturn: {class: supply}
+ice -> earth: {class: supply}
+beans -> mercury: {class: supply}
+mars -> payments: {class: supply}
+pluto -> asleep: {class: supply}
+s1: {class: star; top: 158; left: 574}
+s2: {class: star; top: 340; left: 942}
+s3: {class: star; top: 693; left: 388}
+s4: {class: star; top: 929; left: 877}
+footer: "INTERPLANETARY SUPPLY CHAIN  /  LOCALLY SOURCED FROM ANOTHER PLANET" {class: note; top: 1060; left: 0; width: 1080; height: 30}

@@ -1,0 +1,136 @@
+# Numeric top/left positions intentionally compose the picture.
+vars: {d2-config: {layout-engine: tala}}
+style.fill: "#FFF7ED"
+classes: {
+  card: {style: {fill: "#FFFCF7"; stroke: "#312727"; stroke-width: 2; border-radius: 14; font-color: "#312727"; font-size: 22}}
+  circle: {shape: oval; label.near: center-center; style: {fill: "#FFFCF7"; stroke: "#312727"; stroke-width: 2; font-color: "#312727"; font-size: 22}}
+  diamond: {shape: diamond; label.near: center-center; style: {fill: "#FFFCF7"; stroke: "#312727"; stroke-width: 2; font-color: "#312727"; font-size: 22}}
+  hero: {shape: diamond; label.near: center-center; style: {fill: "#FF6E59"; stroke: "#312727"; stroke-width: 3; font-color: "#312727"; font-size: 27; bold: true}}
+  title: {shape: text; style: {font-color: "#312727"; font-size: 38; bold: true}}
+  note: {shape: text; style: {font-color: "#312727"; font-size: 20}}
+}
+title: "FRIDAY DEPLOY: THE ESCAPE ROOM" {
+  class: title
+  left: 319
+  top: 0
+  width: 593
+  height: 60
+}
+subtitle: "Find the exit before the on-call phone finds you." {
+  class: note
+  left: 417
+  top: 75
+  width: 396
+  height: 40
+}
+entry: "01 / ENTER\nIt is 4:59 p.m." {
+  class: card
+  left: 0
+  top: 185
+  width: 260
+  height: 125
+  style.fill: "#BFE9DC"
+}
+test: "02 / UNIT TESTS\nGreen. Suspiciously green." {
+  class: card
+  left: 440
+  top: 185
+  width: 290
+  height: 125
+}
+ci: "03 / CI QUEUE\nYou are number 47." {
+  class: card
+  left: 940
+  top: 185
+  width: 290
+  height: 125
+}
+staging: "04 / STAGING\nWorks on my staging." {
+  class: card
+  left: 940
+  top: 440
+  width: 290
+  height: 125
+}
+flake: "05 / THE FLAKY TEST\nTry the handle again." {
+  class: card
+  left: 440
+  top: 440
+  width: 290
+  height: 125
+  style.fill: "#FFE1A8"
+}
+approval: "06 / APPROVAL\nApprover is on a plane." {
+  class: card
+  left: 0
+  top: 440
+  width: 290
+  height: 125
+}
+ritual: "07 / THE RITUAL\nClose tab. Reopen tab." {
+  class: card
+  left: 0
+  top: 735
+  width: 290
+  height: 125
+}
+button: "08 / BIG RED BUTTON\nIt says “probably”." {
+  class: card
+  left: 440
+  top: 735
+  width: 290
+  height: 125
+  style.fill: "#FFAB99"
+}
+weekend: "09 / THE EXIT\nThe weekend exists!" {
+  class: card
+  left: 940
+  top: 735
+  width: 290
+  height: 125
+  style.fill: "#BFE9DC"
+}
+rollback: "EMERGENCY EXIT\nRevert. Walk away." {
+  class: diamond
+  left: 425
+  top: 1030
+  width: 330
+  height: 180
+  style.fill: "#BFE9DC"
+}
+plant: "BACKUP APPROVER\nThe office plant" {
+  class: circle
+  left: 0
+  top: 1060
+  width: 230
+  height: 120
+  style.fill: "#D9E4BB"
+}
+pager: "SECRET BOSS\nThe pager" {
+  class: diamond
+  left: 970
+  top: 1055
+  width: 230
+  height: 130
+  style.fill: "#FFAB99"
+}
+entry -> test: {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+test -> ci: {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+ci -> staging: "finally" {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+staging -> flake: {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+flake -> approval: {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+approval -> ritual: {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+ritual -> button: {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+button -> weekend: {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+approval -> plant: "delegated" {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+button -> rollback: "sanity prevails" {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+weekend -> pager: "plot twist" {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"}
+flake -> flake: "rerun" {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"; style.stroke-dash: 4}
+pager -> button: "one tiny hotfix" {style.stroke: "#312727"; style.stroke-width: 2; style.font-size: 18; style.font-color: "#312727"; style.stroke: "#D43F36"; style.stroke-dash: 4}
+caption: "ESCAPE TIME: 8 MINUTES  /  ELAPSED TIME: 3 HOURS" {
+  class: note
+  left: 396
+  top: 1285
+  width: 438
+  height: 40
+}
