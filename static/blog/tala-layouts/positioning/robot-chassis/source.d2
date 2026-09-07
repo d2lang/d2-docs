@@ -1,0 +1,54 @@
+vars: {d2-config: {layout-engine: tala}}
+classes: {
+  auto: {
+    width: 160
+    height: 82
+    label.near: center-center
+    style: {fill: "#FFFFFF"; stroke: "#BAA898"; font-color: "#603C21"; font-size: 19; bold: false; border-radius: 6; stroke-width: 1}
+  }
+  icon: {
+    width: 155
+    height: 115
+    icon.near: top-center
+    label.near: bottom-center
+  }
+}
+(** -> **)[*].style: {stroke: "#796450"; font-color: "#796450"; font-size: 15; stroke-width: 2}
+style.fill: "#F3EBE1"
+direction: right
+chassis: "MULE / AUTONOMOUS UTILITY ROVER" {
+  style: {fill: "#FFFAF1"; stroke: "#96775E"; font-color: "#603C21"; font-size: 21; border-radius: 4; stroke-width: 2}
+  fl: "FRONT LEFT\nM1" {left: 0; top: 0; width: 140; height: 125; icon: ./icons/wheel.svg; icon.near: top-center; label.near: bottom-center; style: {fill: "#E3AD72"; stroke: "#A55D22"; stroke-width: 3; font-color: "#603C21"; bold: true}}
+  fr: "FRONT RIGHT\nM2" {left: 600; top: 0; width: 140; height: 125; icon: ./icons/wheel.svg; icon.near: top-center; label.near: bottom-center; style: {fill: "#E3AD72"; stroke: "#A55D22"; stroke-width: 3; font-color: "#603C21"; bold: true}}
+  rl: "REAR LEFT\nM3" {left: 0; top: 600; width: 140; height: 125; icon: ./icons/wheel.svg; icon.near: top-center; label.near: bottom-center; style: {fill: "#E3AD72"; stroke: "#A55D22"; stroke-width: 3; font-color: "#603C21"; bold: true}}
+  rr: "REAR RIGHT\nM4" {left: 600; top: 600; width: 140; height: 125; icon: ./icons/wheel.svg; icon.near: top-center; label.near: bottom-center; style: {fill: "#E3AD72"; stroke: "#A55D22"; stroke-width: 3; font-color: "#603C21"; bold: true}}
+  drive: "Drive controller" {class: [auto; icon]; icon: ./icons/cpu.svg; style.fill: "#EDDBBD"}
+  planner: "Local planner" {class: auto}
+  lidar: "360° LiDAR" {class: [auto; icon]; icon: ./icons/radar.svg}
+  imu: "IMU + odometry" {class: auto}
+  battery: "48 V battery" {class: [auto; icon]; icon: ./icons/battery.svg; style.fill: "#E8DEC9"}
+  power: "Power distribution" {class: auto}
+  estop: "E-STOP" {class: auto; shape: hexagon; style: {fill: "#B5533C"; stroke: "#813A29"; font-color: "#FFFFFF"; bold: true}}
+  telemetry: "Telemetry" {class: auto}
+  lidar -> planner
+  imu -> planner -> drive
+  drive -> fl
+  drive -> fr
+  drive -> rl
+  drive -> rr
+  battery -> power -> drive: {style: {stroke: "#A55D22"; stroke-width: 3}}
+  estop -> drive: "cut power" {style: {stroke: "#B5533C"; stroke-dash: 4}}
+  drive -> telemetry: "health"
+}
+fleet: "FLEET OPERATIONS" {
+  direction: down
+  style: {fill: "#E5D8C8"; stroke: "#BAA898"; font-color: "#603C21"; font-size: 18; border-radius: 4}
+  dispatch: "Job queue" {class: auto; shape: queue}
+  console: "Operator console" {class: [auto; icon]; icon: ./icons/eye.svg}
+  dock: "Charging dock" {class: [auto; icon]; icon: ./icons/battery.svg}
+  console -> dispatch
+  dispatch -> dock: "return home"
+}
+fleet.dispatch -> chassis.planner: "waypoints"
+chassis.telemetry -> fleet.console
+fleet.dock -> chassis.battery: "charge" {style: {stroke: "#A55D22"; stroke-dash: 4}}

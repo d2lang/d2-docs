@@ -1,0 +1,67 @@
+.example {
+  margin: 1.25rem 0 3rem;
+  min-width: 0;
+}
+
+.toolbar,
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.toolbar {
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.toolbar > span {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.preview {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  cursor: zoom-in;
+}
+
+.preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.source {
+  margin-top: 0.75rem;
+}
+
+.placementNotes {
+  margin-top: 0.8rem;
+  font-size: 0.88rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.placementNotes p {
+  margin: 0.25rem 0;
+}
+
+.source summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.source pre {
+  max-height: 32rem !important;
+  overflow: auto !important;
+}
+
+.example :is(a, summary):focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}

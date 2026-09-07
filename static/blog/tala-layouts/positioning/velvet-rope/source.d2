@@ -1,0 +1,213 @@
+vars: {d2-config: {layout-engine: tala}}
+style.fill: "#131C22"
+kicker: "THE VELVET ROPE       •       PRIVATE INFRASTRUCTURE" {
+  shape: text
+  left: 0
+  top: 0
+  width: 1260
+  height: 28
+  style: {font-color: "#C6AC75"; font-size: 16; bold: true}
+}
+title: "Every request is a guest." {
+  shape: text
+  left: 0
+  top: 47
+  width: 1260
+  height: 78
+  style: {font-color: "#F0E6D2"; font-size: 48; bold: true}
+}
+subtitle: "A zero-trust hotel. Hospitality at the edge. Discretion at every door." {
+  shape: text
+  left: 0
+  top: 141
+  width: 1300
+  height: 32
+  style: {font-color: "#C6AC75"; font-size: 19; bold: false}
+}
+lobby: "01  /  ARRIVALS" {
+  left: 0
+  top: 262
+  width: 300
+  height: 755
+  label.near: top-left
+  style: {fill: "#1E2A31"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#C6AC75"; font-size: 19; bold: true; border-radius: 0; stroke-dash: 0}
+  guest: "Guest identity" {
+    left: 0
+    top: 10
+    width: 180
+    height: 120
+    shape: rectangle
+    style: {fill: "#1E2A31"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+    icon: ./icons/pass.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+  desk: "Concierge" {
+    left: 0
+    top: 230
+    width: 180
+    height: 120
+    shape: rectangle
+    style: {fill: "#1E2A31"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+    icon: ./icons/bell.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+  key: "Short-lived key" {
+    left: 0
+    top: 450
+    width: 180
+    height: 120
+    shape: rectangle
+    style: {fill: "#1E2A31"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+    icon: ./icons/key.svg
+    icon.near: top-center
+    label.near: bottom-center
+  }
+  guest -> desk: {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 0; font-color: "#C6AC75"; font-size: 15}}
+  desk -> key: {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 0; font-color: "#C6AC75"; font-size: 15}}
+}
+hotel: "A   /   THE PRIVATE WING" {
+  left: 400
+  top: 230
+  width: 745
+  height: 1015
+  label.near: top-left
+  style: {fill: "#1E2A31"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#C6AC75"; font-size: 19; bold: true; border-radius: 0; stroke-dash: 0}
+  suites: "02  /  GUEST SUITES" {
+    left: 0
+    top: 22
+    width: 625
+    height: 235
+    label.near: top-left
+    style: {fill: "#27343B"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#C6AC75"; font-size: 19; bold: true; border-radius: 0; stroke-dash: 0}
+    door: "Room gateway" {
+      left: 0
+      top: 0
+      width: 195
+      height: 115
+      shape: rectangle
+      style: {fill: "#131C22"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+      icon: ./icons/door.svg
+      icon.near: top-center
+      label.near: bottom-center
+    }
+    session: "Verified session" {
+      left: 310
+      top: 0
+      width: 195
+      height: 115
+      shape: rectangle
+      style: {fill: "#131C22"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+      icon: ./icons/shield.svg
+      icon.near: top-center
+      label.near: bottom-center
+    }
+    door -> session: {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 0; font-color: "#C6AC75"; font-size: 15}}
+  }
+  service: "03  /  SERVICE FLOOR" {
+    left: 0
+    top: 332
+    width: 625
+    height: 235
+    label.near: top-left
+    style: {fill: "#27343B"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#C6AC75"; font-size: 19; bold: true; border-radius: 0; stroke-dash: 0}
+    room: "Private API" {
+      left: 0
+      top: 0
+      width: 195
+      height: 115
+      shape: rectangle
+      style: {fill: "#131C22"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+      icon: ./icons/server.svg
+      icon.near: top-center
+      label.near: bottom-center
+    }
+    lift: "Service lift" {
+      left: 310
+      top: 0
+      width: 195
+      height: 115
+      shape: rectangle
+      style: {fill: "#131C22"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+      icon: ./icons/bolt.svg
+      icon.near: top-center
+      label.near: bottom-center
+    }
+    room -> lift: {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 0; font-color: "#C6AC75"; font-size: 15}}
+  }
+  vaults: "04  /  MEMBERS ONLY" {
+    left: 0
+    top: 642
+    width: 625
+    height: 235
+    label.near: top-left
+    style: {fill: "#35352D"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#C6AC75"; font-size: 19; bold: true; border-radius: 0; stroke-dash: 0}
+    vault: "Data vault" {
+      left: 0
+      top: 0
+      width: 195
+      height: 115
+      shape: rectangle
+      style: {fill: "#131C22"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+      icon: ./icons/vault.svg
+      icon.near: top-center
+      label.near: bottom-center
+    }
+    book: "Audit ledger" {
+      left: 310
+      top: 0
+      width: 195
+      height: 115
+      shape: rectangle
+      style: {fill: "#131C22"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+      icon: ./icons/ledger.svg
+      icon.near: top-center
+      label.near: bottom-center
+    }
+    vault -> book: {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 0; font-color: "#C6AC75"; font-size: 15}}
+  }
+  suites.session -> service.room: {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 0; font-color: "#C6AC75"; font-size: 15}}
+  service.lift -> vaults.vault: {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 0; font-color: "#C6AC75"; font-size: 15}}
+}
+watch: "Night watch\nContinuous review" {
+  left: 1230
+  top: 330
+  width: 205
+  height: 150
+  shape: rectangle
+  style: {fill: "#131C22"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+  icon: ./icons/eye.svg
+  icon.near: top-center
+  label.near: bottom-center
+}
+expiry: "Keys expire.\nTrust does too." {
+  left: 1230
+  top: 710
+  width: 205
+  height: 150
+  shape: rectangle
+  style: {fill: "#131C22"; stroke: "#C6AC75"; stroke-width: 1; font-color: "#F0E6D2"; font-size: 18; border-radius: 0}
+  icon: ./icons/clock.svg
+  icon.near: top-center
+  label.near: bottom-center
+}
+lobby.key -> hotel.suites.door: "check in" {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 0; font-color: "#C6AC75"; font-size: 15}}
+watch -> hotel.suites.session: {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 5; font-color: "#C6AC75"; font-size: 15}}
+hotel.vaults.book -> watch: {style: {stroke: "#C6AC75"; stroke-width: 2; stroke-dash: 5; font-color: "#C6AC75"; font-size: 15}}
+policy: "NO MASTER KEY.\nNO VIP BYPASS." {
+  shape: text
+  left: 0
+  top: 1095
+  width: 315
+  height: 100
+  style: {font-color: "#F0E6D2"; font-size: 29; bold: true}
+}
+foot: "ACCESS IS GRANTED FOR A PURPOSE.   NEVER FOR A LIFETIME." {
+  shape: text
+  left: 0
+  top: 1330
+  width: 1350
+  height: 30
+  style: {font-color: "#C6AC75"; font-size: 15; bold: true}
+}

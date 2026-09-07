@@ -1,0 +1,339 @@
+vars: {d2-config: {layout-engine: tala}}
+
+style.fill: "#111B29"
+# Numeric top and left coordinates give this composition its shape.
+
+edition: "NIGHT SHIFT   /   ORBITAL OPERATIONS" {
+  left: 0
+  top: 0
+  width: 1330
+  height: 42
+  shape: text
+  style: {
+    fill: "transparent"
+    stroke: "transparent"
+    font-color: "#69D7C3"
+    font-size: 18
+    bold: true
+  }
+}
+
+title: "Everyone has a station." {
+  left: 0
+  top: 58
+  width: 1330
+  height: 75
+  shape: text
+  style: {
+    fill: "transparent"
+    stroke: "transparent"
+    font-color: "#E8F3F0"
+    font-size: 46
+    bold: true
+  }
+}
+
+subtitle: "A quiet control room for a very loud launch." {
+  left: 0
+  top: 140
+  width: 1330
+  height: 40
+  shape: text
+  style: {
+    fill: "transparent"
+    stroke: "transparent"
+    font-color: "#7893A5"
+    font-size: 22
+    bold: false
+  }
+}
+
+vehicle: "VEHICLE\nUp where it belongs" {
+  left: 545
+  top: 260
+  width: 280
+  height: 100
+  style: {
+    fill: "#283B4E"
+    stroke: "#283B4E"
+    font-color: "#E8F3F0"
+    font-size: 23
+    bold: true
+    border-radius: 6
+    stroke-width: 2
+  }
+}
+
+tracking: "Tracking\nPosition + velocity" {
+  left: 160
+  top: 415
+  width: 245
+  height: 100
+  style: {
+    fill: "#111B29"
+    stroke: "#7893A5"
+    font-color: "#E8F3F0"
+    font-size: 22
+    bold: false
+    border-radius: 6
+    stroke-width: 2
+  }
+}
+
+uplink: "Uplink\nSigned commands" {
+  left: 965
+  top: 415
+  width: 245
+  height: 100
+  style: {
+    fill: "#111B29"
+    stroke: "#7893A5"
+    font-color: "#E8F3F0"
+    font-size: 22
+    bold: false
+    border-radius: 6
+    stroke-width: 2
+  }
+}
+
+telemetry: "Telemetry\nMake the numbers talk" {
+  left: 0
+  top: 640
+  width: 260
+  height: 100
+  style: {
+    fill: "#111B29"
+    stroke: "#7893A5"
+    font-color: "#E8F3F0"
+    font-size: 22
+    bold: false
+    border-radius: 6
+    stroke-width: 2
+  }
+}
+
+flight: "FLIGHT\nThe final call" {
+  left: 545
+  top: 570
+  width: 280
+  height: 280
+  shape: circle
+  style: {
+    fill: "#69D7C3"
+    stroke: "#69D7C3"
+    font-color: "#132733"
+    font-size: 30
+    bold: true
+    border-radius: 6
+    stroke-width: 2
+  }
+}
+
+guidance: "Guidance\nStay on the line" {
+  left: 1110
+  top: 640
+  width: 260
+  height: 100
+  style: {
+    fill: "#111B29"
+    stroke: "#7893A5"
+    font-color: "#E8F3F0"
+    font-size: 22
+    bold: false
+    border-radius: 6
+    stroke-width: 2
+  }
+}
+
+power: "Power + thermal\nKeep the lights on" {
+  left: 160
+  top: 870
+  width: 245
+  height: 100
+  style: {
+    fill: "#111B29"
+    stroke: "#7893A5"
+    font-color: "#E8F3F0"
+    font-size: 22
+    bold: false
+    border-radius: 6
+    stroke-width: 2
+  }
+}
+
+safety: "Range safety\nProtect the envelope" {
+  left: 965
+  top: 870
+  width: 245
+  height: 100
+  style: {
+    fill: "#111B29"
+    stroke: "#7893A5"
+    font-color: "#E8F3F0"
+    font-size: 22
+    bold: false
+    border-radius: 6
+    stroke-width: 2
+  }
+}
+
+ground: "GROUND\nReady for the return" {
+  left: 545
+  top: 1030
+  width: 280
+  height: 100
+  style: {
+    fill: "#283B4E"
+    stroke: "#283B4E"
+    font-color: "#E8F3F0"
+    font-size: 23
+    bold: true
+    border-radius: 6
+    stroke-width: 2
+  }
+}
+
+vehicle -> tracking: {
+  style.stroke: "#69D7C3"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#69D7C3"
+}
+
+tracking -> telemetry: {
+  style.stroke: "#7893A5"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#7893A5"
+}
+
+telemetry -> flight: {
+  style.stroke: "#69D7C3"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#69D7C3"
+}
+
+flight -> guidance: {
+  style.stroke: "#69D7C3"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#69D7C3"
+}
+
+guidance -> uplink: {
+  style.stroke: "#7893A5"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#7893A5"
+}
+
+uplink -> vehicle: {
+  style.stroke: "#69D7C3"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#69D7C3"
+}
+
+power -> flight: {
+  style.stroke: "#7893A5"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#7893A5"
+}
+
+safety -> flight: {
+  style.stroke: "#EEC583"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#EEC583"
+}
+
+ground -> power: {
+  style.stroke: "#7893A5"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#7893A5"
+}
+
+flight -> ground: {
+  style.stroke: "#69D7C3"
+  style.stroke-width: 2
+  style.font-size: 16
+  style.font-color: "#69D7C3"
+}
+
+watch: "ON WATCH" {
+  left: 0
+  top: 1080
+  width: 270
+  height: 30
+  shape: text
+  style: {
+    fill: "transparent"
+    stroke: "transparent"
+    font-color: "#7893A5"
+    font-size: 16
+    bold: true
+  }
+}
+
+status: "All stations listening." {
+  left: 0
+  top: 1120
+  width: 370
+  height: 38
+  shape: text
+  style: {
+    fill: "transparent"
+    stroke: "transparent"
+    font-color: "#E8F3F0"
+    font-size: 21
+    bold: false
+  }
+}
+
+rule: "ONE RULE" {
+  left: 1020
+  top: 1080
+  width: 350
+  height: 30
+  shape: text
+  style: {
+    fill: "transparent"
+    stroke: "transparent"
+    font-color: "#EEC583"
+    font-size: 16
+    bold: true
+  }
+}
+
+rule_text: "Say it before it matters." {
+  left: 1020
+  top: 1120
+  width: 350
+  height: 38
+  shape: text
+  style: {
+    fill: "transparent"
+    stroke: "transparent"
+    font-color: "#E8F3F0"
+    font-size: 21
+    bold: false
+  }
+}
+
+footer: "AQUA  /  COMMAND LOOP                  AMBER  /  SAFETY AUTHORITY" {
+  left: 0
+  top: 1230
+  width: 1370
+  height: 35
+  shape: text
+  style: {
+    fill: "transparent"
+    stroke: "transparent"
+    font-color: "#7893A5"
+    font-size: 16
+    bold: true
+  }
+}

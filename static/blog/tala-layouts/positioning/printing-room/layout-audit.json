@@ -1,0 +1,149 @@
+{
+  "id": "printing-room",
+  "title": "The Printing Room",
+  "d2_repository": "https://github.com/d2lang/d2",
+  "d2_commit": "99b07917c875249656a93d65097236ad0bec73f6",
+  "tala_seeds": [
+    1,
+    2,
+    3
+  ],
+  "source_sha256": "68146ff2a120fa23685a3088eb1cc9934df854931578e84bcec6ebb2bf0dd22b",
+  "pinned_ids": [
+    "press.c",
+    "press.k",
+    "press.m",
+    "press.y"
+  ],
+  "automatic_ids": [
+    "finishing.bind",
+    "finishing.edition",
+    "finishing.trim",
+    "prepress.manuscript",
+    "prepress.plates",
+    "prepress.proof",
+    "press.camera",
+    "press.dryer",
+    "press.feed",
+    "press.registration"
+  ],
+  "automatic_container_count": 3,
+  "automatic_nodes_sharing_pinned_scope": [
+    "press.camera",
+    "press.dryer",
+    "press.feed",
+    "press.registration"
+  ],
+  "pinned_geometry_checks": [
+    {
+      "from": "press.c",
+      "to": "press.k",
+      "axis": "x",
+      "specified_delta": 840.0,
+      "rendered_delta": 840,
+      "passed": true
+    },
+    {
+      "from": "press.c",
+      "to": "press.k",
+      "axis": "y",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    },
+    {
+      "from": "press.c",
+      "to": "press.m",
+      "axis": "x",
+      "specified_delta": 280.0,
+      "rendered_delta": 280,
+      "passed": true
+    },
+    {
+      "from": "press.c",
+      "to": "press.m",
+      "axis": "y",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    },
+    {
+      "from": "press.c",
+      "to": "press.y",
+      "axis": "x",
+      "specified_delta": 560.0,
+      "rendered_delta": 560,
+      "passed": true
+    },
+    {
+      "from": "press.c",
+      "to": "press.y",
+      "axis": "y",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    },
+    {
+      "from": "press.k",
+      "to": "press.m",
+      "axis": "x",
+      "specified_delta": -560.0,
+      "rendered_delta": -560,
+      "passed": true
+    },
+    {
+      "from": "press.k",
+      "to": "press.m",
+      "axis": "y",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    },
+    {
+      "from": "press.k",
+      "to": "press.y",
+      "axis": "x",
+      "specified_delta": -280.0,
+      "rendered_delta": -280,
+      "passed": true
+    },
+    {
+      "from": "press.k",
+      "to": "press.y",
+      "axis": "y",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    },
+    {
+      "from": "press.m",
+      "to": "press.y",
+      "axis": "x",
+      "specified_delta": 280.0,
+      "rendered_delta": 280,
+      "passed": true
+    },
+    {
+      "from": "press.m",
+      "to": "press.y",
+      "axis": "y",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    }
+  ],
+  "node_overlap_count": 0,
+  "node_overlaps": [],
+  "sibling_container_overlap_count": 0,
+  "sibling_container_overlaps": [],
+  "containment_failure_count": 0,
+  "containment_failures": [],
+  "previous_geometry_comparison": {
+    "available": true,
+    "source_sha256_matches": true,
+    "changed_object_count": 0,
+    "changes": []
+  },
+  "errors": [],
+  "all_checks_passed": true
+}

@@ -1,0 +1,154 @@
+{
+  "id": "robot-chassis",
+  "title": "MULE / Utility Rover",
+  "d2_repository": "https://github.com/d2lang/d2",
+  "d2_commit": "99b07917c875249656a93d65097236ad0bec73f6",
+  "tala_seeds": [
+    1,
+    2,
+    3
+  ],
+  "source_sha256": "23f0ba311b21edcf64d01d6a36547e57ca9e47fe6670456f6d6bb8f9926f60e3",
+  "pinned_ids": [
+    "chassis.fl",
+    "chassis.fr",
+    "chassis.rl",
+    "chassis.rr"
+  ],
+  "automatic_ids": [
+    "chassis.battery",
+    "chassis.drive",
+    "chassis.estop",
+    "chassis.imu",
+    "chassis.lidar",
+    "chassis.planner",
+    "chassis.power",
+    "chassis.telemetry",
+    "fleet.console",
+    "fleet.dispatch",
+    "fleet.dock"
+  ],
+  "automatic_container_count": 2,
+  "automatic_nodes_sharing_pinned_scope": [
+    "chassis.battery",
+    "chassis.drive",
+    "chassis.estop",
+    "chassis.imu",
+    "chassis.lidar",
+    "chassis.planner",
+    "chassis.power",
+    "chassis.telemetry"
+  ],
+  "pinned_geometry_checks": [
+    {
+      "from": "chassis.fl",
+      "to": "chassis.fr",
+      "axis": "x",
+      "specified_delta": 600.0,
+      "rendered_delta": 600,
+      "passed": true
+    },
+    {
+      "from": "chassis.fl",
+      "to": "chassis.fr",
+      "axis": "y",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    },
+    {
+      "from": "chassis.fl",
+      "to": "chassis.rl",
+      "axis": "x",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    },
+    {
+      "from": "chassis.fl",
+      "to": "chassis.rl",
+      "axis": "y",
+      "specified_delta": 600.0,
+      "rendered_delta": 600,
+      "passed": true
+    },
+    {
+      "from": "chassis.fl",
+      "to": "chassis.rr",
+      "axis": "x",
+      "specified_delta": 600.0,
+      "rendered_delta": 600,
+      "passed": true
+    },
+    {
+      "from": "chassis.fl",
+      "to": "chassis.rr",
+      "axis": "y",
+      "specified_delta": 600.0,
+      "rendered_delta": 600,
+      "passed": true
+    },
+    {
+      "from": "chassis.fr",
+      "to": "chassis.rl",
+      "axis": "x",
+      "specified_delta": -600.0,
+      "rendered_delta": -600,
+      "passed": true
+    },
+    {
+      "from": "chassis.fr",
+      "to": "chassis.rl",
+      "axis": "y",
+      "specified_delta": 600.0,
+      "rendered_delta": 600,
+      "passed": true
+    },
+    {
+      "from": "chassis.fr",
+      "to": "chassis.rr",
+      "axis": "x",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    },
+    {
+      "from": "chassis.fr",
+      "to": "chassis.rr",
+      "axis": "y",
+      "specified_delta": 600.0,
+      "rendered_delta": 600,
+      "passed": true
+    },
+    {
+      "from": "chassis.rl",
+      "to": "chassis.rr",
+      "axis": "x",
+      "specified_delta": 600.0,
+      "rendered_delta": 600,
+      "passed": true
+    },
+    {
+      "from": "chassis.rl",
+      "to": "chassis.rr",
+      "axis": "y",
+      "specified_delta": 0.0,
+      "rendered_delta": 0,
+      "passed": true
+    }
+  ],
+  "node_overlap_count": 0,
+  "node_overlaps": [],
+  "sibling_container_overlap_count": 0,
+  "sibling_container_overlaps": [],
+  "containment_failure_count": 0,
+  "containment_failures": [],
+  "previous_geometry_comparison": {
+    "available": true,
+    "source_sha256_matches": true,
+    "changed_object_count": 0,
+    "changes": []
+  },
+  "errors": [],
+  "all_checks_passed": true
+}
