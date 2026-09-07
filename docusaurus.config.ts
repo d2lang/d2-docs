@@ -221,6 +221,10 @@ const config: Config = {
         fromExtensions: ["html", "htm"],
         redirects: [
           {
+            to: "/blog/tala-is-open-source/",
+            from: ["/blog/tala-layouts/"],
+          },
+          {
             to: "/tour/intro/",
             from: ["/tour"],
           },
