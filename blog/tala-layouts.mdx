@@ -23,7 +23,7 @@ import PositionSource5 from "@site/static/blog/tala-layouts/positioning/friday-d
 import PositionSource7 from "@site/static/blog/tala-layouts/positioning/internet-jellyfish/source.d2";
 import PositionSource8 from "@site/static/blog/tala-layouts/positioning/orbital-coffee/source.d2";
 
-Following up on the announcement [here](https://d2lang.com/blog/d2-non-profit/), TALA (Terrastruct's AutoLayout Algorithm) is now open-source under the same permissive license as D2 (MPL-2.0).
+Following up on the announcement [here](https://d2lang.com/blog/d2-non-profit/), TALA (Terrastruct's AutoLayout Algorithm) is now open-source under the same license as D2 (MPL-2.0).
 
 <!-- truncate -->
 
@@ -32,13 +32,13 @@ TALA is a novel autolayout algorithm designed with software architecture diagram
 I'll keep the text short and lead with examples.
 
 - The first batch compares diagrams rendered with TALA with the other two layout algorithms D2 comes with -- Dagre and ELK. These are not hand-selected, I just found public d2 files from around GitHub. So for some, you may very well prefer the not-TALA layout.
-- The second batch demonstrates a unique property of TALA, which is that node positions and sizes can be customized, e.g. locking in the coordinates. This lends itself especially well to agentic use cases, where models can draw in 2d space well, but TALA still takes care of routing, which models still struggle with. I had AI generate these.
+- The second batch demonstrates a unique property of TALA, which is that node positions and sizes can be customized, e.g. locking in the coordinates. This lends itself especially well to agentic use cases, where models can draw in 2D space well, but TALA still takes care of routing, which models still struggle with. I had AI generate these.
 - The third batch demonstrates TALA's capability to support a hybrid of some nodes specifying coordinates and some left to the layout engine. You might have a specific shape of a collection of nodes in mind, which you can specify with coordinates, and TALA can take care of the rest. Again, AI generated.
 
 Please also note that TALA is not without tradeoffs.
 
 - It has randomness in the algorithm. It finds the best layout by using a default of 3 seeds and choosing the one scored the best. Given the same seeds and same input, it'll produce the same diagram. But let's say you just add one more node. The diagram could look completely different. In Dagre and ELK, it looks mostly the same as prior, with the extra node accommodated for. This is sometimes desirable.
-- It doesn't do DAGs as well. I often myself preferring Dagre or ELK when I want a long flowing graph.
+- It doesn't do DAGs as well. I often find myself preferring Dagre or ELK when I want a long flowing graph.
 - It can take longer to run for larger diagrams -- scaling nonlinearly. For a benchmark of TALA's runtime performance compared to others, see [https://github.com/d2lang/d2-benchmarks](https://github.com/d2lang/d2-benchmarks).
 
 TALA comes bundled into D2 v0.9.0, so just install and specify with `--layout=tala` to try it out! Or head on over to [https://play.d2lang.com](https://play.d2lang.com/?layout=tala&script=7Jjfb-JGEMff_VeMLs8YWJOGbqVK6fWqVsq1dyRVXipFY--AVzG7vt11I3rif6_8C2xwCknjpJV4ifES5vPd-eUdn8G1zkxEHGLnUsuHw4V0cRb6kV4OFzpBtRh8ySijYfk3THQ4ZHjxbThFjIJvCCO8OJ_O55P5-WTM5lE4mZ6HI3YhxPl0KJe4IDucJ_phMAp8wbwzuJIRKUscPv5y8x1YIph9uLy6u_1tdvWjvxS-dwaXAlOHTmrF4SaWRgxSNG4FMtLKgqE0wYgEPEgXQ5jJxA2kggRDSkiAjTEl63uekIai0oiRi9h5XmbJjMYcfi-u8NWD8r85pGSsVvm9WyXEi68AllniZJrfO5NRsRTqRDRu51q5gZV_EQc29QDW3rrCsArD-sUEFSboFzOpMJPeMJFWDqUic5caLbKIzF0eqmsyf8qIqmjthXSHfRDkATi096Nx_YvWzzvF71lt2Q1YsbZuWWd9WS9qkMPn_AJXMjRoVt2of7LKpvWaTBIOsVa0EvRQoYpLHQMOn6pPG8s7oA5U1xa2uE-Y4gpvY5m2vhik6BwZxWFhUKqGdSPIDAwKmVkO0xaDw1IrXS2tOyIxhsH3pdf87ZY-qGIFbtDed3sPlVyiI3F0oNi0A87eAv5IKbFtKbFTKZ1K6VRKR5WSQIchWuIwk2rxh_ohm8_JNB-C0SqRSpA5vn6qMLYjlUhF1tsLRiFCu5jMnXXaEId37-DrLkunGEm34jCqnWZISMthll9q1-zpfVKmB6yx1kqWLd2_aIfOYBhKt_zCYYZhqN3Hz20tRfheSsiGqtBZDr9e3lz3SHt0263-m59Xs2V1lLnV5n5z7jy131dqv3UIOLyvPv3v2m_Z9-qN5J2wjvzPqETSa_d9hM2OYD_vyLItGbYpmdOJZWM96NX6pNdyH41PBX98wY_YyVtP8Nb4LRvkaPy8FvlCdLZPD96UPumdvva8szx5VflIqN_t5Qo63yT5dUa8N4SuoaulqkPT8S_8DrBZj-zgMTbrf9-TA-ye9t3t6faImCvbTnDX-QDVvwjWIaIxwfnboei_IqicFbsGyx1kY-QJ_g2xnNCeCawD2k67xqTlt8-sHH4iF8Uv6-dDIpi_-1zoRUZXXh2SxF5RUp5ZT9FzRErsQruTZDfb3kLE3wMA&), which runs 100% client-side. I especially look forward to the improvements that being open-source brings, and can't wait to see what improvements and ideas are submitted by the community.
