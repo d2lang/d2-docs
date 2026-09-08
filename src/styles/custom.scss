@@ -31,7 +31,8 @@ strong {
   --button-hover: var(--steel-800);
   --icon-filter: var(--white-filter);
 
-  .theme-admonition {
+  .theme-admonition,
+  details.alert--info {
     background: var(--steel-800);
   }
 }
