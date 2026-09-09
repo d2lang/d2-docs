@@ -73,9 +73,7 @@ export default function DonorList() {
     );
   }
 
-  const years = [
-    ...new Set(donations.map((d) => new Date(d.date).getUTCFullYear())),
-  ];
+  const years = [...new Set(donations.map((d) => new Date(d.date).getUTCFullYear()))];
 
   return (
     <div className={styles.list}>
@@ -83,10 +81,7 @@ export default function DonorList() {
         <section key={year} aria-labelledby={`donations-${year}`}>
           <h2 id={`donations-${year}`}>{year}</h2>
           <div className={styles.tableContainer}>
-            <table
-              className={styles.table}
-              aria-labelledby={`donations-${year}`}
-            >
+            <table className={styles.table} aria-labelledby={`donations-${year}`}>
               <thead>
                 <tr>
                   <th scope="col">Date</th>
