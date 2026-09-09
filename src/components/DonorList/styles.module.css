@@ -1,0 +1,45 @@
+.list {
+  margin: 2rem 0;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  margin-bottom: var(--ifm-spacing-vertical);
+}
+
+.table {
+  display: table;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.table .amount {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.date,
+.type {
+  white-space: nowrap;
+}
+
+.name {
+  overflow-wrap: anywhere;
+  min-width: 10rem;
+}
+
+.source {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.notice {
+  margin: 2rem 0;
+}
+
+@media (min-width: 577px) {
+  .actions :global(.button) {
+    flex-basis: auto;
+  }
+}
