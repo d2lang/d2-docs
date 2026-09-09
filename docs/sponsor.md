@@ -23,6 +23,8 @@
 
 ## Where the money goes
 
+Thank you to [our donors](/donors/) for supporting D2.
+
 D2 is free and open source.
 
 Donations support:

@@ -158,9 +158,10 @@ const sidebars: SidebarsConfig = {
     "tour/troubleshoot",
     "tour/help",
     {
-      type: "doc",
-      id: "sponsor",
+      type: "category",
       label: "Sponsor D2",
+      link: { type: "doc", id: "sponsor" },
+      items: ["donors"],
     },
   ],
   releasesSidebar: [

@@ -1,0 +1,27 @@
+---
+title: Donors
+description: Thank you to the people and organizations supporting D2.
+---
+
+import DonorList from "@site/src/components/DonorList";
+import styles from "@site/src/components/DonorList/styles.module.css";
+
+# Donors
+
+<p className="hero__subtitle sponsorSubtitle margin-bottom--lg">
+    Thank you, truly.
+</p>
+
+<div className={`sponsorActions margin-top--lg margin-bottom--lg ${styles.actions}`}>
+  <a
+    className="button button--primary button--lg"
+    href="https://hcb.hackclub.com/donations/start/d2"
+  >
+    <span>Donate to D2</span>
+  </a>
+  <a className="button button--primary button--outline button--lg" href="/sponsor/">
+    <span>How donations are used</span>
+  </a>
+</div>
+
+<DonorList />
