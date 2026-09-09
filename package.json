@@ -10,7 +10,6 @@
     "prod": "docusaurus build",
     "clear": "docusaurus clear",
     "swizzle": "docusaurus swizzle",
-    "write-translations": "docusaurus write-translations",
     "spell-check": "cspell \"**/*.md\" --config .cspell.json --no-exit-code --quiet | grep 'fix:' || echo 'No spelling errors found'"
   },
   "dependencies": {

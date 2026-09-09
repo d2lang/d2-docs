@@ -31,20 +31,7 @@ yarn
 yarn run dev
 ```
 
-### Translations
-
-Help wanted for translations.
-
-Current efforts:
-
-- Korean (Thanks @Baejw0111)
-
-To preview in dev mode: `yarn dev --locale ko`.
-
-Translations are filed under `i18n/ko/docusaurus-plugin-content-docs/current`.
-
-Once we have enough docs translated for a certain language (e.g. above 80%), we'll enable
-the locale switcher on the nav bar for that language.
+The site is maintained in English only.
 
 ### Note
 

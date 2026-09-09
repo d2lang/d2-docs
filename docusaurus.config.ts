@@ -62,15 +62,7 @@ const config: Config = {
 
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "ko"],
-    localeConfigs: {
-      en: {
-        label: "English",
-      },
-      ko: {
-        label: "Korean (한국어)",
-      },
-    },
+    locales: ["en"],
   },
 
   presets: [
@@ -219,6 +211,11 @@ const config: Config = {
       "@docusaurus/plugin-client-redirects",
       {
         fromExtensions: ["html", "htm"],
+        // Keep links to retired translations pointing to the English pages.
+        createRedirects: (existingPath: string) => [
+          `/ko${existingPath}`,
+          `/zh-cn${existingPath}`,
+        ],
         redirects: [
           {
             to: "/blog/tala-is-open-source/",
