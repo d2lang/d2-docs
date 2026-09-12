@@ -6,7 +6,8 @@ import Dimensions from '@site/static/d2/dimensions.d2';
 You can specify the `width` and `height` of most shapes.
 
 :::info
-These keywords cannot be set on containers, since containers resize to fit their children.
+These keywords can be set on containers when using TALA or ELK. TALA may increase the
+dimensions to fit the children.
 :::
 
 <CodeBlock className="language-d2">

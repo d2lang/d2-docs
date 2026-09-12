@@ -44,8 +44,8 @@ These are mentioned in other parts of the doc and aggregated here:
 
 - `near` set to another object. `near` can be set to constants for all layout engines, but
   only TALA can use it to set to objects.
-- `width` and `height` on containers. TALA will add this soon, but currently it is only in
-  ELK. Note that these keywords work on non-containers in all layout engines.
+- `width` and `height` on containers are supported by TALA and ELK. These keywords work on
+  non-containers in all layout engines.
 - `top` and `left` to lock positions only work in TALA.
 - Connections from ancestors to descendants (e.g. a container to its child) do not work in
   Dagre.

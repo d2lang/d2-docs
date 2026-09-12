@@ -65,9 +65,11 @@ from stdin and writing to stdout. Images and fonts are by default embedded into 
 diagram so that exported diagrams are standalone -- they'll look the same everywhere. D2
 supports a wide variety of formats like PPT and GIF. It allows imports, such that you can
 modularize your diagram into multiple files. There's a language API to programmatically
-edit and write D2. All of these are antithetical to a web library for browser rendering.
-D2 intends to ship and maintain a web library for that purpose, but it'll be trimmed down
-from the full feature set and secondary in priority.
+edit and write D2.
+
+D2 also runs in browsers and Node.js through
+[D2.js](https://github.com/d2lang/d2/tree/master/d2js/js#readme), a JavaScript library
+powered by WebAssembly.
 
 ## Singular use case: documenting software
 

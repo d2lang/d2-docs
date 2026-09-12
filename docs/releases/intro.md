@@ -2,9 +2,9 @@
 
 :::info Latest
 
-Version: [0.7.1](/releases/0.7.1) (released August 19, 2025)
+Version: [0.9.0](/releases/0.9.0) (released September 7, 2026)
 
-Downloads: [Assets](https://github.com/d2lang/d2/releases/tag/v0.7.1)
+Downloads: [Assets](https://github.com/d2lang/d2/releases/tag/v0.9.0)
 
 :::
 

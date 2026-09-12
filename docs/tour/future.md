@@ -127,9 +127,10 @@ aim to be at least as good as an existing, battle-tested text-based styling lang
 
 ### Plan
 
-1. Build language features to make customization easier. Things like glob targeting (e.g.
-x.*.style.fill: red to make every child of a container red) and classes (define styles
-once, reuse as classes). Its catalog of shape and connection types needs to expand.
+1. Continue building language features to make customization easier. D2 supports
+[glob targeting](/tour/globs) (e.g. `x.*.style.fill: red` to make every child of a container
+red) and [classes](/tour/classes) (define styles once, reuse as classes). Its catalog of
+shape and connection types needs to expand.
 1. Continue investing in themes. Theming is how engineers make beautiful diagrams without
 designing. D2 needs to extend what themes can latch onto. Not just colors, but fonts,
 background styles (dotted, grids, colors), every aspect of the diagram. They should be
@@ -176,10 +177,9 @@ unplanned usage.
 1. Complete editor integrations. Currently, syntax highlighting is supported. But a
    feature-complete integration for VSCode for example would allow rendering to its
    built-in browser, autoformat, call out to LSP functions to refactor, and more.
-1. Build out imports/exports. Currently, D2 can take in D2 files and export to SVGs. It
-   should have a transpiler to import other popular text-to-diagram languages, and output
-   to other popular image types. It should take in CSVs of schemas to make ERDs. It should
-   be able to render to ASCII art.
+1. Build out imports/exports. D2 exports to [SVG, PNG, PDF, PPTX, GIF, and ASCII](/tour/exports).
+   It should have a transpiler to import other popular text-to-diagram languages. It
+   should take in CSVs of schemas to make ERDs.
 1. Build a configurable linter.
 
 ## Your feedback
@@ -199,8 +199,7 @@ GUI diagram-makers will always be necessary.
 [2] MermaidJS seems to have implemented support for containers as well, but it's not
 widely released and their live editor still won't allow it.
 
-[3] For now, this is closed-source. It's free to download and evaluate. To learn more,
-visit [https://terrastruct.com/tala](https://terrastruct.com/tala).
+[3] [TALA](/tour/tala) is open-source and bundled with D2 as of v0.9.0.
 
 [4] If you still miss the hand-drawn aesthetic, D2 has just the thing:
 https://github.com/d2lang/d2/pull/492

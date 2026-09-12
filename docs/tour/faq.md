@@ -42,8 +42,14 @@ No, D2 can run entirely server-side.
 ### Can D2 run on a browser?
 
 Yes, with WebAssembly. D2 runs on [https://play.d2lang.com](https://play.d2lang.com) this
-way.We are working on including the build with the releases, as well as provide
-instructions and examples so you can include it in your browser projects.
+way. To include D2 in your own browser projects, install D2.js:
+
+```shell
+npm install @d2lang/d2
+```
+
+See the [D2.js docs](https://github.com/d2lang/d2/tree/master/d2js/js#readme) for
+instructions and examples.
 
 ### Can I use D2 online?
 
