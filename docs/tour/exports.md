@@ -22,14 +22,12 @@ file will be the input name as an SVG file.
 
 For example, `d2 in.d2` will produce a file named `in.svg`.
 
-The resulting SVG has CSS injected into it. This, along with the use of HTML
-`<foreignObject>`s used to make Markdown work, means that the SVG is meant to be viewed in
-a web context. For example, opening it up in your browser, embedding it onto a webpage. It
-may not look right without a web context, like in Inkscape or Adobe Illustrator.
+The resulting SVG has CSS injected into it. You can open it in your browser or embed it
+onto a webpage. Different SVG viewers may handle CSS and fonts differently.
 
 On the CLI, if you pass in `-`
 - for the input, it reads D2 from stdin
-- for the output, it writes SVG to stdout
+- for the output, it writes SVG to stdout by default
 
 :::info Technical details on SVG exports This information might be useful if you're
 planning on doing post-processing on the SVG exports.
@@ -49,21 +47,8 @@ conflicts when multiple diagrams are on the same page.
 d2 in.d2 out.png
 ```
 
-PNG exports work by [Playwright](https://github.com/microsoft/playwright) spinning up a
-headless browser, putting the SVG onto it, and taking a screenshot. The first invocation
-of Playwright will download its dependencies, if they don't already exist on the machine.
-
-:::info
-If you get a message like `err: failed to launch Chromium`, you can try installing
-Playwright dependencies outside of D2 on your machine. For example:
-
-```
-npm install -g @playwright
-npx playwright install --with-deps chromium
-```
-
-See [#744](https://github.com/d2lang/d2/issues/744#issuecomment-1446641870) for more.
-:::
+PNG exports have no external dependencies. D2 renders them directly, unlike Mermaid,
+which uses a headless browser like Chromium to render diagrams and take screenshots.
 
 ## PDF
 
@@ -72,8 +57,7 @@ d2 in.d2 out.pdf
 ```
 
 PDF exports are the result of taking PNG exports and placing them on PDF pages, along with
-headers and fonts. As such, dependencies needed for PNG exports are also needed for PDF
-exports.
+headers and fonts.
 
 PDF is _more_ interactive than PNG, but _less_ interactive than SVG.
 
@@ -159,11 +143,19 @@ d2 --ascii-mode standard in.d2 out.txt
 
 ## Stdout
 
-D2 accepts `-` in place of the input and/or output arguments. SVG is used as the format
-for Stdout output.
+D2 accepts `-` in place of the input and/or output arguments. SVG is the default format
+for stdout.
 
 For example, this writes a D2 script of `x -> y` and outputs it to a file `example.svg`.
 
 ```shell
 echo "x -> y" | d2 - - > example.svg
 ```
+
+To use a different format, pass `--stdout-format`:
+
+```shell
+echo "x -> y" | d2 --stdout-format=png - - > example.png
+```
+
+Supported formats are `svg`, `png`, `pdf`, `pptx`, `gif`, and `ascii` (`txt` also works).

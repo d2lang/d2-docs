@@ -33,10 +33,10 @@ italic will remain as Source Sans Pro Italic.
 
 If you'd like to customize the mono fonts:
 
-- `--font-regular`
-- `--font-italic`
-- `--font-bold`
-- `--font-semibold`
+- `--font-mono`
+- `--font-mono-italic`
+- `--font-mono-bold`
+- `--font-mono-semibold`
 
 ## Sketch font
 

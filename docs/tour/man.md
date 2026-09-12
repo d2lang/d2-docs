@@ -4,29 +4,31 @@ pagination_next: tour/exports
 
 # CLI manual
 
-The following is a copy of the `man` (manual) for the CLI. It is identical to the output
-you would get by installing the CLI and running `man d2`.
+The following is a copy of the `man` (manual) for D2 v0.9.0. Run `man d2` to view the
+manual for your installed version.
 
-```rolf
-d2(1)			    General Commands Manual			 d2(1)
-
+```text
 NAME
      d2 – compiles and renders d2 diagrams into svgs.
 
 SYNOPSIS
      d2 [--watch false] [--theme 0] [--salt string] file.d2
-	[file.svg | file.png]
+	[file.svg | file.png | file.pdf | file.pptx | file.gif | file.txt]
      d2 layout [name]
      d2 fmt file.d2 ...
      d2 play file.d2
      d2 validate file.d2
 
 DESCRIPTION
-     d2 compiles and renders file.d2 to file.svg | file.png.
+     d2 compiles and renders file.d2 to file.svg | file.png | file.pdf |
+     file.pptx | file.gif | file.txt.
 
      It defaults to file.svg if no output path is passed.
 
      Pass - to have d2 read from stdin or write to stdout.
+
+     PNG exports support up to 32768 pixels per dimension, subject to
+     rendering resource limits.
 
      Never use the presence of the output file to check for success.  Always
      use the exit status of d2.  This is because sometimes when errors occur
@@ -65,11 +67,6 @@ OPTIONS
      -s, --sketch false
 		 Renders the diagram to look like it was sketched by hand.
 
-     --ascii-mode extended
-		 Character set to use for ASCII output (.txt extension or
-		 --stdout-format ascii). Options: standard (basic ASCII) or
-		 extended (Unicode box-drawing characters).
-
      --center flag
 		 Center the SVG in the containing viewbox, such as your
 		 browser screen.
@@ -91,12 +88,33 @@ OPTIONS
 		 Path to .ttf file to use for the bold font. If none provided,
 		 Source Sans Pro Bold is used.
 
+     --font-semibold
+		 Path to .ttf file to use for the semibold font. If none
+		 provided, Source Sans Pro Semibold is used.
+
+     --font-mono
+		 Path to .ttf file to use for the monospace font. If none
+		 provided, Source Code Pro Regular is used.
+
+     --font-mono-bold
+		 Path to .ttf file to use for the monospace bold font. If none
+		 provided, Source Code Pro Bold is used.
+
+     --font-mono-italic
+		 Path to .ttf file to use for the monospace italic font. If
+		 none provided, Source Code Pro Italic is used.
+
+     --font-mono-semibold
+		 Path to .ttf file to use for the monospace semibold font. If
+		 none provided, Source Code Pro Semibold is used.
+
      --pad 100	 Pixels padded around the rendered diagram.
 
      --animate-interval 0
 		 If given, multiple boards are packaged as 1 SVG which
 		 transitions through each board at the interval (in
-		 milliseconds). Can only be used with SVG and GIF exports.
+		 milliseconds). Can only be used with SVG or GIF exports. For
+		 GIF exports, defaults to 1000ms if not specified.
 
      --browser true
 		 Browser executable that watch opens. Setting to 0 opens no
@@ -150,12 +168,19 @@ OPTIONS
 
      --stdout-format string
 		 Set the output format when writing to stdout. Supported
-		 formats are: png, svg, ascii. Only used when output is set to stdout
-		 (-).
+		 formats are: png, svg, ascii, txt, pdf, pptx, gif. Only used
+		 when output is set to stdout (-).
 
      --no-xml-tag false
 		 Omit XML tag (<?xml ...?>) from output SVG files. Useful when
 		 generating SVGs for direct HTML embedding.
+
+     --omit-version false
+		 omit D2 version from generated image.
+
+     --ascii-mode extended
+		 ASCII rendering mode for text outputs. Options: 'standard'
+		 (basic ASCII chars) or 'extended' (Unicode chars).
 
 SUBCOMMANDS
      layout	 Lists available layout engine options with short help.
@@ -217,6 +242,18 @@ ENVIRONMENT VARIABLES
      D2_FONT_SEMIBOLD
 	     See --font-semibold flag.
 
+     D2_FONT_MONO
+	     See --font-mono flag.
+
+     D2_FONT_MONO_BOLD
+	     See --font-mono-bold flag.
+
+     D2_FONT_MONO_ITALIC
+	     See --font-mono-italic flag.
+
+     D2_FONT_MONO_SEMIBOLD
+	     See --font-mono-semibold flag.
+
      D2_ANIMATE_INTERVAL
 	     See --animate-interval flag.
 
@@ -225,6 +262,9 @@ ENVIRONMENT VARIABLES
 
      D2_CHECK
 	     See --check flag.
+
+     D2_ASCII_MODE
+	     See --ascii-mode flag.
 
      DEBUG   See -d[ebug] flag.
 
@@ -241,17 +281,12 @@ ENVIRONMENT VARIABLES
      D2_STDOUT_FORMAT
 	     See --stdout-format flag.
 
-     D2_ASCII_MODE
-	     See --ascii-mode flag.
-
      D2_NO_XML_TAG
 	     See --no-xml-tag flag.
 
-SEE ALSO
-     d2plugin-tala(1)
+     OMIT_VERSION
+	     See --omit-version
 
 AUTHORS
-     Terrastruct Inc.
-
-macOS 14.1			March 12, 2025			    macOS 14.1
+     D2 contributors
 ```

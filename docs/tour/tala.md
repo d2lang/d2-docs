@@ -2,19 +2,8 @@
 
 **[🔗 Gallery](/examples/tala)**
 
-Proprietary layout engine developed by Terrastruct, designed specifically for software
+A novel layout engine developed by Terrastruct, designed specifically for software
 architecture diagrams.
-
-TALA is a separate install from D2, to keep a clean cut between 100% free and
-open-source D2, and proprietary, closed-source TALA. You can download it here:
-[https://github.com/terrastruct/tala](https://github.com/terrastruct/tala#installation).
-
-## Reference
-
-[https://terrastruct.com/tala/](https://terrastruct.com/tala/)
-
-For the most up-to-date information, please see the [official TALA
-manual](https://github.com/terrastruct/TALA/blob/master/TALA_User_Manual.pdf).
 
 ## Pros
 
@@ -32,8 +21,5 @@ manual](https://github.com/terrastruct/TALA/blob/master/TALA_User_Manual.pdf).
 
 ## Cons
 
-- Not free.
-- Relatively new. ~2 years in production compared to the 10+ years that alternative layout
-  engines have.
-- More random than other layout engines. A small change to a label can cascade into an
+- Has randomness. A small change to a label can cascade into an
   entirely different layout.

@@ -119,7 +119,7 @@ const moreFeatures = [
   },
   {
     title: "Exports",
-    description: "On the CLI, you may export .d2 into SVG, PNG, PDF.  More coming soon!",
+    description: "Export .d2 into SVG, PNG, PDF, PPTX, GIF, and ASCII.",
     icon: "exports.svg",
     href: "/tour/exports/",
   },

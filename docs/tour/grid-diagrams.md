@@ -164,10 +164,8 @@ Connections for grids themselves work normally as you'd expect.
 
 ### Connections between grid cells
 
-Connections between shapes inside a grid work a bit differently. Because a grid structure
-imposes positioning outside what the layout engine controls, the layout engine is also
-unable to make routes. Therefore, these connections are center-center straight segments,
-i.e., no path-finding.
+With Dagre and ELK, connections between shapes inside a grid are center-center straight
+segments, i.e., no path-finding. With TALA, these connections use TALA's routing engine.
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/grid-connections.svg2')}}></div>
 
@@ -179,8 +177,7 @@ i.e., no path-finding.
 
 ## Nesting
 
-Currently you can nest grid diagrams within grid diagrams. Nesting other types is coming
-soon.
+You can nest grid diagrams, sequence diagrams, and regular diagrams within grids.
 
 <CodeBlock className="language-d2">
     {GridNestedGrid}

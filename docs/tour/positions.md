@@ -139,7 +139,20 @@ Notice how the text is positioned near the `aws` node and not the `gcloud` node.
 ## Top and left
 
 On the TALA engine, you can also directly set the `top` and `left` values for objects, and
-the layout engine will only move other objects around it.
+the layout engine will only move other objects around it. Both values must be set together.
 
-For more on this, see page 17 of the [TALA user
-manual](https://github.com/terrastruct/TALA/blob/master/TALA_User_Manual.pdf).
+For example, this locks `x` in place while TALA positions `y` around it:
+
+```d2
+x: {
+  top: 100
+  left: 100
+}
+x -> y
+```
+
+Run with TALA:
+
+```shell
+d2 --layout=tala input.d2 output.svg
+```
