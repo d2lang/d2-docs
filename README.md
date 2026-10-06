@@ -3,6 +3,7 @@
 [![ci](https://github.com/d2lang/d2-docs/actions/workflows/ci.yml/badge.svg)](https://github.com/d2lang/d2-docs/actions/workflows/ci.yml)
 [![daily](https://github.com/d2lang/d2-docs/actions/workflows/daily.yml/badge.svg)](https://github.com/d2lang/d2-docs/actions/workflows/daily.yml)
 [![license](https://img.shields.io/github/license/d2lang/d2-docs?color=9cf)](./LICENSE)
+<a href="https://vercel.com/open-source-program"><img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge-2026.svg" /></a>
 
 This is language documentation for D2, a modern, open-source text-to-diagram DSL. The
 source repository for that is here:
@@ -18,20 +19,58 @@ A more formal reference specification is in the works.
 
 ### Development
 
-Init submodules
+Use Node.js 24 and Yarn 1.22.22. Initialize the public submodules:
 
 ```sh
 git submodule update --init
 ```
 
-Run dev server
+Install the locked dependencies and run the development server:
 
 ```sh
-yarn
-yarn run dev
+npx --yes --package=yarn@1.22.22 -- yarn install --frozen-lockfile
+npx --yes --package=yarn@1.22.22 -- yarn run dev
 ```
 
 The site is maintained in English only.
+
+### Production build
+
+```sh
+DOCUSAURUS_IGNORE_SSG_WARNINGS=true npx --yes --package=yarn@1.22.22 -- yarn run prod
+npx --yes --package=yarn@1.22.22 -- yarn run serve
+```
+
+The static site is generated in `build/`. This includes the custom `404.html`,
+hashed assets, and redirects from retired `/ko/` and `/zh-cn/` translations to the
+English pages. Canonical URLs remain `https://d2lang.com/` with trailing slashes.
+
+### Hosting
+
+Vercel serves production at `https://d2lang.com`; `master` is the production
+branch. Connect this repository to the D2 team's `d2-docs` project, select Node.js
+24, and use the install/build/output settings in `vercel.json`. No build secrets
+are required. Vercel initializes the public Git submodules and builds previews
+for branch changes. Existing GitHub CI and daily checks continue to validate the
+site independently.
+
+Set the GitHub repository variable `D2_DOCS_VERCEL_PROJECT_ID` to this project's
+Vercel ID. Keep the existing `D2_DOCS_ALGOLIA_CRAWLER_API_KEY` GitHub secret; it is
+used only by the `search-index` workflow after Vercel reports a successful
+production promotion. Previews and failed builds do not trigger indexing. Run
+that workflow manually on `master` after the initial DNS cutover or a manual
+rollback/promotion to refresh search against the live production site.
+
+The configuration preserves the same-origin Plausible `/js/script.js` and
+`/api/event` proxies and serves `/install.sh` from the existing
+`d2lang/d2` installer on GitHub's raw content host. Hashed files under `/assets/`
+have immutable browser caching;
+other files use Vercel's default caching. Static filesystem routing serves the
+generated pages and custom 404; no catch-all rewrite turns missing pages into 200s.
+
+Rollback by promoting a previous production deployment in Vercel. The former AWS
+deployment job and script are retired; retained infrastructure and DNS rollback
+are managed separately in `d2lang/infra`.
 
 ### Note
 
