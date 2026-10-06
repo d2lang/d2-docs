@@ -1,0 +1,37 @@
+name: search-index
+
+on:
+  repository_dispatch:
+    types: [vercel.deployment.success]
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: production-search-index
+  cancel-in-progress: false
+
+jobs:
+  reindex:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master') ||
+      (github.event_name == 'repository_dispatch' &&
+       github.actor == 'vercel[bot]' &&
+       github.event.client_payload.environment == 'production' &&
+       github.event.client_payload.state.type == 'success' &&
+       github.event.client_payload.git.ref == 'master' &&
+       vars.D2_DOCS_VERCEL_PROJECT_ID != '' &&
+       github.event.client_payload.project.id == vars.D2_DOCS_VERCEL_PROJECT_ID)
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Reindex the live production site
+        env:
+          D2_DOCS_ALGOLIA_CRAWLER_API_KEY: ${{ secrets.D2_DOCS_ALGOLIA_CRAWLER_API_KEY }}
+        run: |
+          : "${D2_DOCS_ALGOLIA_CRAWLER_API_KEY:?Missing crawler API key}"
+          curl --fail --silent --show-error --connect-timeout 10 --max-time 60 \
+            --header "Content-Type: application/json" \
+            --request POST \
+            --user "dd0bd3fe-db42-4673-89ae-e7e70dfae16b:${D2_DOCS_ALGOLIA_CRAWLER_API_KEY}" \
+            "https://crawler.algolia.com/api/1/crawlers/2d841c67-ab75-4fb1-9114-f8844363d74c/reindex"
