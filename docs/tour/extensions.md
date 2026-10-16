@@ -41,3 +41,4 @@ issue and we're happy to include your's!
 - C# & dotnet SDK: [https://github.com/Stephanvs/d2lang-cs](https://github.com/Stephanvs/d2lang-cs)
 - Zed extension: [https://github.com/gabeidx/zed-d2](https://github.com/gabeidx/zed-d2)
 - Hexo blog extension: [https://github.com/leverimmy/hexo-d2](https://github.com/leverimmy/hexo-d2)
+- macOS file viewer with local D2 previews and Markdown code-fence rendering: [Glim](https://github.com/NeoPanic/Glim) (static previews; external imports and images disabled).
