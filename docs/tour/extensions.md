@@ -28,6 +28,7 @@ issue and we're happy to include your's!
 - Org-mode support: [https://github.com/xcapaldi/ob-d2](https://github.com/xcapaldi/ob-d2)
 - ROS2 D2 Exporter: [https://github.com/Greenroom-Robotics/ros-d2](https://github.com/Greenroom-Robotics/ros-d2)
 - Python D2 diagram builder: [https://github.com/MrBlenny/py-d2](https://github.com/MrBlenny/py-d2)
+- Python D2 diagram builder, a maintained fork of py-d2: [https://github.com/h0rv/d2-python](https://github.com/h0rv/d2-python)
 - Clojure D2 transpiler: [https://github.com/judepayne/dictim](https://github.com/judepayne/dictim)
 - JavaScript D2 diagram builder: [https://github.com/Kreshnik/d2lang-js](https://github.com/Kreshnik/d2lang-js)
 - CIL (C#, Visual Basic, F#, C++ CLR) to D2: [https://github.com/HugoVG/AppDiagram](https://github.com/HugoVG/AppDiagram)
