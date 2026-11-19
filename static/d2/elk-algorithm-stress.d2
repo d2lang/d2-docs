@@ -1,0 +1,12 @@
+vars: {
+  d2-config: {
+    layout-engine: elk
+    data: {elk-algorithm: stress}
+  }
+}
+
+direction: right
+Site -> App
+Site -> Docs
+App -> API
+App -> UI

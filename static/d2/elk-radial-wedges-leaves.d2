@@ -1,0 +1,17 @@
+vars: {
+  d2-config: {
+    layout-engine: elk
+    data: {
+      elk-algorithm: radial
+      elk-radialWedgeCriteria: leaf_number
+    }
+  }
+}
+
+direction: right
+Hub -> Archive
+Hub -> Live
+Hub -> Logs
+Archive.width: 160
+Live -> Web
+Live -> App

@@ -1,0 +1,14 @@
+vars: {
+  d2-config: {
+    layout-engine: elk
+    data: {elk-algorithm: radial}
+  }
+}
+
+direction: right
+Hub -> Archive
+Hub -> Live
+Hub -> Logs
+Archive.width: 160
+Live -> Web
+Live -> App

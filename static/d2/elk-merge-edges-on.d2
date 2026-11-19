@@ -1,0 +1,13 @@
+vars: {
+  d2-config: {
+    layout-engine: elk
+    data: {
+      elk-mergeEdges: true
+    }
+  }
+}
+
+direction: right
+Gateway -> Orders
+Gateway -> Billing
+Gateway -> Events

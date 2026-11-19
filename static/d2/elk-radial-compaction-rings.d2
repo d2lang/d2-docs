@@ -1,0 +1,18 @@
+vars: {
+  d2-config: {
+    layout-engine: elk
+    data: {
+      elk-algorithm: radial
+      elk-radialCompactor: radial_compaction
+    }
+  }
+}
+
+direction: right
+Hub -> Big
+Hub -> Mid
+Hub -> Small
+Big -> One
+Big -> Two
+Big -> Three
+Mid -> Four
