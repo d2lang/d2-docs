@@ -509,13 +509,17 @@ centers of directly connected shapes. Use a positive number. Changing `100` to
 
 ## Mr. Tree layout
 
+Mr. Tree leaves 20 pixels between shapes (`elk-nodeNode`) and uses 3 pixels of
+edge clearance (`elk-edgeNode`) by default.
+
 ### Choose a spanning tree
 
 When a shape is reachable by several paths, `elk-mrtreeSearchOrder` decides
 how to build the tree that assigns levels. Depth-first search (`dfs`) follows
 `Root -> API -> Cache -> Store`, placing `Store` three levels out. Breadth-first
 search (`bfs`) finds the direct edge `Root -> Store` and places `Store` in the
-first level after `Root`. Both drawings keep every connection.
+first level after `Root`. Both drawings use 40 pixels between shapes and 10 pixels
+of edge clearance so you can follow the shortcut.
 
 <ElkOptionExample
   source={require('@site/static/d2/elk-mrtree-search-bfs.d2')}
@@ -528,7 +532,7 @@ first level after `Root`. Both drawings keep every connection.
     {
       file: "mrtree-search-bfs",
       label: "bfs",
-      alt: "Store is one level from Root, between API and Web. The connection from Cache turns back toward Store.",
+      alt: "Store sits one level from Root, between API and Web. The arrow from Cache loops above API and points back into Store.",
     },
   ]}
 />
