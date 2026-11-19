@@ -1,0 +1,13 @@
+vars: {
+  d2-config: {
+    layout-engine: elk
+    data: {elk-algorithm: force}
+  }
+}
+
+direction: right
+Web -> API
+Job -> API
+API -> Store
+Job -> Store
+Web -> Cache

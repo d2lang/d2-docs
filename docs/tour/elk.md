@@ -12,16 +12,78 @@ Kiel](https://www.rtsys.informatik.uni-kiel.de/en/team).
 
 [https://www.eclipse.org/elk/reference.html](https://www.eclipse.org/elk/reference.html)
 
+## Algorithms
+
+Set `layout-engine` to `elk` to use ELK. The default algorithm, `layered`, arranges
+shapes in layers. To choose another algorithm, set `elk-algorithm` in
+`vars.d2-config.data`. The other diagram-wide options go in the same map. From the
+command line, add `--` to the option name. A value in the diagram takes precedence
+over the flag. Values are case-insensitive. Run `d2 layout elk` to see the flags
+your version supports.
+
+| Option | Default | What it controls |
+| --- | --- | --- |
+| [`elk-algorithm`](#choose-an-algorithm) | `layered` | The algorithm that arranges the diagram. |
+| [`elk-forceModel`](#choose-a-force-model) | `fruchterman_reingold` | How attraction and repulsion place shapes. |
+| [`elk-forceRepulsion`](#adjust-repulsion) | `5` | How strongly unconnected shapes repel each other in the eades model. |
+| [`elk-stressDesiredEdgeLength`](#set-the-target-edge-length) | `100` | Target distance between the centers of connected shapes in stress layout. |
+| [`elk-mrtreeSearchOrder`](#choose-a-spanning-tree) | `dfs` | Which paths determine the levels in Mr. Tree. |
+| [`elk-mrtreeWeighting`](#order-sibling-branches) | `model_order` | The order of branches within a tree level. |
+| [`elk-radialRadius`](#space-the-rings) | `0` | Initial spacing between rings in a radial tree. |
+| [`elk-radialWedgeCriteria`](#divide-the-circle-between-branches) | `node_size` | Each branch's share of the circle. |
+| [`elk-radialCompactor`](#bring-radial-branches-closer) | `none` | How closely rings or branches pack around the root. |
+
+### Choose an algorithm
+
+These five layouts use the same tree. [Layered](#layered-layout-options) groups
+shapes into columns. [Force](#force-layout) balances attraction and repulsion.
+[Stress](#stress-layout) places shapes according to their distance through the
+graph. [Mr. Tree](#mr-tree-layout) organizes parents and children into levels.
+[Radial](#radial-layout) expects a directed tree and arranges its levels in rings.
+
+Each comparison on this page changes one option and shows the diagrams at the same scale.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-algorithm-radial.d2')}
+  variants={[
+    {
+      file: "algorithm-layered",
+      label: "layered (default)",
+      alt: "Site, App and API sit in three columns with right-angle connections.",
+    },
+    {
+      file: "algorithm-force",
+      label: "force",
+      alt: "App sits left of Site, with API above and Docs below the rest of the network.",
+    },
+    {
+      file: "algorithm-stress",
+      label: "stress",
+      alt: "Site and App sit near the middle of a chain from Docs at the bottom to API at the top.",
+    },
+    {
+      file: "algorithm-mrtree",
+      label: "mrtree",
+      alt: "Site forms the leftmost level. App and Docs share the next level, followed closely by API and UI.",
+    },
+    {
+      file: "algorithm-radial",
+      label: "radial",
+      alt: "Site sits at the center. App and Docs occupy the first ring, with API and UI farther out.",
+    },
+  ]}
+/>
+
+To select an algorithm and set its options for one render, run
+
+```shell
+d2 --layout=elk --elk-algorithm=stress --elk-stressDesiredEdgeLength=200 input.d2 output.svg
+```
+
 ## Layered layout options
 
-Set `layout-engine` to `elk` to use ELK's default layered layout. Put diagram-wide
-options in the `data` map inside `d2-config`. You can also pass these options on the
-command line by adding `--` to the key. A value in the diagram takes precedence over
-the flag. These option values are case-insensitive. Run `d2 layout elk` to see the
-flags your installed version supports.
-Set `elk-layer-constraint` directly on the shape you want to position.
-
-Each comparison changes one option and shows the diagrams at the same scale.
+Use these options with `elk-algorithm: layered`, the default. Set
+`elk-layer-constraint` directly on the shape you want to position.
 
 | Option | Default | What it controls |
 | --- | --- | --- |
@@ -372,41 +434,212 @@ into the rightmost layer alongside `Ship`.
   ]}
 />
 
-## Algorithms
+## Force layout
 
-ELK has several layout algorithms. D2 uses `layered` by default. To choose another one,
-pass `--elk-algorithm` along with `--layout=elk`.
+### Choose a force model
 
-The main choices for connected diagrams are:
+`elk-forceModel` selects how each pair of shapes attracts or repels. With
+`fruchterman_reingold`, the default, the example stretches vertically from
+`Store` to `Cache`. With `eades`, it spreads out horizontally and brings
+`Cache` closer to `Web`.
 
-| Algorithm | Description |
-| --- | --- |
-| `layered` | The default. Arranges shapes in layers, with orthogonal connections. |
-| `force` | Spreads shapes out using simulated attraction and repulsion. |
-| `stress` | Places shapes closer together when there are shorter paths between them. |
-| `mrtree` | Arranges a tree in levels. |
-| `radial` | Arranges a tree in circles around its root. |
+<ElkOptionExample
+  source={require('@site/static/d2/elk-force-model-eades.d2')}
+  variants={[
+    {
+      file: "force-model-default",
+      label: "fruchterman_reingold (default)",
+      alt: "Cache hangs well below Web, with API and Store toward the top of the drawing.",
+    },
+    {
+      file: "force-model-eades",
+      label: "eades",
+      alt: "Web, API and Job spread across a shorter, wider drawing. Cache is closer to Web.",
+    },
+  ]}
+/>
 
-For example:
+### Adjust repulsion
 
-```shell
-d2 --layout=elk --elk-algorithm=force input.d2 force.svg
-d2 --layout=elk --elk-algorithm=stress input.d2 stress.svg
-d2 --layout=elk --elk-algorithm=radial tree.d2 radial.svg
-```
+`elk-forceRepulsion` sets the strength of repulsion between shapes without a
+direct connection in the `eades` model. Here `Parse` and `Send` are two
+connections apart. Raising repulsion from `5` to `500` moves their centers
+from about 370 to 440 pixels apart and changes the bend in the chain.
 
-`radial` expects a tree. For example, `tree.d2` could contain:
+<ElkOptionExample
+  source={require('@site/static/d2/elk-force-repulsion-strong.d2')}
+  variants={[
+    {
+      file: "force-repulsion-default",
+      label: "5 (default)",
+      alt: "The chain runs left to right from Get to Send, with Parse near the top.",
+    },
+    {
+      file: "force-repulsion-strong",
+      label: "500",
+      alt: "Get begins above and to the right of Parse. Send ends farther away from Parse.",
+    },
+  ]}
+/>
 
-```d2
-a -> b
-a -> c
-c -> d
-```
+## Stress layout
 
-The pros and cons below describe the default `layered` algorithm. Other algorithms have
-different routing and feature support.
+### Set the target edge length
+
+`elk-stressDesiredEdgeLength` sets the target distance in pixels between the
+centers of directly connected shapes. Use a positive number. Changing `100` to
+`200` roughly doubles the distance from `Client` to `API` and from `API` to
+`Store`. The boxes keep their size, so the visible arrows grow longer.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-stress-length-long.d2')}
+  variants={[
+    {
+      file: "stress-length-default",
+      label: "100 (default)",
+      alt: "Client, API and Store form a short chain with about 100 pixels between neighboring centers.",
+    },
+    {
+      file: "stress-length-long",
+      label: "200",
+      alt: "The same three boxes form a longer chain with about 200 pixels between neighboring centers.",
+    },
+  ]}
+/>
+
+## Mr. Tree layout
+
+### Choose a spanning tree
+
+When a shape is reachable by several paths, `elk-mrtreeSearchOrder` decides
+how to build the tree that assigns levels. Depth-first search (`dfs`) follows
+`Root -> API -> Cache -> Store`, placing `Store` three levels out. Breadth-first
+search (`bfs`) finds the direct edge `Root -> Store` and places `Store` in the
+first level after `Root`. Both drawings keep every connection.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-mrtree-search-bfs.d2')}
+  variants={[
+    {
+      file: "mrtree-search-dfs",
+      label: "dfs (default)",
+      alt: "Store is three levels from Root, at the far end of the chain through API and Cache.",
+    },
+    {
+      file: "mrtree-search-bfs",
+      label: "bfs",
+      alt: "Store is one level from Root, between API and Web. The connection from Cache turns back toward Store.",
+    },
+  ]}
+/>
+
+### Order sibling branches
+
+`elk-mrtreeWeighting` controls sibling order. `model_order` follows declaration
+order. `descendants` uses the total number of shapes in each subtree, so the long
+`Deep` branch moves to the top. `fan` uses the largest number of descendants
+on any single level, so `Wide`, with three children side by side, moves to the top.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-mrtree-order-fan.d2')}
+  variants={[
+    {
+      file: "mrtree-order-declared",
+      label: "model_order (default)",
+      alt: "The three branches read Small, Deep and Wide from top to bottom.",
+    },
+    {
+      file: "mrtree-order-descendants",
+      label: "descendants",
+      alt: "Deep comes first with its chain of four descendants, followed by Wide, then Small.",
+    },
+    {
+      file: "mrtree-order-fan",
+      label: "fan",
+      alt: "Wide comes first with three children on one level, followed by Deep, then Small.",
+    },
+  ]}
+/>
+
+## Radial layout
+
+### Space the rings
+
+`elk-radialRadius` sets the initial distance in pixels between tree levels.
+The default, `0`, derives that distance from the largest shape. ELK can expand
+a ring to keep shapes clear of each other. Set `220` to give the three children
+of `Hub` a wider ring.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-radial-radius-wide.d2')}
+  variants={[
+    {
+      file: "radial-radius-auto",
+      label: "0 (default)",
+      alt: "Read, Save and Send form a tight ring around Hub.",
+    },
+    {
+      file: "radial-radius-wide",
+      label: "220",
+      alt: "Read, Save and Send keep the same angles on a wider ring around Hub.",
+    },
+  ]}
+/>
+
+### Divide the circle between branches
+
+`elk-radialWedgeCriteria` controls how much angular space each branch receives.
+`node_size` takes shape dimensions into account, including the wide `Archive`
+box. `leaf_number` counts leaves. The `Live` branch has two of the four leaves,
+so it gets half of the circle.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-radial-wedges-leaves.d2')}
+  variants={[
+    {
+      file: "radial-wedges-size",
+      label: "node_size (default)",
+      alt: "Live sits above and left of Hub. Web is below Live and App is above it, farther right.",
+    },
+    {
+      file: "radial-wedges-leaves",
+      label: "leaf_number",
+      alt: "The branch with two leaves occupies the left half of the circle. Web and App line up vertically.",
+    },
+  ]}
+/>
+
+### Bring radial branches closer
+
+`elk-radialCompactor` controls how radial layout uses spare space. `none`
+keeps the original rings. `radial_compaction` pulls each ring inward as a unit.
+`wedge_compaction` lets branches move inward independently. In this tree the
+branch ending at `Four` can move closer to `Hub` than the branch ending at `Two`.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-radial-compaction-wedges.d2')}
+  variants={[
+    {
+      file: "radial-compaction-none",
+      label: "none (default)",
+      alt: "Two and Four lie on the outer ring, well below and above Hub.",
+    },
+    {
+      file: "radial-compaction-rings",
+      label: "radial_compaction",
+      alt: "The outer ring moves inward together, bringing Two and Four closer to Hub.",
+    },
+    {
+      file: "radial-compaction-wedges",
+      label: "wedge_compaction",
+      alt: "Four moves closer to Hub than Two does because its branch can contract farther.",
+    },
+  ]}
+/>
 
 ## Pros
+
+The strengths and limitations below describe the default `layered` algorithm.
 
 - Clean, orthogonal routes.
 - Highly customizable.

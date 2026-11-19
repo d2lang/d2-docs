@@ -1,0 +1,14 @@
+vars: {
+  d2-config: {
+    layout-engine: elk
+    data: {
+      elk-algorithm: mrtree
+      elk-mrtreeSearchOrder: bfs
+    }
+  }
+}
+
+direction: right
+Root -> API -> Cache -> Store
+Root -> Store
+Root -> Web
