@@ -1,6 +1,4 @@
-import CodeBlock from '@theme/CodeBlock';
-import MergeEdges from '@site/static/d2/elk-merge-edges-on.d2';
-import LastLayer from '@site/static/d2/elk-last-layer.d2';
+import ElkOptionExample from '@site/src/components/ElkOptionExample';
 
 # ELK
 
@@ -17,34 +15,53 @@ Kiel](https://www.rtsys.informatik.uni-kiel.de/en/team).
 ## Layered layout options
 
 Set `layout-engine` to `elk` to use ELK's default layered layout. Put diagram-wide
-options in the `data` map inside `d2-config`, as shown below. You can also pass these
-options on the command line by adding `--` to the key. When both specify a value, the
-value in the diagram takes precedence. Run `d2 layout elk` to see the flags your
-installed version supports.
+options in the `data` map inside `d2-config`. You can also pass these options on the
+command line by adding `--` to the key. A value in the diagram takes precedence over
+the flag. Run `d2 layout elk` to see the flags your installed version supports.
+Set `elk-layer-constraint` directly on the shape you want to position.
 
-### Merge connections
+Each comparison changes one option and shows the diagrams at the same scale.
 
-By default, the three connections from `Gateway` leave at different points. Set
-`elk-mergeEdges` to `true` to give them one exit point. Connections entering the same
-shape can share an entry point too. Connections to specific SQL table columns stay
-attached to their columns.
+| Option | Default | What it controls |
+| --- | --- | --- |
+| [`elk-mergeEdges`](#merge-connections) | `false` | Shared entry and exit points. |
+| [`elk-edgeRouting`](#choose-how-connections-bend) | `ORTHOGONAL` | Right-angle or diagonal segments. |
+| [`elk-feedbackEdges`](#route-a-cycle) | `false` | The path an edge takes back through a cycle. |
+| [`elk-wrappingStrategy`](#wrap-a-long-pipeline) | `OFF` | Where a pipeline can wrap onto another row. |
+| [`elk-forceNodeModelOrder`](#keep-shapes-in-declaration-order) | `false` | The order of top-level shapes within a layer. |
+| [`elk-nodeNode`](#separate-shapes-in-the-same-layer) | `20` | Gap between shapes in the same layer. |
+| [`elk-edgeNode`](#move-a-passing-edge-away-from-a-shape) | `40` | Clearance between a shape and an edge passing through its layer. |
+| [`elk-edgeEdge`](#separate-edges-in-the-same-layer) | `10` | Gap between edges passing through the same layer. |
+| [`elk-nodeNodeBetweenLayers`](#separate-shapes-in-adjacent-layers) | `70` | Gap between shapes in adjacent layers. |
+| [`elk-edgeNodeBetweenLayers`](#move-bends-away-from-adjacent-shapes) | `40` | Clearance between a bend and the shapes in adjacent layers. |
+| [`elk-edgeEdgeBetweenLayers`](#separate-edges-between-layers) | `50` | Gap between parallel edge segments between layers. |
+| [`elk-padding`](#add-space-inside-a-container) | 50 on each side | Space inside a container’s border. |
+| [`elk-nodeSelfLoop`](#move-a-self-loop-away-from-its-shape) | `50` | Gap between a shape and its self-loop. |
+| [`elk-layer-constraint`](#place-a-shape-in-the-first-or-last-layer) | `NONE` | The layer assigned to one shape. |
 
-<CodeBlock className="language-d2" layout="elk">{MergeEdges}</CodeBlock>
+### Routing and order
 
-<div className="row">
-  <div className="col col--6">
-    <strong>Default</strong>
-    <div className="embedSVG" role="img"
-      aria-label="Three connections leave Gateway at three separate points."
-      dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/elk-merge-edges-off.svg2')}} />
-  </div>
-  <div className="col col--6">
-    <strong>Merge edges enabled</strong>
-    <div className="embedSVG" role="img"
-      aria-label="The same three connections leave Gateway at one shared point before branching."
-      dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/elk-merge-edges-on.svg2')}} />
-  </div>
-</div>
+#### Merge connections
+
+With `elk-mergeEdges` set to `true`, the connections to `Orders`, `Billing` and `Events`
+leave `Gateway` at one point and then branch. Incoming connections can also share an
+entry point. Connections to specific SQL table columns stay attached to their columns.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-merge-edges-on.d2')}
+  variants={[
+    {
+      file: "merge-edges-off",
+      label: "false (default)",
+      alt: "Three arrows leave Gateway at three different points.",
+    },
+    {
+      file: "merge-edges-on",
+      label: "true",
+      alt: "Three arrows leave Gateway at one point and branch toward Orders, Billing and Events.",
+    },
+  ]}
+/>
 
 To enable merging for a single render, leave `elk-mergeEdges` out of the source and run
 
@@ -52,47 +69,307 @@ To enable merging for a single render, leave `elk-mergeEdges` out of the source 
 d2 --layout=elk --elk-mergeEdges gateway.d2 gateway.svg
 ```
 
-### Routing and order
+#### Choose how connections bend
 
-| Key | Default | Effect |
-| --- | --- | --- |
-| `elk-mergeEdges` | `false` | Let incoming connections share an entry point and outgoing connections share an exit point. |
-| `elk-edgeRouting` | `ORTHOGONAL` | `ORTHOGONAL` routes with right-angle turns. `POLYLINE` allows diagonal segments. |
-| `elk-feedbackEdges` | `false` | Route edges that point back against the flow around the nodes in a cycle. |
-| `elk-wrappingStrategy` | `OFF` | Wrap a long pipeline into shorter runs. `SINGLE_EDGE` can break between layers joined by one edge. `MULTI_EDGE` also permits breaks crossed by several edges. |
-| `elk-forceNodeModelOrder` | `false` | Keep top-level shapes in declaration order within each layer, even when that introduces crossings. |
+The routes from `Router` to `East` and `West` turn at right angles with
+`elk-edgeRouting` set to `ORTHOGONAL`. Switch to `POLYLINE` and the two routes run
+diagonally. The connection to `Local` is straight in both diagrams.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-edge-routing-polyline.d2')}
+  variants={[
+    {
+      file: "edge-routing-orthogonal",
+      label: "ORTHOGONAL (default)",
+      alt: "The upper and lower arrows from Router bend twice on the way to East and West.",
+    },
+    {
+      file: "edge-routing-polyline",
+      label: "POLYLINE",
+      alt: "Straight diagonal arrows fan out from Router to East and West.",
+    },
+  ]}
+/>
+
+#### Route a cycle
+
+Follow the arrow from `Write` back to `Read`. By default it leaves the left side of
+`Write`. With `elk-feedbackEdges` enabled, it leaves the right side, goes around the
+whole row and enters `Read` from the left.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-feedback-edges-on.d2')}
+  variants={[
+    {
+      file: "feedback-edges-default",
+      label: "false (default)",
+      alt: "The return arrow starts on the left of Write and enters the right of Read.",
+    },
+    {
+      file: "feedback-edges-on",
+      label: "true",
+      alt: "Read, Parse and Write line up. The return arrow loops around the row from its far right to its far left.",
+    },
+  ]}
+/>
+
+#### Wrap a long pipeline
+
+With `elk-wrappingStrategy` set to `OFF`, the pipeline runs from `Fetch` to `Ship` in
+one row. `SINGLE_EDGE` can wrap between layers joined by a single edge. Here it wraps
+after `Pack`. `MULTI_EDGE` can also wrap where several edges cross between layers.
+Here it wraps before `Pack`, where both `Build` and `Test` connect to it.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-wrapping-multi.d2')}
+  variants={[
+    {
+      file: "wrapping-off",
+      label: "OFF (default)",
+      alt: "All six pipeline stages progress left to right, with a shortcut from Build to Pack.",
+    },
+    {
+      file: "wrapping-single",
+      label: "SINGLE_EDGE",
+      alt: "The top row ends at Pack. Sign and Ship occupy a second row.",
+    },
+    {
+      file: "wrapping-multi",
+      label: "MULTI_EDGE",
+      alt: "The top row ends at Test. Both Test and Build connect to Pack on the second row, followed by Sign and Ship.",
+    },
+  ]}
+/>
+
+#### Keep shapes in declaration order
+
+The source declares `One` before `Two`. By default, ELK puts `Two` above `One` to
+avoid a crossing. Set `elk-forceNodeModelOrder` to `true` to keep the declared order
+within each layer of top-level shapes. The lines from `Alpha` and `Beta` now cross.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-declaration-order-forced.d2')}
+  variants={[
+    {
+      file: "declaration-order-default",
+      label: "false (default)",
+      alt: "Two sits above One, so the lines from Alpha to Two and Beta to One do not cross.",
+    },
+    {
+      file: "declaration-order-forced",
+      label: "true",
+      alt: "One sits above Two. The two connections cross between the middle columns.",
+    },
+  ]}
+/>
 
 ### Spacing and padding
 
-In a left-to-right diagram, shapes in the same layer form a vertical column.
-`elk-nodeNode` opens the vertical gaps within a column. `elk-nodeNodeBetweenLayers` opens
-the horizontal gap between columns. These distances are minimums in pixels. Labels and
-routing can require extra room.
+In a left-to-right diagram, shapes in the same layer form a vertical column. Spacing
+values are minimum distances in pixels. Labels and routing can require more room.
 
-| Key | Default | Space between |
-| --- | --- | --- |
-| `elk-nodeNode` | `20` | Two nodes in the same layer. |
-| `elk-edgeNode` | `40` | A node and an edge passing it within a layer. |
-| `elk-edgeEdge` | `10` | Two edges passing through the same layer. |
-| `elk-nodeNodeBetweenLayers` | `70` | Nodes in adjacent layers. |
-| `elk-edgeNodeBetweenLayers` | `40` | A node and an edge running beside its layer. |
-| `elk-edgeEdgeBetweenLayers` | `50` | Parallel edge segments between adjacent layers. |
-| `elk-nodeSelfLoop` | `50` | A node and an edge that loops back to it. |
-| `elk-padding` | `50` on each side | A container's border and its contents. Set each side with a string such as `"[top=20,left=40,bottom=20,right=40]"`. |
+#### Separate shapes in the same layer
 
-### Place a shape in the first or last layer
+The three destinations of `Queue` share a column. Increasing `elk-nodeNode` from
+`20` to `100` increases the vertical gap between neighboring boxes from 20 to 100 pixels.
 
-Set `elk-layer-constraint` directly on a shape. With `direction: right`, `FIRST` puts
-the shape in the leftmost layer and `LAST` puts it in the rightmost layer.
-`NONE` lets ELK choose the layer and is the default.
-Here, `Audit` has just one incoming edge from `Start`. Giving it `LAST` places it in
-the same layer as `Ship`.
+<ElkOptionExample
+  source={require('@site/static/d2/elk-node-spacing-wide.d2')}
+  variants={[
+    {
+      file: "node-spacing-default",
+      label: "20 px (default)",
+      alt: "Fast, Normal and Batch are stacked with 20 pixels between boxes.",
+    },
+    {
+      file: "node-spacing-wide",
+      label: "100 px",
+      alt: "The same three boxes are stacked with 100 pixels between them.",
+    },
+  ]}
+/>
 
-<CodeBlock className="language-d2" layout="elk">{LastLayer}</CodeBlock>
+#### Move a passing edge away from a shape
 
-<div className="embedSVG" role="img"
-  aria-label="Build, Test and Ship form a pipeline from Start. Audit sits in the final column alongside Ship."
-  dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/elk-last-layer.svg2')}} />
+The direct edge from `Start` to `Ship` bypasses `Check` and `Pack`. Increasing
+`elk-edgeNode` moves that route farther below the two boxes.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-edge-node-spacing-wide.d2')}
+  variants={[
+    {
+      file: "edge-node-spacing-default",
+      label: "40 px (default)",
+      alt: "The direct route from Start to Ship passes 40 pixels below Check and Pack.",
+    },
+    {
+      file: "edge-node-spacing-wide",
+      label: "100 px",
+      alt: "The same route passes 100 pixels below Check and Pack.",
+    },
+  ]}
+/>
+
+#### Separate edges in the same layer
+
+Two edges run directly from `Input` to `Save`, passing under `Check`. With
+`elk-edgeEdge` set to `80`, the lower edge bends away so the two routes have more space
+between them as they pass through the middle layer.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-edge-spacing-wide.d2')}
+  variants={[
+    {
+      file: "edge-spacing-default",
+      label: "10 px (default)",
+      alt: "Two straight parallel arrows pass below Check, from Input to Save.",
+    },
+    {
+      file: "edge-spacing-wide",
+      label: "80 px",
+      alt: "The upper arrow stays straight. The lower arrow bends farther down beneath Check.",
+    },
+  ]}
+/>
+
+#### Separate shapes in adjacent layers
+
+Each stage in `Read -> Build -> Ship` occupies its own layer. Increasing
+`elk-nodeNodeBetweenLayers` from `70` to `180` adds 110 pixels between each pair of
+boxes along the direction of the pipeline.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-layer-node-spacing-wide.d2')}
+  variants={[
+    {
+      file: "layer-node-spacing-default",
+      label: "70 px (default)",
+      alt: "Read, Build and Ship sit in a row with 70 pixels between consecutive boxes.",
+    },
+    {
+      file: "layer-node-spacing-wide",
+      label: "180 px",
+      alt: "The same boxes are 180 pixels apart and the two arrows are longer.",
+    },
+  ]}
+/>
+
+#### Move bends away from adjacent shapes
+
+The two edges turn between the source column and `Store`. Increasing
+`elk-edgeNodeBetweenLayers` gives those vertical segments more space on both sides.
+`Store` moves farther right to make room.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-layer-edge-node-spacing-wide.d2')}
+  variants={[
+    {
+      file: "layer-edge-node-spacing-default",
+      label: "40 px (default)",
+      alt: "The arrows from Queue and Batch bend in the gap before Store.",
+    },
+    {
+      file: "layer-edge-node-spacing-wide",
+      label: "100 px",
+      alt: "The bends sit farther from both the source boxes and Store.",
+    },
+  ]}
+/>
+
+#### Separate edges between layers
+
+Each of `API`, `Web` and `Job` connects to both destinations. Increasing
+`elk-edgeEdgeBetweenLayers` spreads out the vertical segments in the gap before
+`East` and `West`.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-layer-edge-spacing-wide.d2')}
+  variants={[
+    {
+      file: "layer-edge-spacing-default",
+      label: "50 px (default)",
+      alt: "The six arrows turn along closely spaced vertical lines between the two columns.",
+    },
+    {
+      file: "layer-edge-spacing-wide",
+      label: "125 px",
+      alt: "The vertical parts of the arrows are spaced farther apart, widening the gap between columns.",
+    },
+  ]}
+/>
+
+#### Add space inside a container
+
+Set the four sides of `elk-padding` with a string. Changing `left` and `right` from
+`50` to `110` adds 60 pixels at each end of `Read -> Write`, making the `Worker` container
+120 pixels wider.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-container-padding-wide.d2')}
+  variants={[
+    {
+      file: "container-padding-default",
+      label: "50 px on each side (default)",
+      alt: "The Worker container has 50 pixels of space around Read and Write.",
+    },
+    {
+      file: "container-padding-wide",
+      label: "110 px left and right",
+      alt: "The left and right margins inside Worker grow to 110 pixels. The top and bottom margins are still 50 pixels.",
+    },
+  ]}
+/>
+
+#### Move a self-loop away from its shape
+
+The `retry` edge leaves `Worker` and returns to it. Increase `elk-nodeSelfLoop` from
+`50` to `120` to move the top of the loop and its label farther above the box.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-self-loop-spacing-wide.d2')}
+  variants={[
+    {
+      file: "self-loop-spacing-default",
+      label: "50 px (default)",
+      alt: "A short loop labeled retry sits immediately above Worker.",
+    },
+    {
+      file: "self-loop-spacing-wide",
+      label: "120 px",
+      alt: "The retry loop rises 70 pixels farther above Worker.",
+    },
+  ]}
+/>
+
+### Shape placement
+
+#### Place a shape in the first or last layer
+
+Set `elk-layer-constraint` on the shape itself. With `NONE`, the default, ELK places
+`Audit` alongside `Build`. With `direction: right`, `FIRST` puts `Audit` in the
+leftmost layer, so the arrow from `Start` points back to it. `LAST` moves `Audit`
+into the rightmost layer alongside `Ship`.
+
+<ElkOptionExample
+  source={require('@site/static/d2/elk-last-layer.d2')}
+  variants={[
+    {
+      file: "audit-layer-none",
+      label: "NONE (default)",
+      alt: "Audit sits in the second column alongside Build, one step to the right of Start.",
+    },
+    {
+      file: "audit-layer-first",
+      label: "FIRST",
+      alt: "Audit sits to the left of Start, with the arrow from Start pointing left to Audit.",
+    },
+    {
+      file: "last-layer",
+      label: "LAST",
+      alt: "Audit sits below Ship in the rightmost column, with a long arrow from Start.",
+    },
+  ]}
+/>
 
 ## Algorithms
 

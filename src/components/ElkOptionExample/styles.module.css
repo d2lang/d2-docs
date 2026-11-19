@@ -1,0 +1,41 @@
+.figures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--panel-width)), 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.figures figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.caption a {
+  font-size: 0.85rem;
+}
+
+.viewport {
+  overflow-x: auto;
+  padding: 0.65rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.4rem;
+}
+
+.diagram {
+  margin-inline: auto;
+}
+
+.diagram > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
