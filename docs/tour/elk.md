@@ -17,7 +17,8 @@ Kiel](https://www.rtsys.informatik.uni-kiel.de/en/team).
 Set `layout-engine` to `elk` to use ELK's default layered layout. Put diagram-wide
 options in the `data` map inside `d2-config`. You can also pass these options on the
 command line by adding `--` to the key. A value in the diagram takes precedence over
-the flag. Run `d2 layout elk` to see the flags your installed version supports.
+the flag. These option values are case-insensitive. Run `d2 layout elk` to see the
+flags your installed version supports.
 Set `elk-layer-constraint` directly on the shape you want to position.
 
 Each comparison changes one option and shows the diagrams at the same scale.
@@ -25,9 +26,9 @@ Each comparison changes one option and shows the diagrams at the same scale.
 | Option | Default | What it controls |
 | --- | --- | --- |
 | [`elk-mergeEdges`](#merge-connections) | `false` | Shared entry and exit points. |
-| [`elk-edgeRouting`](#choose-how-connections-bend) | `ORTHOGONAL` | Right-angle or diagonal segments. |
+| [`elk-edgeRouting`](#choose-how-connections-bend) | `orthogonal` | Right-angle or diagonal segments. |
 | [`elk-feedbackEdges`](#route-a-cycle) | `false` | The path an edge takes back through a cycle. |
-| [`elk-wrappingStrategy`](#wrap-a-long-pipeline) | `OFF` | Where a pipeline can wrap onto another row. |
+| [`elk-wrappingStrategy`](#wrap-a-long-pipeline) | `off` | Where a pipeline can wrap onto another row. |
 | [`elk-forceNodeModelOrder`](#keep-shapes-in-declaration-order) | `false` | The order of top-level shapes within a layer. |
 | [`elk-nodeNode`](#separate-shapes-in-the-same-layer) | `20` | Gap between shapes in the same layer. |
 | [`elk-edgeNode`](#move-a-passing-edge-away-from-a-shape) | `40` | Clearance between a shape and an edge passing through its layer. |
@@ -37,7 +38,7 @@ Each comparison changes one option and shows the diagrams at the same scale.
 | [`elk-edgeEdgeBetweenLayers`](#separate-edges-between-layers) | `50` | Gap between parallel edge segments between layers. |
 | [`elk-padding`](#add-space-inside-a-container) | 50 on each side | Space inside a container’s border. |
 | [`elk-nodeSelfLoop`](#move-a-self-loop-away-from-its-shape) | `50` | Gap between a shape and its self-loop. |
-| [`elk-layer-constraint`](#place-a-shape-in-the-first-or-last-layer) | `NONE` | The layer assigned to one shape. |
+| [`elk-layer-constraint`](#place-a-shape-in-the-first-or-last-layer) | `none` | The layer assigned to one shape. |
 
 ### Routing and order
 
@@ -72,7 +73,7 @@ d2 --layout=elk --elk-mergeEdges gateway.d2 gateway.svg
 #### Choose how connections bend
 
 The routes from `Router` to `East` and `West` turn at right angles with
-`elk-edgeRouting` set to `ORTHOGONAL`. Switch to `POLYLINE` and the two routes run
+`elk-edgeRouting` set to `orthogonal`. Switch to `polyline` and the two routes run
 diagonally. The connection to `Local` is straight in both diagrams.
 
 <ElkOptionExample
@@ -80,12 +81,12 @@ diagonally. The connection to `Local` is straight in both diagrams.
   variants={[
     {
       file: "edge-routing-orthogonal",
-      label: "ORTHOGONAL (default)",
+      label: "orthogonal (default)",
       alt: "The upper and lower arrows from Router bend twice on the way to East and West.",
     },
     {
       file: "edge-routing-polyline",
-      label: "POLYLINE",
+      label: "polyline",
       alt: "Straight diagonal arrows fan out from Router to East and West.",
     },
   ]}
@@ -115,9 +116,9 @@ whole row and enters `Read` from the left.
 
 #### Wrap a long pipeline
 
-With `elk-wrappingStrategy` set to `OFF`, the pipeline runs from `Fetch` to `Ship` in
-one row. `SINGLE_EDGE` can wrap between layers joined by a single edge. Here it wraps
-after `Pack`. `MULTI_EDGE` can also wrap where several edges cross between layers.
+With `elk-wrappingStrategy` set to `off`, the pipeline runs from `Fetch` to `Ship` in
+one row. `single_edge` can wrap between layers joined by a single edge. Here it wraps
+after `Pack`. `multi_edge` can also wrap where several edges cross between layers.
 Here it wraps before `Pack`, where both `Build` and `Test` connect to it.
 
 <ElkOptionExample
@@ -125,17 +126,17 @@ Here it wraps before `Pack`, where both `Build` and `Test` connect to it.
   variants={[
     {
       file: "wrapping-off",
-      label: "OFF (default)",
+      label: "off (default)",
       alt: "All six pipeline stages progress left to right, with a shortcut from Build to Pack.",
     },
     {
       file: "wrapping-single",
-      label: "SINGLE_EDGE",
+      label: "single_edge",
       alt: "The top row ends at Pack. Sign and Ship occupy a second row.",
     },
     {
       file: "wrapping-multi",
-      label: "MULTI_EDGE",
+      label: "multi_edge",
       alt: "The top row ends at Test. Both Test and Build connect to Pack on the second row, followed by Sign and Ship.",
     },
   ]}
@@ -345,9 +346,9 @@ The `retry` edge leaves `Worker` and returns to it. Increase `elk-nodeSelfLoop` 
 
 #### Place a shape in the first or last layer
 
-Set `elk-layer-constraint` on the shape itself. With `NONE`, the default, ELK places
-`Audit` alongside `Build`. With `direction: right`, `FIRST` puts `Audit` in the
-leftmost layer, so the arrow from `Start` points back to it. `LAST` moves `Audit`
+Set `elk-layer-constraint` on the shape itself. With `none`, the default, ELK places
+`Audit` alongside `Build`. With `direction: right`, `first` puts `Audit` in the
+leftmost layer, so the arrow from `Start` points back to it. `last` moves `Audit`
 into the rightmost layer alongside `Ship`.
 
 <ElkOptionExample
@@ -355,17 +356,17 @@ into the rightmost layer alongside `Ship`.
   variants={[
     {
       file: "audit-layer-none",
-      label: "NONE (default)",
+      label: "none (default)",
       alt: "Audit sits in the second column alongside Build, one step to the right of Start.",
     },
     {
       file: "audit-layer-first",
-      label: "FIRST",
+      label: "first",
       alt: "Audit sits to the left of Start, with the arrow from Start pointing left to Audit.",
     },
     {
       file: "last-layer",
-      label: "LAST",
+      label: "last",
       alt: "Audit sits below Ship in the rightmost column, with a long arrow from Start.",
     },
   ]}
