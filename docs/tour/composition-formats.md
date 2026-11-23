@@ -15,6 +15,9 @@ export options are different.
     viewer may get confused or wait until a loop.
   - On the CLI, passing `--animate-interval=1200` sets the resulting SVG to be an
     animation that stays on each board for 1200ms.
+  - You can also set the interval in `vars.d2-config.animate-interval`. To show a
+    value changing within a step, set `animate-duration` in the same block.
+    [See the battery example](./steps.md#animate-a-value-between-steps).
 - Single animated GIF
   - Same as above, but useful in different contexts, like where SVG is not rendered.
 - PDF
