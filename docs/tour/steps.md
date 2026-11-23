@@ -20,7 +20,7 @@ defined, because it was inherited from Step 2, which inherited it from Step 1.
 ## Animate a value between steps
 
 Set `animate-duration` once in the root `vars.d2-config` to animate changes to
-numeric and percentage variables. Every use of a variable updates together.
+numeric, percentage, and solid color variables. Every use of a variable updates together.
 Here the battery label and both gradient stops use `${charge}`.
 
 ```d2
@@ -48,6 +48,20 @@ starts at 65% for 800 ms, drains to 0% over four seconds, then loops. Changing
 `animate-duration` to `300ms` makes the drain take 300 ms and leaves the
 battery empty for the remaining 500 ms of the step.
 
-The default duration is zero. A positive duration applies when consecutive
-values are both numbers or both percentages. New variables and text values
-appear immediately. Static exports show each step’s destination value.
+The default duration is zero. D2 interpolates between two numbers, two percentages,
+or two opaque solid colors. New variables and ordinary text values appear immediately.
+Static exports show each step’s destination value.
+
+### Change a solid color
+
+A step can also change `style.fill`, `style.stroke`, or `style.font-color` directly.
+Here the service goes from blue through purple (`#800080`) to red.
+
+```d2
+vars: {d2-config: {animate-interval: 1500ms; animate-duration: 1200ms}}
+service: {style.fill: blue}
+steps: {alert: {service.style.fill: red}}
+```
+
+D2 interpolates the red, green, and blue channels of named colors and three- or
+six-digit hex colors. Values such as `transparent` change immediately.
