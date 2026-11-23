@@ -20,7 +20,7 @@ defined, because it was inherited from Step 2, which inherited it from Step 1.
 ## Animate a value between steps
 
 Set `animate-duration` once in the root `vars.d2-config` to animate changes to
-numeric, percentage, and solid color variables. Every use of a variable updates together.
+number, percentage, color, and gradient variables. Every use of a variable updates together.
 Here the battery label and both gradient stops use `${charge}`.
 
 ```d2
@@ -49,7 +49,7 @@ starts at 65% for 800 ms, drains to 0% over four seconds, then loops. Changing
 battery empty for the remaining 500 ms of the step.
 
 The default duration is zero. D2 interpolates between two numbers, two percentages,
-or two opaque solid colors. New variables and ordinary text values appear immediately.
+two opaque solid colors, or two compatible gradients. New variables and ordinary text values appear immediately.
 Static exports show each step’s destination value.
 
 ### Change a solid color
@@ -64,4 +64,44 @@ steps: {alert: {service.style.fill: red}}
 ```
 
 D2 interpolates the red, green, and blue channels of named colors and three- or
-six-digit hex colors. Values such as `transparent` change immediately.
+six-digit hex colors. A solid fill changing to `transparent` switches immediately.
+
+### Change numeric properties directly
+
+Give the property a starting value, then set its destination in the step.
+Here the worker fades in as its outline thickens and its corners round.
+
+```d2
+vars: {d2-config: {animate-interval: 2s; animate-duration: 1200ms}}
+worker: {
+  style: {opacity: 0.25; stroke-width: 2; border-radius: 0}
+}
+steps: {ready: {
+  worker.style: {opacity: 1; stroke-width: 8; border-radius: 24}
+}}
+```
+
+At the midpoint the opacity is 0.625, the stroke is 5 pixels wide, and the
+corner radius is 12 pixels. You can also change `style.stroke-dash`,
+`style.font-size`, and an object's explicit `width` and `height` this way.
+
+### Change a whole gradient
+
+Set the new gradient directly or assign it to a variable. D2 pairs the stops
+in order when the gradients have the same kind, direction, and stop count.
+Each pair changes color and position together.
+
+```d2
+vars: {d2-config: {animate-interval: 2s; animate-duration: 1200ms}}
+capacity: {
+  width: 300
+  style.fill: "linear-gradient(to right, seagreen 60%, white 60%)"
+}
+steps: {busy: {
+  capacity.style.fill: "linear-gradient(to right, orange 80%, white 80%)"
+}}
+```
+
+The two stops share a position at both ends, so the boundary stays sharp as
+it passes through 70%. Changing the gradient kind, direction, or stop count
+switches directly to the new gradient.
