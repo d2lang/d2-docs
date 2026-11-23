@@ -12,6 +12,30 @@ Dagre is D2's default layout engine.
 
 [https://github.com/dagrejs/dagre](https://github.com/dagrejs/dagre)
 
+## Spacing
+
+On D2's development branch (`master`), you can set Dagre spacing in
+`vars.d2-config.data`. These source options will be available in the next release.
+
+```d2
+vars: {
+  d2-config: {
+    data: {
+      dagre-nodesep: 120
+      dagre-edgesep: 40
+    }
+  }
+}
+
+gateway -> api
+gateway -> worker
+```
+
+`dagre-nodesep` controls the spacing between nodes in the same rank (default 60
+pixels). `dagre-edgesep` controls the spacing between edges (default 20 pixels).
+Both take nonnegative whole numbers. Each value in the diagram takes precedence
+over its corresponding CLI flag, `--dagre-nodesep` or `--dagre-edgesep`.
+
 ## Pros
 
 - Very fast.
