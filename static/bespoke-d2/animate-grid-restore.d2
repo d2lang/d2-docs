@@ -1,0 +1,32 @@
+vars: {d2-config: {animate-duration: 900ms; animate-interval: 1200ms; pad: 8}}
+style.fill: transparent
+grid-rows: 2
+grid-columns: 3
+grid-gap: 12
+
+classes: {
+  job: {width: 145; height: 60; style: {fill: "#ECF0F7"; stroke: "#A4B0C1"; stroke-width: 1; border-radius: 7; font-size: 16; font-color: "#344253"}}
+  critical: {style: {fill: "#374E78"; stroke: "#374E78"; font-color: white; bold: true}}
+  incoming: {style: {fill: "#D9E9FF"; stroke: "#80A9C9"; font-color: "#214C64"}}
+}
+
+blob: "Blob index\nrestore #18" {class: job}
+audit: "Audit log\nrestore #21" {class: job}
+ledger: "Ledger\nrestore #24" {class: [job; critical]}
+catalog: "Catalog\nrestore #26" {class: job}
+images: "Image cache\nrestore #28" {class: job}
+
+steps: {
+  reprioritize: {
+    # Clear and redeclare existing IDs to change their order.
+    blob: null
+    audit: null
+    catalog: null
+    images: null
+    audit: "Audit log\nrestore #21" {class: job}
+    catalog: "Catalog\nrestore #26" {class: job}
+    images: "Image cache\nrestore #28" {class: job}
+    search: "Search index\nrestore #31" {class: [job; incoming]}
+    thumb: "Thumbnails\nrestore #32" {class: [job; incoming]}
+  }
+}

@@ -1,0 +1,19 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+}
+
+delivery: "POST /webhooks/orders" {
+  created: "order.created" {shape: text}
+  paid: "order.paid" {shape: text; style.font-color: darkslategray}
+  grid-columns: 1
+  vertical-gap: 8
+}
+
+steps: {
+  retries-exhausted: {
+    delivery.paid.style.font-color: firebrick
+  }
+}

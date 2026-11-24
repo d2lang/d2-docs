@@ -1,0 +1,20 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+}
+
+direction: right
+catalog: Catalog {shape: cylinder; width: 86; height: 85}
+index: "Index backfill\n8 partitions" {
+  width: 155
+  style.fill: "linear-gradient(to right, mediumaquamarine 25%, whitesmoke 25%)"
+}
+catalog -> index
+
+steps: {
+  next-checkpoint: {
+    index.style.fill: "linear-gradient(to right, mediumaquamarine 75%, whitesmoke 75%)"
+  }
+}

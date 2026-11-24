@@ -1,0 +1,29 @@
+vars: {
+  d2-config: {animate-interval: 1ms; animate-duration: 1200ms}
+  angle: 0
+}
+
+restore: "" {
+  grid-rows: 1
+  grid-gap: 14
+  style: {fill: white; stroke: "#c5d3da"; stroke-width: 1; border-radius: 10}
+  spinner: "" {
+    shape: circle
+    width: 48
+    height: 48
+    style: {
+      fill: transparent
+      stroke-width: 6
+      stroke: "linear-gradient(${angle}deg, #d7e5e7 0%, #97cbca 45%, #00776e 85%)"
+    }
+  }
+  status: "" {
+    grid-columns: 1
+    grid-gap: 2
+    style: {fill: transparent; stroke-width: 0}
+    action: Restoring snapshot {shape: text; style: {font-size: 18; bold: true; font-color: "#183544"}}
+    database: orders-db {shape: text; style: {font: mono; font-size: 14; font-color: "#4c6472"}}
+  }
+}
+
+steps: {turn: {vars: {angle: -360}}}

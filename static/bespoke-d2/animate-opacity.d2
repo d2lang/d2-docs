@@ -1,0 +1,21 @@
+vars: {
+  d2-config: {
+    animate-interval: 1200ms
+    animate-duration: 900ms
+  }
+}
+
+gateway: Gateway
+old: API v1
+new: API v2
+gateway -> old: in flight
+gateway -> new: new requests
+old.style.opacity: 1
+(gateway -> old)[0].style.opacity: 1
+
+steps: {
+  drained: {
+    old.style.opacity: 0.2
+    (gateway -> old)[0].style.opacity: 0.2
+  }
+}

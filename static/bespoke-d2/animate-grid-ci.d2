@@ -1,0 +1,67 @@
+vars: {d2-config: {animate-duration: 900ms; animate-interval: 1200ms; pad: 8}}
+style.fill: transparent
+grid-rows: 4
+grid-columns: 3
+horizontal-gap: 10
+vertical-gap: 9
+
+classes: {
+  axis: {width: 96; height: 46; style: {fill: "#E8EDF0"; stroke-width: 0; border-radius: 7; font-size: 16; font-color: "#253A43"; bold: true}}
+  runtime: {width: 142; height: 38; style: {fill: "#233C43"; stroke-width: 0; border-radius: 7; font-size: 17; font-color: white; bold: true}}
+  job: {width: 142; height: 46; style: {fill: "#F1F5F5"; stroke: "#A5B8BB"; stroke-width: 1; border-radius: 7; font-size: 16; font-color: "#344A50"}}
+  newRuntime: {style: {fill: "#176E64"; font-color: white}}
+  newJob: {style: {fill: "#D1F1E4"; stroke: "#55A391"; font-color: "#0B5347"}}
+}
+
+runner: Runner {class: axis; height: 38}
+runtime22: Node 22 {class: runtime}
+runtime26: Node 26 {class: runtime}
+linux: Linux {class: axis}
+linux22: glibc build {class: job}
+linux26: glibc build {class: job}
+mac: macOS {class: axis}
+mac22: arm64 build {class: job}
+mac26: arm64 build {class: job}
+win: Windows {class: axis}
+win22: MSVC build {class: job}
+win26: MSVC build {class: job}
+
+steps: {
+  add-runtime: {
+    grid-columns: 4
+    # Redeclare the same cell IDs in the new column order.
+    runtime26: null
+    linux: null
+    linux22: null
+    linux26: null
+    mac: null
+    mac22: null
+    mac26: null
+    win: null
+    win22: null
+    win26: null
+
+    runtime24: Node 24 {class: [runtime; newRuntime]}
+    runtime26: Node 26 {class: runtime}
+    linux: Linux {class: axis}
+    linux22: glibc build {class: job}
+    linux24: glibc build {class: [job; newJob]}
+    linux26: glibc build {class: job}
+    mac: macOS {class: axis}
+    mac22: arm64 build {class: job}
+    mac24: arm64 build {class: [job; newJob]}
+    mac26: arm64 build {class: job}
+    win: Windows {class: axis}
+    win22: MSVC build {class: job}
+    win24: MSVC build {class: [job; newJob]}
+    win26: MSVC build {class: job}
+  }
+  retire-node-22: {
+    grid-rows: 4
+    grid-columns: 3
+    runtime22: null
+    linux22: null
+    mac22: null
+    win22: null
+  }
+}

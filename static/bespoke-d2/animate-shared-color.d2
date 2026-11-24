@@ -1,0 +1,19 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 640ms
+  }
+  tls: lightcoral
+}
+
+cert: "Wildcard certificate\n*.shop.test"
+api: "api.shop.test" {style.fill: ${tls}}
+pay: "pay.shop.test" {style.fill: ${tls}}
+cert -> api
+cert -> pay
+
+steps: {
+  renew: {
+    vars: {tls: palegreen}
+  }
+}

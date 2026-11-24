@@ -1,0 +1,6 @@
+orders: "Orders DB" {shape: cylinder}
+fraud: "Fraud checks"
+bi: "BI warehouse"
+
+orders -> fraud: change feed {style.animated: true}
+orders -> bi: nightly snapshot

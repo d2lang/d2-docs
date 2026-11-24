@@ -1,0 +1,23 @@
+vars: {
+  d2-config: {
+    animate-interval: 250ms
+    animate-duration: 1200ms
+  }
+  tail: -20%
+  head: 0%
+}
+direction: right
+
+api: Order API
+cache: "Redis\norder:481"
+db: Postgres
+
+api -> cache: {
+  style.stroke-width: 6
+  style.stroke: "linear-gradient(to right, #466477 ${tail}, orange ${tail}, orange ${head}, #466477 ${head})"
+}
+api -> db: on miss
+
+steps: {
+  read-order-481: {vars: {tail: 100%; head: 120%}}
+}

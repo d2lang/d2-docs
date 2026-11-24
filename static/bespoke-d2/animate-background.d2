@@ -1,0 +1,20 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+}
+
+grid-rows: 1
+grid-gap: 14
+style.fill: honeydew
+api: "Catalog API\nRead/write" {shape: text; width: 118; height: 60}
+sync: "Import job\nRunning" {shape: text; width: 118; height: 60}
+
+steps: {
+  maintenance-notice: {style.fill: moccasin}
+  freeze-writes: {
+    api: "Catalog API\nRead only"
+    sync: "Import job\nPaused"
+  }
+}

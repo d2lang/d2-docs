@@ -82,6 +82,10 @@ In other words, if you call `D2_PAD=2 d2 --theme=1 input.d2`, it doesn't matter 
 the command.
 :::
 
+`animate-interval` sets the playback interval for all boards.
+`animate-duration` sets the transition time for steps. It also controls pencil shading
+and text decorations between layers and scenarios. See the [animation configuration](./animation.md#configuration).
+
 ### Output scale and SVG appendix
 
 On D2's development branch (`master`), you can set `scale` and `force-appendix`

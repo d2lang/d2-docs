@@ -1,0 +1,25 @@
+vars: {
+  latency: 100
+  d2-config: {
+    animate-interval: 1200ms
+    animate-duration: 900ms
+  }
+}
+
+direction: right
+budget: GET /cart · 200 ms budget {
+  width: 220
+  height: 40
+  style.stroke-dash: 2
+}
+query: "SQL · ${latency} ms" {
+  width: 110
+  height: 40
+}
+
+steps: {
+  cold-read: {
+    vars: {latency: 200}
+    query.width: 220
+  }
+}

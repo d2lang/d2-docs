@@ -1,0 +1,74 @@
+vars: {d2-config: {animate-duration: 900ms; animate-interval: 1200ms; pad: 8}}
+style.fill: transparent
+grid-rows: 1
+grid-columns: 4
+grid-gap: 34
+
+classes: {
+  head: {width: 124; height: 35; style: {fill: "#293D4B"; stroke-width: 0; border-radius: 7; font-size: 15; font-color: white; bold: true}}
+  lane: {width: 124; height: 59; style: {fill: "#E8EEF1"; stroke-width: 0; border-radius: 7; font-size: 16; font-color: "#334854"; bold: true}}
+  input: {width: 139; height: 59; style: {fill: "#F1F5F7"; stroke: "#A4B5C0"; stroke-width: 1; border-radius: 7; font: mono; font-size: 16; font-color: "#334C5C"}}
+  worker: {width: 122; height: 59; style: {fill: "#ECF2F6"; stroke: "#96ABBC"; stroke-width: 1; border-radius: 7; font: mono; font-size: 16; font-color: "#2E495C"}}
+  active: {style: {fill: "#D5E9F9"; stroke: "#5183A8"; stroke-width: 2; font-color: "#19486A"; bold: true}}
+  view: {width: 250; height: 59; style: {fill: "#E3F0E9"; stroke: "#89AA99"; stroke-width: 1; border-radius: 7; font-size: 16; font-color: "#305441"; bold: true}}
+  offset: {width: 100; height: 48; style: {fill: "#F5FAF7"; stroke: "#94B8A4"; stroke-width: 1; border-radius: 5; font-size: 14; font-color: "#315743"}}
+  flow: {style: {stroke: "#5E7787"; stroke-width: 2}}
+}
+
+classes.column: {
+  label: ""
+  grid-rows: 3
+  grid-columns: 1
+  horizontal-gap: 0
+  vertical-gap: 13
+  style: {fill: transparent; stroke-width: 0}
+}
+
+tasks: {
+  class: column
+  taskH: Projector {class: head}
+  payments: Payments {class: lane}
+  refunds: Refunds {class: lane}
+}
+inputs: {
+  class: column
+  inputH: Input partition {class: head; width: 139}
+  payments0: payments-0 {class: input}
+  refunds0: refunds-0 {class: input}
+}
+workers: {
+  class: column
+  workerH: Worker process {class: head; width: 122}
+  worker11: worker-11 {class: worker}
+  worker23: worker-23 {class: [worker; active]}
+}
+views: {
+  class: column
+  viewH: Ledger view {class: head; width: 250}
+  posted: Posted ledger {class: view}
+  refundLedger: Refund ledger {class: view}
+}
+
+inputs.payments0 -> workers.worker11: {class: flow}
+workers.worker11 -> views.posted: {class: flow}
+inputs.refunds0 -> workers.worker23: {class: flow}
+workers.worker23 -> views.refundLedger: {class: flow}
+
+steps: {
+  replace: {
+    workers.worker23: null
+    workers.worker37: worker-37 {class: [worker; active]}
+    inputs.refunds0 -> workers.worker37: {class: flow}
+    workers.worker37 -> views.refundLedger: {class: flow}
+  }
+  inspect: {
+    views.refundLedger: {
+      height: 122
+      grid-rows: 1
+      grid-columns: 2
+      grid-gap: 9
+      committed: "Applied offset\n18,240" {class: offset}
+      resume: "Resume at\n18,241" {class: offset}
+    }
+  }
+}

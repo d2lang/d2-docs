@@ -1,0 +1,20 @@
+vars: {
+  d2-config: {
+    animate-interval: 800ms
+    animate-duration: 4s
+  }
+  charge: 65%
+}
+
+tracker: Pallet tracker
+battery: "Dashboard · ${charge}" {
+  width: 230
+  height: 64
+  style.fill: "linear-gradient(to right, #82d6a7 ${charge}, #eff5f1 ${charge})"
+}
+
+tracker -> battery: MQTT · battery_pct
+
+steps: {
+  drain: {vars: {charge: 15%}}
+}
