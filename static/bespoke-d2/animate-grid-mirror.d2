@@ -1,0 +1,40 @@
+vars: {d2-config: {animate-duration: 900ms; animate-interval: 1200ms; pad: 8}}
+style.fill: transparent
+grid-rows: 3
+grid-columns: 1
+grid-gap: 10
+
+classes: {
+  mirror: {width: 402; height: 48; style: {fill: "#EDF3F3"; stroke: "#A4B8B6"; stroke-width: 1; border-radius: 8; font-size: 17; font-color: "#2A4644"; bold: true}}
+  disk: {width: 146; height: 50; style: {fill: "#DCECE7"; stroke: "#85ADA1"; stroke-width: 1; border-radius: 7; font: mono; font-size: 16; font-color: "#29463C"}}
+  replacing: {style: {fill: "#B5E0CD"; stroke: "#4D9076"; stroke-width: 2; font-color: "#174F38"; bold: true}}
+}
+
+mirrorA: "Mirror A  ·  WAL" {class: mirror}
+mirrorB: "Mirror B  ·  data" {class: mirror; style: {fill: "#E1F0EA"; stroke: "#7CA790"; font-color: "#285742"}}
+mirrorC: "Mirror C  ·  archives" {class: mirror}
+
+steps: {
+  inspect: {
+    mirrorB: {
+      height: 121
+      grid-rows: 1
+      grid-columns: 2
+      grid-gap: 12
+      nvme02: nvme-02 {class: disk}
+      nvme05: nvme-05 {class: [disk; replacing]}
+    }
+  }
+  exchange: {
+    mirrorB.nvme05: null
+    mirrorB.nvme07: nvme-07 {class: [disk; replacing]}
+  }
+  close: {
+    mirrorB.nvme02: null
+    mirrorB.nvme07: null
+    mirrorB.grid-rows: null
+    mirrorB.grid-columns: null
+    mirrorB.grid-gap: null
+    mirrorB.height: 48
+  }
+}

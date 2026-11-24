@@ -1,0 +1,15 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 640ms
+  }
+  lag: 120
+}
+
+orders: "Orders topic" {shape: queue}
+billing: "Billing consumer\nRecords behind: ${lag}" {width: 186}
+orders -> billing: replay
+
+steps: {
+  catch-up: {vars: {lag: 0}}
+}

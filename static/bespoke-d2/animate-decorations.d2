@@ -1,0 +1,45 @@
+vars: {
+  d2-config: {
+    animate-interval: 450ms
+    animate-duration: 900ms
+  }
+}
+direction: right
+sender: Webhook dispatcher {
+  style: {fill: "#f2f5f5"; stroke: "#556774"; font-color: "#263941"}
+}
+v1: |md
+  POST /v1/events
+| {
+  shape: rectangle
+  width: 160
+  height: 54
+  style: {fill: "#fbf0ea"; stroke: "#996956"; font-color: "#794436"}
+}
+v2: POST /v2/events {
+  width: 160
+  height: 54
+  style: {
+    fill: "#e6f2eb"
+    stroke: "#386953"
+    font-color: "#24553e"
+  }
+}
+sender -> v1: {style.stroke: "#62747a"}
+sender -> v2: {style.stroke: "#62747a"}
+
+steps: {
+  retire-v1: {
+    v1: |md
+      ~~POST /v1/events~~
+    |
+    v2.style.underline: true
+  }
+  soak: {v2.style.underline: true}
+  rollback: {
+    v1: |md
+      POST /v1/events
+    |
+    v2.style.underline: false
+  }
+}

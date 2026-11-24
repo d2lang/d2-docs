@@ -1,0 +1,138 @@
+vars: {
+  # Stops outside 0% to 100% move the pulse off the connection.
+  v0: -22%
+  v1: -15%
+  v2: -7%
+  v3: 0%
+  l0: -112%
+  l1: -98%
+  m0: -109%
+  m1: -95%
+  g0: -133%
+  g1: -119%
+  warm: -215%
+  c: "FB6"
+  f: "FB6"
+  d2-config: {
+    animate-interval: 140ms
+    animate-duration: 2100ms
+    theme-id: 200
+    theme-overrides: {B1: "#73B2AF"; B4: "#234959"; B6: "#203F50"; N1: "#E9F5EC"}
+    pad: 24
+    data: {dagre-nodesep: 16}
+  }
+}
+
+# Transparent cells reserve grid slots.
+classes.t: {width: 50; height: 29; style: {font-size: 14}}
+classes.z: {width: 50; height: 29; style.opacity: 0}
+
+classes.p: {width: 158; height: 46; style: {fill: "linear-gradient(to right,#166A61 ${warm},#193B4C ${warm})"; border-radius: 7; stroke-width: 1; bold: false}}
+
+# Put both colors at the same stop to give the pulse a sharp edge.
+classes.v: {style: {stroke: "linear-gradient(to right,#345 ${v0},#${c} ${v0},#${c} ${v1},#345 ${v1},#345 ${v2},#${c} ${v2},#${c} ${v3},#345 ${v3})"; stroke-width: 6}}
+classes.l: {style: {stroke: "linear-gradient(to right,#345 ${l0},#${c} ${l0},#${c} ${l1},#345 ${l1})"; stroke-width: 6}}
+classes.m: {style: {stroke: "linear-gradient(to right,#345 ${m0},#${f} ${m0},#${f} ${m1},#345 ${m1})"; stroke-width: 6}}
+classes.g: {style: {stroke: "linear-gradient(to right,#345 ${g0},#${c} ${g0},#${c} ${g1},#345 ${g1})"; stroke-width: 6}}
+
+h: "How 1,200 GETs become one origin read" {near: top-center; shape: text; style: {bold: true; font-size: 26; font-color: "#E9F5EC"}}
+direction: right
+style.fill: "#122C3A"
+
+v: "1,200 viewers\n200 per edge\n300 MiB total" {width: 154; height: 88}
+shield: "Shield cache\nIn-flight requests" {
+  width: 206
+  height: 124
+  grid-rows: 2
+  grid-columns: 3
+  grid-gap: 6
+  style.font-size: 16
+  label.near: top-center
+  # A suspended cell keeps its place in declaration order.
+  IAD: IAD {class: t; style: {fill: "#FB6"; font-color: "#223744"}}
+  IAD: suspend
+  _slot: "" {class: z}
+}
+o: "Image origin\n/cover.avif\n1 × 256 KiB" {style.stroke: "#CA985E"; shape: cylinder; width: 150; height: 123}
+
+NRT: "NRT  /  Tokyo" {class: p}
+FRA: "FRA  /  Frankfurt" {class: p}
+LHR: "LHR  /  London" {class: p}
+IAD: "IAD  /  Ashburn" {class: p}
+ORD: "ORD  /  Chicago" {class: p}
+SFO: "SFO  /  San Francisco" {class: p}
+
+v -- NRT: {class: v}
+NRT -- shield: {class: m}
+v -- FRA: {class: v}
+FRA -- shield: {class: m}
+v -- LHR: {class: v}
+LHR -- shield: {class: m}
+v -- IAD: {class: v}
+IAD -- shield: {class: l}
+v -- ORD: {class: v}
+ORD -- shield: {class: m}
+v -- SFO: {class: v}
+SFO -- shield: {class: m}
+shield -- o: {class: g}
+
+steps: {
+  leader: {
+    shield.IAD: unsuspend
+    shield._y: "" {class: z}
+    shield._z: "" {class: z}
+    vars: {
+      v0: 420%
+      v1: 425%
+      v2: 432%
+      v3: 437%
+      l0: 288%
+      l1: 302%
+      m0: 76%
+      m1: 90%
+      g0: 112%
+      g1: 126%
+    }
+  }
+
+  join: {
+    shield._slot: null
+    shield._y: null
+    shield._z: null
+    shield.ORD: ORD {class: t}
+    shield.FRA: FRA {class: t}
+    shield.SFO: SFO {class: t}
+    shield.LHR: LHR {class: t}
+    shield.NRT: NRT {class: t}
+    vars: {
+      g0: -14%
+      g1: 0%
+      m0: 212%
+      m1: 226%
+      l0: 102%
+      l1: 116%
+      c: "6EC"
+    }
+  }
+
+  deliver: {
+    shield.IAD: null
+    shield.ORD: null
+    shield.FRA: null
+    shield.SFO: null
+    shield.LHR: null
+    shield.NRT: null
+    vars: {
+      warm: 210%
+      f: "6EC"
+      m0: -199%
+      m1: -185%
+      l0: -199%
+      l1: -185%
+      v0: -22%
+      v1: -15%
+      v2: -7%
+      v3: 0%
+    }
+  }
+}

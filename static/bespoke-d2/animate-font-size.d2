@@ -1,0 +1,25 @@
+vars: {
+  p95: 120
+  d2-config: {
+    animate-interval: 1200ms
+    animate-duration: 900ms
+  }
+}
+
+checkout: Checkout p95 {
+  budget: Budget · 250 ms {shape: text}
+  reading: "${p95} ms" {
+    width: 150
+    height: 58
+    style.font-size: 16
+  }
+  grid-columns: 1
+  vertical-gap: 10
+}
+
+steps: {
+  over-budget: {
+    vars: {p95: 680}
+    checkout.reading.style.font-size: 30
+  }
+}

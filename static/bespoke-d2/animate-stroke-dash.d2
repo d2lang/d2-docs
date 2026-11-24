@@ -1,0 +1,18 @@
+vars: {
+  d2-config: {
+    animate-interval: 1200ms
+    animate-duration: 900ms
+  }
+}
+
+primary: Orders DB
+local: Local replica
+remote: New EU replica
+primary -> local
+primary -> remote: {style.stroke-dash: 6}
+
+steps: {
+  enable-eu-replication: {
+    (primary -> remote)[0].style.stroke-dash: 0
+  }
+}

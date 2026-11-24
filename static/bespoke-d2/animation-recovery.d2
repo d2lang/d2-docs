@@ -1,0 +1,28 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 400ms
+  }
+  healthy: 3
+}
+
+lb: Checkout load balancer
+pool: "Healthy replicas · ${healthy}/3" {
+  width: 210
+  style.fill: "#a7dfbd"
+}
+lb -> pool: health checks
+
+scenarios: {
+  bad-release: {
+    vars: {healthy: 0}
+    pool.style.fill: "#f4aca3"
+
+    steps: {
+      rollback: {
+        vars: {healthy: 3}
+        pool.style.fill: "#a7dfbd"
+      }
+    }
+  }
+}

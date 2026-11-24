@@ -1,0 +1,33 @@
+vars: {d2-config: {sketch: true; pad: 12; animate-duration: 650ms; animate-interval: 830ms}}
+direction: right
+style.fill: transparent
+classes: {
+  range: {
+    width: 85
+    height: 43
+    style: {fill: "#F6F6EC"; stroke: "#4B6353"; stroke-width: 1; font-color: "#183B2A"; font-size: 15; bold: true}
+  }
+}
+snapshot: S3 snapshot {
+  shape: cylinder
+  width: 110
+  height: 87
+  style: {fill: "#EEE7D9"; stroke: "#5C5247"; stroke-width: 2; font-size: 15; font-color: "#403A32"}
+}
+standby: Standby volume {
+  grid-columns: 2
+  grid-gap: 6
+  style: {fill: "#F7F5EB"; stroke: "#4C5548"; stroke-width: 2; font-color: "#283B2F"; font-size: 19; bold: true}
+  r0: 0–1 GiB {class: range}
+  r1: 1–2 GiB {class: range}
+  r2: 2–3 GiB {class: range}
+  r3: 3–4 GiB {class: range}
+}
+snapshot -> standby: restore {style: {stroke: "#53695B"; stroke-width: 2; font-color: "#435348"; font-size: 15}}
+
+steps: {
+  copy-range-0: {standby.r0.style.fill: "#95BCA2"}
+  copy-range-1: {standby.r1.style.fill: "#95BCA2"}
+  copy-range-2: {standby.r2.style.fill: "#95BCA2"}
+  copy-range-3: {standby.r3.style.fill: "#95BCA2"}
+}

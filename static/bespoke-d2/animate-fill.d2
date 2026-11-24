@@ -1,0 +1,22 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+}
+
+registry: Container registry {
+  image: "Image v42\nSignature check" {
+    width: 164
+    style.fill: moccasin
+  }
+}
+
+steps: {
+  verify: {
+    registry.image.style.fill: palegreen
+  }
+  approved: {
+    registry.image.label: "Image v42\nSignature verified"
+  }
+}
