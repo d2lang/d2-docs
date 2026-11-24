@@ -268,7 +268,8 @@ label shows the angle as you go.
 
 Does a cache hit reach the database? The order API looks up `order:481`.
 Redis already has it, so only the Redis connection carries a request.
-The Postgres path stays still. This is the same technique used for the
+The arrowhead stays gray until the orange band reaches it. The Postgres
+path stays still. This is the same technique used for the
 [shield cache](#how-1200-gets-become-one-origin-read).
 
 <AnimationExample name="request-pulse" width={395} height={226} alt="An orange pulse travels from the order API to Redis, where order 481 is cached. The Postgres connection marked “on miss” stays still." />
