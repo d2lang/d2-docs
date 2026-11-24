@@ -32,6 +32,19 @@ If you want to uninstall:
 curl -fsSL https://d2lang.com/install.sh | sh -s -- --uninstall
 ```
 
+## Windows
+
+On x64 Windows, download an MSI from the [D2 releases page](https://github.com/d2lang/d2/releases).
+
+- **Just for your account (v0.9.1 and later).** Choose the file ending in
+  `-windows-amd64-user.msi`. It installs in `%LOCALAPPDATA%\Programs\D2` without administrator rights.
+- **For all users.** Choose the file ending in `-windows-amd64.msi`. It requires
+  administrator rights and installs in `%ProgramFiles%\D2`.
+
+After installation, open a new PowerShell or Command Prompt window and run `d2 --version`.
+
+For native ARM64, extract the `-windows-arm64.tar.gz` archive and run `d2.exe` from its `bin` directory.
+
 ## Install from source
 
 Alternatively, you can install from source:

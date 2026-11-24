@@ -75,7 +75,7 @@ d2 --layout=elk --theme=4 --dark-theme=200 --pad=0 --sketch --center input.d2
 <div style={{width: 400}} className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/vars-config.svg2')}}></div>
 
 :::info Precedence
-Flags and environment variables take precedence.
+For top-level settings such as `theme-id` and `pad`, flags and environment variables take precedence.
 
 In other words, if you call `D2_PAD=2 d2 --theme=1 input.d2`, it doesn't matter what
 `theme-id` and `pad` are set to in `input.d2`'s `d2-config`; it will use the options from
@@ -111,19 +111,21 @@ To export the same diagram at its natural size without the SVG appendix, run
 `d2 --scale=1 --force-appendix=false input.d2 output.svg`.
 
 :::info `data`
-`data` is an anything-goes map of key-value pairs. This is used in contexts where
-third-party software read configuration, such as when D2 is used as a library, or D2 is
-run with an external plugin.
-
-For example,
+`data` holds key-value pairs that applications embedding D2 can read. Starting in v0.9.1,
+you can also set [Dagre](./dagre.md#spacing) and [ELK](./elk.md#algorithms) layout options here.
+These values take precedence over the corresponding CLI flags. This example sets the space
+between adjacent ELK layers to 100 pixels.
 
 ```d2
 vars: {
   d2-config: {
+    layout-engine: elk
     data: {
-      power-level: 9000
+      elk-nodeNodeBetweenLayers: 100
     }
   }
 }
+
+a -> b
 ```
 :::
