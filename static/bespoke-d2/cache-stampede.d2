@@ -1,168 +1,129 @@
-# Origin shielding for one cold, cacheable 256 KiB image, GET /cover.avif.
-# Each of the six edge POPs receives 200 requests for the same cache key.
-# On the viewer links, each amber or mint dash represents 50 messages.
-# On the upstream links, each moving dash represents one GET or one body.
-#
-# In this run Ashburn arrives first. Its fetch is already in flight when
-# the other five misses reach the shield. Only fully delivered body bytes
-# count toward the 300 MiB total. Network headers are excluded.
-#
-# Two D2 connections between each pair carry opposite directions of travel.
-# A leading and trailing gradient stop define each dash. Values below 0%
-# or above 100% keep a dash outside its link until its scheduled hop.
-# The numeric endpoint values in the final step are interpolated by D2.
+# GET /cover.avif is a cold, cacheable 256 KiB response.
+# Each viewer dash represents 100 GETs or responses. Farther upstream,
+# one dash represents a single GET or a single response body.
 vars: {
+  # Start and end of each pulse, measured along the connection from left to right.
+  v0: -22%; v1: -15%; v2: -7%; v3: 0%  # Two viewer batches
+  l0: -112%; l1: -98%                   # Ashburn's miss
+  m0: -109%; m1: -95%                   # The five other misses
+  g0: -133%; g1: -119%                  # The one origin fetch
+  warm: -215%
+  # Hex digits for the packet colors. Switch each group to mint when its
+  # connections start carrying the response in the other direction.
+  c: "FB6"
+  f: "FB6"
   d2-config: {
-    layout-engine: dagre
-    pad: 24
-    data: {dagre-nodesep: 16; dagre-edgesep: 30}
     animate-interval: 140ms
-    animate-duration: 7200ms
+    animate-duration: 2100ms
+    theme-id: 200
+    theme-overrides: {B1: "#73B2AF"; B4: "#234959"; B6: "#203F50"; N1: "#E9F5EC"}
+    pad: 24
+    data: {dagre-nodesep: 16}
   }
-  # Viewer GETs (v), three staggered edge misses (a/b/c), then the origin GET (g).
-  v1: 0%
-  v2: -5%
-  v3: -12%
-  v4: -17%
-  v5: -24%
-  v6: -29%
-  v7: -36%
-  v8: -41%
-  a1: -121.9%
-  a2: -136.9%
-  b1: -129.4%
-  b2: -144.4%
-  c1: -136%
-  c2: -151%
-  g1: -351%
-  g2: -366%
-  # Returning body (h), edge copies (r), and bundles to viewers (d).
-  h1: -604.4%
-  h2: -622.4%
-  r1: -588.6%
-  r2: -606.6%
-  d1: -901.1%
-  d2: -906.1%
-  d3: -913.1%
-  d4: -918.1%
-  d5: -925.1%
-  d6: -930.1%
-  d7: -937.1%
-  d8: -942.1%
-  cache: -2448.5%
-  cached: -2787%
-  read: -800%
-  time: 0%
-  served: -2219%
 }
 
+# Visible request cells and empty cells that reserve space in the shield.
+classes.t: {width: 50; height: 29; style: {font-size: 14}}
+classes.z: {width: 50; height: 29; style.opacity: 0}
+
+# An edge fills in as its cached copy arrives.
+classes.p: {width: 158; height: 46; style: {fill: "linear-gradient(to right,#166A61 ${warm},#193B4C ${warm})"; border-radius: 7; stroke-width: 1; bold: false}}
+
+# The two stops at each end give a moving packet a sharp edge.
+classes.v: {style: {stroke: "linear-gradient(to right,#345 ${v0},#${c} ${v0},#${c} ${v1},#345 ${v1},#345 ${v2},#${c} ${v2},#${c} ${v3},#345 ${v3})"; stroke-width: 6}}
+classes.l: {style: {stroke: "linear-gradient(to right,#345 ${l0},#${c} ${l0},#${c} ${l1},#345 ${l1})"; stroke-width: 6}}
+classes.m: {style: {stroke: "linear-gradient(to right,#345 ${m0},#${f} ${m0},#${f} ${m1},#345 ${m1})"; stroke-width: 6}}
+classes.g: {style: {stroke: "linear-gradient(to right,#345 ${g0},#${c} ${g0},#${c} ${g1},#345 ${g1})"; stroke-width: 6}}
+
+h: "How 1,200 GETs become one origin read" {near: top-center; shape: text; style: {bold: true; font-size: 26; font-color: "#E9F5EC"}}
 direction: right
-style.fill: "#112737"
+style.fill: "#122C3A"
 
-classes: {
-  pop: {width: 163; height: 54; style: {fill: "linear-gradient(to right, #166A61 ${cache}, #17394C ${cache})"; stroke: "#416376"; stroke-width: 1; font-color: "#E3F2EF"; border-radius: 7; font-size: 16; bold: false}}
-  service: {width: 166; height: 84; style: {fill: "#204958"; stroke: "#6BB6AF"; stroke-width: 1; font-color: "#F4FAEA"; border-radius: 9; font-size: 17; bold: true}}
-
-  viewer-burst: {style: {stroke-width: 7; stroke: "linear-gradient(to right, #544D43 ${v8}, #FB6 ${v8}, #FB6 ${v7}, #345 ${v7}, #345 ${v6}, #FB6 ${v6}, #FB6 ${v5}, #345 ${v5}, #345 ${v4}, #FB6 ${v4}, #FB6 ${v3}, #345 ${v3}, #345 ${v2}, #FB6 ${v2}, #FB6 ${v1}, #345 ${v1})"}}
-  leader-miss: {style: {stroke-width: 6; stroke: "linear-gradient(to right, #544D43 ${a2}, #FB6 ${a2}, #FB6 ${a1}, #345 ${a1})"}}
-  early-miss: {style: {stroke-width: 6; stroke: "linear-gradient(to right, #544D43 ${b2}, #FB6 ${b2}, #FB6 ${b1}, #345 ${b1})"}}
-  late-miss: {style: {stroke-width: 6; stroke: "linear-gradient(to right, #544D43 ${c2}, #FB6 ${c2}, #FB6 ${c1}, #345 ${c1})"}}
-
-  origin-get: {style: {stroke-width: 6; stroke: "linear-gradient(to right, #544D43 ${g2}, #FB6 ${g2}, #FB6 ${g1}, #345 ${g1})"}}
-
-  origin-body: {style: {stroke-width: 6; stroke: "linear-gradient(to left, #315854 ${h2}, #6EC ${h2}, #6EC ${h1}, #345 ${h1})"}}
-  edge-fill: {style: {stroke-width: 6; stroke: "linear-gradient(to left, #315854 ${r2}, #6EC ${r2}, #6EC ${r1}, #345 ${r1})"}}
-
-  viewer-delivery: {style: {stroke-width: 7; stroke: "linear-gradient(to left, #315854 ${d8}, #6EC ${d8}, #6EC ${d7}, #345 ${d7}, #345 ${d6}, #6EC ${d6}, #6EC ${d5}, #345 ${d5}, #345 ${d4}, #6EC ${d4}, #6EC ${d3}, #345 ${d3}, #345 ${d2}, #6EC ${d2}, #6EC ${d1}, #345 ${d1})"}}
-}
-
-header: "" {
-  near: top-center
+# Viewers, the shared shield, and the origin, in network order.
+v: "1,200 viewers\n200 per edge\n300 MiB total" {width: 154; height: 88}
+shield: "Shield cache\nIn-flight requests" {
+  width: 206
+  height: 124
+  grid-rows: 2
   grid-columns: 3
-  horizontal-gap: 24
-  vertical-gap: 2
-  style: {fill: transparent; stroke-width: 0}
-  title: "How 1,200 GETs become one origin read" {shape: text; style: {bold: true; font-size: 30; font-color: "#F7F4E2"}}
-  get: "▪ GET request" {shape: text; style.font-color: "#FB6"}
-  body: "▪ Response body" {shape: text; style.font-color: "#6EC"}
+  grid-gap: 6
+  style.font-size: 16
+  label.near: top-center
+  # Declare IAD first so it keeps the same slot when the other five arrive.
+  IAD: IAD {class: t; style: {fill: "#FB6"; font-color: "#223744"}}
+  IAD: suspend
+  _slot: "" {class: z}
 }
-viewers: "1,200 viewers\n200 per edge\n300 MiB total" {class: service; width: 160; height: 100; style: {multiple: true; fill: "linear-gradient(to right, #28675C ${served}, #204958 ${served})"}}
-shield: "Shield cache\n1 leader + 5 waiters" {class: service; width: 181; style.fill: "linear-gradient(to right, #166A61 ${cached}, #204958 ${cached})"}
-origin: "Image origin\n/cover.avif\n1 × 256 KiB" {class: service; width: 148; shape: cylinder; label.near: center-center; height: 133; style: {fill: "linear-gradient(to top, #695134 ${read}, #423E38 ${read})"; stroke: "#B79870"; font-color: "#F9E9D8"}}
+o: "Image origin\n/cover.avif\n1 × 256 KiB" {style.stroke: "#CA985E"; shape: cylinder; width: 150; height: 123}
 
-# POPs are declared in reverse of Dagre’s bottom-up stacking order.
-NRT: "NRT  /  Tokyo" {class: pop}
-FRA: "FRA  /  Frankfurt" {class: pop}
-LHR: "LHR  /  London" {class: pop}
-IAD: "IAD  /  Ashburn" {class: pop}
-ORD: "ORD  /  Chicago" {class: pop}
-SFO: "SFO  /  San Francisco" {class: pop}
+# Dagre stacks these bottom-up. Ashburn is the third row from the top.
+NRT: "NRT  /  Tokyo" {class: p}
+FRA: "FRA  /  Frankfurt" {class: p}
+LHR: "LHR  /  London" {class: p}
+IAD: "IAD  /  Ashburn" {class: p}
+ORD: "ORD  /  Chicago" {class: p}
+SFO: "SFO  /  San Francisco" {class: p}
 
-viewers -- NRT: {class: viewer-burst}
-viewers -- NRT: {class: viewer-delivery}
-NRT -- shield: {class: late-miss}
-NRT -- shield: {class: edge-fill}
-viewers -- FRA: {class: viewer-burst}
-viewers -- FRA: {class: viewer-delivery}
-FRA -- shield: {class: early-miss}
-FRA -- shield: {class: edge-fill}
-viewers -- LHR: {class: viewer-burst}
-viewers -- LHR: {class: viewer-delivery}
-LHR -- shield: {class: late-miss}
-LHR -- shield: {class: edge-fill}
-viewers -- IAD: {class: viewer-burst}
-viewers -- IAD: {class: viewer-delivery}
-IAD -- shield: {class: leader-miss}
-IAD -- shield: {class: edge-fill}
-viewers -- ORD: {class: viewer-burst}
-viewers -- ORD: {class: viewer-delivery}
-ORD -- shield: {class: early-miss}
-ORD -- shield: {class: edge-fill}
-viewers -- SFO: {class: viewer-burst}
-viewers -- SFO: {class: viewer-delivery}
-SFO -- shield: {class: late-miss}
-SFO -- shield: {class: edge-fill}
-shield -- origin: {class: origin-get}
-shield -- origin: {class: origin-body}
-
-timeline: "GET burst     Edge misses       Origin read       Shield fill      Edge fills      Delivery" {near: bottom-center; width: 960; height: 34; style: {font: mono; font-size: 14; font-color: "#D9E9E6"; border-radius: 5; stroke-width: 0; fill: "linear-gradient(to right, #315B61 ${time}, #1C3748 ${time})"}}
+v -- NRT: {class: v}
+NRT -- shield: {class: m}
+v -- FRA: {class: v}
+FRA -- shield: {class: m}
+v -- LHR: {class: v}
+LHR -- shield: {class: m}
+v -- IAD: {class: v}
+IAD -- shield: {class: l}
+v -- ORD: {class: v}
+ORD -- shield: {class: m}
+v -- SFO: {class: v}
+SFO -- shield: {class: m}
+shield -- o: {class: g}
 
 steps: {
-  fill-and-deliver: {
+  # The first edge miss reaches the shield and starts the origin GET.
+  leader: {
+    shield.IAD: unsuspend
+    shield._y: "" {class: z}
+    shield._z: "" {class: z}
     vars: {
-      v1: 724.6%
-      v2: 719.6%
-      v3: 712.6%
-      v4: 707.6%
-      v5: 700.6%
-      v6: 695.6%
-      v7: 688.6%
-      v8: 683.6%
-      a1: 563%
-      a2: 548%
-      b1: 484%
-      b2: 469%
-      c1: 425.8%
-      c2: 410.8%
-      g1: 629.4%
-      g2: 614.4%
-      h1: 494.5%
-      h2: 476.5%
-      r1: 288.6%
-      r2: 270.6%
-      d1: 162.8%
-      d2: 157.8%
-      d3: 150.8%
-      d4: 145.8%
-      d5: 138.8%
-      d6: 133.8%
-      d7: 126.8%
-      d8: 121.8%
-      cache: 581.8%
-      cached: 1560.9%
-      read: 866.7%
-      time: 100%
-      served: 143%
+      v0: 420%; v1: 425%; v2: 432%; v3: 437%
+      l0: 288%; l1: 302%
+      m0: 76%; m1: 90%
+      g0: 112%; g1: 126%
+    }
+  }
+
+  # The other edges attach to the same fetch as the body travels back.
+  join: {
+    shield._slot: null
+    shield._y: null
+    shield._z: null
+    shield.ORD: ORD {class: t}
+    shield.FRA: FRA {class: t}
+    shield.SFO: SFO {class: t}
+    shield.LHR: LHR {class: t}
+    shield.NRT: NRT {class: t}
+    vars: {
+      g0: -14%; g1: 0%
+      m0: 212%; m1: 226%
+      l0: 102%; l1: 116%
+      c: "6EC"
+    }
+  }
+
+  # Release the in-flight entry, fill the edges, and deliver to the viewers.
+  deliver: {
+    shield.IAD: null
+    shield.ORD: null
+    shield.FRA: null
+    shield.SFO: null
+    shield.LHR: null
+    shield.NRT: null
+    vars: {
+      warm: 210%
+      f: "6EC"
+      m0: -199%; m1: -185%
+      l0: -199%; l1: -185%
+      v0: -22%; v1: -15%; v2: -7%; v3: 0%
     }
   }
 }

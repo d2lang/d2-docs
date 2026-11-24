@@ -13,15 +13,15 @@ value changing *during* a step, like a battery draining, set `animate-duration`.
 
 ## How 1,200 GETs become one origin read
 
-Six edge caches each receive 200 requests for the same image. Watch Ashburn,
-the third row. Its amber request reaches the shield while the others are
-still on their way.
+All 1,200 viewers request `/cover.avif` before it’s cached. Each of six edge
+caches combines its 200 GETs into one miss. Follow the amber requests to the
+shield and watch its in-flight grid as they arrive.
 
 <img
   src="/img/generated/cache-stampede.svg"
-  alt="Six edge caches send GETs to a shared shield. One GET reaches the origin. The response returns to the shield, then to the edges and their viewers."
-  width="1008"
-  height="578"
+  alt="Ashburn appears first in the shield’s in-flight grid. Five more edge caches join the same origin fetch. When the response returns, all six entries clear and each edge serves 200 viewers."
+  width="1018"
+  height="459"
   style={{height: 'auto'}}
 />
 
@@ -29,23 +29,25 @@ still on their way.
 {' · '}
 <a href="/bespoke-d2/cache-stampede.d2" download="cache-stampede.d2">Download the D2 source</a>
 
-The shield starts one origin GET for Ashburn. The other five edges wait for
-that same fetch. When the mint response comes back, each edge gets a copy
-and serves its 200 viewers. The origin sends 256 KiB and the viewers receive
-300 MiB.
+Ashburn (**IAD**) arrives first. Its amber cell appears as the shield sends
+one GET to the origin. Five more cells appear while that fetch is in flight,
+one for each edge waiting for the same image. When the mint response reaches
+the shield, the grid clears. Each edge gets a copy and serves its 200 viewers.
+The origin sends **256 KiB** and the viewers receive **300 MiB**.
 
 <details>
-<summary>How do the requests move?</summary>
+<summary>How do the pulses and the grid work together?</summary>
 
-Look for `origin-get` in the source below. Its connection stroke is a linear
-gradient with a narrow amber band. One step moves both ends of that band
-together. The next hop's band starts outside its connection, so it comes into
-view just as the request arrives. This works on curves that keep moving in
-the same direction along the gradient axis.
+A connection stroke is a linear gradient with a narrow colored band. Moving
+both ends of the band together sends a pulse along the connection. Stops
+below 0% or above 100% let the next hop wait until the packet arrives.
+Each dash on a viewer link represents 100 GETs or responses. Farther
+upstream, one dash is one GET or one response.
 
-Each dash on a viewer connection stands for 50 messages. Farther upstream,
-one dash is one GET or one response. The opening board lasts 140 ms and one
-7.2-second step runs the whole exchange.
+The same three steps update the [grid](#grid-animations). The first reveals
+`shield.IAD`, the second adds five waiting edges, and the last removes all
+six with `null`. The shield keeps the same width and height throughout, so
+you can follow the pulses while its contents change.
 
 <CodeBlock className="language-d2" hidePlaygroundLink>{CacheStampede}</CodeBlock>
 
@@ -60,7 +62,8 @@ d2 cache-stampede.d2 cache-stampede.svg
 Use `cache-stampede.gif` as the output filename to get a GIF.
 
 :::note
-`animate-duration` is available on D2's `master` branch for the next release.
+This example uses the grid renderer from [d2lang/d2#3021](https://github.com/d2lang/d2/pull/3021).
+The examples that animate style properties work with D2’s `master` branch.
 :::
 
 ## Play layers, scenarios, and steps
