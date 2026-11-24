@@ -83,7 +83,8 @@ the command.
 :::
 
 `animate-interval` sets the playback interval for all boards.
-`animate-duration` sets the transition time for steps. See the [animation configuration](./animation.md#configuration).
+`animate-duration` sets the transition time for steps. It also controls pencil shading
+and text decorations between layers and scenarios. See the [animation configuration](./animation.md#configuration).
 
 ### Output scale and SVG appendix
 

@@ -11,8 +11,10 @@ Animation is in alpha and may change. If you have feedback, [open a GitHub issue
 
 Use [`style.animated`](./style.md#animated) to animate a shape or connection on a single board.
 To show a sequence, use `animate-interval` to play [boards](./composition.md) in order.
-Set `animate-duration` to control how long changes take when entering a [step](./steps.md).
-The default is `0`, so steps change instantly.
+Set `animate-duration` to control how long a transition takes. [Steps](./steps.md)
+can animate styles, variables, and grids. Pencil shading and text decorations
+also animate between consecutive [layers](./layers.md) and [scenarios](./scenarios.md).
+The default duration is `0`, so boards change instantly.
 
 This example is an animated SVG you can embed in a GitHub README.
 
@@ -68,6 +70,13 @@ Set `style.fill` on the board to animate its background color.
 
 <AnimationExample name="background" width={268} height={78} alt="The board background changes from green to amber." />
 
+### Pencil shading
+
+In sketch mode, changing a shape’s solid fill shades it in with pencil strokes.
+Changing the fill to `transparent` erases it.
+
+<AnimationExample name="sketch-shading" width={470} height={150} alt="A standby volume’s block ranges are shaded in as they are restored from a snapshot." />
+
 ### Stroke
 
 Set `style.stroke` to animate the outline of a shape or the color of a connection.
@@ -77,6 +86,15 @@ Set `style.stroke` to animate the outline of a shape or the color of a connectio
 ### Font color
 
 <AnimationExample name="font-color" width={312} height={122} alt="One label changes from gray to red." />
+
+### Text decorations
+
+Keep the same object ID and label text. Set `style.underline` on a shape or
+connection to draw an underline, or wrap a Markdown span in `~~` to draw a
+strikethrough. Removing the decoration retracts the line. Both work in regular
+and sketch mode.
+
+<AnimationExample name="decorations" width={469} height={186} alt="The v1 webhook endpoint is crossed out as the v2 endpoint is underlined. Both marks retract on rollback." />
 
 ### Stroke width
 
