@@ -1,0 +1,16 @@
+vars: {
+  d2-config: {
+    layout-engine: tala
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+  x: 100
+  y: 0
+}
+
+Gate: {left: 0; top: 0}
+Worker: {left: ${x}; top: ${y}}
+
+steps: {
+  depart: {vars: {x: 200; y: 60}}
+}

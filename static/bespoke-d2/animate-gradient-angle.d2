@@ -1,0 +1,17 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+  angle: 0
+}
+
+tile: "" {
+  width: 160
+  height: 72
+  style.fill: "linear-gradient(${angle}deg, navy, lightskyblue)"
+}
+
+steps: {
+  turn: {vars: {angle: 180}}
+}

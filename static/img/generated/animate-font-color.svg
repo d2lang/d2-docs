@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" d2Version="v0.8.1-HEAD" preserveAspectRatio="xMinYMin meet" viewBox="0 0 88 39"><svg class="d2-svg" width="88" height="39" viewBox="-9 -9 88 39"><style type="text/css"><![CDATA[
+.d2-808109787 .text {
+	font-family: "d2-808109787-font-regular";
+}
+@font-face {
+	font-family: d2-808109787-font-regular;
+	src: url("data:application/font-woff;base64,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");
+}]]></style><style type="text/css"><![CDATA[.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-808109787 .fill-N1{fill:#0A0F25;}
+		.d2-808109787 .fill-N2{fill:#676C7E;}
+		.d2-808109787 .fill-N3{fill:#9499AB;}
+		.d2-808109787 .fill-N4{fill:#CFD2DD;}
+		.d2-808109787 .fill-N5{fill:#DEE1EB;}
+		.d2-808109787 .fill-N6{fill:#EEF1F8;}
+		.d2-808109787 .fill-N7{fill:#FFFFFF;}
+		.d2-808109787 .fill-B1{fill:#0D32B2;}
+		.d2-808109787 .fill-B2{fill:#0D32B2;}
+		.d2-808109787 .fill-B3{fill:#E3E9FD;}
+		.d2-808109787 .fill-B4{fill:#E3E9FD;}
+		.d2-808109787 .fill-B5{fill:#EDF0FD;}
+		.d2-808109787 .fill-B6{fill:#F7F8FE;}
+		.d2-808109787 .fill-AA2{fill:#4A6FF3;}
+		.d2-808109787 .fill-AA4{fill:#EDF0FD;}
+		.d2-808109787 .fill-AA5{fill:#F7F8FE;}
+		.d2-808109787 .fill-AB4{fill:#EDF0FD;}
+		.d2-808109787 .fill-AB5{fill:#F7F8FE;}
+		.d2-808109787 .stroke-N1{stroke:#0A0F25;}
+		.d2-808109787 .stroke-N2{stroke:#676C7E;}
+		.d2-808109787 .stroke-N3{stroke:#9499AB;}
+		.d2-808109787 .stroke-N4{stroke:#CFD2DD;}
+		.d2-808109787 .stroke-N5{stroke:#DEE1EB;}
+		.d2-808109787 .stroke-N6{stroke:#EEF1F8;}
+		.d2-808109787 .stroke-N7{stroke:#FFFFFF;}
+		.d2-808109787 .stroke-B1{stroke:#0D32B2;}
+		.d2-808109787 .stroke-B2{stroke:#0D32B2;}
+		.d2-808109787 .stroke-B3{stroke:#E3E9FD;}
+		.d2-808109787 .stroke-B4{stroke:#E3E9FD;}
+		.d2-808109787 .stroke-B5{stroke:#EDF0FD;}
+		.d2-808109787 .stroke-B6{stroke:#F7F8FE;}
+		.d2-808109787 .stroke-AA2{stroke:#4A6FF3;}
+		.d2-808109787 .stroke-AA4{stroke:#EDF0FD;}
+		.d2-808109787 .stroke-AA5{stroke:#F7F8FE;}
+		.d2-808109787 .stroke-AB4{stroke:#EDF0FD;}
+		.d2-808109787 .stroke-AB5{stroke:#F7F8FE;}
+		.d2-808109787 .background-color-N1{background-color:#0A0F25;}
+		.d2-808109787 .background-color-N2{background-color:#676C7E;}
+		.d2-808109787 .background-color-N3{background-color:#9499AB;}
+		.d2-808109787 .background-color-N4{background-color:#CFD2DD;}
+		.d2-808109787 .background-color-N5{background-color:#DEE1EB;}
+		.d2-808109787 .background-color-N6{background-color:#EEF1F8;}
+		.d2-808109787 .background-color-N7{background-color:#FFFFFF;}
+		.d2-808109787 .background-color-B1{background-color:#0D32B2;}
+		.d2-808109787 .background-color-B2{background-color:#0D32B2;}
+		.d2-808109787 .background-color-B3{background-color:#E3E9FD;}
+		.d2-808109787 .background-color-B4{background-color:#E3E9FD;}
+		.d2-808109787 .background-color-B5{background-color:#EDF0FD;}
+		.d2-808109787 .background-color-B6{background-color:#F7F8FE;}
+		.d2-808109787 .background-color-AA2{background-color:#4A6FF3;}
+		.d2-808109787 .background-color-AA4{background-color:#EDF0FD;}
+		.d2-808109787 .background-color-AA5{background-color:#F7F8FE;}
+		.d2-808109787 .background-color-AB4{background-color:#EDF0FD;}
+		.d2-808109787 .background-color-AB5{background-color:#F7F8FE;}
+		.d2-808109787 .color-N1{color:#0A0F25;}
+		.d2-808109787 .color-N2{color:#676C7E;}
+		.d2-808109787 .color-N3{color:#9499AB;}
+		.d2-808109787 .color-N4{color:#CFD2DD;}
+		.d2-808109787 .color-N5{color:#DEE1EB;}
+		.d2-808109787 .color-N6{color:#EEF1F8;}
+		.d2-808109787 .color-N7{color:#FFFFFF;}
+		.d2-808109787 .color-B1{color:#0D32B2;}
+		.d2-808109787 .color-B2{color:#0D32B2;}
+		.d2-808109787 .color-B3{color:#E3E9FD;}
+		.d2-808109787 .color-B4{color:#E3E9FD;}
+		.d2-808109787 .color-B5{color:#EDF0FD;}
+		.d2-808109787 .color-B6{color:#F7F8FE;}
+		.d2-808109787 .color-AA2{color:#4A6FF3;}
+		.d2-808109787 .color-AA4{color:#EDF0FD;}
+		.d2-808109787 .color-AA5{color:#F7F8FE;}
+		.d2-808109787 .color-AB4{color:#EDF0FD;}
+		.d2-808109787 .color-AB5{color:#F7F8FE;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-darker-d2-808109787);mix-blend-mode:lighten}.sketch-overlay-B2{fill:url(#streaks-darker-d2-808109787);mix-blend-mode:lighten}.sketch-overlay-B3{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-B5{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-B6{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-AA2{fill:url(#streaks-dark-d2-808109787);mix-blend-mode:overlay}.sketch-overlay-AA4{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-AA5{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-AB5{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-darker-d2-808109787);mix-blend-mode:lighten}.sketch-overlay-N2{fill:url(#streaks-dark-d2-808109787);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal-d2-808109787);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal-d2-808109787);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-bright-d2-808109787);mix-blend-mode:darken}.light-code{display: block}.dark-code{display: none}]]></style><style type="text/css"><![CDATA[@keyframes d2Transition-d2-808109787-0 {0.000000000%{opacity:1}50.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-1 {0%{opacity:0}50.000000000%{opacity:1}52.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-2 {0%{opacity:0}52.000000000%{opacity:1}54.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-3 {0%{opacity:0}54.000000000%{opacity:1}56.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-4 {0%{opacity:0}56.000000000%{opacity:1}58.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-5 {0%{opacity:0}58.000000000%{opacity:1}60.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-6 {0%{opacity:0}60.000000000%{opacity:1}62.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-7 {0%{opacity:0}62.000000000%{opacity:1}64.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-8 {0%{opacity:0}64.000000000%{opacity:1}66.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-9 {0%{opacity:0}66.000000000%{opacity:1}68.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-10 {0%{opacity:0}68.000000000%{opacity:1}70.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-11 {0%{opacity:0}70.000000000%{opacity:1}72.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-12 {0%{opacity:0}72.000000000%{opacity:1}74.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-13 {0%{opacity:0}74.000000000%{opacity:1}76.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-14 {0%{opacity:0}76.000000000%{opacity:1}78.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-15 {0%{opacity:0}78.000000000%{opacity:1}80.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-16 {0%{opacity:0}80.000000000%{opacity:1}82.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-17 {0%{opacity:0}82.000000000%{opacity:1}84.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-18 {0%{opacity:0}84.000000000%{opacity:1}86.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-19 {0%{opacity:0}86.000000000%{opacity:1}88.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-20 {0%{opacity:0}88.000000000%{opacity:1}90.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-808109787-21 {0%{opacity:0}90.000000000%{opacity:1}100%{opacity:1}}]]></style><g style="animation: d2Transition-d2-808109787-0 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="navy" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-808109787" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-1 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="navy" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-1290691725" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-2 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#09027b" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-313366542" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-3 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#120377" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-3979766722" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-4 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#1b0572" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-311252579" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-5 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#24076d" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-666785407" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-6 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#2d0969" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-3393926002" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-7 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#350a64" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-2092486335" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-8 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#3e0c5f" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-2113637332" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-9 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#470e5a" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-822006378" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-10 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#500f56" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-3732583098" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-11 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#591151" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-2952415956" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-12 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#62134c" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-3933537599" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-13 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#6b1448" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-2806325499" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-14 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#741643" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-2798346831" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-15 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#7d183e" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-2090014308" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-16 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#861a3a" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-221229902" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-17 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#8e1b35" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-3075571842" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-18 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#971d30" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-3214176404" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-19 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#a01f2b" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-2994795528" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-20 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="#a92027" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-3772775077" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-808109787-21 2000ms steps(1,end) infinite" class="d2-808109787 " width="88" height="39" viewBox="-9 -9 88 39"><rect x="-9" y="-9" width="88" height="39" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><g class="c3RhdHVz"><g class="shape" ></g><text x="35" y="16" fill="firebrick" class="text" style="text-anchor:middle;font-size:16px">Job status</text></g><mask id="d2-4235858782" maskUnits="userSpaceOnUse" x="-9" y="-9" width="88" height="39">
+<rect x="-9" y="-9" width="88" height="39" fill="white"></rect>
+
+</mask></g></svg></svg>

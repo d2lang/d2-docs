@@ -1,0 +1,13 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+  jobs: 2
+}
+
+Queue: "Queued jobs: ${jobs}" {width: 160}
+
+steps: {
+  enqueue: {vars: {jobs: 12}}
+}

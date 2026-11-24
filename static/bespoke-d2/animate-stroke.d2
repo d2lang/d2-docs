@@ -1,0 +1,18 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+}
+direction: right
+
+Client -> API: {
+  style.stroke: teal
+  style.stroke-width: 5
+}
+
+steps: {
+  highlight: {
+    (Client -> API)[0].style.stroke: purple
+  }
+}

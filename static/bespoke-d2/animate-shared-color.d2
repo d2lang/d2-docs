@@ -1,0 +1,17 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+  health: palegreen
+}
+
+direction: right
+
+API.style.fill: ${health}
+Cache.style.fill: ${health}
+API -> Cache
+
+steps: {
+  alert: {vars: {health: lightcoral}}
+}

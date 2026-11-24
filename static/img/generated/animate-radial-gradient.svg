@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" d2Version="v0.8.1-HEAD" preserveAspectRatio="xMinYMin meet" viewBox="0 0 118 118"><svg class="d2-svg" width="118" height="118" viewBox="-9 -9 118 118"><style type="text/css"><![CDATA[
+.d2-2172947122 .text-bold {
+	font-family: "d2-2172947122-font-bold";
+}
+@font-face {
+	font-family: d2-2172947122-font-bold;
+	src: url("data:application/font-woff;base64,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");
+}]]></style><style type="text/css"><![CDATA[.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-2172947122 .fill-N1{fill:#0A0F25;}
+		.d2-2172947122 .fill-N2{fill:#676C7E;}
+		.d2-2172947122 .fill-N3{fill:#9499AB;}
+		.d2-2172947122 .fill-N4{fill:#CFD2DD;}
+		.d2-2172947122 .fill-N5{fill:#DEE1EB;}
+		.d2-2172947122 .fill-N6{fill:#EEF1F8;}
+		.d2-2172947122 .fill-N7{fill:#FFFFFF;}
+		.d2-2172947122 .fill-B1{fill:#0D32B2;}
+		.d2-2172947122 .fill-B2{fill:#0D32B2;}
+		.d2-2172947122 .fill-B3{fill:#E3E9FD;}
+		.d2-2172947122 .fill-B4{fill:#E3E9FD;}
+		.d2-2172947122 .fill-B5{fill:#EDF0FD;}
+		.d2-2172947122 .fill-B6{fill:#F7F8FE;}
+		.d2-2172947122 .fill-AA2{fill:#4A6FF3;}
+		.d2-2172947122 .fill-AA4{fill:#EDF0FD;}
+		.d2-2172947122 .fill-AA5{fill:#F7F8FE;}
+		.d2-2172947122 .fill-AB4{fill:#EDF0FD;}
+		.d2-2172947122 .fill-AB5{fill:#F7F8FE;}
+		.d2-2172947122 .stroke-N1{stroke:#0A0F25;}
+		.d2-2172947122 .stroke-N2{stroke:#676C7E;}
+		.d2-2172947122 .stroke-N3{stroke:#9499AB;}
+		.d2-2172947122 .stroke-N4{stroke:#CFD2DD;}
+		.d2-2172947122 .stroke-N5{stroke:#DEE1EB;}
+		.d2-2172947122 .stroke-N6{stroke:#EEF1F8;}
+		.d2-2172947122 .stroke-N7{stroke:#FFFFFF;}
+		.d2-2172947122 .stroke-B1{stroke:#0D32B2;}
+		.d2-2172947122 .stroke-B2{stroke:#0D32B2;}
+		.d2-2172947122 .stroke-B3{stroke:#E3E9FD;}
+		.d2-2172947122 .stroke-B4{stroke:#E3E9FD;}
+		.d2-2172947122 .stroke-B5{stroke:#EDF0FD;}
+		.d2-2172947122 .stroke-B6{stroke:#F7F8FE;}
+		.d2-2172947122 .stroke-AA2{stroke:#4A6FF3;}
+		.d2-2172947122 .stroke-AA4{stroke:#EDF0FD;}
+		.d2-2172947122 .stroke-AA5{stroke:#F7F8FE;}
+		.d2-2172947122 .stroke-AB4{stroke:#EDF0FD;}
+		.d2-2172947122 .stroke-AB5{stroke:#F7F8FE;}
+		.d2-2172947122 .background-color-N1{background-color:#0A0F25;}
+		.d2-2172947122 .background-color-N2{background-color:#676C7E;}
+		.d2-2172947122 .background-color-N3{background-color:#9499AB;}
+		.d2-2172947122 .background-color-N4{background-color:#CFD2DD;}
+		.d2-2172947122 .background-color-N5{background-color:#DEE1EB;}
+		.d2-2172947122 .background-color-N6{background-color:#EEF1F8;}
+		.d2-2172947122 .background-color-N7{background-color:#FFFFFF;}
+		.d2-2172947122 .background-color-B1{background-color:#0D32B2;}
+		.d2-2172947122 .background-color-B2{background-color:#0D32B2;}
+		.d2-2172947122 .background-color-B3{background-color:#E3E9FD;}
+		.d2-2172947122 .background-color-B4{background-color:#E3E9FD;}
+		.d2-2172947122 .background-color-B5{background-color:#EDF0FD;}
+		.d2-2172947122 .background-color-B6{background-color:#F7F8FE;}
+		.d2-2172947122 .background-color-AA2{background-color:#4A6FF3;}
+		.d2-2172947122 .background-color-AA4{background-color:#EDF0FD;}
+		.d2-2172947122 .background-color-AA5{background-color:#F7F8FE;}
+		.d2-2172947122 .background-color-AB4{background-color:#EDF0FD;}
+		.d2-2172947122 .background-color-AB5{background-color:#F7F8FE;}
+		.d2-2172947122 .color-N1{color:#0A0F25;}
+		.d2-2172947122 .color-N2{color:#676C7E;}
+		.d2-2172947122 .color-N3{color:#9499AB;}
+		.d2-2172947122 .color-N4{color:#CFD2DD;}
+		.d2-2172947122 .color-N5{color:#DEE1EB;}
+		.d2-2172947122 .color-N6{color:#EEF1F8;}
+		.d2-2172947122 .color-N7{color:#FFFFFF;}
+		.d2-2172947122 .color-B1{color:#0D32B2;}
+		.d2-2172947122 .color-B2{color:#0D32B2;}
+		.d2-2172947122 .color-B3{color:#E3E9FD;}
+		.d2-2172947122 .color-B4{color:#E3E9FD;}
+		.d2-2172947122 .color-B5{color:#EDF0FD;}
+		.d2-2172947122 .color-B6{color:#F7F8FE;}
+		.d2-2172947122 .color-AA2{color:#4A6FF3;}
+		.d2-2172947122 .color-AA4{color:#EDF0FD;}
+		.d2-2172947122 .color-AA5{color:#F7F8FE;}
+		.d2-2172947122 .color-AB4{color:#EDF0FD;}
+		.d2-2172947122 .color-AB5{color:#F7F8FE;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-darker-d2-2172947122);mix-blend-mode:lighten}.sketch-overlay-B2{fill:url(#streaks-darker-d2-2172947122);mix-blend-mode:lighten}.sketch-overlay-B3{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-B5{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-B6{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-AA2{fill:url(#streaks-dark-d2-2172947122);mix-blend-mode:overlay}.sketch-overlay-AA4{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-AA5{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-AB5{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-darker-d2-2172947122);mix-blend-mode:lighten}.sketch-overlay-N2{fill:url(#streaks-dark-d2-2172947122);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal-d2-2172947122);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal-d2-2172947122);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-bright-d2-2172947122);mix-blend-mode:darken}.light-code{display: block}.dark-code{display: none}]]></style><style type="text/css"><![CDATA[@keyframes d2Transition-d2-2172947122-0 {0.000000000%{opacity:1}50.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-1 {0%{opacity:0}50.000000000%{opacity:1}52.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-2 {0%{opacity:0}52.000000000%{opacity:1}54.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-3 {0%{opacity:0}54.000000000%{opacity:1}56.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-4 {0%{opacity:0}56.000000000%{opacity:1}58.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-5 {0%{opacity:0}58.000000000%{opacity:1}60.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-6 {0%{opacity:0}60.000000000%{opacity:1}62.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-7 {0%{opacity:0}62.000000000%{opacity:1}64.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-8 {0%{opacity:0}64.000000000%{opacity:1}66.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-9 {0%{opacity:0}66.000000000%{opacity:1}68.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-10 {0%{opacity:0}68.000000000%{opacity:1}70.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-11 {0%{opacity:0}70.000000000%{opacity:1}72.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-12 {0%{opacity:0}72.000000000%{opacity:1}74.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-13 {0%{opacity:0}74.000000000%{opacity:1}76.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-14 {0%{opacity:0}76.000000000%{opacity:1}78.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-15 {0%{opacity:0}78.000000000%{opacity:1}80.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-16 {0%{opacity:0}80.000000000%{opacity:1}82.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-17 {0%{opacity:0}82.000000000%{opacity:1}84.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-18 {0%{opacity:0}84.000000000%{opacity:1}86.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-19 {0%{opacity:0}86.000000000%{opacity:1}88.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-20 {0%{opacity:0}88.000000000%{opacity:1}90.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-2172947122-21 {0%{opacity:0}90.000000000%{opacity:1}100%{opacity:1}}]]></style><g style="animation: d2Transition-d2-2172947122-0 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-49f0cb40d6a46c04eb0d39d6ed5e5d26a9c9aea1">
+<stop offset="10%" stop-color="lightskyblue" />
+<stop offset="70%" stop-color="white" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-49f0cb40d6a46c04eb0d39d6ed5e5d26a9c9aea1')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-2172947122" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-1 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-49f0cb40d6a46c04eb0d39d6ed5e5d26a9c9aea1">
+<stop offset="10%" stop-color="lightskyblue" />
+<stop offset="70%" stop-color="white" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-49f0cb40d6a46c04eb0d39d6ed5e5d26a9c9aea1')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-4271903719" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-2 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-dbe26fdf7b73e5383eaa467e97f112da4f19a755">
+<stop offset="12%" stop-color="#8bccf9" />
+<stop offset="71.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-dbe26fdf7b73e5383eaa467e97f112da4f19a755')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-3649004418" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-3 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-193ddbaac5e7d6c260e74abe068d4526c5b0e10d">
+<stop offset="14%" stop-color="#90c9f7" />
+<stop offset="73%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-193ddbaac5e7d6c260e74abe068d4526c5b0e10d')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-4190656312" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-4 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-76246540d2cd7f01aef9c021ac1001a8edf25f35">
+<stop offset="16%" stop-color="#94c7f6" />
+<stop offset="74.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-76246540d2cd7f01aef9c021ac1001a8edf25f35')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-2862999037" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-5 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-71e4b56f6283291e66b6d4ca5e47b94d5deb3e23">
+<stop offset="18%" stop-color="#98c5f4" />
+<stop offset="76%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-71e4b56f6283291e66b6d4ca5e47b94d5deb3e23')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-2168721162" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-6 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-8db43998cd285e3ab227cdebe78f36994fd68cc3">
+<stop offset="20%" stop-color="#9dc3f3" />
+<stop offset="77.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-8db43998cd285e3ab227cdebe78f36994fd68cc3')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-1884070050" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-7 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-2b429254d41478f9c7ffc5b7c16abef4a64e373f">
+<stop offset="22%" stop-color="#a1c0f1" />
+<stop offset="79%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-2b429254d41478f9c7ffc5b7c16abef4a64e373f')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-732908329" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-8 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-ec6ba28c09f5bc4723c3304619c1421a0394fae4">
+<stop offset="24%" stop-color="#a5bef0" />
+<stop offset="80.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-ec6ba28c09f5bc4723c3304619c1421a0394fae4')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-1131398187" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-9 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-654f8c621a1edc5635ae3682f1108f65feda23b6">
+<stop offset="26%" stop-color="#a9bcee" />
+<stop offset="82%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-654f8c621a1edc5635ae3682f1108f65feda23b6')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-3951834158" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-10 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-ed8ac013da5c6db926c576fa8d939d6d93498802">
+<stop offset="28%" stop-color="#aeb9ed" />
+<stop offset="83.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-ed8ac013da5c6db926c576fa8d939d6d93498802')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-1892426373" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-11 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-921eb328b6140792bda7009cdc6926a07a8c95ad">
+<stop offset="30%" stop-color="#b2b7ec" />
+<stop offset="85%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-921eb328b6140792bda7009cdc6926a07a8c95ad')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-2961867750" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-12 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-641091d22fa33324729e4fc49ebb8dedc800e525">
+<stop offset="32%" stop-color="#b6b5ea" />
+<stop offset="86.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-641091d22fa33324729e4fc49ebb8dedc800e525')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-497895872" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-13 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-d6c76bd2f0ba2055415ee89011dd48251c941630">
+<stop offset="34%" stop-color="#bbb2e9" />
+<stop offset="88%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-d6c76bd2f0ba2055415ee89011dd48251c941630')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-3791164924" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-14 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-a8139918ea15889cf015058ab2e26a7e8c1171e7">
+<stop offset="36%" stop-color="#bfb0e7" />
+<stop offset="89.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-a8139918ea15889cf015058ab2e26a7e8c1171e7')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-3904009704" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-15 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-37f971b4b59ec2ea3ffe9f0848b036bb0cc6a972">
+<stop offset="38%" stop-color="#c3aee6" />
+<stop offset="91%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-37f971b4b59ec2ea3ffe9f0848b036bb0cc6a972')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-4030092913" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-16 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-b6fec26295847bc9e6dfd93b4ff707c8b1ee4f0f">
+<stop offset="40%" stop-color="#c8ace4" />
+<stop offset="92.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-b6fec26295847bc9e6dfd93b4ff707c8b1ee4f0f')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-3306781917" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-17 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-27a63ada55d725e1e9b697d49dd0af3efb842ddc">
+<stop offset="42%" stop-color="#cca9e3" />
+<stop offset="94%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-27a63ada55d725e1e9b697d49dd0af3efb842ddc')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-447148900" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-18 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-40f4ee859bcee9312d48825988a562e18a4cd4e2">
+<stop offset="44%" stop-color="#d0a7e1" />
+<stop offset="95.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-40f4ee859bcee9312d48825988a562e18a4cd4e2')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-2077795470" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-19 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-039768b91710e6f1fed6428133202fa1807cdc16">
+<stop offset="46%" stop-color="#d4a5e0" />
+<stop offset="97%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-039768b91710e6f1fed6428133202fa1807cdc16')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-1767080650" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-20 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-373cab1f3411fa869fa2d6e2809d5caca52b5198">
+<stop offset="48%" stop-color="#d9a2de" />
+<stop offset="98.5%" stop-color="#ffffff" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-373cab1f3411fa869fa2d6e2809d5caca52b5198')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-2396562008" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-2172947122-21 2000ms steps(1,end) infinite" class="d2-2172947122 " width="118" height="118" viewBox="-9 -9 118 118"><rect x="-9" y="-9" width="118" height="118" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><radialGradient id="grad-eccfcbe462cc05e2e2025a5382f5bd2e6d7eb757">
+<stop offset="50%" stop-color="plum" />
+<stop offset="100%" stop-color="white" />
+</radialGradient></defs><g class="U2lnbmFs"><g class="shape" ><ellipse rx="50" ry="50" cx="50" cy="50" stroke="#0D32B2" fill="url('#grad-eccfcbe462cc05e2e2025a5382f5bd2e6d7eb757')" class="shape stroke-B1" style="stroke-width:2;" /></g><text x="50" y="55.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Signal</text></g><mask id="d2-2797248885" maskUnits="userSpaceOnUse" x="-9" y="-9" width="118" height="118">
+<rect x="-9" y="-9" width="118" height="118" fill="white"></rect>
+
+</mask></g></svg></svg>

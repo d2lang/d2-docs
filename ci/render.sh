@@ -16,6 +16,10 @@ _bespoke() {
   sh_c d2 --omit-version ./static/bespoke-d2/cache-stampede.d2 ${output_dir}/cache-stampede.svg
   sh_c d2 --omit-version --pad 8 ./static/bespoke-d2/animation-recovery.d2 ${output_dir}/animation-recovery.svg
   sh_c d2 --omit-version --pad 8 ./static/bespoke-d2/animation-battery.d2 ${output_dir}/animation-battery.svg
+  for animation_source in ./static/bespoke-d2/animate-*.d2; do
+    animation_file=${animation_source##*/}
+    sh_c d2 --omit-version --pad 8 "$animation_source" "$output_dir/${animation_file%.d2}.svg"
+  done
   sh_c d2 --omit-version --pad 50 ./static/bespoke-d2/tiktok.d2 ${output_dir}/tiktok.pdf
   sh_c d2 --omit-version --pad 0 ./static/bespoke-d2/cat.d2 ${output_dir}/cat.pdf
   sh_c d2 --omit-version --pad 50 ./static/bespoke-d2/lotr.d2 ${output_dir}/lotr.pdf

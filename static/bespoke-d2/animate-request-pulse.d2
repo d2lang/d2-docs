@@ -1,0 +1,19 @@
+vars: {
+  d2-config: {
+    animate-interval: 200ms
+    animate-duration: 1200ms
+  }
+  tail: -20%
+  head: 0%
+}
+direction: right
+
+Client -> Cache: {
+  style.stroke-width: 6
+  style.stroke: "linear-gradient(to right, #466477 ${tail}, orange ${tail}, orange ${head}, #466477 ${head})"
+}
+Client -> Origin
+
+steps: {
+  fetch: {vars: {tail: 100%; head: 120%}}
+}

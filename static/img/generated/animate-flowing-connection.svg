@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMinYMin meet" viewBox="0 0 275 84"><svg class="d2-2066177128 d2-svg" width="275" height="84" viewBox="-9 -9 275 84"><rect x="-9" y="-9" width="275" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><style type="text/css"><![CDATA[
+@keyframes dashdraw {
+	from {
+		stroke-dashoffset: 0;
+	}
+}
+
+.d2-2066177128 .text-bold {
+	font-family: "d2-2066177128-font-bold";
+}
+@font-face {
+	font-family: d2-2066177128-font-bold;
+	src: url("data:application/font-woff;base64,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");
+}]]></style><style type="text/css"><![CDATA[.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-2066177128 .fill-N1{fill:#0A0F25;}
+		.d2-2066177128 .fill-N7{fill:#FFFFFF;}
+		.d2-2066177128 .fill-B1{fill:#0D32B2;}
+		.d2-2066177128 .fill-B6{fill:#F7F8FE;}
+		.d2-2066177128 .stroke-B1{stroke:#0D32B2;}
+		.d2-2066177128 .stroke-B2{stroke:#0D32B2;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.light-code{display: block}.dark-code{display: none}]]></style><g class="QVBJ"><g class="shape" ><rect x="0" y="0" width="69" height="66" stroke="#0D32B2" fill="#F7F8FE" class=" stroke-B1 fill-B6" style="stroke-width:2;" /></g><text x="34.5" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">API</text></g><g class="Q2FjaGU="><g class="shape" ><rect x="169" y="0" width="88" height="66" stroke="#0D32B2" fill="#F7F8FE" class=" stroke-B1 fill-B6" style="stroke-width:2;" /></g><text x="213" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><g class="KEFQSSAtJmd0OyBDYWNoZSlbMF0="><marker id="mk-d2-2066177128-3488378134" markerWidth="10" markerHeight="12" refX="7" refY="6" viewBox="0 0 10 12" orient="auto" markerUnits="userSpaceOnUse"> <polygon points="0,0 10,6 0,12" fill="#0D32B2" class="connection fill-B1" stroke-width="2" /> </marker><path d="M 71 33 C 109 33 129 33 165 33" stroke="#0D32B2" fill="none" class="connection animated-connection stroke-B1" style="stroke-width:2;stroke-dasharray:10.000000,9.865639;stroke-dashoffset:-198.656393;animation: dashdraw 4.932820s linear infinite;" marker-end="url(#mk-d2-2066177128-3488378134)" mask="url(#d2-2066177128)" /></g><mask id="d2-2066177128" maskUnits="userSpaceOnUse" x="-9" y="-9" width="275" height="84">
+<rect x="-9" y="-9" width="275" height="84" fill="white"></rect>
+
+</mask></svg></svg>

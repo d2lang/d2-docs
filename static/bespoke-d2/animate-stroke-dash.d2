@@ -1,0 +1,15 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 800ms
+  }
+}
+
+direction: right
+API -> Cache: {style.stroke-dash: 1}
+
+steps: {
+  stretch: {
+    (API -> Cache)[0].style.stroke-dash: 7
+  }
+}

@@ -1,3 +1,4 @@
+import AnimationExample from '@site/src/components/AnimationExample';
 import CodeBlock from '@theme/CodeBlock';
 import CacheStampede from '@site/static/bespoke-d2/cache-stampede.d2';
 import Recovery from '@site/static/bespoke-d2/animation-recovery.d2';
@@ -65,7 +66,10 @@ Use `cache-stampede.gif` as the output filename to get a GIF.
 ## Play layers, scenarios, and steps
 
 Use a scenario to show an API going down and a step inside it to show the
-recovery. Set both timing options once in `vars.d2-config`.
+recovery. Set both timing options once in `vars.d2-config`. The interval
+gives each board its time on screen. The duration tells D2 how long to
+spend changing values in a step. If the change takes longer than the
+interval, the step stays on screen until it finishes.
 
 <CodeBlock className="language-d2" hidePlaygroundLink>{Recovery}</CodeBlock>
 
@@ -102,51 +106,201 @@ The default duration is zero. You can override it on the CLI with
 
 ## Animate styles
 
-You can change a property directly in a step. Give it a starting value so D2
-knows where to begin. Here the worker fades in as its outline thickens and
-its corners round.
+To fade a worker when it goes on standby, give it a starting opacity and
+change that opacity in a step. The same pattern works for the other
+properties below. The starting value can also come from a [class](./classes.md).
 
-```d2
-vars: {d2-config: {animate-interval: 2s; animate-duration: 1200ms}}
+### Opacity
 
-worker: {
-  style: {opacity: 0.25; stroke-width: 2; border-radius: 0}
-}
-steps: {
-  ready: {
-    worker.style: {opacity: 1; stroke-width: 8; border-radius: 24}
-  }
-}
-```
+A worker on standby can fade into the background. Set `Worker.style.opacity`
+to `1` for a fully opaque worker, then to `0.3` in the next step. Its label,
+fill, and outline fade together.
+Use `0` to make it disappear completely.
 
-This also works with `style.stroke-dash`, `style.font-size`, and a shape's
-explicit `width` and `height`. Colors work the same way. Set `style.fill`,
-`style.stroke`, or `style.font-color` to a new opaque named or hex color and
-D2 blends the colors. Changing a solid color to `transparent` takes effect
-immediately.
+<AnimationExample name="opacity" width={116} height={84} alt="A worker fades until its box and label are barely visible." open />
 
-For dashes that move continuously along a single connection, use
-[`style.animated`](./style.md#animated).
+### Fill
+
+Change `Cache.style.fill` from `lightblue` to `peachpuff` to show a cache
+warming up. D2 blends opaque named colors and three- or six-digit hex colors.
+A change to the solid color `transparent` takes effect immediately. Use
+[opacity](#opacity) for a gradual fade.
+
+<AnimationExample name="fill" width={106} height={84} alt="A cache changes from light blue to peach." />
+
+You can change the background of the whole board, too. Set `style.fill` at
+the top level and change it in a step. Here the canvas darkens behind the
+client and its worker.
+
+<AnimationExample name="background" width={303} height={84} alt="The background changes from pale blue to steel blue behind two connected boxes." />
+
+### Stroke
+
+Change `style.stroke` on a shape for its outline, or on a connection for
+its line. Here `(Client -> API)[0].style.stroke` changes the existing
+connection from teal to purple. The `[0]` selects the first connection
+between those two shapes.
+
+<AnimationExample name="stroke" width={274} height={84} alt="The arrow from Client to API changes from teal to purple." />
+
+### Font color
+
+Change `status.style.font-color` from `navy` to `firebrick` to draw
+attention to a job's status.
+
+<AnimationExample name="font-color" width={88} height={39} alt="The words “Job status” change from dark blue to brick red." />
+
+### Stroke width
+
+Set `Worker.style.stroke-width` to `2`, then `8`. The outline gets thicker
+while the label keeps its size.
+
+<AnimationExample name="stroke-width" width={122} height={90} alt="The worker's outline thickens from 2 to 8 pixels." />
+
+### Stroke dash
+
+Increase `style.stroke-dash` from `1` to `7` on the API connection. Both
+the dashes and the gaps grow. To make dashes travel along an arrow, see
+[flow along a connection](#flow-along-a-connection).
+
+<AnimationExample name="stroke-dash" width={275} height={84} alt="Short dashes on the arrow from API to Cache lengthen and spread apart." />
+
+### Border radius
+
+Change `Cache.style.border-radius` from `0` to `24` to round the cache's
+square corners.
+
+<AnimationExample name="border-radius" width={106} height={84} alt="The square corners of a cache box become rounded." />
+
+### Font size
+
+Change `Alert.style.font-size` from `16` to `32`. Give the box a fixed
+width and height if you want just the text to grow.
+
+<AnimationExample name="font-size" width={178} height={88} alt="The word “Alert” doubles in size inside the same box." />
+
+### Width
+
+Change `Queue.width` from `100` to `240`. The queue gets wider while its
+height stays at `48`.
+
+<AnimationExample name="width" width={258} height={66} alt="A queue stretches horizontally while keeping the same height." />
+
+### Height
+
+Change `Queue.height` from `48` to `96` to make the same queue grow
+vertically. For a circle or square with both dimensions set, change them
+together so they stay equal.
+
+<AnimationExample name="height" width={138} height={114} alt="A queue grows to twice its height while keeping the same width." />
 
 ## Change a gradient
 
-You can replace the whole gradient in a step. D2 matches the first stop to
-the first stop, the second to the second, and so on. In this example the
-green area grows from 60% to 80% and turns orange along the way.
+Use a gradient when you want some parts of a shape or connection to change color
+before others. You can change a whole gradient in a step, or use a variable
+to control just one part of it.
 
-```d2
-vars: {d2-config: {animate-interval: 2s; animate-duration: 1200ms}}
+### Fill a progress bar
 
-capacity: {
-  width: 300
-  style.fill: "linear-gradient(to right, seagreen 60%, white 60%)"
-}
-steps: {
-  busy: {
-    capacity.style.fill: "linear-gradient(to right, orange 80%, white 80%)"
-  }
-}
-```
+Give two color stops the same percentage to get a sharp boundary. Here the
+boundary moves from 25% to 75%. The filled portion also changes from green
+to salmon. Halfway through the step, the bar is half full.
 
-Use the same gradient kind, direction, and number of stops at both ends of
-the transition. If any of those change, the new gradient appears immediately.
+<AnimationExample name="linear-gradient" width={218} height={79} alt="A buffer fills from one quarter to three quarters as its colored portion changes from green to salmon." />
+
+D2 pairs the stops in order and blends each stop's color and position.
+When replacing a whole gradient, keep the
+same kind (linear or radial), the same number of stops, and, for a linear
+gradient, the same direction. Otherwise the new gradient appears immediately.
+
+### Fade one end of a fill
+
+To keep the label readable, change the transparency of a gradient stop.
+Here both stops start at `lightskyblue`, so the cache has an even fill.
+Change just the left stop to `transparent` and the background shows
+through from that side. The label and outline stay fully opaque.
+
+<AnimationExample name="gradient-opacity" width={106} height={84} alt="The left end of a blue cache fill fades to transparent while its label and outline stay solid." />
+
+### Expand a radial gradient
+
+Here the whole gradient lives in a variable named `glow`. The inner blue
+region starts at 10% of the radius. As it expands to 50%, it turns plum and
+the white outer stop moves to the rim.
+
+<AnimationExample name="radial-gradient" width={118} height={118} alt="A small blue center in a circle grows into a wider plum-colored glow." />
+
+### Rotate a gradient
+
+To turn a linear gradient, put a number in the angle itself, as in
+`linear-gradient(${angle}deg, navy, lightskyblue)`. Change `angle` from
+`0` to `180` and watch the dark end turn through half a circle.
+
+<AnimationExample name="gradient-angle" width={178} height={90} alt="A navy-to-light-blue gradient rotates 180 degrees inside a stationary rectangle." />
+
+### Send a pulse along a connection
+
+This is how the [cache diagram](#how-1200-gets-become-one-origin-read) sends
+a request. Put a narrow orange band in the stroke of the cache connection.
+Move both ends of the band from left to right. The connection to the origin
+stays still.
+
+<AnimationExample name="request-pulse" width={294} height={210} alt="An orange band travels from Client to Cache along a curved connection while the Client to Origin connection stays still." />
+
+The percentages `tail` and `head` mark the back and front of the band. They
+stay 20 percentage points apart. Starting the tail below 0% and ending the
+head above 100% lets the pulse enter and leave the line.
+
+## Animate with variables
+
+The [battery](#animate-a-value-between-steps) uses one percentage for a
+label and a gradient stop. The same idea works anywhere a variable supplies
+a value D2 can draw.
+
+### Count in a label
+
+Put `${jobs}` in the queue's label, then change `jobs` from `2` to `12`.
+The label counts through the whole numbers in between. For a reading in
+tenths, write the endpoints as `2.0` and `12.0`. D2 keeps the precision
+of the more precise endpoint.
+
+<AnimationExample name="counter" width={178} height={79} alt="The label counts from “Queued jobs: 2” through “Queued jobs: 12”." />
+
+### Share a color
+
+Give the API and cache the same `${health}` fill. Changing `health` from
+`palegreen` to `lightcoral` in one place changes both shapes in sync.
+
+<AnimationExample name="shared-color" width={275} height={84} alt="The API and cache turn from pale green to coral together." />
+
+### Move a pinned shape
+
+With [TALA](./positions.md#top-and-left), use numeric variables for a
+shape's `left` and `top`. Here the gate stays at the origin and the worker
+moves from `(100, 0)` to `(200, 60)`. Change the **variables** in the
+step. Assigning new coordinates directly moves the shape in one jump.
+
+<AnimationExample name="position" width={316} height={144} alt="The gate stays fixed as the worker slides right and down." />
+
+Both ends of a variable change must be the same kind of value. For example,
+`20%` can animate to `80%`. Changing `20` to `80%`, introducing a new
+variable, or replacing text like `idle` with `busy` takes effect immediately.
+
+## Animate a single board
+
+Set `style.animated: true` for motion that repeats on its own. These two
+SVGs each have a single board and use the default timing options.
+
+### Float a shape
+
+Set `Worker.style.animated: true`. The worker rises and settles back down
+as its shadow changes.
+
+<AnimationExample name="floating-shape" width={116} height={84} alt="A worker gently lifts and settles over its shadow." open />
+
+### Flow along a connection
+
+Set `style.animated: true` on `API -> Cache`. The dashes keep flowing
+toward the cache for as long as the SVG is on screen.
+
+<AnimationExample name="flowing-connection" width={275} height={84} alt="Dashes move along the arrow from the API to the cache." open />
