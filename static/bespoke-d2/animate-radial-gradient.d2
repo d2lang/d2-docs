@@ -1,28 +1,49 @@
 vars: {
   d2-config: {
+    layout-engine: tala
     animate-interval: 1s
-    animate-duration: 800ms
+    animate-duration: 640ms
   }
-  area: "radial-gradient(circle, lightskyblue 22%, whitesmoke 24%)"
+  radius: 26%
 }
 
-map: "Driver search" {
+index: "Log embeddings · L2 range query" {
+  left: 0
+  top: 0
+  width: 256
+  height: 256
   label.near: outside-top-center
-  grid-rows: 1
-  grid-gap: 0
-  style.fill: ${area}
-  width: 210
-  height: 210
-
-  *.shape: text
-  *.width: 58
-  west: Cab A
-  pickup: Pickup
-  east: Cab B
+  style: {
+    font-size: 16
+    bold: true
+    fill: "radial-gradient(circle, #a9ded5 ${radius}, #f3f6f8 ${radius})"
+    stroke: "#a5b7bd"
+    stroke-width: 1
+    border-radius: 8
+  }
 }
+
+classes.point: {
+  shape: circle
+  width: 9
+  height: 9
+  label.near: outside-right-center
+  style: {fill: "#325766"; stroke-width: 0; font-size: 14; bold: false}
+}
+query: "OOM query" {
+  class: point
+  shape: diamond
+  left: 121
+  top: 121
+  width: 14
+  height: 14
+  label.near: outside-bottom-center
+  style: {fill: "#083b4f"; bold: true}
+}
+heap: "Heap limit" {class: point; left: 142; top: 107}
+allocation: "Allocation failed" {class: point; left: 51; top: 177}
+auth: "Invalid token" {class: point; left: 213; top: 18; label.near: outside-left-center}
 
 steps: {
-  widen-search: {
-    vars: {area: "radial-gradient(circle, lightskyblue 78%, whitesmoke 80%)"}
-  }
+  widen: {vars: {radius: 76%}}
 }

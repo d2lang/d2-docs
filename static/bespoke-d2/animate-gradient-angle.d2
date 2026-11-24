@@ -1,23 +1,35 @@
 vars: {
   d2-config: {
-    animate-interval: 1s
-    animate-duration: 800ms
+    layout-engine: tala
+    animate-interval: 850ms
+    animate-duration: 520ms
   }
   angle: 0
-  camera: "#a7d3ed"
-  slides: "#ffdb9c"
 }
 
-camera: Camera {style.fill: ${camera}}
-slides: Slides {style.fill: ${slides}}
-program: "Wipe · ${angle}°" {
-  width: 180
-  height: 76
-  style.fill: "linear-gradient(${angle}deg, ${camera} 50%, ${slides} 50%)"
+*.style.stroke-width: 0
+outer: QR finder check {
+  left: 10
+  top: 10
+  width: 112
+  height: 112
+  label.near: outside-top-center
+  style.fill: "#203444"
 }
-camera -> program
-slides -> program
+gap: "" {left: 26; top: 26; width: 80; height: 80; style.fill: white}
+center: "" {left: 42; top: 42; width: 48; height: 48; style.fill: "#203444"}
+scan: "" {
+  left: 4
+  top: 4
+  width: 120
+  height: 120
+  style.fill: "linear-gradient(${angle}deg, transparent 1%, coral 1%, coral 6%, transparent 6%)"
+}
+runs: "Run lengths   1:1:3:1:1" {
+  left: 2
+  top: 136
+  shape: text
+  style.font-size: 14
+}
 
-steps: {
-  quarter-turn: {vars: {angle: 90}}
-}
+steps: {check-column: {vars: {angle: 90}}}

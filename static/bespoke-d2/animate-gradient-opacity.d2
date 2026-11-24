@@ -1,21 +1,45 @@
 vars: {
   d2-config: {
-    animate-interval: 1s
-    animate-duration: 800ms
+    layout-engine: tala
+    animate-interval: 850ms
+    animate-duration: 500ms
   }
 }
 
-base: Base aerial imagery {
-  style.fill: darkseagreen
+viewport: "" {
+  left: 0
+  top: 0
+  width: 292
+  height: 164
+  style: {fill: "#142734"; stroke-width: 0}
+}
+title: Build log {shape: text; left: 14; top: 10; style: {font-color: "#91ddc8"; bold: true}}
+classes.line: {
+  shape: text
+  left: 14
+  style: {font: mono; font-size: 14; font-color: "#e2edf3"}
+}
+compile: "09:41:02  Compile sources" {class: line; top: 38}
+test: "09:41:03  Run unit tests" {class: line; top: 58}
+bundle: "09:41:04  Bundle assets" {class: line; top: 78}
+write: "09:41:05  Write manifest" {class: line; top: 98}
+upload: "09:41:06  Upload artifacts" {class: line; top: 118}
 
-  strip: New flight strip {
-    width: 194
-    style.fill: "linear-gradient(to right, lightskyblue 0%, lightskyblue 35%)"
+overflow: "" {
+  left: 0
+  top: 97
+  width: 292
+  height: 67
+  style: {
+    stroke-width: 0
+    fill: "linear-gradient(to bottom, #142734 0%, #142734 65%)"
   }
 }
+
+follow: "↓  Jump to latest" {shape: text; left: 14; top: 143; style: {font-color: "#91ddc8"; font-size: 13}}
 
 steps: {
-  blend-overlap: {
-    base.strip.style.fill: "linear-gradient(to right, transparent 0%, lightskyblue 35%)"
+  append-output: {
+    overflow.style.fill: "linear-gradient(to bottom, transparent 0%, #142734 65%)"
   }
 }

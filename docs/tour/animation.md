@@ -158,22 +158,25 @@ stops together to advance the fill.
 
 ### Fade one end of a fill
 
-Change one gradient stop to `transparent` and keep the other stops opaque.
+To reveal content beneath an overlay, change one gradient stop to
+`transparent`. Keep the opposite stop opaque.
 
-<AnimationExample name="gradient-opacity" width={272} height={179} alt="One edge of a fill fades to reveal the color underneath." />
+<AnimationExample name="gradient-opacity" width={308} height={180} alt="Build log entries show through an overlay and fade toward the bottom of the log viewer." />
 
 ### Expand a radial gradient
 
-Increase the stop percentages in a radial gradient to move the colors outward.
+Use the same percentage for two color stops to give a radius a sharp edge.
+Increase that percentage in a step to expand the radius.
 
-<AnimationExample name="radial-gradient" width={228} height={268} alt="A circular color boundary expands from the center." />
+<AnimationExample name="radial-gradient" width={274} height={299} alt="A wider search radius includes a second log embedding while a third stays outside." />
 
 ### Rotate a gradient
 
-Use a numeric variable for the angle, such as `${angle}deg`. Change the
-variable in a step to rotate the gradient.
+Use a narrow band of color between transparent stops to draw a line. Bind the
+gradient angle to a number, such as `${angle}deg`, and change it in a step
+to rotate the line.
 
-<AnimationExample name="gradient-angle" width={266} height={260} alt="The boundary between two colors rotates by 90 degrees." />
+<AnimationExample name="gradient-angle" width={142} height={186} alt="A scan line turns from horizontal to vertical across the same QR finder pattern." />
 
 ### Send a pulse along a connection
 
