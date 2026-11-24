@@ -172,11 +172,10 @@ Increase that percentage in a step to expand the radius.
 
 ### Rotate a gradient
 
-Use a narrow band of color between transparent stops to draw a line. Bind the
-gradient angle to a number, such as `${angle}deg`, and change it in a step
-to rotate the line.
+Use a numeric variable for the gradient angle, such as `${angle}deg`.
+Change it by 360 degrees in a step to make one full turn.
 
-<AnimationExample name="gradient-angle" width={142} height={186} alt="A scan line turns from horizontal to vertical across the same QR finder pattern." />
+<AnimationExample name="gradient-angle" width={266} height={94} alt="A highlight travels around a loading ring beside the status “Restoring snapshot”." />
 
 ### Send a pulse along a connection
 
