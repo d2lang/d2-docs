@@ -118,10 +118,10 @@ the line solid.
 
 ### Border radius
 
-Increase `style.border-radius` to round the corners of a rectangle. Decrease
-it to sharpen them.
+To show a circular crop, animate a square’s `style.border-radius` from `0`
+to half its width.
 
-<AnimationExample name="border-radius" width={156} height={278} alt="A circle becomes a rounded square as its corner radius decreases." />
+<AnimationExample name="border-radius" width={273} height={134} alt="A square upload stays fixed while its matching profile avatar rounds into a circle." />
 
 ### Font size
 

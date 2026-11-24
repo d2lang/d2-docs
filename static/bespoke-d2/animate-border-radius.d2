@@ -1,25 +1,35 @@
 vars: {
   d2-config: {
-    animate-interval: 1200ms
-    animate-duration: 900ms
+    animate-interval: 800ms
+    animate-duration: 480ms
   }
 }
 
-engine: Audio engine
-control: Capture control {
-  width: 48
-  height: 48
-  label.near: outside-bottom-center
+grid-rows: 2
+grid-columns: 2
+horizontal-gap: 80
+vertical-gap: 8
+
+classes.caption: {width: 88; height: 22; style: {fill: transparent; stroke-width: 0; font-size: 15; bold: false}}
+classes.tile: {
+  width: 88
+  height: 88
   style: {
-    fill: tomato
-    stroke: tomato
-    border-radius: 24
+    fill: "linear-gradient(135deg, #225b65 63%, #84cdb8 63%, #84cdb8 74%, #3c7778 74%)"
+    stroke-width: 0
+    font-color: white
+    font-size: 29
+    bold: true
+    border-radius: 0
   }
 }
-engine -> control: capture state
+
+upload: AK {class: tile}
+avatar: AK {class: tile}
+source-label: Upload {class: caption}
+output-label: Profile avatar {class: caption}
+upload -> avatar: crop {style: {font-size: 14; stroke: "#526974"}}
 
 steps: {
-  recording: {
-    control.style.border-radius: 4
-  }
+  apply-mask: {avatar.style.border-radius: 44}
 }
