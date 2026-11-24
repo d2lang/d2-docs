@@ -1,19 +1,23 @@
 vars: {
   d2-config: {
     animate-interval: 1s
-    animate-duration: 800ms
+    animate-duration: 600ms
   }
 }
 
 router: Payment router
 a: Acquirer A
 b: Acquirer B
-router -> a: active {style.stroke: teal; style.stroke-width: 4}
-router -> b: backup {style.stroke: silver; style.stroke-width: 4}
+router -> a: preferred {style.stroke: teal; style.stroke-width: 4}
+router -> b: fallback {style.stroke: silver; style.stroke-width: 4}
 
 steps: {
   failover: {
-    (router -> a)[0]: backup {style.stroke: silver}
-    (router -> b)[0]: active {style.stroke: teal}
+    (router -> a)[0].style.stroke: silver
+    (router -> b)[0].style.stroke: teal
+  }
+  primary-healthy: {
+    (router -> a)[0].style.stroke: teal
+    (router -> b)[0].style.stroke: silver
   }
 }

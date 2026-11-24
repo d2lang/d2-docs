@@ -101,7 +101,10 @@ stays there for 500 ms.
 
 D2 can fill in values between two numbers, percentages, colors, or compatible
 gradients. If a step introduces a variable or changes ordinary text, its new
-value appears immediately. Static exports show the final value of each step.
+value appears immediately. For a [state label](#fill) that announces the
+result of a transition, put the new words in the following step. For a
+[counter](#count-in-a-label), put the numeric variable in the label so the
+reader can watch the value change. Static exports show the final value of each step.
 
 The default duration is zero. You can override it on the CLI with
 `--animate-duration=300` (milliseconds).
@@ -123,41 +126,43 @@ can still see where the old requests went. The v2 route stays fully visible.
 
 ### Fill
 
-A container registry quarantines image v42 until it verifies the image's
-signature. Change `registry.image.style.fill` from amber to green when the
-check passes. The label switches to “Signature verified” as the color
-begins to change.
+A container registry checks the signature of image v42 before releasing it
+from quarantine. Change the fill from amber to green in one step. In the
+next step, change “Signature check” to “Signature verified”. The reader
+gets to see the check finish before reading the result.
 
-<AnimationExample name="fill" width={238} height={195} alt="Inside a container registry, image v42 goes from amber and quarantined to green and marked “Signature verified”." />
+<AnimationExample name="fill" width={242} height={195} alt="Image v42 turns green during its signature check. Once the fill has settled, its label changes to Signature verified." />
 
 D2 blends opaque named colors and three- or six-digit hex colors. A solid
 fill changes to `transparent` immediately. For gradual transparency, see
 [how to fade one end of a fill](#fade-one-end-of-a-fill).
 
-You can also set `style.fill` on the whole board. During catalog maintenance,
-the API still serves reads, but imports pause. The background changes once
-for the entire catalog while the two labels explain what happens to each part.
+You can also set `style.fill` on the whole board. The catalog turns amber
+to announce a maintenance window. When the write freeze begins in the
+following step, the API switches to read only and the import job pauses.
 
-<AnimationExample name="background" width={268} height={78} alt="The catalog background changes to amber. The API switches to read only and the import job pauses." />
+<AnimationExample name="background" width={268} height={78} alt="The catalog background turns amber. On the following board the API becomes read only and the import job pauses." />
 
 ### Stroke
 
-A payment router has two acquirers. When it fails over to B, the teal
-stroke switches to B's route and A's route fades to silver. The labels
-tell you which one is active even without color. Change the existing
-connection with `(router -> b)[0].style.stroke`. The `[0]` selects the
-first connection from the router to B.
+A payment router normally sends charges to acquirer A. The teal stroke
+shows which route handles payments. Follow it to B during failover and
+back to A when A recovers. The route labels, “preferred” and “fallback”,
+stay in place throughout.
 
-<AnimationExample name="stroke" width={318} height={271} alt="The active payment route changes from acquirer A to B. Its line turns teal while the backup line turns silver." />
+Change `(router -> b)[0].style.stroke` to recolor the first connection
+from the router to B.
+
+<AnimationExample name="stroke" width={318} height={271} alt="The teal highlight moves from the preferred payment route to the fallback route and back. Both route labels stay fixed." />
 
 ### Font color
 
-The webhook for `order.paid` gets three delivery attempts. When the third
-one fails, the event is dead-lettered. Change the event's `style.font-color`
-to `firebrick` so the failed delivery stands out under the endpoint that
-needs investigation.
+One webhook endpoint receives both `order.created` and `order.paid`. When
+the paid event exhausts its retries, turn its name red with
+`style.font-color`. Keeping both event names in place makes it easy to
+pick out the delivery that needs attention.
 
-<AnimationExample name="font-color" width={301} height={155} alt="Inside POST /webhooks/orders, the order.paid entry changes from attempt two of three to “Dead-lettered” and its text turns red." />
+<AnimationExample name="font-color" width={312} height={122} alt="Under the orders webhook endpoint, order.paid turns red while order.created stays the same." />
 
 ### Stroke width
 
@@ -179,12 +184,12 @@ see [flow along a connection](#flow-along-a-connection).
 
 ### Border radius
 
-A recorder's red button tells you what a tap will do. Before capture starts,
-it's a circle labeled “Record”. When the audio engine starts capturing, the
-same control becomes a rounded square labeled “Stop”. Keep its width and
-height at `48` and change `style.border-radius` from `24` to `4`.
+A recorder's capture control is a red circle when it's ready to record
+and a rounded square when tapping it will stop the recording. Keep the
+control's dimensions at `48` and change `style.border-radius` from `24`
+to `4` when capture starts.
 
-<AnimationExample name="border-radius" width={156} height={278} alt="The audio engine starts capture, and the round red Record button changes to a square Stop button with rounded corners." />
+<AnimationExample name="border-radius" width={156} height={278} alt="The audio recorder's circular capture control becomes a rounded square when recording starts. Its caption stays in place." />
 
 ### Font size
 
@@ -299,9 +304,10 @@ use decimal endpoints like `12.0` and `0.0`.
 
 Two endpoints serve the same wildcard certificate. When it expires, both
 hosts fail TLS checks. Bind their fills to `${tls}` so renewing the one
-certificate turns both hosts green in the same step.
+certificate turns both hosts green together. The wildcard name above them
+shows what they have in common.
 
-<AnimationExample name="shared-color" width={359} height={266} alt="The expired wildcard certificate is renewed, and both API and payment hosts change from red to green together." />
+<AnimationExample name="shared-color" width={359} height={266} alt="The API and payment hosts share one wildcard certificate. Both hosts change from red to green when it is renewed." />
 
 ### Move a pinned shape
 

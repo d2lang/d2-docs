@@ -6,7 +6,7 @@ vars: {
 }
 
 engine: Audio engine
-control: Record {
+control: Capture control {
   width: 48
   height: 48
   label.near: outside-bottom-center
@@ -16,12 +16,10 @@ control: Record {
     border-radius: 24
   }
 }
-engine -> control: ready
+engine -> control: capture state
 
 steps: {
   recording: {
-    control: Stop
     control.style.border-radius: 4
-    (engine -> control)[0]: capture started
   }
 }

@@ -6,14 +6,14 @@ vars: {
 }
 
 delivery: "POST /webhooks/orders" {
-  event: "order.paid\nAttempt 2 of 3" {
-    shape: text
-    style.font-color: darkslategray
-  }
+  created: "order.created" {shape: text}
+  paid: "order.paid" {shape: text; style.font-color: darkslategray}
+  grid-columns: 1
+  vertical-gap: 8
 }
 
 steps: {
-  third-failure: {
-    delivery.event: "order.paid\nDead-lettered" {style.font-color: firebrick}
+  retries-exhausted: {
+    delivery.paid.style.font-color: firebrick
   }
 }

@@ -6,7 +6,7 @@ vars: {
   tls: lightcoral
 }
 
-cert: "*.shop.test\nExpired"
+cert: "Wildcard certificate\n*.shop.test"
 api: "api.shop.test" {style.fill: ${tls}}
 pay: "pay.shop.test" {style.fill: ${tls}}
 cert -> api
@@ -14,7 +14,6 @@ cert -> pay
 
 steps: {
   renew: {
-    cert.label: "*.shop.test\nRenewed"
     vars: {tls: palegreen}
   }
 }

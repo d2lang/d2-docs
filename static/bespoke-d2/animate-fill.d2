@@ -6,14 +6,17 @@ vars: {
 }
 
 registry: Container registry {
-  image: "Image v42\nQuarantined" {
-    width: 160
+  image: "Image v42\nSignature check" {
+    width: 164
     style.fill: moccasin
   }
 }
 
 steps: {
-  verify-signature: {
-    registry.image: "Image v42\nSignature verified" {style.fill: palegreen}
+  verify: {
+    registry.image.style.fill: palegreen
+  }
+  approved: {
+    registry.image.label: "Image v42\nSignature verified"
   }
 }

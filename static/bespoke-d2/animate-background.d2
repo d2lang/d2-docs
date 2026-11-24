@@ -12,8 +12,8 @@ api: "Catalog API\nRead/write" {shape: text; width: 118; height: 60}
 sync: "Import job\nRunning" {shape: text; width: 118; height: 60}
 
 steps: {
-  maintenance: {
-    style.fill: moccasin
+  maintenance-notice: {style.fill: moccasin}
+  freeze-writes: {
     api: "Catalog API\nRead only"
     sync: "Import job\nPaused"
   }
