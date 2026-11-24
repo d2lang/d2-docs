@@ -3,13 +3,48 @@ import Chicken from '@site/static/bespoke-d2/chicken.d2';
 
 # Steps
 
-A "Step" represents a step in a sequence of events.
+Use steps to show a diagram at successive moments. Each step inherits from the
+one before it. The first step inherits from its parent board.
 
-Each Step inherits from its the Step before it. The first step inherits from its parent,
-whether that's a Scenario or Layer.
+## How 1,200 GETs become one origin read
 
-Notice how in Step 3 for example, the object "Approach road" exists even though it's not
-defined, because it was inherited from Step 2, which inherited it from Step 1.
+Six cold edge caches each receive 200 requests for the same image. Watch
+Ashburn, the third row. Its GET reaches the shield first and starts an origin
+read. The other five caches join that fetch while it is in flight.
+
+<img
+  src="/img/generated/cache-stampede.svg"
+  alt="Amber GETs converge from six edge caches into one origin read. A mint response returns to the shield, fills all six edges, and fans back out to the viewers."
+  width="1008"
+  height="578"
+  style={{height: 'auto'}}
+/>
+
+<a href="/img/generated/cache-stampede.svg">Open the animation</a>
+{' · '}
+<a href="/bespoke-d2/cache-stampede.d2" download="cache-stampede.d2">Download the D2 source</a>
+
+The origin sends one 256 KiB body. By the time the edges finish serving all
+1,200 viewers, they have delivered 300 MiB. Each dash on a viewer connection
+represents 50 messages. On the upstream connections, each dash is one message.
+
+One D2 step animates the whole round trip. With `animate-interval: 140ms` and
+`animate-duration: 7200ms`, the opening board holds for 140 ms, then the
+transition runs for 7.2 seconds. To reproduce it, run
+`d2 cache-stampede.d2 cache-stampede.svg` with a D2 build that includes
+`animate-duration`. The option is available on D2's `master` branch for the
+next release.
+
+The amber GET is a narrow band in the connection’s stroke gradient. When its
+ends move from 20% and 30% to 60% and 70%, the band travels forward and keeps
+its width. Starting a band outside the visible 0–100% range delays its entry
+onto the next connection. This works best on routes that keep moving in one
+direction along the gradient axis.
+
+## How steps inherit objects
+
+In Step 3 below, “Approach road” still exists because Step 2 inherited it
+from Step 1. Only the changes need to be written in each step.
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/chicken.svg2')}}></div>
 
@@ -48,7 +83,12 @@ starts at 65% for 800 ms, drains to 0% over four seconds, then loops. Changing
 `animate-duration` to `300ms` makes the drain take 300 ms and leaves the
 battery empty for the remaining 500 ms of the step.
 
-The default duration is zero. D2 interpolates between two numbers, two percentages,
+The default duration is zero. For an animated SVG, set a positive
+`animate-interval`. A changing step lasts for the longer of the interval and
+the duration. You can override the source duration with the CLI flag
+`--animate-duration=300` (milliseconds).
+
+D2 interpolates between two numbers, two percentages,
 two opaque solid colors, or two compatible gradients. New variables and ordinary text values appear immediately.
 Static exports show each step’s destination value.
 

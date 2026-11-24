@@ -17,7 +17,7 @@ export options are different.
     animation that stays on each board for 1200ms.
   - You can also set the interval in `vars.d2-config.animate-interval`. To show a
     value changing within a step, set `animate-duration` in the same block.
-    [See the battery example](./steps.md#animate-a-value-between-steps).
+    [Watch a cache shield collapse 1,200 GETs into one origin read](./steps.md#how-1200-gets-become-one-origin-read).
 - Single animated GIF
   - Same as above, but useful in different contexts, like where SVG is not rendered.
 - PDF

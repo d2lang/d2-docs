@@ -82,6 +82,9 @@ In other words, if you call `D2_PAD=2 d2 --theme=1 input.d2`, it doesn't matter 
 the command.
 :::
 
+For animated steps, `animate-interval` sets the time allotted to each board and
+`animate-duration` sets how long a change takes. [See both settings in the cache shield example](./steps.md#how-1200-gets-become-one-origin-read).
+
 ### Output scale and SVG appendix
 
 On D2's development branch (`master`), you can set `scale` and `force-appendix`
