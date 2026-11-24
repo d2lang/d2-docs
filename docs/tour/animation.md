@@ -1,8 +1,10 @@
 # Animation
 
-D2 can animate changes between [steps](./steps.md). Set `animate-duration`
-to control how long a value takes to move from its starting point to its
-destination.
+D2 can play a [composition](./composition.md) as an animated SVG or GIF.
+`animate-interval` controls playback across all drawable boards, including
+the root, [layers](./layers.md), [scenarios](./scenarios.md), and
+[steps](./steps.md). When a step changes a value, `animate-duration`
+controls how long D2 takes to interpolate it.
 
 ## How 1,200 GETs become one origin read
 
@@ -38,6 +40,29 @@ ends move from 20% and 30% to 60% and 70%, the band travels forward and keeps
 its width. Starting a band outside the visible 0–100% range delays its entry
 onto the next connection. This works best on routes that keep moving in one
 direction along the gradient axis.
+
+## Play layers, scenarios, and steps
+
+Layers and scenarios appear as complete boards when playback reaches them.
+A step can interpolate supported changes from its starting board. The first
+step starts from its parent, and later steps start from the previous step.
+This also works for steps nested inside a layer or scenario.
+
+```d2
+vars: {d2-config: {animate-interval: 1s; animate-duration: 400ms}}
+api: {style.fill: blue}
+
+scenarios: {
+  incident: {
+    api.style.fill: red
+    steps: {recover: {api.style.fill: blue}}
+  }
+}
+```
+
+The root shows a blue API for one second. The `incident` scenario cuts
+straight to red and holds for one second. Its `recover` step blends red
+back to blue over 400 ms, then holds blue for the remaining 600 ms.
 
 ## Animate a value between steps
 
