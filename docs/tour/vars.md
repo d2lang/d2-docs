@@ -83,7 +83,7 @@ the command.
 :::
 
 For animated steps, `animate-interval` sets the time allotted to each board and
-`animate-duration` sets how long a change takes. [See both settings in the cache shield example](./steps.md#how-1200-gets-become-one-origin-read).
+`animate-duration` sets how long a change takes. [See both settings in the cache shield example](./animation.md#how-1200-gets-become-one-origin-read).
 
 ### Output scale and SVG appendix
 

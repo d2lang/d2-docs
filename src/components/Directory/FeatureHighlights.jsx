@@ -30,7 +30,7 @@ const featureHighlights = [
     title: "Animations",
     description: "D2 is the only language that can produce animated diagrams from text.",
     img: Animations,
-    href: "/tour/composition/",
+    href: "/tour/animation/",
   },
   {
     title: "LaTeX",
