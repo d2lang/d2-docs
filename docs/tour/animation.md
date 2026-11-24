@@ -323,6 +323,70 @@ Both ends of a variable change must be the same kind of value. For example,
 `20%` can animate to `80%`. Changing `20` to `80%`, introducing a new
 variable, or replacing text like `idle` with `busy` takes effect immediately.
 
+## Grid animations
+
+To animate a [grid](./grid-diagrams.md), draw its next arrangement in a
+[step](./steps.md) and set a positive `animate-duration` in `vars.d2-config`.
+D2 matches cells by their full IDs across the two boards. Keep an ID when the
+same job changes position. Give its replacement a new ID when a different job
+takes its place.
+
+### Hand a partition to another worker
+
+A Kafka consumer goes offline. Follow the refunds partition as `worker-37`
+takes over from `worker-23`. The worker's outline stays in place and the
+two arrows still connect the partition to the refund ledger. The ledger then
+opens to show why the new worker resumes at offset **18,241**. Its predecessor
+saved **18,240** with the last ledger update.
+
+<AnimationExample name="grid-consumers" width={754} height={284} alt="The refunds worker changes from worker-23 to worker-37. Its ledger opens to show the applied and resume offsets. The payments path stays fixed." />
+
+To get this handoff, replace one rectangular cell with another of the same
+size and style in the same slot. Give both a plain, centered, single-line
+label and keep the other cells in the grid in place. For equal-length
+monospace identifiers like these, the shared `worker-` stays still while
+the digits roll. Each column in this example is its own grid, so expanding
+the ledger leaves the input partitions and workers where they were.
+
+### Reorder a recovery queue
+
+The blob index finishes restoring, and the ledger gets priority over the
+audit log. Watch the ledger move from third to first while two new restores
+join the queue.
+
+<AnimationExample name="grid-restore" width={477} height={150} alt="The completed blob-index restore shrinks away. The ledger slides to the head of the queue, and search and thumbnail restores grow into the last two slots." />
+
+A [grid fills in declaration order](./grid-diagrams.md#dominant-direction).
+In the `reprioritize` step, `blob: null` removes the completed job. The
+step clears and redeclares the waiting jobs after `ledger`, keeping their
+IDs. Those jobs slide to their new slots. Only the two new IDs grow into
+view.
+
+### Add or retire a row or column
+
+A native Node module builds on Linux, macOS, and Windows. Adding Node 24
+creates a job on each runner. Watch the Node 26 column slide over to make
+room for all three jobs and their header. In the next step, the project
+retires Node 22. Its jobs shrink together before the gap closes.
+
+<AnimationExample name="grid-ci" width={569} height={220} alt="A CI matrix opens a column between Node 22 and 26 for Node 24. The Node 22 column then disappears, and the remaining jobs move left." />
+
+Insert or remove one complete row or column in a filled grid, keeping the
+other cells in the same relative order. If you append cells at the end and
+the existing cells already have room, the new cells can appear immediately.
+
+### Open a cell to inspect its contents
+
+Which disk in the data mirror needs replacing? Keep the ID `mirrorB` and
+give that cell a two-column grid in the `inspect` step. The rectangle grows,
+then the disk labels appear together when they fit. Watch `nvme-05` change
+to `nvme-07` while the healthy disk stays in place.
+
+<AnimationExample name="grid-mirror" width={420} height={255} alt="The data mirror opens to reveal two disks. One disk is replaced, then the details fade and the mirror closes between its neighbors." />
+
+To fold it closed, remove the child cells and restore the summary cell's
+dimensions. The labels fade before the space closes up.
+
 ## Animate a single board
 
 Set `style.animated: true` for motion that repeats on its own. These two
