@@ -28,7 +28,7 @@ const featureHighlights = [
   },
   {
     title: "Animations",
-    description: "Play boards in a loop and animate changes to shapes, connections, and grids.",
+    description: "Loop through boards and animate changes between steps.",
     img: Animations,
     href: "/tour/animation/",
   },
