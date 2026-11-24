@@ -1,14 +1,20 @@
 import AnimationExample from '@site/src/components/AnimationExample';
 import CodeBlock from '@theme/CodeBlock';
 import CacheStampede from '@site/static/bespoke-d2/cache-stampede.d2';
-import Recovery from '@site/static/bespoke-d2/animation-recovery.d2';
 import Battery from '@site/static/bespoke-d2/animation-battery.d2';
 
 # Animation
 
-Set `animate-interval` to play [boards](./composition.md) in a loop. Add
-`animate-duration` to animate changes between steps. Both settings go in
-`vars.d2-config`.
+:::note
+Animation is in alpha and may change. If you have feedback, [open a GitHub issue](https://github.com/d2lang/d2/issues/new).
+:::
+
+Use [`style.animated`](./style.md#animated) to animate a shape or connection on a single board.
+To show a sequence, use `animate-interval` to play [boards](./composition.md) in order.
+Set `animate-duration` to control how long changes take when entering a [step](./steps.md).
+The default is `0`, so steps change instantly.
+
+This example is an animated SVG you can embed in a GitHub README.
 
 <img
   src="/img/generated/cache-stampede.svg"
@@ -18,10 +24,6 @@ Set `animate-interval` to play [boards](./composition.md) in a loop. Add
   style={{height: 'auto'}}
 />
 
-<a href="/img/generated/cache-stampede.svg">Open the animation</a>
-{' · '}
-<a href="/bespoke-d2/cache-stampede.d2" download="cache-stampede.d2">Download the D2 source</a>
-
 <details>
 <summary>View D2 source</summary>
 
@@ -29,12 +31,7 @@ Set `animate-interval` to play [boards](./composition.md) in a loop. Add
 
 </details>
 
-## Play layers, scenarios, and steps
-
-D2 plays each board, then its [layers](./layers.md), [scenarios](./scenarios.md),
-and [steps](./steps.md), in that order. Layers and scenarios switch immediately.
-The first step animates from its parent board. Later steps animate from the
-previous step.
+## Configuration
 
 ```d2-incomplete
 vars: {
@@ -45,21 +42,10 @@ vars: {
 }
 ```
 
-With these settings, a step animates for 400 ms and holds its final state for
-600 ms. A transition longer than the interval extends the step. The default
-duration is zero. Step transitions are available on D2's [development branch](https://github.com/d2lang/d2/tree/master).
+The 1-second interval includes the transition. Each animated step spends 400 ms
+changing and holds its final state for the remaining 600 ms.
 
-<img src="/img/generated/animation-recovery.svg" alt="A scenario switches instantly. A nested step changes the count and fill together." width="231" height="266" style={{height: 'auto'}} loading="lazy" />
-
-<details>
-<summary>View D2 source</summary>
-
-<CodeBlock className="language-d2" hidePlaygroundLink>{Recovery}</CodeBlock>
-
-</details>
-
-Export to SVG or GIF. Use `--animate-interval` or `--animate-duration` to
-override the diagram's settings in milliseconds.
+Export to SVG or GIF. The CLI accepts durations in milliseconds.
 
 ```sh
 d2 input.d2 output.svg
@@ -68,150 +54,91 @@ d2 --animate-duration=300 input.d2 output.gif
 
 ## Animate styles
 
-Set a property on an object or in a [class](./classes.md), then give it a new
-value in a step. Several properties can change together.
+The following properties animate when their values change in a step.
 
 ### Opacity
-
-Change `style.opacity` on a shape or connection. Use `0` for invisible and
-`1` for fully visible.
 
 <AnimationExample name="opacity" width={258} height={271} alt="A shape and its connection fade together." open />
 
 ### Fill
 
-Change `style.fill` to blend two colors. Solid colors can be opaque named
-colors or three- or six-digit hex values. A solid fill switches to `transparent`
-immediately. To fade a shape, animate its [opacity](#opacity).
-
 <AnimationExample name="fill" width={242} height={195} alt="A shape changes from amber to green before its label changes." />
 
-Set `style.fill` at the board level to animate the background.
+Set `style.fill` on the board to animate its background color.
 
 <AnimationExample name="background" width={268} height={78} alt="The board background changes from green to amber." />
 
 ### Stroke
 
-Change `style.stroke` on a shape to recolor its outline. On a connection,
-set `(a -> b)[0].style.stroke` to recolor the first edge from `a` to `b`.
+Set `style.stroke` to animate the outline of a shape or the color of a connection.
 
 <AnimationExample name="stroke" width={318} height={271} alt="Two connections exchange stroke colors." />
 
 ### Font color
 
-Change `style.font-color` to blend between two label colors.
-
 <AnimationExample name="font-color" width={312} height={122} alt="One label changes from gray to red." />
 
 ### Stroke width
-
-Change `style.stroke-width` to thicken or thin a line.
 
 <AnimationExample name="stroke-width" width={336} height={250} alt="One connection thickens as the other thins." />
 
 ### Stroke dash
 
-Change `style.stroke-dash` to adjust the dash pattern. A value of `0` makes
-the line solid.
-
 <AnimationExample name="stroke-dash" width={362} height={250} alt="A dashed connection becomes solid." />
 
 ### Border radius
-
-To show a circular crop, animate a square’s `style.border-radius` from `0`
-to half its width.
 
 <AnimationExample name="border-radius" width={273} height={134} alt="A square upload stays fixed while its matching profile avatar rounds into a circle." />
 
 ### Font size
 
-Change `style.font-size` to grow or shrink a label.
-
 <AnimationExample name="font-size" width={288} height={163} alt="A numeric label grows while a second label stays the same size." />
 
 ### Width
-
-Change `width` to resize a shape horizontally.
 
 <AnimationExample name="width" width={238} height={158} alt="A horizontal bar doubles in width." />
 
 ### Height
 
-Change `height` to resize a shape vertically. For a square or circle, change
-both dimensions together if both are set.
-
 <AnimationExample name="height" width={144} height={480} alt="A queue grows taller as its label counts up." />
 
 ## Change a gradient
 
-D2 pairs gradient stops in order and blends their colors and positions. Use
-the same gradient kind and number of stops at both ends. For a linear
-gradient, keep the same direction. Other gradient changes take effect
-immediately.
+Animate a gradient by changing its color stops or angle between steps.
 
 ### Fill a progress bar
-
-Put two colors at the same percentage to make a sharp edge. Move both
-stops together to advance the fill.
 
 <AnimationExample name="linear-gradient" width={359} height={103} alt="A sharp color boundary advances across a bar." />
 
 ### Fade one end of a fill
 
-To reveal content beneath an overlay, change one gradient stop to
-`transparent`. Keep the opposite stop opaque.
-
 <AnimationExample name="gradient-opacity" width={308} height={180} alt="Build log entries show through an overlay and fade toward the bottom of the log viewer." />
 
 ### Expand a radial gradient
-
-Use the same percentage for two color stops to give a radius a sharp edge.
-Increase that percentage in a step to expand the radius.
 
 <AnimationExample name="radial-gradient" width={274} height={299} alt="A wider search radius includes a second log embedding while a third stays outside." />
 
 ### Rotate a gradient
 
-Use a numeric variable for the gradient angle, such as `${angle}deg`.
-Change it by 360 degrees in a step to make one full turn.
-
 <AnimationExample name="gradient-angle" width={266} height={94} alt="A highlight travels around a loading ring beside the status “Restoring snapshot”." />
 
 ### Send a pulse along a connection
-
-Set `style.stroke` to a linear gradient with a narrow band of color. Move both
-ends of the band toward the arrowhead. Stop positions below `0%` and above
-`100%` let the pulse enter and leave the connection.
 
 <AnimationExample name="request-pulse" width={395} height={226} alt="A narrow band of color travels along a connection and through its arrowhead." />
 
 ## Animate with variables
 
-Give a [variable](./vars.md) a starting value, use it in a label or style,
-then change it in a step. D2 fills in the values between the two endpoints
-wherever the variable is used.
+Use the same [variable](./vars.md) in several places to animate them together.
 
 <CodeBlock className="language-d2" hidePlaygroundLink>{Battery}</CodeBlock>
 
 <img src="/img/generated/animation-battery.svg" alt="A percentage label counts down as the filled portion of a bar shrinks." width="248" height="269" style={{height: 'auto'}} loading="lazy" />
 
-Use two numbers, two percentages, two colors, or two [compatible gradients](#change-a-gradient).
-New variables, unit changes, and ordinary text changes take effect immediately.
-To change a label after a transition finishes, set it in the next step.
-Static exports show each step's final values.
-
 ### Count in a label
-
-Put a numeric variable in a label, such as `Records behind: ${lag}`. Integer
-endpoints produce whole numbers. Use decimal endpoints like `12.0` and `0.0`
-to display tenths.
 
 <AnimationExample name="counter" width={204} height={282} alt="A label counts down in whole numbers." />
 
 ### Share a color
-
-Use the same color variable on several objects. Changing it once animates
-them together.
 
 <AnimationExample name="shared-color" width={359} height={266} alt="Two shapes change from red to green together." />
 
@@ -225,10 +152,8 @@ in the step moves the shape immediately.
 
 ## Grid animations
 
-Edit a [grid](./grid-diagrams.md) in a step with a positive `animate-duration`.
-D2 matches cells by their full IDs. Cells that keep their IDs slide to their
-new positions, and their connections follow. New cells grow into view.
-Removed cells shrink away.
+When a grid changes, D2 matches cells by ID. Cells that keep their IDs can move
+to new slots. New cells grow into place, and removed cells shrink away.
 
 ### Reorder cells
 
@@ -261,19 +186,3 @@ appears when it fits. To collapse the cell, remove its children and restore
 its original dimensions.
 
 <AnimationExample name="grid-mirror" width={420} height={255} alt="A cell expands to reveal a nested grid, then folds closed." />
-
-## Animate a single board
-
-Set `style.animated: true` for continuous motion on a single board.
-
-### Float a shape
-
-Apply `style.animated` to a shape to make it rise and settle above its shadow.
-
-<AnimationExample name="floating-shape" width={210} height={282} alt="A shape rises and settles above its shadow." open />
-
-### Flow along a connection
-
-Apply `style.animated` to a connection to make dashes flow along it.
-
-<AnimationExample name="flowing-connection" width={355} height={323} alt="Dashes flow along one connection while a second connection stays still." open />
