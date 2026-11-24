@@ -3,6 +3,10 @@ import TabItem from '@theme/TabItem';
 
 # Isometric
 
+:::note
+Isometric mode is in alpha and may change. If you have feedback or suggestions, [open a GitHub issue](https://github.com/d2lang/d2/issues/new).
+:::
+
 Follow a sheet of paper through a four-color printing press. The colored lines carry
 ink to the rollers. The dark arrows trace the paper from the stack to the finished proof.
 
