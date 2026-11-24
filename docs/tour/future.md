@@ -150,12 +150,6 @@ high-level (more intelligent than just CRUD on AST nodes). This lets anyone buil
 edit a diagram programmatically. The goal isn't to enable a specific use case, but rather
 unforeseen ones for the infinite workflows out there.
 
-D2's plugin system further makes the language extensible. These allow you to add "hooks"
-to stages of D2 compilation. For example, while not core to D2, a hypothetical set of
-plugins can add a styled border, add your signature/credits, make everything [look
-hand-drawn](https://github.com/d2lang/d2/pull/91), then increase contrast for
-accessibility.
-
 ### How success is measured
 
 - Does writing and reading D2 in your environment feel "complete"?
@@ -172,8 +166,6 @@ unplanned usage.
 
 ### Plan
 
-1. D2's plugin system is still in its early stages, and should allow deeper hooks into
-   parts of compilation.
 1. Complete editor integrations. Currently, syntax highlighting is supported. But a
    feature-complete integration for VSCode for example would allow rendering to its
    built-in browser, autoformat, call out to LSP functions to refactor, and more.
