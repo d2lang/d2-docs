@@ -35,7 +35,8 @@ _bespoke() {
 
   sh_c d2 --omit-version --sketch ./static/bespoke-d2/grid-nested-connections.d2 ${output_dir}/grid-nested-connections.svg2
 
-  sh_c d2 --omit-version ./static/bespoke-d2/order-service.d2 ${output_dir}/order-service.svg
+  sh_c d2 --omit-version ./static/bespoke-d2/printing-press.d2 ${output_dir}/printing-press.svg
+  sh_c d2 --omit-version ./static/bespoke-d2/printing-press.d2 ${output_dir}/printing-press.gif
 
   sh_c d2 --omit-version --dark-theme=200 -l elk -c --pad 0 ./static/bespoke-d2/classes-3.d2 ${output_dir}/classes-3.svg2
 
