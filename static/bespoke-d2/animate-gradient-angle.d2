@@ -4,14 +4,20 @@ vars: {
     animate-duration: 800ms
   }
   angle: 0
+  camera: "#a7d3ed"
+  slides: "#ffdb9c"
 }
 
-tile: "" {
-  width: 160
-  height: 72
-  style.fill: "linear-gradient(${angle}deg, navy, lightskyblue)"
+camera: Camera {style.fill: ${camera}}
+slides: Slides {style.fill: ${slides}}
+program: "Wipe · ${angle}°" {
+  width: 180
+  height: 76
+  style.fill: "linear-gradient(${angle}deg, ${camera} 50%, ${slides} 50%)"
 }
+camera -> program
+slides -> program
 
 steps: {
-  turn: {vars: {angle: 180}}
+  quarter-turn: {vars: {angle: 90}}
 }

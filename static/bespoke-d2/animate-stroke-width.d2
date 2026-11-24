@@ -1,14 +1,19 @@
 vars: {
   d2-config: {
-    animate-interval: 1s
-    animate-duration: 800ms
+    animate-interval: 1200ms
+    animate-duration: 900ms
   }
 }
 
-Worker.style.stroke-width: 2
+router: Read router
+east: East replica
+west: West replica
+router -> east: {style.stroke-width: 8}
+router -> west: {style.stroke-width: 2}
 
 steps: {
-  highlight: {
-    Worker.style.stroke-width: 8
+  shift-west: {
+    (router -> east)[0].style.stroke-width: 2
+    (router -> west)[0].style.stroke-width: 8
   }
 }

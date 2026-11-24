@@ -1,10 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" d2Version="v0.8.1-HEAD" preserveAspectRatio="xMinYMin meet" viewBox="0 0 106 84"><svg class="d2-svg" width="106" height="84" viewBox="-9 -9 106 84"><style type="text/css"><![CDATA[
-.d2-1494751077 .text-bold {
-	font-family: "d2-1494751077-font-bold";
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" d2Version="v0.8.1-HEAD" preserveAspectRatio="xMinYMin meet" viewBox="0 0 272 179"><svg class="d2-svg" width="272" height="179" viewBox="1 -29 272 179"><style type="text/css"><![CDATA[
+.d2-472354761 .text {
+	font-family: "d2-472354761-font-regular";
 }
 @font-face {
-	font-family: d2-1494751077-font-bold;
-	src: url("data:application/font-woff;base64,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");
+	font-family: d2-472354761-font-regular;
+	src: url("data:application/font-woff;base64,d09GRgABAAAAAAs0AAoAAAAAEVAAAguFAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAAA9AAAAGAAAABgXd/Vo2NtYXAAAAFUAAAAdwAAAJgC2AKlZ2x5ZgAAAcwAAAUhAAAGgH0QfZZoZWFkAAAG8AAAADYAAAA2G4Ue32hoZWEAAAcoAAAAJAAAACQKhAXWaG10eAAAB0wAAABQAAAAUCKRBAxsb2NhAAAHnAAAACoAAAAqEiQQmG1heHAAAAfIAAAAIAAAACAALAD2bmFtZQAAB+gAAAMrAAAIFAbDVU1wb3N0AAALFAAAACAAAAAg/9EAMgADAgkBkAAFAAACigJYAAAASwKKAlgAAAFeADIBIwAAAgsFAwMEAwICBGAAAvcAAAADAAAAAAAAAABBREJPAEAAIP//Au7/BgAAA9gBESAAAZ8AAAAAAeYClAAAACAAA3icbMxNCgFxHIDhZ/zH+BqMjbWzOIA7WFgoapKSOzgAkZQz2LuKk/wUZaV39yxeZJIMpdwBY5WkMDE1M7e0Vtva2Ufw84WV2ubr8YpnPOIet7jGJc5xiuPn+q9MQ5JrKrS0dXT1lPoGhioj3gAAAP//AwB+GR1rAHicVJRLbBpXF8fPvTMwxoBhDMyAjRlmxswYMGAYZsYv4AvGb2McPtuJ/X12m8apoz6i1ItGkaJEairZm6peZFdVjdRssowipV0nquo+pUhV20UXXZFIaSuVWt20HioGbLmrczWae/7n/H/nXLDAGgBW8R0gwAYu6AYfgELzdISXZZHSFV0XWUKXEU2toZ+MfYRms6Smkenii+L1W7fQ+Zv4ztEbo+9ub3+2ee2a8V7tuZFB3z4HAtYBcD/eBxp6QGzmVDIM4/NaKZ8ZrCKhZDQ1K4kifXxYfzJxaSSdGpsvXJ27eWF5rly+tLOyubG6g/fDU6Ppiou0L5b+sxpD10czI0NHh4VibgQAkKmVwPvgMXU8rCJJKq3QIiGLDOOj11d/nSYJqrL62zRJUnjf2NrLvJ5F/z26ij7cTV/OGvcBQ7ZxiB6gOvRAPwArSGpW07OSJApWStY0JcP4aFEWrVY5o+mq1erzMo9zZ9//gI4PxOb6wsLF0bWlEkUIZxkxL16/kHHMnllaoblhMewdYaJv/s/4fjQYKwrcrms8FY0AhmTjEH2J6uAHDsAiSE1BU8ZrpXiGUTKazlqtBJ9tloDYM6/lC1v6xiWEjU8t56bEsd4+rvIVIgsjyllHbqeytJO/cdkZsJX/76M1bwhJc+WK6U0IABXwdy2uoqqr2aYKS0mi4PMpPpF+uVicnGVj7u7eYGl7G32ct5TnztmogmOzPGFsAAABiUYY/YLqkIYclE/cUaVTwUyq+MQ2XEE2LVJaDVmJFmGh+c3Tpi1IrX/+XLsq8d0BweOXM8tpb7/z/hbNDi1lZMHZHUlvrqyMX1mI5cbj8fGcNrWspJa7eHePf/7nUoEbYUj7QJBLOklvKa4uxihLwa1y2YUobe/1siE9l1hIoQcFVR0fV9WCsZeThB6S9MR8ctL0pgqAfsAH4G16o/ioY860aTpFV6uEWM6Up6uDQ5GxCD54vMWnLmwYX6NoKS9FjLvQaMAkADzEj7AE3QBgBc8NaOVuHMKP+ABcLb9ohfYeQ72fjFa7bCRF2TsYx4iKXz2646ERypNk8x4A/h3VgTdrYhWzJvZflVEnsVqiiPBCfLjgkhYH52erg0mtVB1MaSVUmxJT6cFo9rjceeNuOwCGakNBf6E6eCAMwJ6omGspSDLrazMSzG1tivCV+OYrYy8NCxMCvjZeGZvkCv18/hv8cDg4sPtW9e18qGflHrJury9dFMKNINv2AABtojrQp3phKaltbokiAjPRPtbt8Lq4iQCqnU9qnTMkmckbB637wcYhuo3qEDM9lHVzLdSsJMlJfDLH7bFi2BBuNvA0uylGw6X40BCv9ArF2FolsRgcCGjhZDw01CuWEtGKQw7qAT7BBQS208mr0bFKmM16/LEg2+ezO3k9KRcHTH1/4xBN4ivAthmKqq4r5tKcsHyxmJtZ6Jy8fZuPOUMOtzflWJ9Bzrxlb2/CqCfSNjJP2Vu5APAjVDO5EoqHYZqm655TJ0IkJKn5xFDER7vLMx1dFNnhts0vLdjoDrLDRU0vvrM1ZXPZyA53ZwnVjGfChCBMCChw6tSDLGIpEpkUjb8BgaORQp+jGvSe9k/XT8sTXXjd3edwd3htUc1lf7Jy0R6wk3Zv57mlT+jU5FMreQZbxhL96JnxBzcj8DNh5DyqDy0k2nzhHqoBYfKlq1VUM3oANb7Ac6DjR2AHoM2XtDVcfo7z+zkOz/UF/KGQP9AH/wAAAP//AwBxY0uwAAAAAAEAAAACC4UnCoi/Xw889QADA+gAAAAA2F2goQAAAADdZi82/jr+2whvA8gAAAADAAIAAAAAAAAAAQAAA9j+7wAACJj+Ov46CG8AAQAAAAAAAAAAAAAAAAAAABQCjQBZAMgAAAJMAFoChwBaAfgANAHwAC4BJAAeAfgALQIgAFIA9gBFAP8AUgM9AFICKwBSAVsAUgGjABwBUgAYAs4AGAHTAAwA9gBSAAD/yQAAACwALABiAIQAvADwARIBfgGgAawByAH6Ai4CTgKOArQC7gMeAyoDQAAAAAEAAAAUAIwADABmAAcAAQAAAAAAAAAAAAAAAAAEAAN4nJyU32obVxDGf4oltaE0F8UE58acy7Y4KzXYIbGv1nVMlhor1Sr9A6WwltaSkLS77K7kuPQBet236Fvkqs/Rhyi9LjMaKdq0ECxCzLc6M998Z+abA+zyDzvU6veBP5s/GK6x3zw2fI8HzQPDO1w0/jJc34hpMGj8arjJl42u4Y94W//d8Mcc1n82fJ+9+rnhT3hS3zX86Y7jb8MPOOTtEtfgGb8ZrrFHZvgeu/xkeIeHGGetzkPahht8xr7hJvtAjzElU8YkDHFcM2bInJyYgpCYnDHXxAxwBPhMKfXXhEiRY/i/v0aElOREyjiixDElZEpEwcgYf9GslFdaUerkiqSaT8mIiCvNmBCR4EgZkpIQM1GekpKMY1q0KOir3oySAo+CMVM8UnKGtOhwzgU9RowpcJwrkygLSbmm5IZI6zuLkM70iUkoTNWchIHqdKov1uyACxwdMo3dZL6oMBzg+E6zRZvEOL7C0/9uQ1m17kpNxEL7KT28Yqo6b3SCI+241PX5VnHJMW6r/lSVfLhHA1Unsx5zxVznL/OTPFGS4NwePqE6KHSPcJzqd0CoHfmegB4v6fCann77dOnic0mPgBea26GL42s6XHKmGYHi5dm5OuaSH3F8Q6Axwh1bf6Tn8vWGzNwt2sUZco8ZmW6BzFjuL86Pt5qw7FBacUehrujrHkmk7IF0RfYsYmiuyNQVM+3lyhuF9W9gjpDTUmf77ly2YWG7t9riW1LdYcfcNMnkloo+NFXvPc/c6D+PiAEpVxrRJ2VGi5JbvdsrIuZMcZypj1/qlpT46xypc6suiZmpgoBEeXIy/RuZb0LT3q/43tlbIps30x2drG+1TRVhTjZm9Fq7tzoLrcvxxgRaNtXUcmTCwry8qXhfor2K/lDdX+jrlvKYLrG+rjL//D/vwBM82hxyxAkjrSP8CQt7I9r6TrR5zon2YEKsUfJqvtFuCcMRHk854ojnPK1w+pxxSoeTO2hcZnU45cV7J5scbs3ijOcPVdNWvY7H669nW8/r8zv48gsOKi+jKJc9yFkY2zv/XxIxEy1ub7Mv7hHevwAAAP//AwAHW0wwAAADAAAAAAAA/84AMgAAAAAAAAAAAAAAAAAAAAAAAAAA");
+}
+.d2-472354761 .text-bold {
+	font-family: "d2-472354761-font-bold";
+}
+@font-face {
+	font-family: d2-472354761-font-bold;
+	src: url("data:application/font-woff;base64,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");
 }]]></style><style type="text/css"><![CDATA[.shape {
   shape-rendering: geometricPrecision;
   stroke-linejoin: round;
@@ -18,207 +25,207 @@
   opacity: 0.5;
 }
 
-		.d2-1494751077 .fill-N1{fill:#0A0F25;}
-		.d2-1494751077 .fill-N2{fill:#676C7E;}
-		.d2-1494751077 .fill-N3{fill:#9499AB;}
-		.d2-1494751077 .fill-N4{fill:#CFD2DD;}
-		.d2-1494751077 .fill-N5{fill:#DEE1EB;}
-		.d2-1494751077 .fill-N6{fill:#EEF1F8;}
-		.d2-1494751077 .fill-N7{fill:#FFFFFF;}
-		.d2-1494751077 .fill-B1{fill:#0D32B2;}
-		.d2-1494751077 .fill-B2{fill:#0D32B2;}
-		.d2-1494751077 .fill-B3{fill:#E3E9FD;}
-		.d2-1494751077 .fill-B4{fill:#E3E9FD;}
-		.d2-1494751077 .fill-B5{fill:#EDF0FD;}
-		.d2-1494751077 .fill-B6{fill:#F7F8FE;}
-		.d2-1494751077 .fill-AA2{fill:#4A6FF3;}
-		.d2-1494751077 .fill-AA4{fill:#EDF0FD;}
-		.d2-1494751077 .fill-AA5{fill:#F7F8FE;}
-		.d2-1494751077 .fill-AB4{fill:#EDF0FD;}
-		.d2-1494751077 .fill-AB5{fill:#F7F8FE;}
-		.d2-1494751077 .stroke-N1{stroke:#0A0F25;}
-		.d2-1494751077 .stroke-N2{stroke:#676C7E;}
-		.d2-1494751077 .stroke-N3{stroke:#9499AB;}
-		.d2-1494751077 .stroke-N4{stroke:#CFD2DD;}
-		.d2-1494751077 .stroke-N5{stroke:#DEE1EB;}
-		.d2-1494751077 .stroke-N6{stroke:#EEF1F8;}
-		.d2-1494751077 .stroke-N7{stroke:#FFFFFF;}
-		.d2-1494751077 .stroke-B1{stroke:#0D32B2;}
-		.d2-1494751077 .stroke-B2{stroke:#0D32B2;}
-		.d2-1494751077 .stroke-B3{stroke:#E3E9FD;}
-		.d2-1494751077 .stroke-B4{stroke:#E3E9FD;}
-		.d2-1494751077 .stroke-B5{stroke:#EDF0FD;}
-		.d2-1494751077 .stroke-B6{stroke:#F7F8FE;}
-		.d2-1494751077 .stroke-AA2{stroke:#4A6FF3;}
-		.d2-1494751077 .stroke-AA4{stroke:#EDF0FD;}
-		.d2-1494751077 .stroke-AA5{stroke:#F7F8FE;}
-		.d2-1494751077 .stroke-AB4{stroke:#EDF0FD;}
-		.d2-1494751077 .stroke-AB5{stroke:#F7F8FE;}
-		.d2-1494751077 .background-color-N1{background-color:#0A0F25;}
-		.d2-1494751077 .background-color-N2{background-color:#676C7E;}
-		.d2-1494751077 .background-color-N3{background-color:#9499AB;}
-		.d2-1494751077 .background-color-N4{background-color:#CFD2DD;}
-		.d2-1494751077 .background-color-N5{background-color:#DEE1EB;}
-		.d2-1494751077 .background-color-N6{background-color:#EEF1F8;}
-		.d2-1494751077 .background-color-N7{background-color:#FFFFFF;}
-		.d2-1494751077 .background-color-B1{background-color:#0D32B2;}
-		.d2-1494751077 .background-color-B2{background-color:#0D32B2;}
-		.d2-1494751077 .background-color-B3{background-color:#E3E9FD;}
-		.d2-1494751077 .background-color-B4{background-color:#E3E9FD;}
-		.d2-1494751077 .background-color-B5{background-color:#EDF0FD;}
-		.d2-1494751077 .background-color-B6{background-color:#F7F8FE;}
-		.d2-1494751077 .background-color-AA2{background-color:#4A6FF3;}
-		.d2-1494751077 .background-color-AA4{background-color:#EDF0FD;}
-		.d2-1494751077 .background-color-AA5{background-color:#F7F8FE;}
-		.d2-1494751077 .background-color-AB4{background-color:#EDF0FD;}
-		.d2-1494751077 .background-color-AB5{background-color:#F7F8FE;}
-		.d2-1494751077 .color-N1{color:#0A0F25;}
-		.d2-1494751077 .color-N2{color:#676C7E;}
-		.d2-1494751077 .color-N3{color:#9499AB;}
-		.d2-1494751077 .color-N4{color:#CFD2DD;}
-		.d2-1494751077 .color-N5{color:#DEE1EB;}
-		.d2-1494751077 .color-N6{color:#EEF1F8;}
-		.d2-1494751077 .color-N7{color:#FFFFFF;}
-		.d2-1494751077 .color-B1{color:#0D32B2;}
-		.d2-1494751077 .color-B2{color:#0D32B2;}
-		.d2-1494751077 .color-B3{color:#E3E9FD;}
-		.d2-1494751077 .color-B4{color:#E3E9FD;}
-		.d2-1494751077 .color-B5{color:#EDF0FD;}
-		.d2-1494751077 .color-B6{color:#F7F8FE;}
-		.d2-1494751077 .color-AA2{color:#4A6FF3;}
-		.d2-1494751077 .color-AA4{color:#EDF0FD;}
-		.d2-1494751077 .color-AA5{color:#F7F8FE;}
-		.d2-1494751077 .color-AB4{color:#EDF0FD;}
-		.d2-1494751077 .color-AB5{color:#F7F8FE;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-darker-d2-1494751077);mix-blend-mode:lighten}.sketch-overlay-B2{fill:url(#streaks-darker-d2-1494751077);mix-blend-mode:lighten}.sketch-overlay-B3{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-B5{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-B6{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-AA2{fill:url(#streaks-dark-d2-1494751077);mix-blend-mode:overlay}.sketch-overlay-AA4{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-AA5{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-AB5{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-darker-d2-1494751077);mix-blend-mode:lighten}.sketch-overlay-N2{fill:url(#streaks-dark-d2-1494751077);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal-d2-1494751077);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal-d2-1494751077);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-bright-d2-1494751077);mix-blend-mode:darken}.light-code{display: block}.dark-code{display: none}]]></style><style type="text/css"><![CDATA[@keyframes d2Transition-d2-1494751077-0 {0.000000000%{opacity:1}50.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-1 {0%{opacity:0}50.000000000%{opacity:1}52.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-2 {0%{opacity:0}52.000000000%{opacity:1}54.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-3 {0%{opacity:0}54.000000000%{opacity:1}56.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-4 {0%{opacity:0}56.000000000%{opacity:1}58.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-5 {0%{opacity:0}58.000000000%{opacity:1}60.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-6 {0%{opacity:0}60.000000000%{opacity:1}62.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-7 {0%{opacity:0}62.000000000%{opacity:1}64.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-8 {0%{opacity:0}64.000000000%{opacity:1}66.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-9 {0%{opacity:0}66.000000000%{opacity:1}68.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-10 {0%{opacity:0}68.000000000%{opacity:1}70.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-11 {0%{opacity:0}70.000000000%{opacity:1}72.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-12 {0%{opacity:0}72.000000000%{opacity:1}74.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-13 {0%{opacity:0}74.000000000%{opacity:1}76.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-14 {0%{opacity:0}76.000000000%{opacity:1}78.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-15 {0%{opacity:0}78.000000000%{opacity:1}80.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-16 {0%{opacity:0}80.000000000%{opacity:1}82.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-17 {0%{opacity:0}82.000000000%{opacity:1}84.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-18 {0%{opacity:0}84.000000000%{opacity:1}86.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-19 {0%{opacity:0}86.000000000%{opacity:1}88.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-20 {0%{opacity:0}88.000000000%{opacity:1}90.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1494751077-21 {0%{opacity:0}90.000000000%{opacity:1}100%{opacity:1}}]]></style><g style="animation: d2Transition-d2-1494751077-0 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-be31876a8da0ad5b6846fa17f8064f1ec233121b" x1="0%" y1="50%" x2="100%" y2="50%">
-<stop offset="0.00%" stop-color="lightskyblue" />
-<stop offset="100.00%" stop-color="lightskyblue" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-be31876a8da0ad5b6846fa17f8064f1ec233121b')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-1494751077" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+		.d2-472354761 .fill-N1{fill:#0A0F25;}
+		.d2-472354761 .fill-N2{fill:#676C7E;}
+		.d2-472354761 .fill-N3{fill:#9499AB;}
+		.d2-472354761 .fill-N4{fill:#CFD2DD;}
+		.d2-472354761 .fill-N5{fill:#DEE1EB;}
+		.d2-472354761 .fill-N6{fill:#EEF1F8;}
+		.d2-472354761 .fill-N7{fill:#FFFFFF;}
+		.d2-472354761 .fill-B1{fill:#0D32B2;}
+		.d2-472354761 .fill-B2{fill:#0D32B2;}
+		.d2-472354761 .fill-B3{fill:#E3E9FD;}
+		.d2-472354761 .fill-B4{fill:#E3E9FD;}
+		.d2-472354761 .fill-B5{fill:#EDF0FD;}
+		.d2-472354761 .fill-B6{fill:#F7F8FE;}
+		.d2-472354761 .fill-AA2{fill:#4A6FF3;}
+		.d2-472354761 .fill-AA4{fill:#EDF0FD;}
+		.d2-472354761 .fill-AA5{fill:#F7F8FE;}
+		.d2-472354761 .fill-AB4{fill:#EDF0FD;}
+		.d2-472354761 .fill-AB5{fill:#F7F8FE;}
+		.d2-472354761 .stroke-N1{stroke:#0A0F25;}
+		.d2-472354761 .stroke-N2{stroke:#676C7E;}
+		.d2-472354761 .stroke-N3{stroke:#9499AB;}
+		.d2-472354761 .stroke-N4{stroke:#CFD2DD;}
+		.d2-472354761 .stroke-N5{stroke:#DEE1EB;}
+		.d2-472354761 .stroke-N6{stroke:#EEF1F8;}
+		.d2-472354761 .stroke-N7{stroke:#FFFFFF;}
+		.d2-472354761 .stroke-B1{stroke:#0D32B2;}
+		.d2-472354761 .stroke-B2{stroke:#0D32B2;}
+		.d2-472354761 .stroke-B3{stroke:#E3E9FD;}
+		.d2-472354761 .stroke-B4{stroke:#E3E9FD;}
+		.d2-472354761 .stroke-B5{stroke:#EDF0FD;}
+		.d2-472354761 .stroke-B6{stroke:#F7F8FE;}
+		.d2-472354761 .stroke-AA2{stroke:#4A6FF3;}
+		.d2-472354761 .stroke-AA4{stroke:#EDF0FD;}
+		.d2-472354761 .stroke-AA5{stroke:#F7F8FE;}
+		.d2-472354761 .stroke-AB4{stroke:#EDF0FD;}
+		.d2-472354761 .stroke-AB5{stroke:#F7F8FE;}
+		.d2-472354761 .background-color-N1{background-color:#0A0F25;}
+		.d2-472354761 .background-color-N2{background-color:#676C7E;}
+		.d2-472354761 .background-color-N3{background-color:#9499AB;}
+		.d2-472354761 .background-color-N4{background-color:#CFD2DD;}
+		.d2-472354761 .background-color-N5{background-color:#DEE1EB;}
+		.d2-472354761 .background-color-N6{background-color:#EEF1F8;}
+		.d2-472354761 .background-color-N7{background-color:#FFFFFF;}
+		.d2-472354761 .background-color-B1{background-color:#0D32B2;}
+		.d2-472354761 .background-color-B2{background-color:#0D32B2;}
+		.d2-472354761 .background-color-B3{background-color:#E3E9FD;}
+		.d2-472354761 .background-color-B4{background-color:#E3E9FD;}
+		.d2-472354761 .background-color-B5{background-color:#EDF0FD;}
+		.d2-472354761 .background-color-B6{background-color:#F7F8FE;}
+		.d2-472354761 .background-color-AA2{background-color:#4A6FF3;}
+		.d2-472354761 .background-color-AA4{background-color:#EDF0FD;}
+		.d2-472354761 .background-color-AA5{background-color:#F7F8FE;}
+		.d2-472354761 .background-color-AB4{background-color:#EDF0FD;}
+		.d2-472354761 .background-color-AB5{background-color:#F7F8FE;}
+		.d2-472354761 .color-N1{color:#0A0F25;}
+		.d2-472354761 .color-N2{color:#676C7E;}
+		.d2-472354761 .color-N3{color:#9499AB;}
+		.d2-472354761 .color-N4{color:#CFD2DD;}
+		.d2-472354761 .color-N5{color:#DEE1EB;}
+		.d2-472354761 .color-N6{color:#EEF1F8;}
+		.d2-472354761 .color-N7{color:#FFFFFF;}
+		.d2-472354761 .color-B1{color:#0D32B2;}
+		.d2-472354761 .color-B2{color:#0D32B2;}
+		.d2-472354761 .color-B3{color:#E3E9FD;}
+		.d2-472354761 .color-B4{color:#E3E9FD;}
+		.d2-472354761 .color-B5{color:#EDF0FD;}
+		.d2-472354761 .color-B6{color:#F7F8FE;}
+		.d2-472354761 .color-AA2{color:#4A6FF3;}
+		.d2-472354761 .color-AA4{color:#EDF0FD;}
+		.d2-472354761 .color-AA5{color:#F7F8FE;}
+		.d2-472354761 .color-AB4{color:#EDF0FD;}
+		.d2-472354761 .color-AB5{color:#F7F8FE;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-darker-d2-472354761);mix-blend-mode:lighten}.sketch-overlay-B2{fill:url(#streaks-darker-d2-472354761);mix-blend-mode:lighten}.sketch-overlay-B3{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-B5{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-B6{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-AA2{fill:url(#streaks-dark-d2-472354761);mix-blend-mode:overlay}.sketch-overlay-AA4{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-AA5{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-AB5{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-darker-d2-472354761);mix-blend-mode:lighten}.sketch-overlay-N2{fill:url(#streaks-dark-d2-472354761);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal-d2-472354761);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal-d2-472354761);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-bright-d2-472354761);mix-blend-mode:darken}.light-code{display: block}.dark-code{display: none}]]></style><style type="text/css"><![CDATA[@keyframes d2Transition-d2-472354761-0 {0.000000000%{opacity:1}50.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-1 {0%{opacity:0}50.000000000%{opacity:1}52.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-2 {0%{opacity:0}52.000000000%{opacity:1}54.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-3 {0%{opacity:0}54.000000000%{opacity:1}56.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-4 {0%{opacity:0}56.000000000%{opacity:1}58.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-5 {0%{opacity:0}58.000000000%{opacity:1}60.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-6 {0%{opacity:0}60.000000000%{opacity:1}62.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-7 {0%{opacity:0}62.000000000%{opacity:1}64.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-8 {0%{opacity:0}64.000000000%{opacity:1}66.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-9 {0%{opacity:0}66.000000000%{opacity:1}68.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-10 {0%{opacity:0}68.000000000%{opacity:1}70.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-11 {0%{opacity:0}70.000000000%{opacity:1}72.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-12 {0%{opacity:0}72.000000000%{opacity:1}74.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-13 {0%{opacity:0}74.000000000%{opacity:1}76.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-14 {0%{opacity:0}76.000000000%{opacity:1}78.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-15 {0%{opacity:0}78.000000000%{opacity:1}80.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-16 {0%{opacity:0}80.000000000%{opacity:1}82.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-17 {0%{opacity:0}82.000000000%{opacity:1}84.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-18 {0%{opacity:0}84.000000000%{opacity:1}86.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-19 {0%{opacity:0}86.000000000%{opacity:1}88.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-20 {0%{opacity:0}88.000000000%{opacity:1}90.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-472354761-21 {0%{opacity:0}90.000000000%{opacity:1}100%{opacity:1}}]]></style><g style="animation: d2Transition-d2-472354761-0 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-9fe87fdb31531ca0b976fe2d443c5af3becfa69a" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="0%" stop-color="lightskyblue" />
+<stop offset="35%" stop-color="lightskyblue" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-9fe87fdb31531ca0b976fe2d443c5af3becfa69a')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-472354761" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-1 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-be31876a8da0ad5b6846fa17f8064f1ec233121b" x1="0%" y1="50%" x2="100%" y2="50%">
-<stop offset="0.00%" stop-color="lightskyblue" />
-<stop offset="100.00%" stop-color="lightskyblue" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-be31876a8da0ad5b6846fa17f8064f1ec233121b')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-2248332367" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+</mask></g><g style="animation: d2Transition-d2-472354761-1 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-9fe87fdb31531ca0b976fe2d443c5af3becfa69a" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="0%" stop-color="lightskyblue" />
+<stop offset="35%" stop-color="lightskyblue" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-9fe87fdb31531ca0b976fe2d443c5af3becfa69a')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-1055827478" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-2 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-5726d354f1dedd96d052130c8cca38be20ae42f3" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-2 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-a41514d0d4552ef51e0eb84a81496c6fd74980c3" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefaf2" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-5726d354f1dedd96d052130c8cca38be20ae42f3')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-3671152344" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-a41514d0d4552ef51e0eb84a81496c6fd74980c3')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-1312841766" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-3 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-12524018abd869d70d745a834068d4f20cc450b5" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-3 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-f125160a39b199a2332ee23eee167d6744c73f25" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefae6" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-12524018abd869d70d745a834068d4f20cc450b5')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-1966529691" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-f125160a39b199a2332ee23eee167d6744c73f25')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-3428133885" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-4 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-713a8f773edf823926b5719c0fee4b3d6ce60f9d" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-4 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-1aa1b2a10b93da3bbcfd4b4d26e44d7464306861" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefad9" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-713a8f773edf823926b5719c0fee4b3d6ce60f9d')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-4173679071" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-1aa1b2a10b93da3bbcfd4b4d26e44d7464306861')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-273074525" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-5 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-be158caa8f975abb0e266e8539a7e46eba2f66f0" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-5 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-417c532dfd007c98a73d9f0134dd3309b087c488" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefacc" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-be158caa8f975abb0e266e8539a7e46eba2f66f0')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-807842182" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-417c532dfd007c98a73d9f0134dd3309b087c488')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-987942152" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-6 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-8f6584db277916a5b530a97edcfae41c15b78a3d" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-6 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-68a75406ad8a3cc3f4b55b3c6ed7d32637ed2855" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefabf" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-8f6584db277916a5b530a97edcfae41c15b78a3d')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-462471992" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-68a75406ad8a3cc3f4b55b3c6ed7d32637ed2855')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-383373662" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-7 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-024e26f662921f52c2b0a3a0c5472512874e981e" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-7 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-62c1f05a885718d45a74b32da8a556d844a7af4c" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefab3" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-024e26f662921f52c2b0a3a0c5472512874e981e')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-3342895935" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-62c1f05a885718d45a74b32da8a556d844a7af4c')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-2516983533" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-8 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ec94843e7d610e538bcb8a3f00688cda6cbdb493" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-8 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-36fc71702a230de93063977bd1e0c4e8699020aa" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefaa6" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-ec94843e7d610e538bcb8a3f00688cda6cbdb493')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-657066607" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-36fc71702a230de93063977bd1e0c4e8699020aa')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-2240548849" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-9 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-4f11cadf0d51e940886008cc744d78b846b10fd8" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-9 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ac670da5fdbf93df279a57aba44a4fd2b69c4787" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa99" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-4f11cadf0d51e940886008cc744d78b846b10fd8')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-2058058766" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-ac670da5fdbf93df279a57aba44a4fd2b69c4787')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-3297894144" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-10 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-2191b8b232a4f1dae4ef569ec3c0992fc3738a14" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-10 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-dc15ee3143fa175c0006be48b77005216b2f642f" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa8c" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-2191b8b232a4f1dae4ef569ec3c0992fc3738a14')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-2630057537" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-dc15ee3143fa175c0006be48b77005216b2f642f')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-3280021447" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-11 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-20e3a8e138b8dfb0599026bc55b94889d2909f1c" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-11 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ffef66e4fdc8266f30379885a2714d0a0a53ed23" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa80" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-20e3a8e138b8dfb0599026bc55b94889d2909f1c')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-962313392" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-ffef66e4fdc8266f30379885a2714d0a0a53ed23')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-1376312238" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-12 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-15f5562c5448266d3f08242a79c2997cfe9660d2" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-12 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-621019f3e40d05ac2c89428072ddf9ae98ea70c2" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa73" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-15f5562c5448266d3f08242a79c2997cfe9660d2')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-3249495626" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-621019f3e40d05ac2c89428072ddf9ae98ea70c2')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-3561404540" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-13 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-9bfbd3154056b572ca50a66123c7891e3da3eaec" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-13 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-1797cc883ad0ea68b6e41a9bd459df3c54bd4e89" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa66" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-9bfbd3154056b572ca50a66123c7891e3da3eaec')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-1795984276" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-1797cc883ad0ea68b6e41a9bd459df3c54bd4e89')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-2853848026" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-14 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ee6b1d31e5e3b25c09421ace410ee38b71c8fdd7" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-14 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-38dd0799382bf989e3efa44a3fdfa853bbc61c73" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa59" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-ee6b1d31e5e3b25c09421ace410ee38b71c8fdd7')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-778224730" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-38dd0799382bf989e3efa44a3fdfa853bbc61c73')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-3038717580" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-15 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-40162df0d718dad4a5c9befe6e4431df7b858ba1" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-15 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-655253154116221ee8fe9b7cbfa8f6a0f6f156b1" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa4d" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-40162df0d718dad4a5c9befe6e4431df7b858ba1')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-3873999536" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-655253154116221ee8fe9b7cbfa8f6a0f6f156b1')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-2985211142" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-16 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-7f76a4087d812620f008a9e0be1ac5fbbd49c8a6" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-16 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-718e2897d77b2e870befa9930ee59835d42a4e20" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa40" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-7f76a4087d812620f008a9e0be1ac5fbbd49c8a6')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-3885162252" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-718e2897d77b2e870befa9930ee59835d42a4e20')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-4064942074" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-17 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-9cb9e3892f51e89d71e9fa3bca990423be9d4cf2" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-17 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-82e12c34f8535c5a97ec0b1fef735f629c0e001e" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa33" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-9cb9e3892f51e89d71e9fa3bca990423be9d4cf2')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-1531811398" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-82e12c34f8535c5a97ec0b1fef735f629c0e001e')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-3028166600" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-18 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ab5c8faa5588fba8a84f8343bd599b9fdb4b1ff5" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-18 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-0a2b73edd6040cf8864a0be980c849f0628d68b3" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa26" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-ab5c8faa5588fba8a84f8343bd599b9fdb4b1ff5')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-3613825944" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-0a2b73edd6040cf8864a0be980c849f0628d68b3')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-2210309758" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-19 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-b7048b1a6779371387f82cee80a34fcf6ecdc7ef" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-19 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-21aca8219826323b7c2faea463ecc35417272440" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa19" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-b7048b1a6779371387f82cee80a34fcf6ecdc7ef')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-3784399398" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-21aca8219826323b7c2faea463ecc35417272440')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-2906423144" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-20 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-16a7756e8c44e3ea7d9d2bdd8e645ece5985a751" x1="0%" y1="50%" x2="100%" y2="50%">
+</mask></g><g style="animation: d2Transition-d2-472354761-20 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-d8b00a6f70dde9f39a4363aeb69105bcede01b2d" x1="0%" y1="50%" x2="100%" y2="50%">
 <stop offset="0%" stop-color="#87cefa0d" />
-<stop offset="100%" stop-color="#87cefa" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-16a7756e8c44e3ea7d9d2bdd8e645ece5985a751')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-1572509044" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+<stop offset="35%" stop-color="#87cefa" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-d8b00a6f70dde9f39a4363aeb69105bcede01b2d')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-1375136250" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
-</mask></g><g style="animation: d2Transition-d2-1494751077-21 2000ms steps(1,end) infinite" class="d2-1494751077 " width="106" height="84" viewBox="-9 -9 106 84"><rect x="-9" y="-9" width="106" height="84" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-48fa7d382d50d87e1f13eddcaa4e280634c68be7" x1="0%" y1="50%" x2="100%" y2="50%">
-<stop offset="0.00%" stop-color="transparent" />
-<stop offset="100.00%" stop-color="lightskyblue" />
-</linearGradient></defs><g class="Q2FjaGU="><g class="shape" ><rect x="0" y="0" width="88" height="66" stroke="#0D32B2" fill="url('#grad-48fa7d382d50d87e1f13eddcaa4e280634c68be7')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="44" y="38.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Cache</text></g><mask id="d2-2017380338" maskUnits="userSpaceOnUse" x="-9" y="-9" width="106" height="84">
-<rect x="-9" y="-9" width="106" height="84" fill="white"></rect>
+</mask></g><g style="animation: d2Transition-d2-472354761-21 2000ms steps(1,end) infinite" class="d2-472354761 " width="272" height="179" viewBox="1 -29 272 179"><rect x="1" y="-29" width="272" height="179" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-eea6e558f791f93c903bad430a3d7e23eda80018" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="0%" stop-color="transparent" />
+<stop offset="35%" stop-color="lightskyblue" />
+</linearGradient></defs><g class="YmFzZQ=="><g class="shape" ><rect x="10" y="20" width="254" height="121" stroke="#0D32B2" fill="darkseagreen" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="7" fill="#0A0F25" class="text fill-N1" style="text-anchor:middle;font-size:28px">Base aerial imagery</text></g><g class="YmFzZS5zdHJpcA=="><g class="shape" ><rect x="40" y="50" width="194" height="61" stroke="#0D32B2" fill="url('#grad-eea6e558f791f93c903bad430a3d7e23eda80018')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="137" y="86" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">New flight strip</text></g><mask id="d2-4081212424" maskUnits="userSpaceOnUse" x="1" y="-29" width="272" height="179">
+<rect x="1" y="-29" width="272" height="179" fill="white"></rect>
 
 </mask></g></svg></svg>

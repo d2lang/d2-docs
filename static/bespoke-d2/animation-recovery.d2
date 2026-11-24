@@ -3,21 +3,26 @@ vars: {
     animate-interval: 1s
     animate-duration: 400ms
   }
+  healthy: 3
 }
 
-API: {
-  width: 120
-  style.fill: royalblue
-  style.font-color: white
-  style.stroke: "#364152"
+lb: Checkout load balancer
+pool: "Healthy replicas · ${healthy}/3" {
+  width: 210
+  style.fill: "#a7dfbd"
 }
+lb -> pool: health checks
 
 scenarios: {
-  incident: {
-    API.style.fill: firebrick
+  bad-release: {
+    vars: {healthy: 0}
+    pool.style.fill: "#f4aca3"
 
     steps: {
-      recover: {API.style.fill: royalblue}
+      rollback: {
+        vars: {healthy: 3}
+        pool.style.fill: "#a7dfbd"
+      }
     }
   }
 }

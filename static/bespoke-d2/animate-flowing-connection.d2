@@ -1,3 +1,6 @@
-direction: right
+orders: "Orders DB" {shape: cylinder}
+fraud: "Fraud checks"
+bi: "BI warehouse"
 
-API -> Cache: {style.animated: true}
+orders -> fraud: change feed {style.animated: true}
+orders -> bi: nightly snapshot

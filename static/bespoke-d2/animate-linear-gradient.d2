@@ -5,13 +5,16 @@ vars: {
   }
 }
 
-Buffer: {
-  width: 200
-  style.fill: "linear-gradient(to right, lightgreen 25%, white 25%)"
+direction: right
+catalog: Catalog {shape: cylinder; width: 86; height: 85}
+index: "Index backfill\n8 partitions" {
+  width: 155
+  style.fill: "linear-gradient(to right, mediumaquamarine 25%, whitesmoke 25%)"
 }
+catalog -> index
 
 steps: {
-  fill: {
-    Buffer.style.fill: "linear-gradient(to right, lightsalmon 75%, white 75%)"
+  next-checkpoint: {
+    index.style.fill: "linear-gradient(to right, mediumaquamarine 75%, whitesmoke 75%)"
   }
 }

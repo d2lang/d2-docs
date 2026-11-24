@@ -65,19 +65,19 @@ Use `cache-stampede.gif` as the output filename to get a GIF.
 
 ## Play layers, scenarios, and steps
 
-Use a scenario to show an API going down and a step inside it to show the
-recovery. Set both timing options once in `vars.d2-config`. The interval
-gives each board its time on screen. The duration tells D2 how long to
-spend changing values in a step. If the change takes longer than the
-interval, the step stays on screen until it finishes.
+A bad release takes all three checkout replicas out of rotation. Show the
+incident with a scenario, then add a step for the rollback as the replicas
+start passing their health checks again.
 
 <CodeBlock className="language-d2" hidePlaygroundLink>{Recovery}</CodeBlock>
 
-<img src="/img/generated/animation-recovery.svg" alt="The blue API turns red at the incident, then fades through purple back to blue as it recovers." width="138" height="79" style={{height: 'auto'}} loading="lazy" />
+<img src="/img/generated/animation-recovery.svg" alt="The checkout load balancer sees healthy replicas drop from three to zero at once, then recover one by one during rollback." width="231" height="266" style={{height: 'auto'}} loading="lazy" />
 
-The API is blue for one second. When the scenario appears, the API turns red
-and stays red for one second. Watch the recovery. The step takes 400 ms to
-blend back to blue and holds blue for the remaining 600 ms.
+Set both timing options once in `vars.d2-config`. With `animate-interval: 1s`,
+the load balancer shows three healthy replicas for one second. The incident
+scenario cuts straight to zero for another second. In the rollback step,
+`animate-duration: 400ms` brings the count back to three over 400 ms. It
+stays there for the remaining 600 ms.
 
 Layers and scenarios switch as whole boards. A step animates from its parent
 board if it's the first step, or from the previous step otherwise. This also
@@ -85,17 +85,19 @@ works for steps inside a layer or scenario.
 
 ## Animate a value between steps
 
-Give a [variable](./vars.md) a starting value, then change it in a step.
-This battery uses the same `${charge}` for its label and for the point where
-the green fill ends. Change `charge` once and both update together.
+A pallet tracker reports its battery charge over MQTT. On the fleet dashboard,
+the number and the green bar both come from one [variable](./vars.md),
+`${charge}`. Change it once to show a tracker running down to 15% before
+its next shipment.
 
 <CodeBlock className="language-d2" hidePlaygroundLink>{Battery}</CodeBlock>
 
-<img src="/img/generated/animation-battery.svg" alt="A battery drains from 65% to empty. The percentage on the label drops as the green fill recedes." width="318" height="82" style={{height: 'auto'}} loading="lazy" />
+<img src="/img/generated/animation-battery.svg" alt="A pallet tracker reports its charge to a dashboard. The green bar shrinks as the readout falls from 65% to 15%." width="248" height="269" style={{height: 'auto'}} loading="lazy" />
 
-The battery starts at 65% for 800 ms. The drain takes the full four seconds
-even though the interval is shorter. Try changing `animate-duration` to
-`300ms`. The battery now drains in 300 ms and stays empty for 500 ms.
+The opening board lasts 800 ms. The step takes the full four seconds to
+drain the battery, even though the interval is shorter. Try setting
+`animate-duration` to `300ms`. The readout now reaches 15% in 300 ms and
+stays there for 500 ms.
 
 D2 can fill in values between two numbers, percentages, colors, or compatible
 gradients. If a step introduces a variable or changes ordinary text, its new
@@ -106,181 +108,209 @@ The default duration is zero. You can override it on the CLI with
 
 ## Animate styles
 
-To fade a worker when it goes on standby, give it a starting opacity and
-change that opacity in a step. The same pattern works for the other
-properties below. The starting value can also come from a [class](./classes.md).
+Give a property a starting value, then change it in a step. The starting
+value can also come from a [class](./classes.md). Each example below shows
+one property at work.
 
 ### Opacity
 
-A worker on standby can fade into the background. Set `Worker.style.opacity`
-to `1` for a fully opaque worker, then to `0.3` in the next step. Its label,
-fill, and outline fade together.
-Use `0` to make it disappear completely.
+During a rolling deployment, the gateway sends new requests to API v2
+while v1 finishes the requests it already has. In the `drained` step,
+lower `style.opacity` from `1` to `0.2` on both v1 and its route. You
+can still see where the old requests went. The v2 route stays fully visible.
 
-<AnimationExample name="opacity" width={116} height={84} alt="A worker fades until its box and label are barely visible." open />
+<AnimationExample name="opacity" width={258} height={271} alt="The gateway's in-flight route and API v1 fade together after draining. The route for new requests to API v2 stays visible." open />
 
 ### Fill
 
-Change `Cache.style.fill` from `lightblue` to `peachpuff` to show a cache
-warming up. D2 blends opaque named colors and three- or six-digit hex colors.
-A change to the solid color `transparent` takes effect immediately. Use
-[opacity](#opacity) for a gradual fade.
+A container registry quarantines image v42 until it verifies the image's
+signature. Change `registry.image.style.fill` from amber to green when the
+check passes. The label switches to “Signature verified” as the color
+begins to change.
 
-<AnimationExample name="fill" width={106} height={84} alt="A cache changes from light blue to peach." />
+<AnimationExample name="fill" width={238} height={195} alt="Inside a container registry, image v42 goes from amber and quarantined to green and marked “Signature verified”." />
 
-You can change the background of the whole board, too. Set `style.fill` at
-the top level and change it in a step. Here the canvas darkens behind the
-client and its worker.
+D2 blends opaque named colors and three- or six-digit hex colors. A solid
+fill changes to `transparent` immediately. For gradual transparency, see
+[how to fade one end of a fill](#fade-one-end-of-a-fill).
 
-<AnimationExample name="background" width={303} height={84} alt="The background changes from pale blue to steel blue behind two connected boxes." />
+You can also set `style.fill` on the whole board. During catalog maintenance,
+the API still serves reads, but imports pause. The background changes once
+for the entire catalog while the two labels explain what happens to each part.
+
+<AnimationExample name="background" width={268} height={78} alt="The catalog background changes to amber. The API switches to read only and the import job pauses." />
 
 ### Stroke
 
-Change `style.stroke` on a shape for its outline, or on a connection for
-its line. Here `(Client -> API)[0].style.stroke` changes the existing
-connection from teal to purple. The `[0]` selects the first connection
-between those two shapes.
+A payment router has two acquirers. When it fails over to B, the teal
+stroke switches to B's route and A's route fades to silver. The labels
+tell you which one is active even without color. Change the existing
+connection with `(router -> b)[0].style.stroke`. The `[0]` selects the
+first connection from the router to B.
 
-<AnimationExample name="stroke" width={274} height={84} alt="The arrow from Client to API changes from teal to purple." />
+<AnimationExample name="stroke" width={318} height={271} alt="The active payment route changes from acquirer A to B. Its line turns teal while the backup line turns silver." />
 
 ### Font color
 
-Change `status.style.font-color` from `navy` to `firebrick` to draw
-attention to a job's status.
+The webhook for `order.paid` gets three delivery attempts. When the third
+one fails, the event is dead-lettered. Change the event's `style.font-color`
+to `firebrick` so the failed delivery stands out under the endpoint that
+needs investigation.
 
-<AnimationExample name="font-color" width={88} height={39} alt="The words “Job status” change from dark blue to brick red." />
+<AnimationExample name="font-color" width={301} height={155} alt="Inside POST /webhooks/orders, the order.paid entry changes from attempt two of three to “Dead-lettered” and its text turns red." />
 
 ### Stroke width
 
-Set `Worker.style.stroke-width` to `2`, then `8`. The outline gets thicker
-while the label keeps its size.
+Show a read router shifting traffic between replicas. As reads move west,
+thicken the west connection from `2` to `8` and narrow the east connection
+by the same amount. Both routes stay open. The thicker stroke tells you
+which replica is carrying more traffic.
 
-<AnimationExample name="stroke-width" width={122} height={90} alt="The worker's outline thickens from 2 to 8 pixels." />
+<AnimationExample name="stroke-width" width={336} height={250} alt="The east and west replicas both stay connected. The west route thickens as the east route thins." />
 
 ### Stroke dash
 
-Increase `style.stroke-dash` from `1` to `7` on the API connection. Both
-the dashes and the gaps grow. To make dashes travel along an arrow, see
-[flow along a connection](#flow-along-a-connection).
+The orders database already replicates locally. Draw the planned EU route
+with `style.stroke-dash: 6`. When replication starts, change it to `0` so
+both active routes are solid. To show data continually moving along a route,
+see [flow along a connection](#flow-along-a-connection).
 
-<AnimationExample name="stroke-dash" width={275} height={84} alt="Short dashes on the arrow from API to Cache lengthen and spread apart." />
+<AnimationExample name="stroke-dash" width={362} height={250} alt="The new EU replication route starts dashed and turns solid like the existing local replication route." />
 
 ### Border radius
 
-Change `Cache.style.border-radius` from `0` to `24` to round the cache's
-square corners.
+A recorder's red button tells you what a tap will do. Before capture starts,
+it's a circle labeled “Record”. When the audio engine starts capturing, the
+same control becomes a rounded square labeled “Stop”. Keep its width and
+height at `48` and change `style.border-radius` from `24` to `4`.
 
-<AnimationExample name="border-radius" width={106} height={84} alt="The square corners of a cache box become rounded." />
+<AnimationExample name="border-radius" width={156} height={278} alt="The audio engine starts capture, and the round red Record button changes to a square Stop button with rounded corners." />
 
 ### Font size
 
-Change `Alert.style.font-size` from `16` to `32`. Give the box a fixed
-width and height if you want just the text to grow.
+Checkout has a 250 ms latency budget. As its p95 rises from 120 ms to
+680 ms, enlarge the observed reading with `style.font-size`. Keeping the
+budget at its original size makes it easy to see which number changed.
 
-<AnimationExample name="font-size" width={178} height={88} alt="The word “Alert” doubles in size inside the same box." />
+<AnimationExample name="font-size" width={288} height={163} alt="Checkout's p95 reading grows larger as it climbs from 120 to 680 ms. Its 250 ms budget stays fixed." />
 
 ### Width
 
-Change `Queue.width` from `100` to `240`. The queue gets wider while its
-height stays at `48`.
+How much of the 200 ms budget for `GET /cart` goes to SQL? On a cold read,
+the query grows from 100 ms to 200 ms. Double the SQL span's `width` in
+the same step. When it matches the dashed budget above it, the database
+alone is using the entire request budget.
 
-<AnimationExample name="width" width={258} height={66} alt="A queue stretches horizontally while keeping the same height." />
+<AnimationExample name="width" width={238} height={158} alt="The SQL span grows from half the width of the dashed 200 ms request budget to its full width." />
 
 ### Height
 
-Change `Queue.height` from `48` to `96` to make the same queue grow
-vertically. For a circle or square with both dimensions set, change them
-together so they stay equal.
+A campaign enqueues 20 emails per second and the mailer sends only 10.
+After 20 seconds the backlog has grown from 200 to 400. Double the
+queue's `height` as the count rises. The rates on either side show why
+it keeps growing.
 
-<AnimationExample name="height" width={138} height={114} alt="A queue grows to twice its height while keeping the same width." />
+<AnimationExample name="height" width={144} height={480} alt="The mail queue grows taller as its backlog doubles. The incoming rate remains 20 jobs per second and the outgoing rate remains 10." />
+
+If you set both dimensions on a square or circle, change them together
+so they stay equal.
 
 ## Change a gradient
 
-Use a gradient when you want some parts of a shape or connection to change color
-before others. You can change a whole gradient in a step, or use a variable
-to control just one part of it.
+You can change a whole gradient in a step, or use a variable to control
+one part of it.
 
 ### Fill a progress bar
 
-Give two color stops the same percentage to get a sharp boundary. Here the
-boundary moves from 25% to 75%. The filled portion also changes from green
-to salmon. Halfway through the step, the bar is half full.
+An indexer is rebuilding an eight-partition search index from a product catalog.
+Two partitions are done at the first checkpoint and six at the next.
+Set the green and off-white stops to the same percentage to give the
+index a sharp progress boundary. Moving both stops from 25% to 75% carries
+that boundary across the index.
 
-<AnimationExample name="linear-gradient" width={218} height={79} alt="A buffer fills from one quarter to three quarters as its colored portion changes from green to salmon." />
+<AnimationExample name="linear-gradient" width={359} height={103} alt="A catalog backfills an eight-partition search index. Its green fill advances from one quarter complete to three quarters." />
 
-D2 pairs the stops in order and blends each stop's color and position.
-When replacing a whole gradient, keep the
-same kind (linear or radial), the same number of stops, and, for a linear
-gradient, the same direction. Otherwise the new gradient appears immediately.
+When you change a whole gradient, D2 pairs up the stops in order and
+blends their positions and colors. Keep the same gradient kind, number of
+stops, and, for a linear gradient, direction. Otherwise the new gradient
+appears immediately.
 
 ### Fade one end of a fill
 
-To keep the label readable, change the transparency of a gradient stop.
-Here both stops start at `lightskyblue`, so the cache has an even fill.
-Change just the left stop to `transparent` and the background shows
-through from that side. The label and outline stay fully opaque.
+A mapping service stitches overlapping aerial photos into a mosaic. Where
+a new flight strip overlaps the base imagery, a hard edge would leave a
+visible seam. Change the left stop of the strip's fill to `transparent`.
+The green base shows through at the edge and gradually gives way to the
+blue strip across the first 35%. The rest of the strip stays opaque.
 
-<AnimationExample name="gradient-opacity" width={106} height={84} alt="The left end of a blue cache fill fades to transparent while its label and outline stay solid." />
+<AnimationExample name="gradient-opacity" width={272} height={179} alt="The left edge of a new blue flight strip fades into the green base imagery while the rest of the overlay stays opaque." />
 
 ### Expand a radial gradient
 
-Here the whole gradient lives in a variable named `glow`. The inner blue
-region starts at 10% of the radius. As it expands to 50%, it turns plum and
-the white outer stop moves to the rim.
+A ride dispatcher finds no available driver near the pickup, so it widens
+the search. The pickup and both cabs stay in place. The blue area expands
+until it reaches the cabs. The `area` variable holds the whole radial
+gradient, so changing its two stops moves the search boundary outward.
 
-<AnimationExample name="radial-gradient" width={118} height={118} alt="A small blue center in a circle grows into a wider plum-colored glow." />
+<AnimationExample name="radial-gradient" width={228} height={268} alt="The search area expands around a stationary pickup until cab A and cab B fall inside it." />
 
 ### Rotate a gradient
 
-To turn a linear gradient, put a number in the angle itself, as in
-`linear-gradient(${angle}deg, navy, lightskyblue)`. Change `angle` from
-`0` to `180` and watch the dark end turn through half a circle.
+In a live video mixer, a wipe can put the camera and the speaker's slides
+on screen at the same time. At 0° the slides run along the bottom of the
+picture. At 90° they sit on the right. Give the two colors the same stop
+to keep that edge sharp, then change `${angle}` to turn it. The output
+label shows the angle as you go.
 
-<AnimationExample name="gradient-angle" width={178} height={90} alt="A navy-to-light-blue gradient rotates 180 degrees inside a stationary rectangle." />
+<AnimationExample name="gradient-angle" width={266} height={260} alt="Blue represents the camera and gold represents slides. Their dividing line turns a quarter turn across the mixer output as the angle goes from zero to 90 degrees." />
 
 ### Send a pulse along a connection
 
-This is how the [cache diagram](#how-1200-gets-become-one-origin-read) sends
-a request. Put a narrow orange band in the stroke of the cache connection.
-Move both ends of the band from left to right. The connection to the origin
-stays still.
+Does a cache hit reach the database? The order API looks up `order:481`.
+Redis already has it, so only the Redis connection carries a request.
+The Postgres path stays still. This is the same technique used for the
+[shield cache](#how-1200-gets-become-one-origin-read).
 
-<AnimationExample name="request-pulse" width={294} height={210} alt="An orange band travels from Client to Cache along a curved connection while the Client to Origin connection stays still." />
+<AnimationExample name="request-pulse" width={395} height={226} alt="An orange pulse travels from the order API to Redis, where order 481 is cached. The Postgres connection marked “on miss” stays still." />
 
-The percentages `tail` and `head` mark the back and front of the band. They
-stay 20 percentage points apart. Starting the tail below 0% and ending the
+Put a narrow orange band in the connection's stroke gradient. Its back
+and front, `tail` and `head`, stay 20 percentage points apart as the step
+moves them from left to right. Starting the tail below 0% and ending the
 head above 100% lets the pulse enter and leave the line.
 
 ## Animate with variables
 
-The [battery](#animate-a-value-between-steps) uses one percentage for a
-label and a gradient stop. The same idea works anywhere a variable supplies
-a value D2 can draw.
+The [tracker's battery gauge](#animate-a-value-between-steps) uses one
+percentage for both its label and its fill. You can also put a variable in
+a label, share it between services, or use it to position a shape.
 
 ### Count in a label
 
-Put `${jobs}` in the queue's label, then change `jobs` from `2` to `12`.
-The label counts through the whole numbers in between. For a reading in
-tenths, write the endpoints as `2.0` and `12.0`. D2 keeps the precision
-of the more precise endpoint.
+Billing is 120 orders behind. As its consumer replays the orders topic,
+the number of records left to process counts down to zero. Put `${lag}`
+in the label and change it in the catch-up step. Integer endpoints give
+you whole records. For a metric measured in tenths, such as seconds of lag,
+use decimal endpoints like `12.0` and `0.0`.
 
-<AnimationExample name="counter" width={178} height={79} alt="The label counts from “Queued jobs: 2” through “Queued jobs: 12”." />
+<AnimationExample name="counter" width={204} height={282} alt="The billing consumer catches up to the orders topic as its lag falls from 120 records to zero." />
 
 ### Share a color
 
-Give the API and cache the same `${health}` fill. Changing `health` from
-`palegreen` to `lightcoral` in one place changes both shapes in sync.
+Two endpoints serve the same wildcard certificate. When it expires, both
+hosts fail TLS checks. Bind their fills to `${tls}` so renewing the one
+certificate turns both hosts green in the same step.
 
-<AnimationExample name="shared-color" width={275} height={84} alt="The API and cache turn from pale green to coral together." />
+<AnimationExample name="shared-color" width={359} height={266} alt="The expired wildcard certificate is renewed, and both API and payment hosts change from red to green together." />
 
 ### Move a pinned shape
 
-With [TALA](./positions.md#top-and-left), use numeric variables for a
-shape's `left` and `top`. Here the gate stays at the origin and the worker
-moves from `(100, 0)` to `(200, 60)`. Change the **variables** in the
-step. Assigning new coordinates directly moves the shape in one jump.
+Which part of the write-ahead log has a replica replayed? Pin two WAL
+segments side by side with [TALA](./positions.md#top-and-left) and put a
+cursor under segment 7. The step changes `x` from `22` to `174`, sliding
+the cursor into segment 8. Bind `left` to the variable. Assigning a new
+`left` directly in the step moves the cursor in one jump.
 
-<AnimationExample name="position" width={316} height={144} alt="The gate stays fixed as the worker slides right and down." />
+<AnimationExample name="position" width={310} height={113} alt="A replica's replay cursor slides from write-ahead log segment 7 into segment 8 while both segments stay fixed." />
 
 Both ends of a variable change must be the same kind of value. For example,
 `20%` can animate to `80%`. Changing `20` to `80%`, introducing a new
@@ -293,14 +323,16 @@ SVGs each have a single board and use the default timing options.
 
 ### Float a shape
 
-Set `Worker.style.animated: true`. The worker rises and settles back down
-as its shadow changes.
+Release v2.8 is queued for production. The reviewer has one thing to do
+before it can ship. Set `approval.style.animated: true` on the approval
+gate so it lifts above its shadow while the queued deployment stays still.
 
-<AnimationExample name="floating-shape" width={116} height={84} alt="A worker gently lifts and settles over its shadow." open />
+<AnimationExample name="floating-shape" width={210} height={282} alt="The production approval gate rises and settles above a queued release that is waiting for a reviewer." open />
 
 ### Flow along a connection
 
-Set `style.animated: true` on `API -> Cache`. The dashes keep flowing
-toward the cache for as long as the SVG is on screen.
+Fraud checks consume order changes as they happen. The BI warehouse gets
+a snapshot each night. Set `style.animated: true` on just the change feed
+so a reader can tell which downstream system sees a new order right away.
 
-<AnimationExample name="flowing-connection" width={275} height={84} alt="Dashes move along the arrow from the API to the cache." open />
+<AnimationExample name="flowing-connection" width={355} height={323} alt="Moving dashes carry the continuous change feed from the orders database to fraud checks. The nightly warehouse snapshot has a stationary arrow." open />

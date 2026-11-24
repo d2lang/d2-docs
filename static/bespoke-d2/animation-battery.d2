@@ -6,12 +6,15 @@ vars: {
   charge: 65%
 }
 
-battery: "Battery · ${charge}" {
-  width: 300
+tracker: Pallet tracker
+battery: "Dashboard · ${charge}" {
+  width: 230
   height: 64
   style.fill: "linear-gradient(to right, #82d6a7 ${charge}, #eff5f1 ${charge})"
 }
 
+tracker -> battery: MQTT · battery_pct
+
 steps: {
-  drain: {vars: {charge: 0%}}
+  drain: {vars: {charge: 15%}}
 }

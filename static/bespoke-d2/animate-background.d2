@@ -5,12 +5,16 @@ vars: {
   }
 }
 
-style.fill: aliceblue
-direction: right
-Client -> Worker
+grid-rows: 1
+grid-gap: 14
+style.fill: honeydew
+api: "Catalog API\nRead/write" {shape: text; width: 118; height: 60}
+sync: "Import job\nRunning" {shape: text; width: 118; height: 60}
 
 steps: {
-  evening: {
-    style.fill: lightsteelblue
+  maintenance: {
+    style.fill: moccasin
+    api: "Catalog API\nRead only"
+    sync: "Import job\nPaused"
   }
 }

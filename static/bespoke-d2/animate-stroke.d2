@@ -4,15 +4,16 @@ vars: {
     animate-duration: 800ms
   }
 }
-direction: right
 
-Client -> API: {
-  style.stroke: teal
-  style.stroke-width: 5
-}
+router: Payment router
+a: Acquirer A
+b: Acquirer B
+router -> a: active {style.stroke: teal; style.stroke-width: 4}
+router -> b: backup {style.stroke: silver; style.stroke-width: 4}
 
 steps: {
-  highlight: {
-    (Client -> API)[0].style.stroke: purple
+  failover: {
+    (router -> a)[0]: backup {style.stroke: silver}
+    (router -> b)[0]: active {style.stroke: teal}
   }
 }

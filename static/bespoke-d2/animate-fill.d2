@@ -5,10 +5,15 @@ vars: {
   }
 }
 
-Cache.style.fill: lightblue
+registry: Container registry {
+  image: "Image v42\nQuarantined" {
+    width: 160
+    style.fill: moccasin
+  }
+}
 
 steps: {
-  warm: {
-    Cache.style.fill: peachpuff
+  verify-signature: {
+    registry.image: "Image v42\nSignature verified" {style.fill: palegreen}
   }
 }

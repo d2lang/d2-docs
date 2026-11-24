@@ -5,13 +5,15 @@ vars: {
   }
 }
 
-status: "Job status" {
-  shape: text
-  style.font-color: navy
+delivery: "POST /webhooks/orders" {
+  event: "order.paid\nAttempt 2 of 3" {
+    shape: text
+    style.font-color: darkslategray
+  }
 }
 
 steps: {
-  alert: {
-    status.style.font-color: firebrick
+  third-failure: {
+    delivery.event: "order.paid\nDead-lettered" {style.font-color: firebrick}
   }
 }

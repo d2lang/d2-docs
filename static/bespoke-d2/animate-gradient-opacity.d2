@@ -5,10 +5,17 @@ vars: {
   }
 }
 
-Cache.style.fill: "linear-gradient(to right, lightskyblue, lightskyblue)"
+base: Base aerial imagery {
+  style.fill: darkseagreen
+
+  strip: New flight strip {
+    width: 194
+    style.fill: "linear-gradient(to right, lightskyblue 0%, lightskyblue 35%)"
+  }
+}
 
 steps: {
-  fade: {
-    Cache.style.fill: "linear-gradient(to right, transparent, lightskyblue)"
+  blend-overlap: {
+    base.strip.style.fill: "linear-gradient(to right, transparent 0%, lightskyblue 35%)"
   }
 }

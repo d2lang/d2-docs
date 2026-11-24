@@ -2,15 +2,19 @@ vars: {
   d2-config: {
     layout-engine: tala
     animate-interval: 1s
-    animate-duration: 800ms
+    animate-duration: 640ms
   }
-  x: 100
-  y: 0
+  x: 22
 }
 
-Gate: {left: 0; top: 0}
-Worker: {left: ${x}; top: ${y}}
+first: "WAL segment 7" {left: 0; top: 0; width: 140; height: 52}
+next: "WAL segment 8" {left: 152; top: 0; width: 140; height: 52}
+cursor: "▲\nReplica cursor" {
+  shape: text
+  left: ${x}
+  top: 58
+}
 
 steps: {
-  depart: {vars: {x: 200; y: 60}}
+  replay-next-segment: {vars: {x: 174}}
 }

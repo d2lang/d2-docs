@@ -1,14 +1,21 @@
 vars: {
   d2-config: {
-    animate-interval: 1s
-    animate-duration: 800ms
+    animate-interval: 1200ms
+    animate-duration: 900ms
   }
 }
 
-Worker.style.opacity: 1
+gateway: Gateway
+old: API v1
+new: API v2
+gateway -> old: in flight
+gateway -> new: new requests
+old.style.opacity: 1
+(gateway -> old)[0].style.opacity: 1
 
 steps: {
-  standby: {
-    Worker.style.opacity: 0.3
+  drained: {
+    old.style.opacity: 0.2
+    (gateway -> old)[0].style.opacity: 0.2
   }
 }

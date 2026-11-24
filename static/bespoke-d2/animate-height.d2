@@ -1,14 +1,23 @@
 vars: {
+  jobs: 200
   d2-config: {
-    animate-interval: 1s
-    animate-duration: 800ms
+    animate-interval: 1200ms
+    animate-duration: 900ms
   }
 }
 
-Queue: {width: 120; height: 48}
+campaign: Campaign
+queue: "${jobs} queued" {
+  width: 126
+  height: 44
+}
+mailer: Mailer
+campaign -> queue: 20 jobs/s
+queue -> mailer: 10 jobs/s
 
 steps: {
-  grow: {
-    Queue.height: 96
+  after-20s: {
+    vars: {jobs: 400}
+    queue.height: 88
   }
 }

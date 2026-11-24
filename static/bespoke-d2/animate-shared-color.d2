@@ -1,17 +1,20 @@
 vars: {
   d2-config: {
     animate-interval: 1s
-    animate-duration: 800ms
+    animate-duration: 640ms
   }
-  health: palegreen
+  tls: lightcoral
 }
 
-direction: right
-
-API.style.fill: ${health}
-Cache.style.fill: ${health}
-API -> Cache
+cert: "*.shop.test\nExpired"
+api: "api.shop.test" {style.fill: ${tls}}
+pay: "pay.shop.test" {style.fill: ${tls}}
+cert -> api
+cert -> pay
 
 steps: {
-  alert: {vars: {health: lightcoral}}
+  renew: {
+    cert.label: "*.shop.test\nRenewed"
+    vars: {tls: palegreen}
+  }
 }

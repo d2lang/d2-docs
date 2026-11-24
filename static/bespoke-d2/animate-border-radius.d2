@@ -1,14 +1,27 @@
 vars: {
   d2-config: {
-    animate-interval: 1s
-    animate-duration: 800ms
+    animate-interval: 1200ms
+    animate-duration: 900ms
   }
 }
 
-Cache.style.border-radius: 0
+engine: Audio engine
+control: Record {
+  width: 48
+  height: 48
+  label.near: outside-bottom-center
+  style: {
+    fill: tomato
+    stroke: tomato
+    border-radius: 24
+  }
+}
+engine -> control: ready
 
 steps: {
-  round: {
-    Cache.style.border-radius: 24
+  recording: {
+    control: Stop
+    control.style.border-radius: 4
+    (engine -> control)[0]: capture started
   }
 }
