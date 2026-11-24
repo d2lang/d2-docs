@@ -1,4 +1,3 @@
-# A recovery controller dequeues a finished restore and admits two new jobs.
 vars: {d2-config: {animate-duration: 900ms; animate-interval: 1200ms; pad: 8}}
 style.fill: transparent
 grid-rows: 2
@@ -19,7 +18,7 @@ images: "Image cache\nrestore #28" {class: job}
 
 steps: {
   reprioritize: {
-    # The blob index is restored. Move ledger to the head of the work queue.
+    # Clear and redeclare existing IDs to change their order.
     blob: null
     audit: null
     catalog: null

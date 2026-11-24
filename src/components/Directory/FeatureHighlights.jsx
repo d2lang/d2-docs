@@ -28,7 +28,7 @@ const featureHighlights = [
   },
   {
     title: "Animations",
-    description: "D2 is the only language that can produce animated diagrams from text.",
+    description: "Play boards in a loop and animate changes to shapes, connections, and grids.",
     img: Animations,
     href: "/tour/animation/",
   },

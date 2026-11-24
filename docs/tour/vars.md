@@ -82,9 +82,8 @@ In other words, if you call `D2_PAD=2 d2 --theme=1 input.d2`, it doesn't matter 
 the command.
 :::
 
-For animated diagrams, `animate-interval` sets the playback interval for all
-boards. `animate-duration` sets the transition time for changes made by steps.
-[See how the settings work together](./animation.md#play-layers-scenarios-and-steps).
+`animate-interval` sets the playback interval for all boards.
+`animate-duration` sets the transition time for steps. See [Animation](./animation.md#play-layers-scenarios-and-steps).
 
 ### Output scale and SVG appendix
 

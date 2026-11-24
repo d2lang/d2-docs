@@ -10,16 +10,11 @@ export options are different.
   - Internal board links are rewritten to point to those file paths, so they work if you
     open the SVG and just click on it.
 - Single animated SVG
-  - This is useful for small compositions. It's great for a small number of Steps or
-    flipping between some Scenarios, but if the composition has too many boards, the
-    viewer may get confused or wait until a loop.
-  - On the CLI, passing `--animate-interval=1200` sets the resulting SVG to be an
-    animation that stays on each board for 1200ms.
-  - You can also set the interval in `vars.d2-config.animate-interval`. To show a
-    value changing within a step, set `animate-duration` in the same block.
-    [Watch a cache shield collapse 1,200 GETs into one origin read](./animation.md#how-1200-gets-become-one-origin-read).
+  - Set `animate-interval` in `vars.d2-config` to play the boards in a loop,
+    or pass `--animate-interval=1200` on the CLI for a 1.2-second interval.
+    Set `animate-duration` to animate changes between steps. See [Animation](./animation.md).
 - Single animated GIF
-  - Same as above, but useful in different contexts, like where SVG is not rendered.
+  - Use a `.gif` output filename to export the animation as a GIF.
 - PDF
   - PDF can be multiple pages, so this medium is suitable for multi-board diagrams.
     Each board is simply another page, and objects can be linked to those pages.

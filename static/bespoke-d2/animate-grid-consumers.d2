@@ -1,4 +1,3 @@
-# Each projector stores the input offset in the same transaction as its ledger update.
 vars: {d2-config: {animate-duration: 900ms; animate-interval: 1200ms; pad: 8}}
 style.fill: transparent
 grid-rows: 1
@@ -16,8 +15,6 @@ classes: {
   flow: {style: {stroke: "#5E7787"; stroke-width: 2}}
 }
 
-# Each column owns its vertical sizing, so inspecting the ledger leaves its
-# input partition and process in their original slots.
 classes.column: {
   label: ""
   grid-rows: 3

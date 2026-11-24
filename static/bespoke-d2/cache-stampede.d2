@@ -1,21 +1,16 @@
-# GET /cover.avif is a cold, cacheable 256 KiB response.
-# Each viewer dash represents 100 GETs or responses. Farther upstream,
-# one dash represents a single GET or a single response body.
 vars: {
-  # Start and end of each pulse, measured along the connection from left to right.
+  # Stops outside 0% to 100% move the pulse off the connection.
   v0: -22%
   v1: -15%
   v2: -7%
-  v3: 0% # Two viewer batches
+  v3: 0%
   l0: -112%
-  l1: -98% # Ashburn's miss
+  l1: -98%
   m0: -109%
-  m1: -95% # The five other misses
+  m1: -95%
   g0: -133%
-  g1: -119% # The one origin fetch
+  g1: -119%
   warm: -215%
-  # Hex digits for the packet colors. Switch each group to mint when its
-  # connections start carrying the response in the other direction.
   c: "FB6"
   f: "FB6"
   d2-config: {
@@ -28,14 +23,13 @@ vars: {
   }
 }
 
-# Visible request cells and empty cells that reserve space in the shield.
+# Transparent cells reserve grid slots.
 classes.t: {width: 50; height: 29; style: {font-size: 14}}
 classes.z: {width: 50; height: 29; style.opacity: 0}
 
-# An edge fills in as its cached copy arrives.
 classes.p: {width: 158; height: 46; style: {fill: "linear-gradient(to right,#166A61 ${warm},#193B4C ${warm})"; border-radius: 7; stroke-width: 1; bold: false}}
 
-# The two stops at each end give a moving packet a sharp edge.
+# Put both colors at the same stop to give the pulse a sharp edge.
 classes.v: {style: {stroke: "linear-gradient(to right,#345 ${v0},#${c} ${v0},#${c} ${v1},#345 ${v1},#345 ${v2},#${c} ${v2},#${c} ${v3},#345 ${v3})"; stroke-width: 6}}
 classes.l: {style: {stroke: "linear-gradient(to right,#345 ${l0},#${c} ${l0},#${c} ${l1},#345 ${l1})"; stroke-width: 6}}
 classes.m: {style: {stroke: "linear-gradient(to right,#345 ${m0},#${f} ${m0},#${f} ${m1},#345 ${m1})"; stroke-width: 6}}
@@ -45,7 +39,6 @@ h: "How 1,200 GETs become one origin read" {near: top-center; shape: text; style
 direction: right
 style.fill: "#122C3A"
 
-# Viewers, the shared shield, and the origin, in network order.
 v: "1,200 viewers\n200 per edge\n300 MiB total" {width: 154; height: 88}
 shield: "Shield cache\nIn-flight requests" {
   width: 206
@@ -55,14 +48,13 @@ shield: "Shield cache\nIn-flight requests" {
   grid-gap: 6
   style.font-size: 16
   label.near: top-center
-  # Declare IAD first so it keeps the same slot when the other five arrive.
+  # A suspended cell keeps its place in declaration order.
   IAD: IAD {class: t; style: {fill: "#FB6"; font-color: "#223744"}}
   IAD: suspend
   _slot: "" {class: z}
 }
 o: "Image origin\n/cover.avif\n1 × 256 KiB" {style.stroke: "#CA985E"; shape: cylinder; width: 150; height: 123}
 
-# Dagre stacks these bottom-up. Ashburn is the third row from the top.
 NRT: "NRT  /  Tokyo" {class: p}
 FRA: "FRA  /  Frankfurt" {class: p}
 LHR: "LHR  /  London" {class: p}
@@ -85,7 +77,6 @@ SFO -- shield: {class: m}
 shield -- o: {class: g}
 
 steps: {
-  # The first edge miss reaches the shield and starts the origin GET.
   leader: {
     shield.IAD: unsuspend
     shield._y: "" {class: z}
@@ -104,7 +95,6 @@ steps: {
     }
   }
 
-  # The other edges attach to the same fetch as the body travels back.
   join: {
     shield._slot: null
     shield._y: null
@@ -125,7 +115,6 @@ steps: {
     }
   }
 
-  # Release the in-flight entry, fill the edges, and deliver to the viewers.
   deliver: {
     shield.IAD: null
     shield.ORD: null

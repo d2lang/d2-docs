@@ -1,4 +1,3 @@
-# A native module's pre-release checks run once for every OS/runtime pair.
 vars: {d2-config: {animate-duration: 900ms; animate-interval: 1200ms; pad: 8}}
 style.fill: transparent
 grid-rows: 4
@@ -30,7 +29,7 @@ win26: MSVC build {class: job}
 steps: {
   add-runtime: {
     grid-columns: 4
-    # Repack the same job IDs in row-major order with the added runtime.
+    # Redeclare the same cell IDs in the new column order.
     runtime26: null
     linux: null
     linux22: null
