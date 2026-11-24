@@ -14,6 +14,8 @@ _bespoke() {
   sh_c d2 --omit-version --animate-interval=1400 -l elk -c --pad 0 ./static/bespoke-d2/animated.d2 ${output_dir}/animated.svg2
   sh_c d2 --omit-version --animate-interval=1400 -c --pad 0 ./static/bespoke-d2/chicken.d2 ${output_dir}/chicken.svg2
   sh_c d2 --omit-version ./static/bespoke-d2/cache-stampede.d2 ${output_dir}/cache-stampede.svg
+  sh_c d2 --omit-version --pad 8 ./static/bespoke-d2/animation-recovery.d2 ${output_dir}/animation-recovery.svg
+  sh_c d2 --omit-version --pad 8 ./static/bespoke-d2/animation-battery.d2 ${output_dir}/animation-battery.svg
   sh_c d2 --omit-version --pad 50 ./static/bespoke-d2/tiktok.d2 ${output_dir}/tiktok.pdf
   sh_c d2 --omit-version --pad 0 ./static/bespoke-d2/cat.d2 ${output_dir}/cat.pdf
   sh_c d2 --omit-version --pad 50 ./static/bespoke-d2/lotr.d2 ${output_dir}/lotr.pdf

@@ -1,0 +1,22 @@
+vars: {
+  d2-config: {
+    animate-interval: 1s
+    animate-duration: 400ms
+  }
+}
+
+API: {
+  width: 120
+  style.fill: royalblue
+  style.font-color: white
+  style.stroke: "#364152"
+}
+
+scenarios: {
+  incident: {
+    API.style.fill: firebrick
+    steps: {
+      recover: {API.style.fill: royalblue}
+    }
+  }
+}

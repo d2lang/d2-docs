@@ -1,0 +1,17 @@
+vars: {
+  d2-config: {
+    animate-interval: 800ms
+    animate-duration: 4s
+  }
+  charge: 65%
+}
+
+battery: "Battery · ${charge}" {
+  width: 300
+  height: 64
+  style.fill: "linear-gradient(to right, #82d6a7 ${charge}, #eff5f1 ${charge})"
+}
+
+steps: {
+  drain: {vars: {charge: 0%}}
+}

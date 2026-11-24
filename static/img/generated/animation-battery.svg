@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" d2Version="v0.8.1-HEAD" preserveAspectRatio="xMinYMin meet" viewBox="0 0 318 82"><svg class="d2-svg" width="318" height="82" viewBox="-9 -9 318 82"><style type="text/css"><![CDATA[
+.d2-1285688474 .text-bold {
+	font-family: "d2-1285688474-font-bold";
+}
+@font-face {
+	font-family: d2-1285688474-font-bold;
+	src: url("data:application/font-woff;base64,d09GRgABAAAAAAv0AAoAAAAAEigAAguFAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAAA9AAAAGAAAABgXxHXrmNtYXAAAAFUAAAAeQAAAJwC6gKTZ2x5ZgAAAdAAAAXLAAAHLBq+UahoZWFkAAAHnAAAADYAAAA2G38e1GhoZWEAAAfUAAAAJAAAACQKfwXWaG10eAAAB/gAAABcAAAAXCssArZsb2NhAAAIVAAAADAAAAAwFUwXQG1heHAAAAiEAAAAIAAAACAALwD3bmFtZQAACKQAAAMvAAAIKgjwVkFwb3N0AAAL1AAAACAAAAAg/9EAMgADAioCvAAFAAACigJYAAAASwKKAlgAAAFeADIBKQAAAgsHAwMEAwICBGAAAvcAAAADAAAAAAAAAABBREJPACAAIP//Au7/BgAAA9gBESAAAZ8AAAAAAfAClAAAACAAA3icbMw/rgFRHEDh7747b/wbDBK1Rq/V2oZKYQOisQkRFiCxCa1laG3AFn6SKUVO9xUHSZZQKZwwVctKM3NLKxtbO3sH9wgaX3x7vOIdz3jELa5xiXMcY91cf5VMtHV09VT6BoZqI3+ywr9Sy5gPAAAA//8DAORlHWsAAAB4nFyVXWzb1hXHz6Vo0pGZ2Pog9RF9RKRISrIdWbwiqciyZdkKVaeV7cRNldWylQlN1sWuE7hZldZxt4dgAboGG7Zg8ApsK4IGKLrtZdvLgmED9jLsaS8LBuylLRoUHbahASZse0jI4dKN5+yBuC8X9/z/v/M/hzAASwBUl7oNHjgEw+AHHgD7Uj4Zq6rEmtg0pZDHVJGPXaL89t331CydzdK5Y7vJNzod1Fyjbj/eWGl2u//qTE7aP/rVPfsWevUegAeaAFSFeht8EAWRvIk1QeCDDMu7ByN5sGboRUWSfFhzz+aH9Y2Z8Yw2V99qdE4aBa1oLb9emVqm3o5b1dHlYfrws7W557PoZk5Sjtnnzo3KABTknD76E3oEEZAAQqKiFw1TUSSRYVXDwJrA+yRVYhhTM0ydYfig8Jv60o3vUVI2OZPW8+vlzsVrXjrZGIzIgYVKkmtVF84Np9Qw/+V4enPLfoBj0lYo0PKOxsMhIPXSTh99jB5BGJIAA6JCChpPvKUEAWtmiGE8uEg0oGRja3ZuY7Kxmqcp+89eq6AbBWXtnV+oY6LBTV89c/pqtbpeD8iHDJz6UjSBylk9DwCAoAaAvo0egd9lF8KumRC7Z81Xu+aljz6n8DFv+HBkJDYVRA9bWmFg4Os0ndXsjwCBz+mjTeoqhFyVui7ppol5zEt8UMCaQUQiaC/Wn/O90etJcS7iDQVM7tILf3iFuXHj1d/nZIZeZ7g9LZwzjR6jh3DUJayaxKVhmh4cEgSizDSx5wh1TUgNR1n/oJzxsr+93Rjye+lB36HKrZ+GSou/Y+graCAdj6JP7ouWLDWk+/bQ9NkceZ8C2emjv1E3YYhUIGqLxCwfZFTNIBkhnknrBDR4cWfnIvkimVAoEwlnwuEM98GdO3fv3rnzwZa81mq1RbHdaq3JRLcFgP5CbQMHgHXsk3TDMLEP89ZbveIz4kavhy6veGPBx496RAeCBAB6QN2EGLk/TenFAzki/WVYw8CYl0/vWIWsaIaX8t16dU2fbBfDFeEbzzd3vjqeL6jRRQ1rK1P65cuGZ+A6eVdw+uhD6iZkD/Jzfema8VSVAwPyz+YrUj1uZfKl2KmTL8xkFNFMnBrrlruvm9hs1NY5LbMaS6vpWFZ4Oa+k5ET0RWV0ZblgCfRIc3pyeZR4oiAAgP5DbcMhCAIEMBkPiWHYgJ7SA4SFxL/7zQFEc9Ejmv2Pz345P48Gv5I8nYgaR+3N3QvoTfvWlV3iIeT00UfUNiT/zwOJoxpI8RK7T+nfCxvKbLyeKZRLYzE5PutHL/91KKWYK6XaJa4or0ZlrTChHfHnUO16bzjXqlsvFV2tWaeP/u7mIAOARIZ9UsTzvzn7YgTcVrgZYVAggoPeUiqVzyemNk/Of22u2k40R8yYVJY8kfn4mfVyB8lx8dkTBUPL2X+sfetyb3d+PHnOf1RunTomdS7Mdkh9BGMA6FNqGw4D4GnKTOkp/oiH/TEjWhX7E3TPnJNH6Evvv7N8/cW517a/swpkz5H985mbGRWK+xvB1PcFH2ip5wtgfFAIuPAU1V1JiK2+VK6OyxPF9mTrkpY6PlO6EFOz6XiuwskTYiXDx8rc2CIunwrTsWc0YzHXWTzeEOjIQlVbOo7eHJ+Qx9OyOmbfVzMxOe4L6PFcHigQnT761OWZBQjszb1LL7DfQcNkGOnpLca8P5GO4IDXFI9NTFVXEwsjRix9Ik1F5uPGWa18/sQ0gYx+ruVcpjZ3PLGHMpnOteZmz+PaW1de+8G848AUPIDP0Q8plmQPHgI4DkSdvmeG2gWV/GkQAyoIaAcAWODRxySygGDK6cPn8DMYerLR9zB+X8FYUTDmdDWj6xlVJ5mJOn3UQd+FIQg9fVt9Ek8+KPzaaretRrvdiEhSJCJJ3Ga3u7HR7W6eKVmWYVhWidR1zjp95KV2wQPAIox+gs6ftd/lqPcetwHgvwAAAP//AwDyA3vCAAABAAAAAguFzVbKMV8PPPUAAQPoAAAAANhdoIQAAAAA3WYvNv43/sQIbQPxAAEAAwACAAAAAAAAAAEAAAPY/u8AAAiY/jf+NwhtAAEAAAAAAAAAAAAAAAAAAAAXArIAUADIAAACXQBNAg8AKgIGACQBjgBBAX8AEQIJAAwCEAAlAhAARgIQAB4CEAAWAhAAEwIQABcCEAApAhAALAIQACoCEAAiASwAPQNZABoBLAA9AXgAGgBg/1UAAAAsACwAYACYAMwA7AESAUIBbgGGAbIB8AIUAkYChgKgAu4DLgM4A0oDYAOGA5YAAQAAABcAkAAMAGMABwABAAAAAAAAAAAAAAAAAAQAA3icnJTPbhtlFMV/TmzTCsECRVW6ib4FiyK1Y1MlVdusJqRWRkRx8LggJIQ0tie25fHMyDN2Gp6ANW/BW3TFQ/AciDW619euXRAFK4p1Zub+Od+5537AAX+yT6V6H/itnhqucFS/NrzHvfqF4X1a9T3DVR7VfjdcY1BbGK7zea1j+CPeVn8xfI/j6o+G73NYbRn+mKfVA8Of7Dv+MPwpx7xd4go852fDFQ7JDe9xwA+G93mA1axUeUDTcI3PODJc5wjoMqYkYUzKEMcNY4bMmRFTEBIzY8wNMQMcAT4Jpb5NiRQ5hv/4NiKkZEakFUeUOBJCEiIKRlbxJ83KuNaO0memSLr5lIyI6GnGhIgUR8aQjJSYidYpKcl5SYMGBX3lm1NS4FEwJsEjY8aQBm1aXNJlxJgCR0srCbOQjBtKbom0v7MIUaZPTEphrOakDJSnU36xZgdc4miTa+xm5cutCo9xfKvZwk1iHF/i6b/bYLbdd8UmYqF6ioY9EuV5qxMcqeLS1+cbxSUvcTvps83kwxoNlJ3MekyPuc5f5id5wiTFuUN8QnVQ6B7iONPngFAV+Y6ALhe0eU1Xn306dPC5okvAK81t08HxFW2uONeMQPHyW0sdc8X3OL4m0BipHZs+ork8vSE3dwt3cYacY0quWyAzlvOL8+OdJiw7lG25o1BX9HWPJFL2QFSRPYsYmitydcVUtVx5ozD9BuYI+VrqbN99l21Y2O6ttviOTHfYMTdOMrklow9N1XvPM7f65xExIKOnEX0ypjQoudOzXRMxJ8Fxrj6+0C0p8dc50udOXRIzVQYBqdaZketvZL4JjXt/y/fO7hLZvKnu6GR9ql26SOV0Y0avVb3Vt9BUjjcm0LCpZpYjE5bKy5OK9yXa2+IfqvsLvd0ynnBGRsLgbzfAUzyaHHPCKSPtIJVTFnY7NPWGaPKCUz39hFij5L58ozpJhRM8nnHCCS949p6OKybOuLg1l83ePuec0eb0P51iGd/mjFfrd//e9Vdl2tSzOJ6sn57vPMVH/8OtX/B4677s6C0gm7Owau+24oqIqXBxh5tauId4fwEAAP//AwD0t09RAAADAAAAAAAA/84AMgAAAAAAAAAAAAAAAAAAAAAAAAAA");
+}]]></style><style type="text/css"><![CDATA[.shape {
+  shape-rendering: geometricPrecision;
+  stroke-linejoin: round;
+}
+.connection {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.blend {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+		.d2-1285688474 .fill-N1{fill:#0A0F25;}
+		.d2-1285688474 .fill-N2{fill:#676C7E;}
+		.d2-1285688474 .fill-N3{fill:#9499AB;}
+		.d2-1285688474 .fill-N4{fill:#CFD2DD;}
+		.d2-1285688474 .fill-N5{fill:#DEE1EB;}
+		.d2-1285688474 .fill-N6{fill:#EEF1F8;}
+		.d2-1285688474 .fill-N7{fill:#FFFFFF;}
+		.d2-1285688474 .fill-B1{fill:#0D32B2;}
+		.d2-1285688474 .fill-B2{fill:#0D32B2;}
+		.d2-1285688474 .fill-B3{fill:#E3E9FD;}
+		.d2-1285688474 .fill-B4{fill:#E3E9FD;}
+		.d2-1285688474 .fill-B5{fill:#EDF0FD;}
+		.d2-1285688474 .fill-B6{fill:#F7F8FE;}
+		.d2-1285688474 .fill-AA2{fill:#4A6FF3;}
+		.d2-1285688474 .fill-AA4{fill:#EDF0FD;}
+		.d2-1285688474 .fill-AA5{fill:#F7F8FE;}
+		.d2-1285688474 .fill-AB4{fill:#EDF0FD;}
+		.d2-1285688474 .fill-AB5{fill:#F7F8FE;}
+		.d2-1285688474 .stroke-N1{stroke:#0A0F25;}
+		.d2-1285688474 .stroke-N2{stroke:#676C7E;}
+		.d2-1285688474 .stroke-N3{stroke:#9499AB;}
+		.d2-1285688474 .stroke-N4{stroke:#CFD2DD;}
+		.d2-1285688474 .stroke-N5{stroke:#DEE1EB;}
+		.d2-1285688474 .stroke-N6{stroke:#EEF1F8;}
+		.d2-1285688474 .stroke-N7{stroke:#FFFFFF;}
+		.d2-1285688474 .stroke-B1{stroke:#0D32B2;}
+		.d2-1285688474 .stroke-B2{stroke:#0D32B2;}
+		.d2-1285688474 .stroke-B3{stroke:#E3E9FD;}
+		.d2-1285688474 .stroke-B4{stroke:#E3E9FD;}
+		.d2-1285688474 .stroke-B5{stroke:#EDF0FD;}
+		.d2-1285688474 .stroke-B6{stroke:#F7F8FE;}
+		.d2-1285688474 .stroke-AA2{stroke:#4A6FF3;}
+		.d2-1285688474 .stroke-AA4{stroke:#EDF0FD;}
+		.d2-1285688474 .stroke-AA5{stroke:#F7F8FE;}
+		.d2-1285688474 .stroke-AB4{stroke:#EDF0FD;}
+		.d2-1285688474 .stroke-AB5{stroke:#F7F8FE;}
+		.d2-1285688474 .background-color-N1{background-color:#0A0F25;}
+		.d2-1285688474 .background-color-N2{background-color:#676C7E;}
+		.d2-1285688474 .background-color-N3{background-color:#9499AB;}
+		.d2-1285688474 .background-color-N4{background-color:#CFD2DD;}
+		.d2-1285688474 .background-color-N5{background-color:#DEE1EB;}
+		.d2-1285688474 .background-color-N6{background-color:#EEF1F8;}
+		.d2-1285688474 .background-color-N7{background-color:#FFFFFF;}
+		.d2-1285688474 .background-color-B1{background-color:#0D32B2;}
+		.d2-1285688474 .background-color-B2{background-color:#0D32B2;}
+		.d2-1285688474 .background-color-B3{background-color:#E3E9FD;}
+		.d2-1285688474 .background-color-B4{background-color:#E3E9FD;}
+		.d2-1285688474 .background-color-B5{background-color:#EDF0FD;}
+		.d2-1285688474 .background-color-B6{background-color:#F7F8FE;}
+		.d2-1285688474 .background-color-AA2{background-color:#4A6FF3;}
+		.d2-1285688474 .background-color-AA4{background-color:#EDF0FD;}
+		.d2-1285688474 .background-color-AA5{background-color:#F7F8FE;}
+		.d2-1285688474 .background-color-AB4{background-color:#EDF0FD;}
+		.d2-1285688474 .background-color-AB5{background-color:#F7F8FE;}
+		.d2-1285688474 .color-N1{color:#0A0F25;}
+		.d2-1285688474 .color-N2{color:#676C7E;}
+		.d2-1285688474 .color-N3{color:#9499AB;}
+		.d2-1285688474 .color-N4{color:#CFD2DD;}
+		.d2-1285688474 .color-N5{color:#DEE1EB;}
+		.d2-1285688474 .color-N6{color:#EEF1F8;}
+		.d2-1285688474 .color-N7{color:#FFFFFF;}
+		.d2-1285688474 .color-B1{color:#0D32B2;}
+		.d2-1285688474 .color-B2{color:#0D32B2;}
+		.d2-1285688474 .color-B3{color:#E3E9FD;}
+		.d2-1285688474 .color-B4{color:#E3E9FD;}
+		.d2-1285688474 .color-B5{color:#EDF0FD;}
+		.d2-1285688474 .color-B6{color:#F7F8FE;}
+		.d2-1285688474 .color-AA2{color:#4A6FF3;}
+		.d2-1285688474 .color-AA4{color:#EDF0FD;}
+		.d2-1285688474 .color-AA5{color:#F7F8FE;}
+		.d2-1285688474 .color-AB4{color:#EDF0FD;}
+		.d2-1285688474 .color-AB5{color:#F7F8FE;}.appendix text.text{fill:#0A0F25}.md{--color-fg-default:#0A0F25;--color-fg-muted:#676C7E;--color-fg-subtle:#9499AB;--color-canvas-default:#FFFFFF;--color-canvas-subtle:#EEF1F8;--color-border-default:#0D32B2;--color-border-muted:#0D32B2;--color-neutral-muted:#EEF1F8;--color-accent-fg:#0D32B2;--color-accent-emphasis:#0D32B2;--color-attention-subtle:#676C7E;--color-danger-fg:red;}.sketch-overlay-B1{fill:url(#streaks-darker-d2-1285688474);mix-blend-mode:lighten}.sketch-overlay-B2{fill:url(#streaks-darker-d2-1285688474);mix-blend-mode:lighten}.sketch-overlay-B3{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-B4{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-B5{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-B6{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-AA2{fill:url(#streaks-dark-d2-1285688474);mix-blend-mode:overlay}.sketch-overlay-AA4{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-AA5{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-AB4{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-AB5{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-N1{fill:url(#streaks-darker-d2-1285688474);mix-blend-mode:lighten}.sketch-overlay-N2{fill:url(#streaks-dark-d2-1285688474);mix-blend-mode:overlay}.sketch-overlay-N3{fill:url(#streaks-normal-d2-1285688474);mix-blend-mode:color-burn}.sketch-overlay-N4{fill:url(#streaks-normal-d2-1285688474);mix-blend-mode:color-burn}.sketch-overlay-N5{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-N6{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.sketch-overlay-N7{fill:url(#streaks-bright-d2-1285688474);mix-blend-mode:darken}.light-code{display: block}.dark-code{display: none}]]></style><style type="text/css"><![CDATA[@keyframes d2Transition-d2-1285688474-0 {0.000000000%{opacity:1}16.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-1 {0%{opacity:0}16.666666667%{opacity:1}17.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-2 {0%{opacity:0}17.500000000%{opacity:1}18.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-3 {0%{opacity:0}18.333333333%{opacity:1}19.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-4 {0%{opacity:0}19.166666667%{opacity:1}20.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-5 {0%{opacity:0}20.000000000%{opacity:1}20.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-6 {0%{opacity:0}20.833333333%{opacity:1}21.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-7 {0%{opacity:0}21.666666667%{opacity:1}22.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-8 {0%{opacity:0}22.500000000%{opacity:1}23.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-9 {0%{opacity:0}23.333333333%{opacity:1}24.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-10 {0%{opacity:0}24.166666667%{opacity:1}25.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-11 {0%{opacity:0}25.000000000%{opacity:1}25.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-12 {0%{opacity:0}25.833333333%{opacity:1}26.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-13 {0%{opacity:0}26.666666667%{opacity:1}27.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-14 {0%{opacity:0}27.500000000%{opacity:1}28.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-15 {0%{opacity:0}28.333333333%{opacity:1}29.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-16 {0%{opacity:0}29.166666667%{opacity:1}30.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-17 {0%{opacity:0}30.000000000%{opacity:1}30.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-18 {0%{opacity:0}30.833333333%{opacity:1}31.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-19 {0%{opacity:0}31.666666667%{opacity:1}32.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-20 {0%{opacity:0}32.500000000%{opacity:1}33.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-21 {0%{opacity:0}33.333333333%{opacity:1}34.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-22 {0%{opacity:0}34.166666667%{opacity:1}35.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-23 {0%{opacity:0}35.000000000%{opacity:1}35.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-24 {0%{opacity:0}35.833333333%{opacity:1}36.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-25 {0%{opacity:0}36.666666667%{opacity:1}37.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-26 {0%{opacity:0}37.500000000%{opacity:1}38.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-27 {0%{opacity:0}38.333333333%{opacity:1}39.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-28 {0%{opacity:0}39.166666667%{opacity:1}40.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-29 {0%{opacity:0}40.000000000%{opacity:1}40.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-30 {0%{opacity:0}40.833333333%{opacity:1}41.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-31 {0%{opacity:0}41.666666667%{opacity:1}42.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-32 {0%{opacity:0}42.500000000%{opacity:1}43.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-33 {0%{opacity:0}43.333333333%{opacity:1}44.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-34 {0%{opacity:0}44.166666667%{opacity:1}45.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-35 {0%{opacity:0}45.000000000%{opacity:1}45.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-36 {0%{opacity:0}45.833333333%{opacity:1}46.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-37 {0%{opacity:0}46.666666667%{opacity:1}47.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-38 {0%{opacity:0}47.500000000%{opacity:1}48.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-39 {0%{opacity:0}48.333333333%{opacity:1}49.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-40 {0%{opacity:0}49.166666667%{opacity:1}50.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-41 {0%{opacity:0}50.000000000%{opacity:1}50.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-42 {0%{opacity:0}50.833333333%{opacity:1}51.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-43 {0%{opacity:0}51.666666667%{opacity:1}52.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-44 {0%{opacity:0}52.500000000%{opacity:1}53.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-45 {0%{opacity:0}53.333333333%{opacity:1}54.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-46 {0%{opacity:0}54.166666667%{opacity:1}55.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-47 {0%{opacity:0}55.000000000%{opacity:1}55.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-48 {0%{opacity:0}55.833333333%{opacity:1}56.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-49 {0%{opacity:0}56.666666667%{opacity:1}57.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-50 {0%{opacity:0}57.500000000%{opacity:1}58.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-51 {0%{opacity:0}58.333333333%{opacity:1}59.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-52 {0%{opacity:0}59.166666667%{opacity:1}60.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-53 {0%{opacity:0}60.000000000%{opacity:1}60.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-54 {0%{opacity:0}60.833333333%{opacity:1}61.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-55 {0%{opacity:0}61.666666667%{opacity:1}62.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-56 {0%{opacity:0}62.500000000%{opacity:1}63.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-57 {0%{opacity:0}63.333333333%{opacity:1}64.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-58 {0%{opacity:0}64.166666667%{opacity:1}65.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-59 {0%{opacity:0}65.000000000%{opacity:1}65.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-60 {0%{opacity:0}65.833333333%{opacity:1}66.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-61 {0%{opacity:0}66.666666667%{opacity:1}67.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-62 {0%{opacity:0}67.500000000%{opacity:1}68.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-63 {0%{opacity:0}68.333333333%{opacity:1}69.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-64 {0%{opacity:0}69.166666667%{opacity:1}70.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-65 {0%{opacity:0}70.000000000%{opacity:1}70.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-66 {0%{opacity:0}70.833333333%{opacity:1}71.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-67 {0%{opacity:0}71.666666667%{opacity:1}72.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-68 {0%{opacity:0}72.500000000%{opacity:1}73.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-69 {0%{opacity:0}73.333333333%{opacity:1}74.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-70 {0%{opacity:0}74.166666667%{opacity:1}75.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-71 {0%{opacity:0}75.000000000%{opacity:1}75.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-72 {0%{opacity:0}75.833333333%{opacity:1}76.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-73 {0%{opacity:0}76.666666667%{opacity:1}77.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-74 {0%{opacity:0}77.500000000%{opacity:1}78.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-75 {0%{opacity:0}78.333333333%{opacity:1}79.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-76 {0%{opacity:0}79.166666667%{opacity:1}80.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-77 {0%{opacity:0}80.000000000%{opacity:1}80.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-78 {0%{opacity:0}80.833333333%{opacity:1}81.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-79 {0%{opacity:0}81.666666667%{opacity:1}82.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-80 {0%{opacity:0}82.500000000%{opacity:1}83.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-81 {0%{opacity:0}83.333333333%{opacity:1}84.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-82 {0%{opacity:0}84.166666667%{opacity:1}85.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-83 {0%{opacity:0}85.000000000%{opacity:1}85.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-84 {0%{opacity:0}85.833333333%{opacity:1}86.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-85 {0%{opacity:0}86.666666667%{opacity:1}87.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-86 {0%{opacity:0}87.500000000%{opacity:1}88.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-87 {0%{opacity:0}88.333333333%{opacity:1}89.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-88 {0%{opacity:0}89.166666667%{opacity:1}90.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-89 {0%{opacity:0}90.000000000%{opacity:1}90.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-90 {0%{opacity:0}90.833333333%{opacity:1}91.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-91 {0%{opacity:0}91.666666667%{opacity:1}92.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-92 {0%{opacity:0}92.500000000%{opacity:1}93.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-93 {0%{opacity:0}93.333333333%{opacity:1}94.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-94 {0%{opacity:0}94.166666667%{opacity:1}95.000000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-95 {0%{opacity:0}95.000000000%{opacity:1}95.833333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-96 {0%{opacity:0}95.833333333%{opacity:1}96.666666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-97 {0%{opacity:0}96.666666667%{opacity:1}97.500000000%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-98 {0%{opacity:0}97.500000000%{opacity:1}98.333333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-99 {0%{opacity:0}98.333333333%{opacity:1}99.166666667%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-100 {0%{opacity:0}99.166666667%{opacity:1}99.583333333%,100%{opacity:0}}@keyframes d2Transition-d2-1285688474-101 {0%{opacity:0}99.583333333%{opacity:1}100%{opacity:1}}]]></style><g style="animation: d2Transition-d2-1285688474-0 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-f0dee695da91aee6a2a7c51c199f6451fd075e91" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="65%" stop-color="#82d6a7" />
+<stop offset="65%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-f0dee695da91aee6a2a7c51c199f6451fd075e91')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 65%</text></g><mask id="d2-1285688474" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-1 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-f0dee695da91aee6a2a7c51c199f6451fd075e91" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="65%" stop-color="#82d6a7" />
+<stop offset="65%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-f0dee695da91aee6a2a7c51c199f6451fd075e91')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 65%</text></g><mask id="d2-1152766579" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-2 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-5a534939544b46c6cca5a5658806eac71e262a6b" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="64%" stop-color="#82d6a7" />
+<stop offset="64%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-5a534939544b46c6cca5a5658806eac71e262a6b')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 64%</text></g><mask id="d2-3156092000" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-3 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-5a534939544b46c6cca5a5658806eac71e262a6b" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="64%" stop-color="#82d6a7" />
+<stop offset="64%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-5a534939544b46c6cca5a5658806eac71e262a6b')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 64%</text></g><mask id="d2-3156092000" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-4 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-edd8b169370bd5faefb78f9fbd386b3c328f82c4" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="63%" stop-color="#82d6a7" />
+<stop offset="63%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-edd8b169370bd5faefb78f9fbd386b3c328f82c4')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 63%</text></g><mask id="d2-3213845417" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-5 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-67dd326e1fe7808148259fe1ace270eb49c0dc7a" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="62%" stop-color="#82d6a7" />
+<stop offset="62%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-67dd326e1fe7808148259fe1ace270eb49c0dc7a')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 62%</text></g><mask id="d2-2262130462" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-6 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-67dd326e1fe7808148259fe1ace270eb49c0dc7a" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="62%" stop-color="#82d6a7" />
+<stop offset="62%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-67dd326e1fe7808148259fe1ace270eb49c0dc7a')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 62%</text></g><mask id="d2-2262130462" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-7 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-4f7022fd4cd411b7153ea8ce0a97ea40fab420d5" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="61%" stop-color="#82d6a7" />
+<stop offset="61%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-4f7022fd4cd411b7153ea8ce0a97ea40fab420d5')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 61%</text></g><mask id="d2-256553359" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-8 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-089e1134b0c083f67b0fae437b054d5f9ff3a561" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="60%" stop-color="#82d6a7" />
+<stop offset="60%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-089e1134b0c083f67b0fae437b054d5f9ff3a561')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 60%</text></g><mask id="d2-2934612884" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-9 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-089e1134b0c083f67b0fae437b054d5f9ff3a561" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="60%" stop-color="#82d6a7" />
+<stop offset="60%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-089e1134b0c083f67b0fae437b054d5f9ff3a561')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 60%</text></g><mask id="d2-2934612884" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-10 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-a77e8506ecb801c4834b27ff6900845133467102" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="59%" stop-color="#82d6a7" />
+<stop offset="59%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-a77e8506ecb801c4834b27ff6900845133467102')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 59%</text></g><mask id="d2-199672268" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-11 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-51146a22b246a5ebb1d742d1c81fe9ab3f660acd" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="58%" stop-color="#82d6a7" />
+<stop offset="58%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-51146a22b246a5ebb1d742d1c81fe9ab3f660acd')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 58%</text></g><mask id="d2-2401454175" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-12 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-51146a22b246a5ebb1d742d1c81fe9ab3f660acd" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="58%" stop-color="#82d6a7" />
+<stop offset="58%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-51146a22b246a5ebb1d742d1c81fe9ab3f660acd')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 58%</text></g><mask id="d2-2401454175" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-13 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-d306aa8a741bdbef3a1ba30f77ffee5b097cfe5e" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="57%" stop-color="#82d6a7" />
+<stop offset="57%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-d306aa8a741bdbef3a1ba30f77ffee5b097cfe5e')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 57%</text></g><mask id="d2-1981345398" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-14 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-d306aa8a741bdbef3a1ba30f77ffee5b097cfe5e" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="57%" stop-color="#82d6a7" />
+<stop offset="57%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-d306aa8a741bdbef3a1ba30f77ffee5b097cfe5e')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 57%</text></g><mask id="d2-1981345398" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-15 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-65cfa79013f9a3ff0db30b04114d322602da2a16" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="56%" stop-color="#82d6a7" />
+<stop offset="56%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-65cfa79013f9a3ff0db30b04114d322602da2a16')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 56%</text></g><mask id="d2-529547961" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-16 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ef4130a07426f86dcb21b1cbf6906e9a7616d0cf" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="55%" stop-color="#82d6a7" />
+<stop offset="55%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-ef4130a07426f86dcb21b1cbf6906e9a7616d0cf')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 55%</text></g><mask id="d2-3712627912" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-17 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ef4130a07426f86dcb21b1cbf6906e9a7616d0cf" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="55%" stop-color="#82d6a7" />
+<stop offset="55%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-ef4130a07426f86dcb21b1cbf6906e9a7616d0cf')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 55%</text></g><mask id="d2-3712627912" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-18 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-7a20d9a5f233210108120ccd0d51bb7d1e7578f6" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="54%" stop-color="#82d6a7" />
+<stop offset="54%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-7a20d9a5f233210108120ccd0d51bb7d1e7578f6')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 54%</text></g><mask id="d2-1183979099" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-19 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-525146310e99b597906ac22ded3170b4856d95e3" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="53%" stop-color="#82d6a7" />
+<stop offset="53%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-525146310e99b597906ac22ded3170b4856d95e3')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 53%</text></g><mask id="d2-143593538" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-20 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-525146310e99b597906ac22ded3170b4856d95e3" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="53%" stop-color="#82d6a7" />
+<stop offset="53%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-525146310e99b597906ac22ded3170b4856d95e3')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 53%</text></g><mask id="d2-143593538" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-21 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-bbced4b8db6f8b6c43c581809999097944a043c8" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="52%" stop-color="#82d6a7" />
+<stop offset="52%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-bbced4b8db6f8b6c43c581809999097944a043c8')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 52%</text></g><mask id="d2-4122041429" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-22 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-cc62f6df86aa8e68bd15d31efcc367af221be3fb" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="51%" stop-color="#82d6a7" />
+<stop offset="51%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-cc62f6df86aa8e68bd15d31efcc367af221be3fb')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 51%</text></g><mask id="d2-1144097396" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-23 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-cc62f6df86aa8e68bd15d31efcc367af221be3fb" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="51%" stop-color="#82d6a7" />
+<stop offset="51%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-cc62f6df86aa8e68bd15d31efcc367af221be3fb')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 51%</text></g><mask id="d2-1144097396" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-24 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-f5fccaa844cf080d0ea1f478f395cf21df869174" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="50%" stop-color="#82d6a7" />
+<stop offset="50%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-f5fccaa844cf080d0ea1f478f395cf21df869174')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 50%</text></g><mask id="d2-3499835351" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-25 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-59cf7ca944feb3dbefce68cfedf374473cd6c857" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="49%" stop-color="#82d6a7" />
+<stop offset="49%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-59cf7ca944feb3dbefce68cfedf374473cd6c857')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 49%</text></g><mask id="d2-2685936713" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-26 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-59cf7ca944feb3dbefce68cfedf374473cd6c857" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="49%" stop-color="#82d6a7" />
+<stop offset="49%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-59cf7ca944feb3dbefce68cfedf374473cd6c857')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 49%</text></g><mask id="d2-2685936713" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-27 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-8074ec2a28977ad0f1a8beb8e6d941b2a2235599" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="48%" stop-color="#82d6a7" />
+<stop offset="48%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-8074ec2a28977ad0f1a8beb8e6d941b2a2235599')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 48%</text></g><mask id="d2-770749754" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-28 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-37d938db385c1d5facaf8662c1cbe189d822fa33" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="47%" stop-color="#82d6a7" />
+<stop offset="47%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-37d938db385c1d5facaf8662c1cbe189d822fa33')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 47%</text></g><mask id="d2-249639643" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-29 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-37d938db385c1d5facaf8662c1cbe189d822fa33" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="47%" stop-color="#82d6a7" />
+<stop offset="47%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-37d938db385c1d5facaf8662c1cbe189d822fa33')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 47%</text></g><mask id="d2-249639643" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-30 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-a29ed8cc9dea78c2d4cf6b897721c60f68606ca1" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="46%" stop-color="#82d6a7" />
+<stop offset="46%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-a29ed8cc9dea78c2d4cf6b897721c60f68606ca1')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 46%</text></g><mask id="d2-1767052492" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-31 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-a29ed8cc9dea78c2d4cf6b897721c60f68606ca1" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="46%" stop-color="#82d6a7" />
+<stop offset="46%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-a29ed8cc9dea78c2d4cf6b897721c60f68606ca1')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 46%</text></g><mask id="d2-1767052492" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-32 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ef002878587eb0807d70e6fd2a381360857ed777" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="45%" stop-color="#82d6a7" />
+<stop offset="45%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-ef002878587eb0807d70e6fd2a381360857ed777')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 45%</text></g><mask id="d2-1235810893" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-33 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-26b958e39a669bf30d32c200b1ca10c437d86025" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="44%" stop-color="#82d6a7" />
+<stop offset="44%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-26b958e39a669bf30d32c200b1ca10c437d86025')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 44%</text></g><mask id="d2-1149086310" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-34 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-26b958e39a669bf30d32c200b1ca10c437d86025" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="44%" stop-color="#82d6a7" />
+<stop offset="44%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-26b958e39a669bf30d32c200b1ca10c437d86025')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 44%</text></g><mask id="d2-1149086310" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-35 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-9cc45ae8ec0e2532bca0b8f2fb91a364887dfa65" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="43%" stop-color="#82d6a7" />
+<stop offset="43%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-9cc45ae8ec0e2532bca0b8f2fb91a364887dfa65')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 43%</text></g><mask id="d2-1927385071" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-36 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-7f31043a754c2b86beaf2e7c70a428062d78d3e5" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="42%" stop-color="#82d6a7" />
+<stop offset="42%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-7f31043a754c2b86beaf2e7c70a428062d78d3e5')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 42%</text></g><mask id="d2-69416120" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-37 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-7f31043a754c2b86beaf2e7c70a428062d78d3e5" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="42%" stop-color="#82d6a7" />
+<stop offset="42%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-7f31043a754c2b86beaf2e7c70a428062d78d3e5')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 42%</text></g><mask id="d2-69416120" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-38 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-3ad8aed55a58a053793ab87d9c6f38da2f00f81f" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="41%" stop-color="#82d6a7" />
+<stop offset="41%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-3ad8aed55a58a053793ab87d9c6f38da2f00f81f')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 41%</text></g><mask id="d2-1763397041" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-39 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-1fd67551d12cff912c2cf4bfb4efa59783d7bd22" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="40%" stop-color="#82d6a7" />
+<stop offset="40%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-1fd67551d12cff912c2cf4bfb4efa59783d7bd22')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 40%</text></g><mask id="d2-253513586" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-40 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-1fd67551d12cff912c2cf4bfb4efa59783d7bd22" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="40%" stop-color="#82d6a7" />
+<stop offset="40%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-1fd67551d12cff912c2cf4bfb4efa59783d7bd22')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 40%</text></g><mask id="d2-253513586" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-41 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-cc9bd6e900f200e7ed53a7312f526562b198181c" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="39%" stop-color="#82d6a7" />
+<stop offset="39%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-cc9bd6e900f200e7ed53a7312f526562b198181c')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 39%</text></g><mask id="d2-2422071462" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-42 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-58cee6966ddd8be549933b0f042cfd8664ea46f9" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="38%" stop-color="#82d6a7" />
+<stop offset="38%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-58cee6966ddd8be549933b0f042cfd8664ea46f9')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 38%</text></g><mask id="d2-2580628181" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-43 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-58cee6966ddd8be549933b0f042cfd8664ea46f9" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="38%" stop-color="#82d6a7" />
+<stop offset="38%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-58cee6966ddd8be549933b0f042cfd8664ea46f9')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 38%</text></g><mask id="d2-2580628181" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-44 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-84e6ccef649a8d498ae12036cffe990455fe910b" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="37%" stop-color="#82d6a7" />
+<stop offset="37%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-84e6ccef649a8d498ae12036cffe990455fe910b')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 37%</text></g><mask id="d2-2473424052" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-45 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-3187241a80c639c9ac14327c35384464722b83da" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="36%" stop-color="#82d6a7" />
+<stop offset="36%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-3187241a80c639c9ac14327c35384464722b83da')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 36%</text></g><mask id="d2-696949347" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-46 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-3187241a80c639c9ac14327c35384464722b83da" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="36%" stop-color="#82d6a7" />
+<stop offset="36%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-3187241a80c639c9ac14327c35384464722b83da')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 36%</text></g><mask id="d2-696949347" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-47 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-55e5c565926803738c66afdad0b4850542978294" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="35%" stop-color="#82d6a7" />
+<stop offset="35%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-55e5c565926803738c66afdad0b4850542978294')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 35%</text></g><mask id="d2-2568154610" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-48 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-fd12970f44f4808b4e73551940af818723a4ab4b" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="34%" stop-color="#82d6a7" />
+<stop offset="34%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-fd12970f44f4808b4e73551940af818723a4ab4b')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 34%</text></g><mask id="d2-1334183089" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-49 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-fd12970f44f4808b4e73551940af818723a4ab4b" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="34%" stop-color="#82d6a7" />
+<stop offset="34%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-fd12970f44f4808b4e73551940af818723a4ab4b')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 34%</text></g><mask id="d2-1334183089" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-50 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-b4039478933cc366e56ba94e9a69d2c0548cbf15" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="33%" stop-color="#82d6a7" />
+<stop offset="33%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-b4039478933cc366e56ba94e9a69d2c0548cbf15')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 33%</text></g><mask id="d2-4175509616" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-51 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-40870089f0e476a94fdbb2cbeefe7ce0d5724c19" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="32%" stop-color="#82d6a7" />
+<stop offset="32%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-40870089f0e476a94fdbb2cbeefe7ce0d5724c19')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 32%</text></g><mask id="d2-1084984335" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-52 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-40870089f0e476a94fdbb2cbeefe7ce0d5724c19" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="32%" stop-color="#82d6a7" />
+<stop offset="32%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-40870089f0e476a94fdbb2cbeefe7ce0d5724c19')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 32%</text></g><mask id="d2-1084984335" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-53 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-5985b55da08e59e6b773ba5e072b5481438ce428" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="31%" stop-color="#82d6a7" />
+<stop offset="31%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-5985b55da08e59e6b773ba5e072b5481438ce428')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 31%</text></g><mask id="d2-638016782" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-54 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-5985b55da08e59e6b773ba5e072b5481438ce428" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="31%" stop-color="#82d6a7" />
+<stop offset="31%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-5985b55da08e59e6b773ba5e072b5481438ce428')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 31%</text></g><mask id="d2-638016782" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-55 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-5033db47ef64425fa265b1a83e68a6d43a012459" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="30%" stop-color="#82d6a7" />
+<stop offset="30%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-5033db47ef64425fa265b1a83e68a6d43a012459')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 30%</text></g><mask id="d2-4149494365" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-56 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-f39c8f5ea5dc29f39761a0b2277c4580e2ab59de" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="29%" stop-color="#82d6a7" />
+<stop offset="29%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-f39c8f5ea5dc29f39761a0b2277c4580e2ab59de')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 29%</text></g><mask id="d2-141521771" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-57 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-f39c8f5ea5dc29f39761a0b2277c4580e2ab59de" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="29%" stop-color="#82d6a7" />
+<stop offset="29%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-f39c8f5ea5dc29f39761a0b2277c4580e2ab59de')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 29%</text></g><mask id="d2-141521771" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-58 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-5c386528ef30c2ad4a4b17c2f52f7be9c6f2820c" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="28%" stop-color="#82d6a7" />
+<stop offset="28%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-5c386528ef30c2ad4a4b17c2f52f7be9c6f2820c')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 28%</text></g><mask id="d2-3321567016" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-59 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-4825c6b771a9f08e7adfa0912f7029c254c802ca" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="27%" stop-color="#82d6a7" />
+<stop offset="27%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-4825c6b771a9f08e7adfa0912f7029c254c802ca')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 27%</text></g><mask id="d2-3602675873" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-60 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-4825c6b771a9f08e7adfa0912f7029c254c802ca" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="27%" stop-color="#82d6a7" />
+<stop offset="27%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-4825c6b771a9f08e7adfa0912f7029c254c802ca')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 27%</text></g><mask id="d2-3602675873" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-61 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-a2d3aac4e7d0875b4de648e340d0fe19c2c01b09" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="26%" stop-color="#82d6a7" />
+<stop offset="26%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-a2d3aac4e7d0875b4de648e340d0fe19c2c01b09')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 26%</text></g><mask id="d2-2674987070" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-62 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-2aed50cefeae5f84c6255196e8a83ce525ad5f37" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="25%" stop-color="#82d6a7" />
+<stop offset="25%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-2aed50cefeae5f84c6255196e8a83ce525ad5f37')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 25%</text></g><mask id="d2-1720661471" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-63 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-2aed50cefeae5f84c6255196e8a83ce525ad5f37" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="25%" stop-color="#82d6a7" />
+<stop offset="25%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-2aed50cefeae5f84c6255196e8a83ce525ad5f37')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 25%</text></g><mask id="d2-1720661471" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-64 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-9dbc1f6d0e99384246575bd7f0c6f9b7e2244231" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="24%" stop-color="#82d6a7" />
+<stop offset="24%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-9dbc1f6d0e99384246575bd7f0c6f9b7e2244231')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 24%</text></g><mask id="d2-2265145908" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-65 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-43becc66bd711a5464e699b8a6745a217d74ed1a" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="23%" stop-color="#82d6a7" />
+<stop offset="23%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-43becc66bd711a5464e699b8a6745a217d74ed1a')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 23%</text></g><mask id="d2-1358987829" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-66 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-43becc66bd711a5464e699b8a6745a217d74ed1a" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="23%" stop-color="#82d6a7" />
+<stop offset="23%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-43becc66bd711a5464e699b8a6745a217d74ed1a')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 23%</text></g><mask id="d2-1358987829" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-67 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-f5148dd1e63a4f9b67a313bbe47a27e4c9771831" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="22%" stop-color="#82d6a7" />
+<stop offset="22%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-f5148dd1e63a4f9b67a313bbe47a27e4c9771831')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 22%</text></g><mask id="d2-356456442" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-68 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-4e011410079d0f5ba59d0201140ab92eae90b928" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="21%" stop-color="#82d6a7" />
+<stop offset="21%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-4e011410079d0f5ba59d0201140ab92eae90b928')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 21%</text></g><mask id="d2-3180567923" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-69 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-4e011410079d0f5ba59d0201140ab92eae90b928" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="21%" stop-color="#82d6a7" />
+<stop offset="21%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-4e011410079d0f5ba59d0201140ab92eae90b928')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 21%</text></g><mask id="d2-3180567923" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-70 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-316e0e8f271f3db07056358f9193357ced1fa13a" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="20%" stop-color="#82d6a7" />
+<stop offset="20%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-316e0e8f271f3db07056358f9193357ced1fa13a')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 20%</text></g><mask id="d2-1903127088" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-71 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-316e0e8f271f3db07056358f9193357ced1fa13a" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="20%" stop-color="#82d6a7" />
+<stop offset="20%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-316e0e8f271f3db07056358f9193357ced1fa13a')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 20%</text></g><mask id="d2-1903127088" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-72 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-42ecaae90c649117ae7c420ca9479029811bed49" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="19%" stop-color="#82d6a7" />
+<stop offset="19%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-42ecaae90c649117ae7c420ca9479029811bed49')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 19%</text></g><mask id="d2-3096290272" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-73 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-6eea97772964ffe98fe46608358a3e396fed579f" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="18%" stop-color="#82d6a7" />
+<stop offset="18%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-6eea97772964ffe98fe46608358a3e396fed579f')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 18%</text></g><mask id="d2-3503112723" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-74 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-6eea97772964ffe98fe46608358a3e396fed579f" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="18%" stop-color="#82d6a7" />
+<stop offset="18%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-6eea97772964ffe98fe46608358a3e396fed579f')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 18%</text></g><mask id="d2-3503112723" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-75 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-8663141591882e7ad05562c6c367028287a43737" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="17%" stop-color="#82d6a7" />
+<stop offset="17%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-8663141591882e7ad05562c6c367028287a43737')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 17%</text></g><mask id="d2-3092820522" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-76 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-190149077b161d3dc6b783285aca826b2bcdd414" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="16%" stop-color="#82d6a7" />
+<stop offset="16%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-190149077b161d3dc6b783285aca826b2bcdd414')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 16%</text></g><mask id="d2-3424385285" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-77 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-190149077b161d3dc6b783285aca826b2bcdd414" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="16%" stop-color="#82d6a7" />
+<stop offset="16%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-190149077b161d3dc6b783285aca826b2bcdd414')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 16%</text></g><mask id="d2-3424385285" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-78 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ea83cd1e1b6846c374ab38809ace4f73456afe1f" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="15%" stop-color="#82d6a7" />
+<stop offset="15%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-ea83cd1e1b6846c374ab38809ace4f73456afe1f')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 15%</text></g><mask id="d2-1776106804" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-79 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-8172594e3f72846fd73db441d9d6fe75daa2caf9" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="14%" stop-color="#82d6a7" />
+<stop offset="14%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-8172594e3f72846fd73db441d9d6fe75daa2caf9')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 14%</text></g><mask id="d2-1908015783" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-80 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-8172594e3f72846fd73db441d9d6fe75daa2caf9" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="14%" stop-color="#82d6a7" />
+<stop offset="14%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-8172594e3f72846fd73db441d9d6fe75daa2caf9')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 14%</text></g><mask id="d2-1908015783" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-81 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-1f107fa305b24aeac248ff80500e81a3590ec2f7" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="13%" stop-color="#82d6a7" />
+<stop offset="13%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-1f107fa305b24aeac248ff80500e81a3590ec2f7')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 13%</text></g><mask id="d2-1211402670" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-82 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-e5ba504cc88fb56e74cd899cfb2a98443aa67618" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="12%" stop-color="#82d6a7" />
+<stop offset="12%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-e5ba504cc88fb56e74cd899cfb2a98443aa67618')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 12%</text></g><mask id="d2-2543963769" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-83 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-e5ba504cc88fb56e74cd899cfb2a98443aa67618" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="12%" stop-color="#82d6a7" />
+<stop offset="12%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-e5ba504cc88fb56e74cd899cfb2a98443aa67618')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 12%</text></g><mask id="d2-2543963769" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-84 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-0606ae1838ebecb2b75960653e9b7231f7177b67" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="11%" stop-color="#82d6a7" />
+<stop offset="11%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-0606ae1838ebecb2b75960653e9b7231f7177b67')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 11%</text></g><mask id="d2-734862600" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-85 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-95eac7bcaab9ce5c47e19fc3911c8cd16eb2fbfa" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="10%" stop-color="#82d6a7" />
+<stop offset="10%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-95eac7bcaab9ce5c47e19fc3911c8cd16eb2fbfa')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 10%</text></g><mask id="d2-1772129179" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-86 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-95eac7bcaab9ce5c47e19fc3911c8cd16eb2fbfa" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="10%" stop-color="#82d6a7" />
+<stop offset="10%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-95eac7bcaab9ce5c47e19fc3911c8cd16eb2fbfa')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 10%</text></g><mask id="d2-1772129179" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-87 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-eda7b1822df33f813495aa70c5c9b48a7d60593c" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="9%" stop-color="#82d6a7" />
+<stop offset="9%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-eda7b1822df33f813495aa70c5c9b48a7d60593c')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 9%</text></g><mask id="d2-2402111432" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-88 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-f759c50a72f871fca7cc694196db3ac9488e89f7" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="8%" stop-color="#82d6a7" />
+<stop offset="8%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-f759c50a72f871fca7cc694196db3ac9488e89f7')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 8%</text></g><mask id="d2-1972692969" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-89 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-f759c50a72f871fca7cc694196db3ac9488e89f7" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="8%" stop-color="#82d6a7" />
+<stop offset="8%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-f759c50a72f871fca7cc694196db3ac9488e89f7')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 8%</text></g><mask id="d2-1972692969" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-90 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-c94e68c692ecd1c4e3596c9defd15e180603296f" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="7%" stop-color="#82d6a7" />
+<stop offset="7%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-c94e68c692ecd1c4e3596c9defd15e180603296f')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 7%</text></g><mask id="d2-4207353430" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-91 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-3cf1a15de319a586cabecdf62445016df0e6b3c8" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="6%" stop-color="#82d6a7" />
+<stop offset="6%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-3cf1a15de319a586cabecdf62445016df0e6b3c8')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 6%</text></g><mask id="d2-1292680167" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-92 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-3cf1a15de319a586cabecdf62445016df0e6b3c8" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="6%" stop-color="#82d6a7" />
+<stop offset="6%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-3cf1a15de319a586cabecdf62445016df0e6b3c8')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 6%</text></g><mask id="d2-1292680167" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-93 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-e6709a2b915e6d49d7efded0c81742ae52bc8803" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="5%" stop-color="#82d6a7" />
+<stop offset="5%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-e6709a2b915e6d49d7efded0c81742ae52bc8803')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 5%</text></g><mask id="d2-1500470204" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-94 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-e6709a2b915e6d49d7efded0c81742ae52bc8803" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="5%" stop-color="#82d6a7" />
+<stop offset="5%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-e6709a2b915e6d49d7efded0c81742ae52bc8803')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 5%</text></g><mask id="d2-1500470204" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-95 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-ce33d7f13595a28c54e64d7d49b184a8fdbb0abc" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="4%" stop-color="#82d6a7" />
+<stop offset="4%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-ce33d7f13595a28c54e64d7d49b184a8fdbb0abc')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 4%</text></g><mask id="d2-4050953357" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-96 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-47cdc61bca34b525141f2b391cfc500af248f955" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="3%" stop-color="#82d6a7" />
+<stop offset="3%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-47cdc61bca34b525141f2b391cfc500af248f955')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 3%</text></g><mask id="d2-812283626" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-97 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-47cdc61bca34b525141f2b391cfc500af248f955" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="3%" stop-color="#82d6a7" />
+<stop offset="3%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-47cdc61bca34b525141f2b391cfc500af248f955')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 3%</text></g><mask id="d2-812283626" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-98 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-e84076284b3149f85e2382a434df20703a04805d" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="2%" stop-color="#82d6a7" />
+<stop offset="2%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-e84076284b3149f85e2382a434df20703a04805d')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 2%</text></g><mask id="d2-1873982923" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-99 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-7f9f1210a898595ac04f0a9b608caa7b97cff99e" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="1%" stop-color="#82d6a7" />
+<stop offset="1%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-7f9f1210a898595ac04f0a9b608caa7b97cff99e')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 1%</text></g><mask id="d2-1230107344" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-100 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-7f9f1210a898595ac04f0a9b608caa7b97cff99e" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="1%" stop-color="#82d6a7" />
+<stop offset="1%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-7f9f1210a898595ac04f0a9b608caa7b97cff99e')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 1%</text></g><mask id="d2-1230107344" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g><g style="animation: d2Transition-d2-1285688474-101 4800ms steps(1,end) infinite" class="d2-1285688474 " width="318" height="82" viewBox="-9 -9 318 82"><rect x="-9" y="-9" width="318" height="82" rx="0" fill="#FFFFFF" class=" fill-N7" stroke-width="0" /><defs><linearGradient id="grad-97eb4a35c260a14448bd7615df0f9da65c6996d5" x1="0%" y1="50%" x2="100%" y2="50%">
+<stop offset="0%" stop-color="#82d6a7" />
+<stop offset="0%" stop-color="#eff5f1" />
+</linearGradient></defs><g class="YmF0dGVyeQ=="><g class="shape" ><rect x="0" y="0" width="300" height="64" stroke="#0D32B2" fill="url('#grad-97eb4a35c260a14448bd7615df0f9da65c6996d5')" class=" stroke-B1" style="stroke-width:2;" /></g><text x="150" y="37.5" fill="#0A0F25" class="text-bold fill-N1" style="text-anchor:middle;font-size:16px">Battery · 0%</text></g><mask id="d2-4158932170" maskUnits="userSpaceOnUse" x="-9" y="-9" width="318" height="82">
+<rect x="-9" y="-9" width="318" height="82" fill="white"></rect>
+
+</mask></g></svg></svg>
