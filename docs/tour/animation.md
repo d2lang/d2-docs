@@ -5,7 +5,7 @@ import Battery from '@site/static/bespoke-d2/animation-battery.d2';
 
 # Animation
 
-:::note
+:::warning
 Animation is in alpha and may change. If you have feedback, [open a GitHub issue](https://github.com/d2lang/d2/issues/new).
 :::
 

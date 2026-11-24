@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Isometric
 
-:::note
+:::warning
 Isometric mode is in alpha and may change. If you have feedback or suggestions, [open a GitHub issue](https://github.com/d2lang/d2/issues/new).
 :::
 
