@@ -3,10 +3,16 @@
 # one dash represents a single GET or a single response body.
 vars: {
   # Start and end of each pulse, measured along the connection from left to right.
-  v0: -22%; v1: -15%; v2: -7%; v3: 0%  # Two viewer batches
-  l0: -112%; l1: -98%                   # Ashburn's miss
-  m0: -109%; m1: -95%                   # The five other misses
-  g0: -133%; g1: -119%                  # The one origin fetch
+  v0: -22%
+  v1: -15%
+  v2: -7%
+  v3: 0% # Two viewer batches
+  l0: -112%
+  l1: -98% # Ashburn's miss
+  m0: -109%
+  m1: -95% # The five other misses
+  g0: -133%
+  g1: -119% # The one origin fetch
   warm: -215%
   # Hex digits for the packet colors. Switch each group to mint when its
   # connections start carrying the response in the other direction.
@@ -85,10 +91,16 @@ steps: {
     shield._y: "" {class: z}
     shield._z: "" {class: z}
     vars: {
-      v0: 420%; v1: 425%; v2: 432%; v3: 437%
-      l0: 288%; l1: 302%
-      m0: 76%; m1: 90%
-      g0: 112%; g1: 126%
+      v0: 420%
+      v1: 425%
+      v2: 432%
+      v3: 437%
+      l0: 288%
+      l1: 302%
+      m0: 76%
+      m1: 90%
+      g0: 112%
+      g1: 126%
     }
   }
 
@@ -103,9 +115,12 @@ steps: {
     shield.LHR: LHR {class: t}
     shield.NRT: NRT {class: t}
     vars: {
-      g0: -14%; g1: 0%
-      m0: 212%; m1: 226%
-      l0: 102%; l1: 116%
+      g0: -14%
+      g1: 0%
+      m0: 212%
+      m1: 226%
+      l0: 102%
+      l1: 116%
       c: "6EC"
     }
   }
@@ -121,9 +136,14 @@ steps: {
     vars: {
       warm: 210%
       f: "6EC"
-      m0: -199%; m1: -185%
-      l0: -199%; l1: -185%
-      v0: -22%; v1: -15%; v2: -7%; v3: 0%
+      m0: -199%
+      m1: -185%
+      l0: -199%
+      l1: -185%
+      v0: -22%
+      v1: -15%
+      v2: -7%
+      v3: 0%
     }
   }
 }
