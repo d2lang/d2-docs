@@ -17,26 +17,20 @@ can animate styles, variables, and grids. Pencil shading and text decorations
 also animate between consecutive [layers](./layers.md) and [scenarios](./scenarios.md).
 The default duration is `0`, so boards change instantly.
 
-## Animated steps
+This example is an animated SVG you can embed in a GitHub README.
 
-Write only what changes in each [step](./steps.md). In *Night Signal*, the alert
-pipeline becomes a [sequence diagram](./sequence-diagrams.md) showing how a retry
-reuses the saved receipt.
-
-<a href="/img/animation/night-signal.svg" aria-label="Open the full-size Night Signal animation">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcSet="/img/animation/night-signal-still.svg" />
-    <img src="/img/animation/night-signal.svg" width="1188" height="677" style={{height: 'auto'}} alt="A telescope detects a signal. The outbox publishes one alert and returns the saved receipt when the publisher retries." />
-  </picture>
-</a>
+<img
+  src="/img/generated/cache-stampede.svg"
+  alt="Pulses travel along connections as grid cells appear and disappear."
+  width="1018"
+  height="459"
+  style={{height: 'auto'}}
+/>
 
 <details>
-<summary>View base D2 source</summary>
+<summary>View D2 source</summary>
 
-Custom SVG smooths the exposure meter and animates the detector trace, traveling
-signal, lifelines, and live feed counter.
-
-<CodeBlock className="language-d2" hidePlaygroundLink>{NightSignal}</CodeBlock>
+<CodeBlock className="language-d2" hidePlaygroundLink>{CacheStampede}</CodeBlock>
 
 </details>
 
@@ -180,24 +174,6 @@ in the step moves the shape immediately.
 When a grid changes, D2 matches cells by ID. Cells that keep their IDs can move
 to new slots. New cells grow into place, and removed cells shrink away.
 
-This example is an animated SVG you can embed in a GitHub README.
-
-<img
-  src="/img/generated/cache-stampede.svg"
-  alt="Pulses travel along connections as grid cells appear and disappear."
-  width="1018"
-  height="459"
-  style={{height: 'auto'}}
-  loading="lazy"
-/>
-
-<details>
-<summary>View D2 source</summary>
-
-<CodeBlock className="language-d2" hidePlaygroundLink>{CacheStampede}</CodeBlock>
-
-</details>
-
 ### Reorder cells
 
 A grid fills in [declaration order](./grid-diagrams.md#dominant-direction).
@@ -229,3 +205,26 @@ appears when it fits. To collapse the cell, remove its children and restore
 its original dimensions.
 
 <AnimationExample name="grid-mirror" width={420} height={255} alt="A cell expands to reveal a nested grid, then folds closed." />
+
+## Animated steps
+
+Write only what changes in each [step](./steps.md). In *Night Signal*, the alert
+pipeline becomes a [sequence diagram](./sequence-diagrams.md) showing how a retry
+reuses the saved receipt.
+
+<a href="/img/animation/night-signal.svg" aria-label="Open the full-size Night Signal animation">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcSet="/img/animation/night-signal-still.svg" />
+    <img src="/img/animation/night-signal.svg" loading="lazy" width="1188" height="677" style={{height: 'auto'}} alt="A telescope detects a signal. The outbox publishes one alert and returns the saved receipt when the publisher retries." />
+  </picture>
+</a>
+
+<details>
+<summary>View base D2 source</summary>
+
+Custom SVG smooths the exposure meter and animates the detector trace, traveling
+signal, lifelines, and live feed counter.
+
+<CodeBlock className="language-d2" hidePlaygroundLink>{NightSignal}</CodeBlock>
+
+</details>
