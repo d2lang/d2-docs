@@ -2,6 +2,7 @@ import AnimationExample from '@site/src/components/AnimationExample';
 import CodeBlock from '@theme/CodeBlock';
 import CacheStampede from '@site/static/bespoke-d2/cache-stampede.d2';
 import Battery from '@site/static/bespoke-d2/animation-battery.d2';
+import NightSignal from '@site/static/bespoke-d2/night-signal.d2';
 
 # Animation
 
@@ -16,20 +17,26 @@ can animate styles, variables, and grids. Pencil shading and text decorations
 also animate between consecutive [layers](./layers.md) and [scenarios](./scenarios.md).
 The default duration is `0`, so boards change instantly.
 
-This example is an animated SVG you can embed in a GitHub README.
+## Animated steps
 
-<img
-  src="/img/generated/cache-stampede.svg"
-  alt="Pulses travel along connections as grid cells appear and disappear."
-  width="1018"
-  height="459"
-  style={{height: 'auto'}}
-/>
+Write only what changes in each [step](./steps.md). In *Night Signal*, the alert
+pipeline becomes a [sequence diagram](./sequence-diagrams.md) showing how a retry
+reuses the saved receipt.
+
+<a href="/img/animation/night-signal.svg" aria-label="Open the full-size Night Signal animation">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcSet="/img/animation/night-signal-still.svg" />
+    <img src="/img/animation/night-signal.svg" width="1188" height="677" style={{height: 'auto'}} alt="A telescope detects a signal. The outbox publishes one alert and returns the saved receipt when the publisher retries." />
+  </picture>
+</a>
 
 <details>
-<summary>View D2 source</summary>
+<summary>View base D2 source</summary>
 
-<CodeBlock className="language-d2" hidePlaygroundLink>{CacheStampede}</CodeBlock>
+Custom SVG smooths the exposure meter and animates the detector trace, traveling
+signal, lifelines, and live feed counter.
+
+<CodeBlock className="language-d2" hidePlaygroundLink>{NightSignal}</CodeBlock>
 
 </details>
 
@@ -172,6 +179,24 @@ in the step moves the shape immediately.
 
 When a grid changes, D2 matches cells by ID. Cells that keep their IDs can move
 to new slots. New cells grow into place, and removed cells shrink away.
+
+This example is an animated SVG you can embed in a GitHub README.
+
+<img
+  src="/img/generated/cache-stampede.svg"
+  alt="Pulses travel along connections as grid cells appear and disappear."
+  width="1018"
+  height="459"
+  style={{height: 'auto'}}
+  loading="lazy"
+/>
+
+<details>
+<summary>View D2 source</summary>
+
+<CodeBlock className="language-d2" hidePlaygroundLink>{CacheStampede}</CodeBlock>
+
+</details>
 
 ### Reorder cells
 

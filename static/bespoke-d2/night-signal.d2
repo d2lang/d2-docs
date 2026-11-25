@@ -1,0 +1,110 @@
+# Night Signal · one exposure, one alert
+vars: {
+  d2-config: {
+    layout-engine: tala
+    theme-id: 200
+    theme-overrides: {N1: "#F5F4FF"}
+    animate-interval: 1800ms
+    animate-duration: 480ms
+    pad: 24
+  }
+}
+style.fill: "#101B2D"
+
+station: "" {
+  top: 0
+  left: 0
+  style: {fill: transparent; stroke-width: 0}
+  observatory: Observatory {
+    grid-columns: 1
+    vertical-gap: 30
+    style.fill: "#252B45"
+
+    camera: Telescope {
+      grid-columns: 1
+      grid-gap: 4
+      style.fill: "#446"
+      readout: Exposure readout {
+        width: 142
+        height: 10
+        label.near: outside-bottom-center
+        style: {
+          fill: "linear-gradient(to right, #B2A4FF, #79E4D1 0%, #27344A 0%)"
+          border-radius: 4
+        }
+      }
+    }
+    worker: Detector {
+      width: 142
+      height: 70
+      style: {fill: "#FCA"; font-color: "#323"}
+    }
+    sky: Reference sky {shape: page; style.fill: "#345"}
+    camera -> worker: exposure
+    sky -> worker: compare
+  }
+}
+
+# Place the services over their future sequence lanes. Reserve space for the receipt row.
+delivery: Alert delivery {
+  top: 0
+  left: 391
+  height: 315
+  style.fill: "#234"
+
+  publisher: Publisher {
+    top: 74
+    left: 0
+    width: 145
+    height: 62
+    style.fill: "#557"
+  }
+  ledger: alert_outbox {
+    top: 28
+    left: 184
+    shape: sql_table
+    style: {fill: "#557"; stroke: "#234"; font-color: "#FFF"}
+    candidate_id: varchar(16) {constraint: primary_key}
+  }
+  feed: Live feed {
+    top: 69
+    left: 520
+    style.fill: "#245"
+  }
+}
+station.observatory.worker -> delivery.publisher: NS-0417
+
+steps: {
+  acquire: {
+    station.observatory.camera.readout.style.fill: "linear-gradient(to right, #B2A4FF, #79E4D1 100%, #27344A 100%)"
+  }
+  record: {delivery.ledger.receipt_id: uuid}
+  unfold: {
+    station.top: null
+    station.left: null
+    delivery.top: null
+    delivery.left: null
+    grid-columns: 2
+    horizontal-gap: 48
+
+    delivery: {
+      height: null
+      publisher.top: null
+      publisher.left: null
+      ledger.top: null
+      ledger.left: null
+      feed.top: null
+      feed.left: null
+      shape: sequence_diagram
+
+      # Begin the write immediately. Reveal the remaining messages on these same lanes.
+      publisher -> ledger: Insert if absent
+      ledger -> feed: Publish NS-0417 {style.opacity: 0}
+      publisher -> ledger: Retry NS-0417 {style: {opacity: 0; stroke: "#FB9"}}
+      ledger -> publisher: Saved receipt {style: {opacity: 0; stroke-dash: 4}}
+    }
+  }
+  publish: {delivery: {(ledger -> feed)[0].style.opacity: 1}}
+  retry: {delivery: {(publisher -> ledger)[1].style.opacity: 1}}
+  receipt: {delivery: {(ledger -> publisher)[0].style.opacity: 1}}
+}

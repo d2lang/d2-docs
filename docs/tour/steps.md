@@ -16,4 +16,4 @@ the one before it. Write only the changes in each step.
     {Chicken}
 </CodeBlock>
 
-To animate a change between steps, see [Animation](./animation.md).
+To animate a change between steps, see [Animated steps](./animation.md#animated-steps).
