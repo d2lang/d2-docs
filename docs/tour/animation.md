@@ -208,9 +208,7 @@ its original dimensions.
 
 ## Animated steps
 
-Write only what changes in each [step](./steps.md). In *Night Signal*, the alert
-pipeline becomes a [sequence diagram](./sequence-diagrams.md) showing how a retry
-reuses the saved receipt.
+You can use [steps](./steps.md) to build up a diagram and walk your audience through a sequence.
 
 <a href="/img/animation/night-signal.svg" aria-label="Open the full-size Night Signal animation">
   <picture>
@@ -221,9 +219,6 @@ reuses the saved receipt.
 
 <details>
 <summary>View base D2 source</summary>
-
-Custom SVG smooths the exposure meter and animates the detector trace, traveling
-signal, lifelines, and live feed counter.
 
 <CodeBlock className="language-d2" hidePlaygroundLink>{NightSignal}</CodeBlock>
 
