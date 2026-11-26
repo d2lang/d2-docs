@@ -36,7 +36,7 @@ function linkedSource(contents) {
         key={i}
         id={defines ? id : undefined}
         href={defines ? "#diagram-" + token : "#" + id}
-        title={defines ? "View the " + token + " railroad diagram" : undefined}
+        title={defines ? "Find " + token + " on the diagram" : undefined}
         className={defines ? styles.definition : styles.reference}
       >
         {token}

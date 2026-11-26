@@ -19,48 +19,12 @@ const git = (...command) => execFileSync("git", ["-C", checkout, ...command]);
 const revision = git("rev-parse", "--verify", requested + "^{commit}")
   .toString()
   .trim();
-// Markdown partials share the page's heading hierarchy and local reference links.
-// Keep fenced examples and their contents exactly as authored upstream.
-function notes(markdown) {
-  const links = new Map([
-    ["structure.ebnf", "#grammar-structure"],
-    ["lexical.ebnf", "#grammar-lexical"],
-    ["structure.md", "#structural-rules"],
-    ["lexical.md", "#lexical-rules"],
-    [
-      "README.md",
-      "https://github.com/d2lang/d2/blob/" + revision + "/docs/grammar/README.md",
-    ],
-  ]);
-  return markdown
-    .replace(/^# [^\n]*\n\n/, "")
-    .split(/(^```[^\n]*\n[\s\S]*?^```[ \t]*$)/gm)
-    .map((part, index) => {
-      if (index % 2) return part;
-      return part
-        .replace(/^(#{2,4}) /gm, "##$1 ")
-        .replace(/\]\(([^)]+)\)/g, (original, target) =>
-          links.has(target) ? "](" + links.get(target) + ")" : original
-        );
-    })
-    .join("");
-}
 
-const files = ["structure", "lexical"].flatMap((stem) => {
-  const read = (ext) => git("show", revision + ":docs/grammar/" + stem + ext);
-  return [
-    {
-      name: stem + ".ebnf",
-      path: new URL("../static/grammar/" + stem + ".ebnf", import.meta.url),
-      contents: read(".ebnf"),
-    },
-    {
-      name: stem + ".md",
-      path: new URL("../docs/tour/_grammar-" + stem + ".md", import.meta.url),
-      contents: Buffer.from(notes(read(".md").toString("utf8"))),
-    },
-  ];
-});
+const files = ["structure.ebnf", "lexical.ebnf"].map((name) => ({
+  name,
+  path: new URL("../static/grammar/" + name, import.meta.url),
+  contents: git("show", revision + ":docs/grammar/" + name),
+}));
 
 for (const { name, path, contents } of files) {
   if (check) {
@@ -72,6 +36,4 @@ for (const { name, path, contents } of files) {
   }
 }
 if (!check) writeFileSync(metadata, JSON.stringify({ revision }, null, 2) + "\n");
-console.log(
-  (check ? "Verified" : "Copied") + " grammar files and reference notes at " + revision
-);
+console.log((check ? "Verified" : "Copied") + " grammar files at " + revision);

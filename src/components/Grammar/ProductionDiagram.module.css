@@ -1,4 +1,4 @@
-.viewport {
+.diagram {
   --rail: #546d9d;
   --terminal-bg: #fff1dc;
   --terminal-line: #ac7338;
@@ -10,15 +10,11 @@
   --range-line: #9074b0;
   --range-text: #5d3b79;
   --canvas: #f6f8fe;
-  max-width: 100%;
-  min-width: 0;
-  overflow-x: auto;
-  padding: 0.5rem 0;
-  background: radial-gradient(#dce1ef 0.8px, transparent 0.9px) 0 0 / 12px 12px
-    var(--canvas);
+  display: block;
+  max-width: none;
 }
 
-:global([data-theme="dark"]) .viewport {
+:global([data-theme="dark"]) .diagram {
   --rail: #a7bbee;
   --terminal-bg: #493c30;
   --terminal-line: #d4ac77;
@@ -30,19 +26,8 @@
   --range-line: #bc9be1;
   --range-text: #eddafc;
   --canvas: #192235;
-  background-image: radial-gradient(#303c51 0.8px, transparent 0.9px);
 }
 
-.viewport:focus-visible {
-  outline: 2px solid var(--ref-line);
-  outline-offset: -2px;
-}
-
-.diagram {
-  display: block;
-  margin: 0 auto;
-  max-width: none;
-}
 .diagram path {
   stroke: var(--rail);
   stroke-width: 1.6;
@@ -88,4 +73,18 @@
 }
 .range text {
   fill: var(--range-text);
+}
+
+.diagram .heading text {
+  fill: var(--ref-text);
+  font-size: 14px;
+  font-weight: 700;
+}
+.heading:is(:hover, :focus-visible) text,
+.diagram .heading:target text {
+  text-decoration: underline;
+}
+.diagram .cap {
+  stroke: var(--ref-line);
+  stroke-width: 1;
 }

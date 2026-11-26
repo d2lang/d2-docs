@@ -1,9 +1,11 @@
 import React from "react";
+import { grammarFiles } from "./grammar";
 import styles from "./ProductionDiagram.module.css";
 
 const turn = 10;
 const gutter = 2 * turn;
-const rowWidth = 520;
+// Wrap long sequences to limit the width of the diagram.
+const rowWidth = 6000;
 
 function Arrow({ x, y = 0, back = false }) {
   const tail = x + (back ? 4 : -4);
@@ -143,12 +145,10 @@ function choice(items) {
   for (let i = 1; i < items.length; i++) {
     levels.push(levels[i - 1] + items[i - 1].below + gutter + items[i].above);
   }
-  const middle = Math.floor((items.length - 1) / 2);
-  const offset = levels[middle];
-  const exit = items[middle].exit;
+  const exit = items[0].exit;
   const node = items.map((item, i) => {
-    const y = levels[i] - offset;
-    const x = (width - item.width) / 2;
+    const y = levels[i];
+    const x = gutter;
     return (
       <g key={i}>
         <path d={bend(0, 0, y) + " " + bend(width - gutter, y + item.exit, exit)} />
@@ -164,8 +164,8 @@ function choice(items) {
   const last = items.length - 1;
   return {
     width,
-    above: offset + items[0].above,
-    below: levels[last] - offset + items[last].below,
+    above: items[0].above,
+    below: levels[last] + items[last].below,
     exit,
     node,
   };
@@ -173,37 +173,101 @@ function choice(items) {
 
 function bypass(body, repeat) {
   const width = body.width + 2 * gutter;
-  const above = body.above + gutter;
-  const below = body.below + (repeat ? gutter : 0);
-  const exit = body.exit;
+  const bodyY = body.above + gutter;
+  const bodyEnd = bodyY + body.exit;
+  const below = bodyY + body.below + (repeat ? gutter : 0);
   const node = (
     <>
-      <path d={`M0 0 H${gutter} M${width - gutter} ${exit} H${width}`} />
-      <path
-        d={
-          bend(0, 0, -above) + ` H${width - gutter} ` + bend(width - gutter, -above, exit)
-        }
-      />
-      <Arrow x={width / 2} y={-above} />
+      <path d={`M0 0 H${width}`} />
+      <Arrow x={width / 2} />
+      <path d={bend(0, 0, bodyY) + " " + bend(width - gutter, bodyEnd, 0)} />
       {repeat && (
         <>
           <path
-            d={`M${width - gutter} ${exit} q${turn} 0 ${turn} ${turn}
+            d={`M${width - gutter} ${bodyEnd} q${turn} 0 ${turn} ${turn}
         V${below - turn} q0 ${turn} ${-turn} ${turn} H${gutter}
-        q${-turn} 0 ${-turn} ${-turn} V${turn} q0 ${-turn} ${turn} ${-turn}`}
+        q${-turn} 0 ${-turn} ${-turn} V${bodyY + turn} q0 ${-turn} ${turn} ${-turn}`}
           />
           <Arrow x={width / 2} y={below} back />
         </>
       )}
-      <g transform={`translate(${gutter} 0)`}>{body.node}</g>
+      <g transform={`translate(${gutter} ${bodyY})`}>{body.node}</g>
     </>
   );
-  return { width, above, below, exit, node };
+  return { width, above: 0, below, exit: 0, node };
+}
+
+// Expand each production at the nearest reference to File. Other occurrences,
+// including recursive references, link to that same expansion on the track.
+function expansionSites() {
+  const rules = new Map(
+    grammarFiles.flatMap((file) => file.rules.map((r) => [r.name, r]))
+  );
+  const start = rules.get("File");
+  const queue = [start];
+  const reached = new Set([start.name]);
+  const sites = new Map();
+  function visit(expr, references) {
+    if (expr.type === "ref") references.set(expr.text, expr);
+    if (expr.children) expr.children.forEach((child) => visit(child, references));
+    if (expr.child) visit(expr.child, references);
+  }
+  for (const parent of queue) {
+    // At equal depth within a rule, use its last occurrence. This keeps the
+    // first pass through MapBody readable before expanding its padding.
+    const references = new Map();
+    visit(parent.expression, references);
+    for (const [name, site] of references) {
+      if (reached.has(name)) continue;
+      const rule = rules.get(name);
+      if (!rule) throw new Error("Undefined grammar rule: " + name);
+      sites.set(site, rule);
+      reached.add(name);
+      queue.push(rule);
+    }
+  }
+  if (reached.size !== rules.size)
+    throw new Error("Grammar contains rules unreachable from File");
+  return { sites, start };
+}
+
+const { sites, start } = expansionSites();
+
+function namedRule(rule) {
+  const body = layout(rule.expression);
+  const lead = 30 + rule.name.length * 8;
+  const width = lead + body.width + gutter;
+  return {
+    width,
+    above: Math.max(33, body.above),
+    below: Math.max(body.below, body.exit + 7),
+    exit: body.exit,
+    node: (
+      <g data-production={rule.name} role="group" aria-label={rule.name}>
+        <desc>{rule.source}</desc>
+        <path d={`M0 0 H${lead} M${lead + body.width} ${body.exit} h${gutter}`} />
+        <Arrow x={lead - 8} />
+        <a
+          id={"diagram-" + rule.name}
+          className={styles.heading}
+          href={"#rule-" + rule.name}
+          aria-label={"EBNF for " + rule.name}
+        >
+          <text data-rule-focus="" x={5} y={-9}>
+            {rule.name}
+          </text>
+        </a>
+        <g transform={`translate(${lead} 0)`}>{body.node}</g>
+        <path className={styles.cap} d={`M${width - 5} ${body.exit - 5} v10`} />
+      </g>
+    ),
+  };
 }
 
 function layout(expr) {
   switch (expr.type) {
     case "ref":
+      return sites.has(expr) ? namedRule(sites.get(expr)) : token(expr);
     case "literal":
     case "range":
       return token(expr);
@@ -228,36 +292,39 @@ function layout(expr) {
   }
 }
 
-export default function ProductionDiagram({ rule }) {
-  const { width, above, below, exit, node } = layout(rule.expression);
-  const svgWidth = Math.ceil(width + 64),
-    svgHeight = Math.ceil(above + below + 36);
+const railroad = namedRule(start);
+export const diagramSize = {
+  width: Math.ceil(railroad.width + 64),
+  height: Math.ceil(railroad.above + railroad.below + 36),
+  entryY: railroad.above + 18,
+};
+
+export default function ProductionDiagram({ svgRef }) {
+  const { width, height, entryY } = diagramSize;
   return (
-    <div
-      className={styles.viewport}
-      role="region"
-      aria-label={rule.name + " syntax diagram"}
-      tabIndex={0}
+    <svg
+      ref={svgRef}
+      className={styles.diagram}
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
+      role="group"
+      aria-label="D2 grammar railroad"
     >
-      <svg
-        className={styles.diagram}
-        width={svgWidth}
-        height={svgHeight}
-        viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-        role="group"
-        aria-label={"Railroad diagram for " + rule.name}
-      >
-        <title>{rule.name}</title>
-        <desc>{rule.source}</desc>
-        <g transform={`translate(32 ${above + 18})`}>
-          <path d={`M-24 0 H0 M${width} ${exit} h24`} />
-          <circle cx={-24} cy={0} r={3.5} />
-          <Arrow x={-9} />
-          {node}
-          <circle cx={width + 24} cy={exit} r={5} className={styles.end} />
-          <circle cx={width + 24} cy={exit} r={2} />
-        </g>
-      </svg>
-    </div>
+      <title>D2 grammar</title>
+      <desc>Start at File. Named references link to their expansion on the track.</desc>
+      <g transform={`translate(32 ${entryY})`}>
+        <path d={`M-24 0 H0 M${railroad.width} ${railroad.exit} h24`} />
+        <circle cx={-24} cy={0} r={3.5} />
+        {railroad.node}
+        <circle
+          cx={railroad.width + 24}
+          cy={railroad.exit}
+          r={5}
+          className={styles.end}
+        />
+        <circle cx={railroad.width + 24} cy={railroad.exit} r={2} />
+      </g>
+    </svg>
   );
 }
