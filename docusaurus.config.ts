@@ -242,6 +242,10 @@ const config: Config = {
               type: "asset/source",
             },
             {
+              test: /\.ebnf$/,
+              type: "asset/source",
+            },
+            {
               test: new RegExp(`d2-vscode/syntaxes/.*\.json$`),
               type: "asset",
             },

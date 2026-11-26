@@ -13,7 +13,14 @@ Deployed at [https://d2lang.com](https://d2lang.com).
 
 ## Reference
 
-A more formal reference specification is in the works.
+The [Grammar page](https://d2lang.com/tour/grammar/) explains D2 syntax with
+railroad diagrams and includes the complete grammar from the
+[D2 source repository](https://github.com/d2lang/d2/tree/master/docs/grammar).
+
+To update the page for a D2 syntax change, run
+`node scripts/sync-grammar.mjs ../d2 <revision>` with a local D2 checkout.
+Run `node scripts/sync-grammar.mjs --check ../d2` to verify the grammar files
+and their companion notes against the pinned commit.
 
 ## Contributing
 

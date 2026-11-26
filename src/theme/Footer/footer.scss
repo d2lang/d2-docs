@@ -81,6 +81,10 @@ html[data-theme="dark"] {
       border-top: 1px solid var(--steel-700);
       padding-top: 1rem;
 
+      @media (max-width: 360px) {
+        grid-template-columns: 1fr;
+      }
+
       [class^="searchBox_"] {
         width: 100% !important;
         max-width: none !important;

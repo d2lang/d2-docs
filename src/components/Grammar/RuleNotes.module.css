@@ -1,0 +1,33 @@
+.notes {
+  margin: 0.8rem 0;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: var(--ifm-global-radius);
+}
+
+.notes summary {
+  padding: 0.8rem 1rem;
+  color: var(--ifm-link-color);
+  cursor: pointer;
+}
+
+.notes summary h3 {
+  display: inline;
+  margin: 0 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.notes .prose {
+  padding: 0.1rem 1rem 1rem;
+}
+
+.prose[id] {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 4rem);
+}
+
+.prose :is(h4, h5)[id] {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
+}
+
+.prose > :last-child {
+  margin-bottom: 0;
+}
