@@ -1,6 +1,7 @@
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import { themes } from "prism-react-renderer";
+import { ruleNotes } from "./src/components/Grammar/ruleNotes";
 
 const config: Config = {
   title: "D2 Documentation",
@@ -209,6 +210,7 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 
   plugins: [
+    [require.resolve("./scripts/llms.cjs"), { ruleNotes }],
     "docusaurus-plugin-sass",
     [
       "@docusaurus/plugin-client-redirects",
