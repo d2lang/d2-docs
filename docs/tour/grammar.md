@@ -8,7 +8,11 @@ import FullGrammar from '@site/src/components/Grammar/FullGrammar';
 
 # Grammar
 
-D2’s grammar defines how to write shapes, connections, and their properties in a `.d2` file.
+:::note
+
+This grammar is subject to change before D2 1.0.
+
+:::
 
 <span id="railroad-diagrams" />
 

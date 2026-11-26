@@ -1,17 +1,4 @@
 .viewport {
-  --rail: #65817a;
-  --terminal-bg: #fbf3de;
-  --terminal-line: #cda661;
-  --terminal-text: #684c25;
-  --ref-bg: #e9edff;
-  --ref-line: #a6b6e6;
-  --ref-text: #304a9c;
-  --range-bg: #f2f0fa;
-  --range-line: #b7accd;
-  --range-text: #55436f;
-  --canvas: #f6f8f5;
-  --dot: #c6d1c8;
-  --border: #d6dfd6;
   max-width: 100%;
   min-width: 0;
   max-height: min(32rem, 65vh);
@@ -19,28 +6,12 @@
   border: 1px solid var(--border);
   border-radius: 5px;
   padding: 0.85rem 0;
-  background: radial-gradient(var(--dot) 0.8px, transparent 0.9px) 0 0 / 13px 13px
-    var(--canvas);
-}
-
-:global([data-theme="dark"]) .viewport {
-  --rail: #a2bdb6;
-  --terminal-bg: #493c30;
-  --terminal-line: #d4ac77;
-  --terminal-text: #ffe1ac;
-  --ref-bg: #293d63;
-  --ref-line: #9dbdff;
-  --ref-text: #ebf1ff;
-  --range-bg: #383047;
-  --range-line: #bc9be1;
-  --range-text: #eddafc;
-  --canvas: #192235;
-  --dot: #354153;
-  --border: #49556b;
+  background: radial-gradient(var(--atlas-dots) 0.8px, transparent 0.9px) 0 0 / 13px 13px
+    var(--atlas-inset);
 }
 
 .viewport:focus-visible {
-  outline: 2px solid var(--ref-line);
+  outline: 2px solid var(--atlas-rule-stroke);
   outline-offset: -2px;
 }
 
@@ -50,45 +21,45 @@
   max-width: none;
 }
 .diagram path {
-  stroke: var(--rail);
+  stroke: var(--atlas-rail);
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
 }
 .diagram circle {
-  fill: var(--rail);
+  fill: var(--atlas-rail);
 }
 .diagram text {
   font: 12px var(--ifm-font-family-monospace);
 }
 .rule rect {
-  fill: var(--ref-bg);
-  stroke: var(--ref-line);
+  fill: var(--atlas-rule-fill);
+  stroke: var(--atlas-rule-stroke);
 }
 .rule text {
-  fill: var(--ref-text);
+  fill: var(--info-label);
 }
 .rule:is(:hover, :focus-visible) rect {
-  stroke: var(--ref-text);
+  stroke: var(--info-label);
   stroke-width: 2;
 }
 .rule:is(:hover, :focus-visible) text {
   text-decoration: underline;
 }
 .literal rect {
-  fill: var(--terminal-bg);
-  stroke: var(--terminal-line);
+  fill: var(--atlas-surface);
+  stroke: var(--atlas-rail);
 }
 .literal text {
-  fill: var(--terminal-text);
+  fill: var(--ifm-font-color-base);
 }
 .range rect {
-  fill: var(--range-bg);
-  stroke: var(--range-line);
+  fill: var(--atlas-range-fill);
+  stroke: var(--atlas-range-stroke);
 }
 .range text {
-  fill: var(--range-text);
+  fill: var(--ifm-font-color-base);
 }
 
 @media (forced-colors: active) {
