@@ -11,6 +11,7 @@ Officially developed and maintained by the creators of D2.
 - [VSCode extension](/tour/vscode/)
 - [Vim plugin](/tour/vim/)
 - [Obsidian plugin](/tour/obsidian/)
+- [MCP server](/tour/mcp/)
 
 ## Community
 

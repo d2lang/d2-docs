@@ -142,7 +142,7 @@ const sidebars: SidebarsConfig = {
           type: "category",
           label: "Official",
           link: { type: "doc", id: "tour/vscode" },
-          items: ["tour/vscode", "tour/vim", "tour/obsidian"],
+          items: ["tour/vscode", "tour/vim", "tour/obsidian", "tour/mcp"],
         },
       ],
     },
