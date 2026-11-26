@@ -108,7 +108,8 @@ html[data-theme="dark"] {
 
     &--Links {
       display: flex;
-      gap: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
     }
 
     &--Icons {

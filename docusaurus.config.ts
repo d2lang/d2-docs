@@ -143,6 +143,12 @@ const config: Config = {
           label: "Tour",
         },
         {
+          type: "doc",
+          docId: "d2js/index",
+          position: "left",
+          label: "D2.js",
+        },
+        {
           to: "blog",
           label: "Blog",
           position: "left",
