@@ -1,51 +1,44 @@
 const fs = require("node:fs/promises");
 const os = require("node:os");
+const { escape } = require("minimatch");
 const path = require("node:path");
 const generateLlms = require("docusaurus-plugin-llms").default;
 const inlineExamples = require("./inline-d2-examples.cjs");
 const inlineGrammar = require("./inline-grammar.cjs");
 
-// The generator logs some write failures and still resolves its postBuild hook.
-async function verifyOutput(outDir) {
-  const index = await fs.readFile(path.join(outDir, "llms.txt"), "utf8");
-  const pages = [...index.matchAll(/^- \[.*?\]\(([^)\s]+)\)/gm)];
-  if (!pages.length)
-    throw new Error("llms.txt contains no documentation pages");
-
-  const files = ["llms-full.txt"];
-  for (const [, url] of pages) {
-    const page = decodeURIComponent(new URL(url).pathname);
-    if (!page.endsWith(".md"))
-      throw new Error(`Missing Markdown page for ${url}`);
-    files.push(page);
-  }
-  for (const file of files) {
-    const stat = await fs.stat(path.join(outDir, file));
-    if (!stat.isFile() || !stat.size)
-      throw new Error(`Empty LLM output: ${file}`);
-  }
-}
-
-async function prepareDocs(source, destination, context, ruleNotes) {
-  await fs.mkdir(destination, { recursive: true });
-  for (const entry of await fs.readdir(source, { withFileTypes: true })) {
-    const from = path.join(source, entry.name);
-    const to = path.join(destination, entry.name);
-    if (entry.isDirectory()) {
-      await prepareDocs(from, to, context, ruleNotes);
-    } else if (/\.mdx?$/i.test(entry.name)) {
-      const markdown = await fs.readFile(from, "utf8");
-      const withExamples = inlineExamples(
-        markdown,
-        context.siteDir,
-        context.siteConfig.url,
-      );
-      await fs.writeFile(
-        to,
-        inlineGrammar(withExamples, context.siteDir, ruleNotes),
-      );
+async function prepareDocs(context, staging, ruleNotes, docs) {
+  const publicSources = new Set(docs.map((doc) => doc.source));
+  const ignoreFiles = [];
+  async function visit(directory) {
+    const source = path.join(context.siteDir, directory);
+    await fs.mkdir(path.join(staging, directory), { recursive: true });
+    for (const entry of await fs.readdir(source, { withFileTypes: true })) {
+      const file = path.posix.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        await visit(file);
+      } else if (/\.mdx?$/i.test(entry.name)) {
+        // Keep partials available to imported pages, but only index public docs.
+        if (!publicSources.has("@site/" + file)) {
+          ignoreFiles.push(escape(file));
+        }
+        const markdown = await fs.readFile(
+          path.join(context.siteDir, file),
+          "utf8",
+        );
+        const withExamples = inlineExamples(
+          markdown,
+          context.siteDir,
+          context.siteConfig.url,
+        );
+        await fs.writeFile(
+          path.join(staging, file),
+          inlineGrammar(withExamples, context.siteDir, ruleNotes),
+        );
+      }
     }
   }
+  await visit("docs");
+  return ignoreFiles;
 }
 
 module.exports = function d2Llms(context, { ruleNotes }) {
@@ -54,16 +47,26 @@ module.exports = function d2Llms(context, { ruleNotes }) {
     async postBuild(props) {
       const staging = await fs.mkdtemp(path.join(os.tmpdir(), "d2-llms-"));
       try {
-        await prepareDocs(
-          path.join(context.siteDir, "docs"),
-          path.join(staging, "docs"),
+        const docsPlugin = props.plugins.find(
+          (plugin) =>
+            plugin.name === "docusaurus-plugin-content-docs" &&
+            plugin.options.id === "default",
+        );
+        const { docs } = docsPlugin.content.loadedVersions.find(
+          (version) => version.versionName === "current",
+        );
+        const publicDocs = docs.filter((doc) => !doc.unlisted);
+        const ignoreFiles = await prepareDocs(
           context,
+          staging,
           ruleNotes,
+          publicDocs,
         );
         const generator = generateLlms(
           { ...context, siteDir: staging },
           {
             docsDir: [{ path: "docs", routeBasePath: "/" }],
+            ignoreFiles,
             excludeImports: true,
             generateMarkdownFiles: true,
             includeOrder: [
@@ -76,7 +79,8 @@ module.exports = function d2Llms(context, { ruleNotes }) {
           },
         );
         await generator.postBuild(props);
-        await verifyOutput(context.outDir);
+        const { verifyOutput } = await import("./verify-llms.mjs");
+        await verifyOutput(context, publicDocs);
       } finally {
         await fs.rm(staging, { recursive: true, force: true });
       }
