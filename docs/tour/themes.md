@@ -10,6 +10,11 @@ import TerminalTheme from '@site/static/bespoke-d2/terminal-theme.d2';
 D2 comes with many themes that make your diagram look professional and ready to insert
 into blogs and wikis.
 
+Starting in v0.10.0, diagrams and CLI flags accept theme names as well as numeric IDs.
+For example, `theme-id: Terminal` selects theme 300. Names are case-insensitive and
+hyphens can replace spaces, so `dark-theme-id: dark mauve` and `--dark-theme Dark-Mauve`
+both select theme 200.
+
 <WebPImage width={700} src={require('@site/static/img/screenshots/themes/theme_overview.png').default} webpSrc={require('@site/static/img/screenshots/themes/theme_overview.webp').default} alt="D2 theme choices"/>
 <WebPImage width={400} src={require('@site/static/img/screenshots/themes/theme_2.png').default} webpSrc={require('@site/static/img/screenshots/themes/theme_2.webp').default} alt="mixed berry blue theme"/>
 <WebPImage width={400} src={require('@site/static/img/screenshots/themes/theme_3.png').default} webpSrc={require('@site/static/img/screenshots/themes/theme_3.webp').default} alt="vanilla nitro cola theme"/>
