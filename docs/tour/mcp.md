@@ -12,9 +12,9 @@ uses the Model Context Protocol (MCP) over standard input and output.
 ## Connect your client
 
 The MCP server is built into D2 v0.10.0 and later. [Install D2](/tour/install/)
-and run `d2 mcp --help` to verify that the command is available. If your client
-finds an older D2 on its `PATH`, configure it with the absolute path to the D2
-executable you just installed.
+and run `d2 mcp --help`. The usage line should start with `d2 mcp [--root dir]`.
+If your client finds an older D2 on its `PATH`, configure it with the absolute
+path to the D2 executable you just installed.
 
 For Codex or Claude Code, register D2 from your terminal.
 
