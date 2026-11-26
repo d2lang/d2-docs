@@ -50,7 +50,6 @@ const sidebars: SidebarsConfig = {
         "tour/dimensions",
         "tour/positions",
         "tour/sketch",
-        "tour/isometric",
         "tour/interactive",
         "tour/fonts",
       ],
