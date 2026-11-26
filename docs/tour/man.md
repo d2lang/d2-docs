@@ -6,7 +6,7 @@ pagination_next: tour/exports
 
 This is the CLI manual for D2 v0.10.0. Run `man d2` to see the manual for your installed version.
 
-For AI client configuration and examples, see the [D2 MCP server guide](/tour/mcp/).
+To connect an AI client, see [MCP server](/tour/mcp/).
 
 ```text
 NAME
