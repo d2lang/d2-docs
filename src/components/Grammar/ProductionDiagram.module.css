@@ -1,21 +1,30 @@
-.diagram {
-  --rail: #546d9d;
-  --terminal-bg: #fff1dc;
-  --terminal-line: #ac7338;
-  --terminal-text: #714018;
-  --ref-bg: #edf2ff;
-  --ref-line: #6986c3;
-  --ref-text: #193d89;
-  --range-bg: #f4eefd;
-  --range-line: #9074b0;
-  --range-text: #5d3b79;
-  --canvas: #f6f8fe;
-  display: block;
-  max-width: none;
+.viewport {
+  --rail: #65817a;
+  --terminal-bg: #fbf3de;
+  --terminal-line: #cda661;
+  --terminal-text: #684c25;
+  --ref-bg: #e9edff;
+  --ref-line: #a6b6e6;
+  --ref-text: #304a9c;
+  --range-bg: #f2f0fa;
+  --range-line: #b7accd;
+  --range-text: #55436f;
+  --canvas: #f6f8f5;
+  --dot: #c6d1c8;
+  --border: #d6dfd6;
+  max-width: 100%;
+  min-width: 0;
+  max-height: min(32rem, 65vh);
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.85rem 0;
+  background: radial-gradient(var(--dot) 0.8px, transparent 0.9px) 0 0 / 13px 13px
+    var(--canvas);
 }
 
-:global([data-theme="dark"]) .diagram {
-  --rail: #a7bbee;
+:global([data-theme="dark"]) .viewport {
+  --rail: #a2bdb6;
   --terminal-bg: #493c30;
   --terminal-line: #d4ac77;
   --terminal-text: #ffe1ac;
@@ -26,11 +35,23 @@
   --range-line: #bc9be1;
   --range-text: #eddafc;
   --canvas: #192235;
+  --dot: #354153;
+  --border: #49556b;
 }
 
+.viewport:focus-visible {
+  outline: 2px solid var(--ref-line);
+  outline-offset: -2px;
+}
+
+.diagram {
+  display: block;
+  margin: 0 auto;
+  max-width: none;
+}
 .diagram path {
   stroke: var(--rail);
-  stroke-width: 1.6;
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
@@ -38,13 +59,8 @@
 .diagram circle {
   fill: var(--rail);
 }
-.diagram .end {
-  fill: var(--canvas);
-  stroke: var(--rail);
-  stroke-width: 1.6;
-}
 .diagram text {
-  font: 600 12px var(--ifm-font-family-monospace);
+  font: 12px var(--ifm-font-family-monospace);
 }
 .rule rect {
   fill: var(--ref-bg);
@@ -75,16 +91,22 @@
   fill: var(--range-text);
 }
 
-.diagram .heading text {
-  fill: var(--ref-text);
-  font-size: 14px;
-  font-weight: 700;
-}
-.heading:is(:hover, :focus-visible) text,
-.diagram .heading:target text {
-  text-decoration: underline;
-}
-.diagram .cap {
-  stroke: var(--ref-line);
-  stroke-width: 1;
+@media (forced-colors: active) {
+  .diagram path,
+  .diagram rect {
+    stroke: CanvasText;
+  }
+  .diagram rect {
+    fill: Canvas;
+  }
+  .diagram text,
+  .diagram circle {
+    fill: CanvasText;
+  }
+  .diagram .rule rect {
+    stroke: LinkText;
+  }
+  .diagram .rule text {
+    fill: LinkText;
+  }
 }

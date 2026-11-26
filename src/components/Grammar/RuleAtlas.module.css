@@ -1,0 +1,335 @@
+.atlas {
+  --line: #c7d2c9;
+  --surface: #fff;
+  --sidebar: #f7f9f5;
+  --inset: #f3f5f1;
+  --muted: #4d6056;
+  --accent: #2946a3;
+  --selected: #e6ecff;
+  --ref-border: #9eafe6;
+  --literal-fill: #fcf2dc;
+  --literal-border: #b99561;
+  --range-fill: #f1eafb;
+  --range-border: #a18bb6;
+  container-type: inline-size;
+  margin-bottom: var(--ifm-leading);
+  min-width: 0;
+}
+
+:global([data-theme="dark"]) .atlas {
+  --line: #465851;
+  --surface: #1b2423;
+  --sidebar: #202a27;
+  --inset: #26322f;
+  --muted: #b7c7bf;
+  --accent: #b5c8ff;
+  --selected: #2e3f60;
+  --ref-border: #829dd6;
+  --literal-fill: #493c30;
+  --literal-border: #d4ac77;
+  --range-fill: #3a304a;
+  --range-border: #b49acb;
+}
+
+.traceBar,
+.trace,
+.meta,
+.legend,
+.legend span {
+  display: flex;
+  align-items: center;
+}
+
+.traceBar {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.trace {
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.trace strong,
+.search,
+.mobilePicker,
+.example strong,
+.notation summary {
+  font: 600 0.85rem/1.55 var(--ifm-font-family-base);
+}
+
+.trace strong {
+  margin-right: 0.42rem;
+  color: var(--muted);
+}
+
+.trace a {
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--sidebar);
+  color: var(--muted);
+  font: 0.78rem/1.4 var(--ifm-font-family-monospace);
+  padding: 0.2rem 0.36rem;
+}
+
+.trace a[aria-current="true"] {
+  color: var(--accent);
+  background: var(--selected);
+  border-color: var(--ref-border);
+}
+
+.fullLink,
+.back {
+  color: var(--ifm-link-color);
+  font-size: 0.84rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: clamp(9.5rem, 21%, 13.4rem) minmax(0, 1fr);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: clip;
+}
+
+.sidebar {
+  padding: 1rem 0.65rem;
+  border-right: 1px solid var(--line);
+  background: var(--sidebar);
+  min-width: 0;
+}
+
+.search,
+.mobilePicker {
+  display: block;
+}
+
+.mobilePicker {
+  display: none;
+}
+
+.sidebar input,
+.sidebar select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin-top: 0.35rem;
+  padding: 0.45rem 0.56rem;
+  background: var(--surface);
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font: 400 0.87rem/1.45 var(--ifm-font-family-base);
+}
+
+.sidebar input::placeholder {
+  color: var(--muted);
+}
+
+.list {
+  max-height: 23rem;
+  margin-top: 0.6rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.list strong,
+.list [role="status"] {
+  display: block;
+  margin: 0.65rem 0.35rem 0.25rem;
+  color: var(--muted);
+  font: 600 0.77rem/1.5 var(--ifm-font-family-base);
+}
+
+.list ul,
+.list li,
+.list li + li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list a {
+  display: block;
+  padding: 0.26rem 0.38rem;
+  border-radius: 3px;
+  color: var(--ifm-font-color-base);
+  overflow-wrap: anywhere;
+  font: 0.8rem/1.5 var(--ifm-font-family-monospace);
+}
+
+.list a:hover,
+.trace a:hover {
+  background: var(--inset);
+}
+
+.list a[aria-current="true"] {
+  background: var(--selected);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.list a:focus-visible {
+  outline-offset: -2px;
+}
+
+.panels {
+  min-width: 0;
+}
+
+.panel {
+  display: none;
+  min-width: 0;
+  padding: 1.1rem clamp(0.8rem, 2.5cqi, 1.5rem) 1.3rem;
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
+}
+
+/* Native fragment links also select a single panel before hydration or without JS. */
+.atlas:not([data-ready]) .panel:target,
+.atlas:not([data-ready]) .panels:not(:has(> :target)) > [data-default],
+.atlas[data-ready] .panel[data-active] {
+  display: block;
+}
+
+.meta {
+  justify-content: space-between;
+  min-height: 1.45rem;
+  color: var(--muted);
+  font-size: 0.79rem;
+}
+
+.back {
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.back:disabled {
+  color: var(--muted);
+  opacity: 0.7;
+  text-decoration: none;
+  cursor: default;
+}
+
+.panel .title {
+  margin: 0.3rem 0;
+  overflow-wrap: anywhere;
+  font: 500 1.5rem/1.25 var(--ifm-font-family-monospace);
+  letter-spacing: -0.035em;
+}
+
+.description {
+  margin: 0.35rem 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.legend {
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  margin: 0.45rem 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.legend span {
+  gap: 0.3rem;
+}
+
+.legend i {
+  width: 0.9rem;
+  height: 0.57rem;
+  border: 1px solid;
+  border-radius: 2px;
+}
+
+.legend .literal {
+  background: var(--literal-fill);
+  border-color: var(--literal-border);
+  border-radius: 1em;
+}
+.legend .reference {
+  background: var(--selected);
+  border-color: var(--ref-border);
+}
+.legend .range {
+  background: var(--range-fill);
+  border-color: var(--range-border);
+  border-radius: 1em;
+}
+
+.notation {
+  border-top: 1px solid var(--line);
+  padding-top: 0.65rem;
+}
+
+.notation summary {
+  cursor: pointer;
+}
+
+.example {
+  margin-top: 0.8rem;
+}
+
+.panel pre {
+  padding: 0.55rem 0.7rem;
+  border: 0;
+  border-radius: 4px;
+  background: var(--inset);
+  color: var(--ifm-font-color-base);
+  margin: 0.4rem 0 0;
+  font: 0.82rem/1.55 var(--ifm-font-family-monospace);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.panel pre code {
+  font: inherit;
+  white-space: inherit;
+}
+
+@container (max-width: 37rem) {
+  .traceBar {
+    gap: 0.35rem 0.8rem;
+  }
+  .trace strong {
+    flex-basis: 100%;
+  }
+  .box {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 0.55rem 0.8rem;
+  }
+  .mobilePicker {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .mobilePicker select {
+    flex: 1;
+    width: auto;
+    margin: 0;
+  }
+  .list {
+    max-height: 8rem;
+  }
+  .search,
+  .atlas[data-ready] .list {
+    display: none;
+  }
+  .panel {
+    padding: 0.85rem 0.8rem;
+  }
+}

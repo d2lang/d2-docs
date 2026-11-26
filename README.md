@@ -13,8 +13,8 @@ Deployed at [https://d2lang.com](https://d2lang.com).
 
 ## Reference
 
-The [Grammar page](https://d2lang.com/tour/grammar/) explains D2 syntax with
-a railroad diagram and includes the complete grammar from the
+The [Grammar page](https://d2lang.com/tour/grammar/) includes a searchable rule
+atlas, D2 examples, and the complete EBNF from the
 [D2 source repository](https://github.com/d2lang/d2/tree/master/docs/grammar).
 
 To update the page for a D2 syntax change, run

@@ -1,25 +1,25 @@
 ---
-description: Explore the D2 grammar in one interactive railroad diagram or read the complete EBNF.
+description: Explore D2 syntax one rule at a time, with diagrams, examples, and the complete EBNF.
+hide_table_of_contents: true
 ---
 
-import GrammarDiagram from '@site/src/components/Grammar/GrammarDiagram';
+import RuleAtlas from '@site/src/components/Grammar/RuleAtlas';
 import FullGrammar from '@site/src/components/Grammar/FullGrammar';
-import grammarSource from '@site/src/components/Grammar/source.json';
 
 # Grammar
 
 D2’s grammar defines how to write shapes, connections, and their properties in a `.d2` file.
 
-## Railroad diagram {#railroad-diagrams}
+<span id="railroad-diagrams" />
 
-Start at [`File`](#diagram-File) and follow the track. Branches show choices. Loops show repetition.
+## Rule Atlas {#atlas}
 
-<GrammarDiagram />
+Read each diagram from left to right. Branches show choices. Loops show repetition.
+
+<RuleAtlas />
 
 ## Full grammar
 
 In Extended Backus–Naur Form (EBNF), read `|` as *or*, `[ ]` as *optional*, and `{ }` as *zero or more*.
 
 <FullGrammar />
-
-<a href={`https://github.com/d2lang/d2/tree/${grammarSource.revision}/docs/grammar/testdata`}>Conformance cases</a>
