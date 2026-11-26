@@ -11,7 +11,7 @@ In a browser, it renders diagrams locally in a worker. The
 
 ## Install
 
-```shell
+```bash
 npm install @d2lang/d2
 ```
 

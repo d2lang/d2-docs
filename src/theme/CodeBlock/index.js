@@ -3,6 +3,7 @@ import clsx from "clsx";
 
 import * as docusaurusThemeCommon from "@docusaurus/theme-common";
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
+import PrismCodeBlock from "@theme-original/CodeBlock";
 
 import * as vscOniguruma from "vscode-oniguruma";
 import * as vscTextMate from "vscode-textmate";
@@ -31,7 +32,21 @@ if (!ExecutionEnvironment.canUseDOM) {
   global.window = {};
 }
 
-export default function D2CodeBlock(props) {
+const prismClassNames = new Set([
+  "language-bash",
+  "language-html",
+  "language-js",
+  "language-javascript",
+]);
+
+export default function CodeBlock(props) {
+  if (prismClassNames.has(props.className)) {
+    return <PrismCodeBlock showLineNumbers {...props} />;
+  }
+  return <D2CodeBlock {...props} />;
+}
+
+function D2CodeBlock(props) {
   if (!ExecutionEnvironment.canUseDOM) {
     // React requires this to rerender correctly on hydration.
     // See https://github.com/facebook/react/issues/8017#issuecomment-256351955

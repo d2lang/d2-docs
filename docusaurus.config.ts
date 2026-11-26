@@ -192,6 +192,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     prism: {
+      additionalLanguages: ["bash"],
       theme: themes.github,
       darkTheme: themes.dracula,
     },
