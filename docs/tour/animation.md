@@ -2,6 +2,7 @@ import AnimationExample from '@site/src/components/AnimationExample';
 import CodeBlock from '@theme/CodeBlock';
 import CacheStampede from '@site/static/bespoke-d2/cache-stampede.d2';
 import Battery from '@site/static/bespoke-d2/animation-battery.d2';
+import NightSignal from '@site/static/bespoke-d2/night-signal.d2';
 
 # Animation
 
@@ -204,3 +205,21 @@ appears when it fits. To collapse the cell, remove its children and restore
 its original dimensions.
 
 <AnimationExample name="grid-mirror" width={420} height={255} alt="A cell expands to reveal a nested grid, then folds closed." />
+
+## Animated steps
+
+You can use [steps](./steps.md) to build up a diagram and walk your audience through a sequence.
+
+<a href="/img/animation/night-signal.svg" aria-label="Open the full-size Night Signal animation">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcSet="/img/animation/night-signal-still.svg" />
+    <img src="/img/animation/night-signal.svg" loading="lazy" width="1188" height="677" style={{height: 'auto'}} alt="A telescope detects a signal. The outbox publishes one alert and returns the saved receipt when the publisher retries." />
+  </picture>
+</a>
+
+<details>
+<summary>View base D2 source</summary>
+
+<CodeBlock className="language-d2" hidePlaygroundLink>{NightSignal}</CodeBlock>
+
+</details>

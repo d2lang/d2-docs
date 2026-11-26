@@ -1,0 +1,83 @@
+.viewport {
+  max-width: 100%;
+  min-width: 0;
+  max-height: min(32rem, 65vh);
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.85rem 0;
+  background: radial-gradient(var(--atlas-dots) 0.8px, transparent 0.9px) 0 0 / 13px 13px
+    var(--atlas-inset);
+}
+
+.viewport:focus-visible {
+  outline: 2px solid var(--atlas-rule-stroke);
+  outline-offset: -2px;
+}
+
+.diagram {
+  display: block;
+  margin: 0 auto;
+  max-width: none;
+}
+.diagram path {
+  stroke: var(--atlas-rail);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+.diagram circle {
+  fill: var(--atlas-rail);
+}
+.diagram text {
+  font: 12px var(--ifm-font-family-monospace);
+}
+.rule rect {
+  fill: var(--atlas-rule-fill);
+  stroke: var(--atlas-rule-stroke);
+}
+.rule text {
+  fill: var(--info-label);
+}
+.rule:is(:hover, :focus-visible) rect {
+  stroke: var(--info-label);
+  stroke-width: 2;
+}
+.rule:is(:hover, :focus-visible) text {
+  text-decoration: underline;
+}
+.literal rect {
+  fill: var(--atlas-surface);
+  stroke: var(--atlas-rail);
+}
+.literal text {
+  fill: var(--ifm-font-color-base);
+}
+.range rect {
+  fill: var(--atlas-range-fill);
+  stroke: var(--atlas-range-stroke);
+}
+.range text {
+  fill: var(--ifm-font-color-base);
+}
+
+@media (forced-colors: active) {
+  .diagram path,
+  .diagram rect {
+    stroke: CanvasText;
+  }
+  .diagram rect {
+    fill: Canvas;
+  }
+  .diagram text,
+  .diagram circle {
+    fill: CanvasText;
+  }
+  .diagram .rule rect {
+    stroke: LinkText;
+  }
+  .diagram .rule text {
+    fill: LinkText;
+  }
+}
