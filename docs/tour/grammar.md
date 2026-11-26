@@ -11,7 +11,7 @@ import LexicalRules from './_grammar-lexical.md';
 
 # Grammar
 
-`build-server` names one object. `build--server` connects two.
+D2’s grammar defines how to write shapes, connections, and their properties in a `.d2` file.
 
 ## Railroad diagrams
 
