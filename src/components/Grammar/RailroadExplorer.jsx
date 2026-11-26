@@ -164,14 +164,8 @@ const diagrams = [
     description:
       "Read a keyPath, a FirstArrow, and a target keyPath. Loop through Arrow for each additional target. This diagram expands the EdgeTargets rule.",
     examples: [
-      [
-        "api -> db",
-        "One connection. A source, an arrow and a target complete the chain.",
-      ],
-      [
-        "api -> db -> cache",
-        "Two connections. After reaching db, take the Arrow loop once to reach cache.",
-      ],
+      ["api -> db", "One arrow connects two objects."],
+      ["api -> db -> cache", "The loop adds a second connection."],
     ],
   },
   {
@@ -182,11 +176,8 @@ const diagrams = [
     description:
       "Read a keyString. To add another segment, follow the loop through a literal dot and read another keyString.",
     examples: [
-      ["api", "One key segment. The route goes straight to the end."],
-      [
-        'api."v1.0".logs',
-        "Three key segments. Take the dot loop twice. The dot inside the quotes belongs to the middle segment.",
-      ],
+      ["api", "One key segment."],
+      ['api."v1.0".logs', "Three segments. The quoted dot stays in the name."],
     ],
   },
   {
@@ -197,19 +188,10 @@ const diagrams = [
     description:
       "Select one of four parallel paths. A value can be a scalar, a map, an array, or an import.",
     examples: [
-      [
-        "hello",
-        "A bare word follows the Scalar branch. Quoted text can also be a scalar.",
-      ],
-      [
-        "{ api; db }",
-        "The braces enclose a map with two entries. Follow the Map branch.",
-      ],
-      [
-        "[one; two]",
-        "The brackets enclose an array with two values. Follow the Array branch.",
-      ],
-      ["@shared", "The at sign introduces an import. Follow the Import branch."],
+      ["hello", "An unquoted string."],
+      ["{ api; db }", "A map with two entries."],
+      ["[one; two]", "An array with two values."],
+      ["@shared", "Imports shared.d2."],
     ],
   },
   {
@@ -220,14 +202,8 @@ const diagrams = [
     description:
       "Choose a literal asterisk or one decimal digit. After a digit, the loop permits more digits. This diagram covers the index inside the brackets.",
     examples: [
-      [
-        "(api -> db)[*]",
-        "The asterisk selects every matching connection. The brackets belong to the enclosing edge group.",
-      ],
-      [
-        "(api -> db)[12]",
-        "Read 1, then loop back for 2. Index 12 selects the thirteenth matching connection because numbering starts at zero.",
-      ],
+      ["(api -> db)[*]", "Selects every matching connection."],
+      ["(api -> db)[12]", "Index 12 selects the thirteenth matching connection."],
     ],
   },
 ];
@@ -347,10 +323,7 @@ export default function RailroadExplorer() {
           )}
         </div>
       ))}
-      <p className={styles.footnote}>
-        The tracks omit optional horizontal whitespace. The EBNF spells it out with{" "}
-        <code>spaces</code>.
-      </p>
+      <p className={styles.footnote}>Diagrams omit optional whitespace.</p>
     </div>
   );
 }
