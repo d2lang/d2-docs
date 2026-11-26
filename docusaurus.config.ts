@@ -8,12 +8,15 @@ const config: Config = {
   url: "https://d2lang.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: { onBrokenMarkdownLinks: "warn" },
+    mdx1Compat: { comments: true, headingIds: true, admonitions: true },
+  },
   favicon: "img/favicon.ico",
   trailingSlash: true,
 
   future: {
-    experimental_faster: true,
+    faster: true,
     v4: true,
   },
 
