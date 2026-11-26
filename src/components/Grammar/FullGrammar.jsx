@@ -3,7 +3,6 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import useBrokenLinks from "@docusaurus/useBrokenLinks";
 import { grammarFiles } from "./grammar";
-import source from "./source.json";
 import styles from "./FullGrammar.module.css";
 
 const names = new Set(
@@ -110,12 +109,6 @@ function GrammarFile({ file }) {
 export default function FullGrammar() {
   return (
     <div className={styles.fullGrammar}>
-      <a
-        className={styles.source}
-        href={"https://github.com/d2lang/d2/tree/" + source.revision + "/docs/grammar"}
-      >
-        D2 source · <span>{source.revision.slice(0, 7)}</span>
-      </a>
       {grammarFiles.map((file) => (
         <GrammarFile key={file.name} file={file} />
       ))}

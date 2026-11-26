@@ -36,23 +36,11 @@
   text-decoration: underline;
 }
 
-.source,
-.actions {
-  font-size: 0.87rem;
-}
-
-.source {
-  display: block;
-  width: fit-content;
-  margin: 0 0 0.8rem auto;
-}
-
 .fileBar a,
 .copy {
   font-weight: 600;
 }
 
-.source span,
 .filename {
   font-family: var(--ifm-font-family-monospace);
 }
@@ -85,6 +73,7 @@
 
 .actions {
   gap: 0.9rem;
+  font-size: 0.87rem;
 }
 
 .copy {
