@@ -6,6 +6,8 @@ pagination_next: tour/exports
 
 This is the CLI manual for D2 v0.10.0. Run `man d2` to see the manual for your installed version.
 
+For AI client configuration and examples, see the [D2 MCP server guide](/tour/mcp/).
+
 ```text
 NAME
      d2 – compiles and renders d2 diagrams into svgs.
@@ -17,6 +19,7 @@ SYNOPSIS
      d2 fmt file.d2 ...
      d2 play file.d2
      d2 validate file.d2
+     d2 mcp [--root dir] [--no-ui] [--timeout seconds]
 
 DESCRIPTION
      d2 compiles and renders file.d2 to file.svg | file.png | file.pdf |
@@ -316,6 +319,11 @@ SUBCOMMANDS
 
      validate file.d2
 		 Validates file.d2
+
+     mcp         Run the Model Context Protocol server on standard input and
+                 output. Use --root to allow diagram files and local images
+                 under a directory, --no-ui to disable the inline viewer, and
+                 --timeout to set the per-call deadline in seconds (default 60).
 
 ENVIRONMENT VARIABLES
      Many flags can also be set with environment variables.
