@@ -22,12 +22,11 @@ lists the D2 engine version included in each recent release.
 
 ## Render a diagram
 
-`compile` lays out the diagram. Pass its `diagram` and `renderOptions` to
-`render` so the SVG uses settings from your D2 source, such as the theme.
+`renderSVG()` takes D2 source and returns an SVG string.
 
 ### Node.js
 
-Save this as `diagram.mjs`. The second argument to `compile` selects the
+Save this as `diagram.mjs`. The second argument to `renderSVG()` selects the
 [ELK layout engine](/tour/elk/).
 
 ```js
@@ -35,8 +34,8 @@ import { D2 } from "@d2lang/d2";
 
 const d2 = new D2();
 try {
-  const { diagram, renderOptions } = await d2.compile("client -> server", { layout: "elk" });
-  console.log(await d2.render(diagram, renderOptions));
+  const svg = await d2.renderSVG("client -> server", { layout: "elk" });
+  console.log(svg);
 } finally {
   await d2.dispose();
 }
@@ -46,8 +45,7 @@ Run `node diagram.mjs > diagram.svg` and open `diagram.svg` in your browser.
 
 ### Browser
 
-Save this as `index.html`. It uses a nightly build that includes the
-[Safari worker fix](https://github.com/d2lang/d2/pull/2965).
+Save this as `index.html` to display the SVG without a bundler.
 
 ```html
 <!doctype html>
@@ -56,12 +54,11 @@ Save this as `index.html`. It uses a nightly build that includes the
 <title>D2.js example</title>
 <img id="diagram" alt="Client connects to server">
 <script type="module">
-  import { D2 } from "https://esm.sh/@d2lang/d2@0.2.0-nightly.20261126.ga29b8604efa0";
+  import { D2 } from "https://esm.sh/@d2lang/d2@0.2.0";
 
   const d2 = new D2();
   try {
-    const { diagram, renderOptions } = await d2.compile("client -> server");
-    const svg = await d2.render(diagram, renderOptions);
+    const svg = await d2.renderSVG("client -> server");
     document.querySelector("#diagram").src =
       "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
   } finally {
@@ -75,5 +72,20 @@ Run `python3 -m http.server 8000` in the same directory and open
 `http://localhost:8000` to see the diagram.
 
 Reuse the D2 instance when rendering multiple diagrams and call `dispose()` when
-you're done. See the [package README](https://www.npmjs.com/package/@d2lang/d2)
-for all options.
+you're done.
+
+## Work with D2 source
+
+To inspect the diagram before rendering, call `compile()` and pass its
+`diagram` and `renderOptions` to `render()`. This preserves settings from
+the source, such as the theme.
+
+```js
+const { diagram, renderOptions } = await d2.compile(source);
+const svg = await d2.render(diagram, renderOptions);
+```
+
+Use `await d2.format(source)` to [format D2](/tour/auto-formatter/) in an editor.
+To share it in the Playground, put the result of `await d2.encode(source)` in the
+URL’s `script` parameter. See the [D2.js reference](https://github.com/d2lang/d2/tree/master/d2js/js#readme)
+for examples and options.
