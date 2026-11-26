@@ -111,7 +111,7 @@ To export the same diagram at its natural size without the SVG appendix, run
 `d2 --scale=1 --force-appendix=false input.d2 output.svg`.
 
 :::info `data`
-`data` holds key-value pairs that applications embedding D2 can read. Starting in v0.9.1,
+`data` holds key-value pairs that applications embedding D2 can read. Starting in v0.10.0,
 you can also set [Dagre](./dagre.md#spacing) and [ELK](./elk.md#algorithms) layout options here.
 These values take precedence over the corresponding CLI flags. This example sets the space
 between adjacent ELK layers to 100 pixels.
