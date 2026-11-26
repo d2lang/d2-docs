@@ -110,29 +110,12 @@ function GrammarFile({ file }) {
 export default function FullGrammar() {
   return (
     <div className={styles.fullGrammar}>
-      <div className={styles.toolbar}>
-        <details className={styles.jump}>
-          <summary>Jump to a rule</summary>
-          {grammarFiles.map((file) => (
-            <div className={styles.ruleGroup} key={file.name}>
-              <strong>{file.name}</strong>
-              <ul>
-                {file.rules.map(({ name }) => (
-                  <li key={name}>
-                    <a href={"#rule-" + name}>{name}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </details>
-        <a
-          className={styles.source}
-          href={"https://github.com/d2lang/d2/tree/" + source.revision + "/docs/grammar"}
-        >
-          D2 source · <span>{source.revision.slice(0, 7)}</span>
-        </a>
-      </div>
+      <a
+        className={styles.source}
+        href={"https://github.com/d2lang/d2/tree/" + source.revision + "/docs/grammar"}
+      >
+        D2 source · <span>{source.revision.slice(0, 7)}</span>
+      </a>
       {grammarFiles.map((file) => (
         <GrammarFile key={file.name} file={file} />
       ))}

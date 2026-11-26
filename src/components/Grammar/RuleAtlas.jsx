@@ -11,7 +11,6 @@ const groups = grammarFiles.map(({ name, rules }) => ({
 }));
 const allRules = groups.flatMap(({ rules }) => rules);
 const ruleNames = new Set(allRules.map(({ name }) => name));
-const trace = ["File", "MapBody", "MapEntry", "EntryKey", "keyPath", "keyString"];
 const initialRule = "keyPath";
 
 function diagramName(hash) {
@@ -46,9 +45,9 @@ function RulePanel({ rule, group, current, ready, previous, goBack }) {
           </button>
         )}
       </div>
-      <h3 className={styles.title} id={id + "-title"} tabIndex={-1}>
+      <h2 className={styles.title} id={id + "-title"} tabIndex={-1}>
         {rule.name}
-      </h3>
+      </h2>
       {description && <p className={styles.description}>{description}</p>}
       <Drawing rule={rule} />
       <div className={styles.legend}>
@@ -87,6 +86,7 @@ function RulePanel({ rule, group, current, ready, previous, goBack }) {
 
 export default function RuleAtlas() {
   const { collectAnchor } = useBrokenLinks();
+  collectAnchor("atlas");
   for (const rule of allRules) collectAnchor("diagram-" + rule.name);
 
   const [ready, setReady] = useState(false);
@@ -194,24 +194,12 @@ export default function RuleAtlas() {
     .filter(({ rules }) => rules.length);
 
   return (
-    <div className={styles.atlas} data-ready={ready || undefined} onClick={followRule}>
-      <div className={styles.traceBar}>
-        <nav className={styles.trace} aria-label="Trace a simple key">
-          <strong>Trace a simple key</strong>
-          {trace.map((name) => (
-            <a
-              key={name}
-              href={"#diagram-" + name}
-              aria-current={ready && active === name ? "true" : undefined}
-            >
-              {name}
-            </a>
-          ))}
-        </nav>
-        <a className={styles.fullLink} href="#full-grammar">
-          Full grammar
-        </a>
-      </div>
+    <div
+      id="atlas"
+      className={styles.atlas}
+      data-ready={ready || undefined}
+      onClick={followRule}
+    >
       <div className={styles.box}>
         <div className={styles.sidebar}>
           {ready && (

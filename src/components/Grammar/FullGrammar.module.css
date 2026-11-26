@@ -19,7 +19,6 @@
   --grammar-terminal: #f0a5c9;
 }
 
-.toolbar,
 .fileBar,
 .fileLabel,
 .actions {
@@ -28,55 +27,13 @@
   gap: 0.65rem;
 }
 
-.toolbar,
 .fileBar {
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.toolbar {
-  margin: 0 0 0.8rem;
-  row-gap: 0.65rem;
-}
-
-.jump {
-  flex: 1 1 14rem;
-  min-width: 0;
-}
-
-.jump summary {
-  width: fit-content;
-  color: var(--ifm-link-color);
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.jump summary:hover,
 .copy:hover {
   text-decoration: underline;
-}
-
-.ruleGroup {
-  margin-top: 0.75rem;
-}
-
-.ruleGroup strong {
-  font: 600 0.85rem var(--ifm-font-family-monospace);
-}
-
-.ruleGroup ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.15rem 0.8rem;
-  list-style: none;
-  padding: 0;
-  margin: 0.35rem 0 0;
-}
-
-.ruleGroup li,
-.ruleGroup li + li {
-  margin: 0;
-  font: 0.8rem/1.6 var(--ifm-font-family-monospace);
 }
 
 .source,
@@ -85,7 +42,9 @@
 }
 
 .source {
-  align-self: flex-start;
+  display: block;
+  width: fit-content;
+  margin: 0 0 0.8rem auto;
 }
 
 .fileBar a,
@@ -206,10 +165,6 @@
 }
 
 @media (max-width: 520px) {
-  .toolbar {
-    align-items: flex-start;
-  }
-
   .fullGrammar pre.listing {
     padding: 0.75rem;
     font-size: 0.8rem;

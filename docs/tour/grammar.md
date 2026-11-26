@@ -12,10 +12,6 @@ D2’s grammar defines how to write shapes, connections, and their properties in
 
 <span id="railroad-diagrams" />
 
-## Rule Atlas {#atlas}
-
-Read each diagram from left to right. Branches show choices. Loops show repetition.
-
 <RuleAtlas />
 
 ## Full grammar

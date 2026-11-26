@@ -13,6 +13,7 @@
   --range-border: #a18bb6;
   container-type: inline-size;
   margin-bottom: var(--ifm-leading);
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
   min-width: 0;
 }
 
@@ -31,8 +32,6 @@
   --range-border: #b49acb;
 }
 
-.traceBar,
-.trace,
 .meta,
 .legend,
 .legend span {
@@ -40,52 +39,11 @@
   align-items: center;
 }
 
-.traceBar {
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.4rem 1rem;
-  margin: 0 0 0.75rem;
-}
-
-.trace {
-  flex-wrap: wrap;
-  gap: 0.25rem;
-}
-
-.trace strong,
 .search,
 .mobilePicker,
 .example strong,
 .notation summary {
   font: 600 0.85rem/1.55 var(--ifm-font-family-base);
-}
-
-.trace strong {
-  margin-right: 0.42rem;
-  color: var(--muted);
-}
-
-.trace a {
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  background: var(--sidebar);
-  color: var(--muted);
-  font: 0.78rem/1.4 var(--ifm-font-family-monospace);
-  padding: 0.2rem 0.36rem;
-}
-
-.trace a[aria-current="true"] {
-  color: var(--accent);
-  background: var(--selected);
-  border-color: var(--ref-border);
-}
-
-.fullLink,
-.back {
-  color: var(--ifm-link-color);
-  font-size: 0.84rem;
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
 }
 
 .box {
@@ -164,8 +122,7 @@
   font: 0.8rem/1.5 var(--ifm-font-family-monospace);
 }
 
-.list a:hover,
-.trace a:hover {
+.list a:hover {
   background: var(--inset);
 }
 
@@ -205,6 +162,10 @@
 }
 
 .back {
+  color: var(--ifm-link-color);
+  font-size: 0.84rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
   padding: 0;
   background: none;
   border: 0;
@@ -298,12 +259,6 @@
 }
 
 @container (max-width: 37rem) {
-  .traceBar {
-    gap: 0.35rem 0.8rem;
-  }
-  .trace strong {
-    flex-basis: 100%;
-  }
   .box {
     grid-template-columns: minmax(0, 1fr);
   }
