@@ -1,0 +1,101 @@
+.atlas {
+  --atlas-border: var(--steel-300);
+  --atlas-bar: var(--steel-050);
+  margin: 0 0 1rem;
+  min-width: 0;
+}
+
+:global([data-theme="dark"]) .atlas {
+  --atlas-border: #485365;
+  --atlas-bar: #1d243a;
+}
+
+.index {
+  margin-bottom: 0.6rem;
+}
+
+.index summary {
+  width: fit-content;
+  color: var(--ifm-link-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.index summary:hover {
+  text-decoration: underline;
+}
+
+.groups {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.75rem 0.9rem;
+  margin-top: 0.5rem;
+  max-height: min(44vh, 20rem);
+  overflow: auto;
+  border: 1px solid var(--atlas-border);
+  border-radius: 7px;
+}
+
+.groups ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.9rem;
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+}
+
+.groups li,
+.groups li + li {
+  margin: 0;
+  font: 0.84rem/1.6 var(--ifm-font-family-monospace);
+}
+
+.panel,
+.defaultPanel {
+  min-width: 0;
+  border: 1px solid var(--atlas-border);
+  border-radius: 8px;
+  overflow: clip;
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 3rem);
+}
+
+/* Fragment navigation selects the diagram even before hydration or without JS. */
+.panel,
+.atlas:has(> section:target) > .defaultPanel:not(:target) {
+  display: none;
+}
+
+.panel:target {
+  display: block;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--atlas-bar);
+  border-bottom: 1px solid var(--atlas-border);
+}
+
+.header h3 {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font: 600 1rem/1.4 var(--ifm-font-family-monospace);
+}
+
+.links {
+  display: flex;
+  gap: 0.8rem;
+  font-size: 0.88rem;
+}
+
+.atlas .note {
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  border-top: 1px solid var(--atlas-border);
+  font-size: 0.93rem;
+}

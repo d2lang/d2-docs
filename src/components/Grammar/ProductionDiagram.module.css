@@ -1,0 +1,91 @@
+.viewport {
+  --rail: #546d9d;
+  --terminal-bg: #fff1dc;
+  --terminal-line: #ac7338;
+  --terminal-text: #714018;
+  --ref-bg: #edf2ff;
+  --ref-line: #6986c3;
+  --ref-text: #193d89;
+  --range-bg: #f4eefd;
+  --range-line: #9074b0;
+  --range-text: #5d3b79;
+  --canvas: #f6f8fe;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  background: radial-gradient(#dce1ef 0.8px, transparent 0.9px) 0 0 / 12px 12px
+    var(--canvas);
+}
+
+:global([data-theme="dark"]) .viewport {
+  --rail: #a7bbee;
+  --terminal-bg: #493c30;
+  --terminal-line: #d4ac77;
+  --terminal-text: #ffe1ac;
+  --ref-bg: #293d63;
+  --ref-line: #9dbdff;
+  --ref-text: #ebf1ff;
+  --range-bg: #383047;
+  --range-line: #bc9be1;
+  --range-text: #eddafc;
+  --canvas: #192235;
+  background-image: radial-gradient(#303c51 0.8px, transparent 0.9px);
+}
+
+.viewport:focus-visible {
+  outline: 2px solid var(--ref-line);
+  outline-offset: -2px;
+}
+
+.diagram {
+  display: block;
+  margin: 0 auto;
+  max-width: none;
+}
+.diagram path {
+  stroke: var(--rail);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+.diagram circle {
+  fill: var(--rail);
+}
+.diagram .end {
+  fill: var(--canvas);
+  stroke: var(--rail);
+  stroke-width: 1.6;
+}
+.diagram text {
+  font: 600 12px var(--ifm-font-family-monospace);
+}
+.rule rect {
+  fill: var(--ref-bg);
+  stroke: var(--ref-line);
+}
+.rule text {
+  fill: var(--ref-text);
+}
+.rule:is(:hover, :focus-visible) rect {
+  stroke: var(--ref-text);
+  stroke-width: 2;
+}
+.rule:is(:hover, :focus-visible) text {
+  text-decoration: underline;
+}
+.literal rect {
+  fill: var(--terminal-bg);
+  stroke: var(--terminal-line);
+}
+.literal text {
+  fill: var(--terminal-text);
+}
+.range rect {
+  fill: var(--range-bg);
+  stroke: var(--range-line);
+}
+.range text {
+  fill: var(--range-text);
+}

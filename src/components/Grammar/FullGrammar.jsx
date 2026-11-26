@@ -2,19 +2,13 @@ import React, { useRef, useState } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import useBrokenLinks from "@docusaurus/useBrokenLinks";
-import structure from "@site/static/grammar/structure.ebnf";
-import lexical from "@site/static/grammar/lexical.ebnf";
+import { grammarFiles } from "./grammar";
 import source from "./source.json";
 import styles from "./FullGrammar.module.css";
 
-const files = [
-  { name: "structure.ebnf", contents: structure },
-  { name: "lexical.ebnf", contents: lexical },
-].map((file) => ({
-  ...file,
-  rules: [...file.contents.matchAll(/^([A-Za-z][A-Za-z0-9]*)[ \t]*=/gm)].map((m) => m[1]),
-}));
-const names = new Set(files.flatMap((file) => file.rules));
+const names = new Set(
+  grammarFiles.flatMap((file) => file.rules.map((rule) => rule.name))
+);
 
 function linkedSource(contents) {
   // Preserve every source character. Quoted terminals and comments are opaque,
@@ -41,7 +35,8 @@ function linkedSource(contents) {
       <a
         key={i}
         id={defines ? id : undefined}
-        href={"#" + id}
+        href={defines ? "#diagram-" + token : "#" + id}
+        title={defines ? "View the " + token + " railroad diagram" : undefined}
         className={defines ? styles.definition : styles.reference}
       >
         {token}
@@ -54,7 +49,7 @@ function GrammarFile({ file }) {
   const anchor = "grammar-" + file.name.split(".")[0];
   const { collectAnchor } = useBrokenLinks();
   collectAnchor(anchor);
-  for (const rule of file.rules) collectAnchor("rule-" + rule);
+  for (const rule of file.rules) collectAnchor("rule-" + rule.name);
   const code = useRef(null);
   const canCopy = useIsBrowser();
   const [copyStatus, setCopyStatus] = useState("");
@@ -118,13 +113,13 @@ export default function FullGrammar() {
       <div className={styles.toolbar}>
         <details className={styles.jump}>
           <summary>Jump to a rule</summary>
-          {files.map((file) => (
+          {grammarFiles.map((file) => (
             <div className={styles.ruleGroup} key={file.name}>
               <strong>{file.name}</strong>
               <ul>
-                {file.rules.map((rule) => (
-                  <li key={rule}>
-                    <a href={"#rule-" + rule}>{rule}</a>
+                {file.rules.map(({ name }) => (
+                  <li key={name}>
+                    <a href={"#rule-" + name}>{name}</a>
                   </li>
                 ))}
               </ul>
@@ -138,7 +133,7 @@ export default function FullGrammar() {
           D2 source · <span>{source.revision.slice(0, 7)}</span>
         </a>
       </div>
-      {files.map((file) => (
+      {grammarFiles.map((file) => (
         <GrammarFile key={file.name} file={file} />
       ))}
     </div>
