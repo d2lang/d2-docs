@@ -43,6 +43,8 @@
     ]
   },
   "devDependencies": {
-    "docusaurus-plugin-llms": "0.6.2"
+    "docusaurus-plugin-llms": "0.6.2",
+    "mdast-util-from-markdown": "^2.0.0",
+    "minimatch": "9.0.3"
   }
 }
