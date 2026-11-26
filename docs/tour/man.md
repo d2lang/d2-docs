@@ -4,7 +4,7 @@ pagination_next: tour/exports
 
 # CLI manual
 
-This is the CLI manual for D2 v0.9.1. Run `man d2` to see the manual for your installed version.
+This is the CLI manual for D2 v0.10.0. Run `man d2` to see the manual for your installed version.
 
 ```text
 NAME

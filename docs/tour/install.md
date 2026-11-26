@@ -46,7 +46,7 @@ To remove this installation, use `--method=standalone --uninstall`. [How verific
 
 On x64 Windows, download an MSI from the [D2 releases page](https://github.com/d2lang/d2/releases).
 
-- **Just for your account (v0.9.1 and later).** Choose the file ending in
+- **Just for your account (v0.10.0 and later).** Choose the file ending in
   `-windows-amd64-user.msi`. It installs in `%LOCALAPPDATA%\Programs\D2` without administrator rights.
 - **For all users.** Choose the file ending in `-windows-amd64.msi`. It requires
   administrator rights and installs in `%ProgramFiles%\D2`.
@@ -57,7 +57,7 @@ For native ARM64, extract the `-windows-arm64.tar.gz` archive and run `d2.exe` f
 
 ## Install from source
 
-Building D2 v0.9.1 from source requires Go 1.27.4 or newer.
+Building D2 v0.10.0 from source requires Go 1.27.4 or newer.
 
 ```shell
 go install github.com/d2lang/d2@latest
