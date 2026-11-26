@@ -164,8 +164,11 @@ Connections for grids themselves work normally as you'd expect.
 
 ### Connections between grid cells
 
-With Dagre and ELK, connections between shapes inside a grid are center-center straight
-segments, i.e., no path-finding. With TALA, these connections use TALA's routing engine.
+With Dagre or ELK, a single connection between grid cells usually follows a straight
+line, even if another cell is in the way. D2 separates parallel and opposing
+connections and draws self-loops. A connection to a named SQL column meets that
+row in the table.
+TALA uses its own router to find paths around other cells.
 
 <div className="embedSVG" dangerouslySetInnerHTML={{__html: require('@site/static/img/generated/grid-connections.svg2')}}></div>
 

@@ -32,6 +32,16 @@ If you want to uninstall:
 curl -fsSL https://d2lang.com/install.sh | sh -s -- --uninstall
 ```
 
+For standalone releases from v0.8.2 onward, the installer checks the archive’s SHA-256
+checksum before extracting it. To also verify that D2’s release workflow built the archive,
+use `--verify-provenance`. This selects a standalone installation.
+
+```shell
+curl -fsSL https://d2lang.com/install.sh | sh -s -- --verify-provenance
+```
+
+To remove this installation, use `--method=standalone --uninstall`. [How verification works](https://github.com/d2lang/d2/blob/master/docs/INSTALL.md#security)
+
 ## Windows
 
 On x64 Windows, download an MSI from the [D2 releases page](https://github.com/d2lang/d2/releases).
@@ -47,7 +57,7 @@ For native ARM64, extract the `-windows-arm64.tar.gz` archive and run `d2.exe` f
 
 ## Install from source
 
-Alternatively, you can install from source:
+Building D2 v0.9.1 from source requires Go 1.27.4 or newer.
 
 ```shell
 go install github.com/d2lang/d2@latest
@@ -67,5 +77,6 @@ echo 'x -> y' > input.d2
 d2 -w input.d2 out.svg
 ```
 
-It should have spun up a local web browser that will automatically refresh when you change
-`input.d2`. Modify `input.d2` as you go through this tour to follow along.
+Watch mode opens a browser that refreshes when you change `input.d2`. If it doesn’t open,
+copy the full URL printed by `d2 -w` into your browser. Modify `input.d2` as you go through
+this tour to follow along.
