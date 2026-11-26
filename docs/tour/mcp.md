@@ -11,19 +11,10 @@ uses the Model Context Protocol (MCP) over standard input and output.
 
 ## Connect your client
 
-The MCP server is included in the upcoming D2 v0.10.0. You can try it before
-the release by installing from `master` with Go 1.27.4 or later.
-
-```shell
-git clone --depth 1 https://github.com/d2lang/d2.git
-cd d2
-go install .
-```
-
-Run `d2 mcp --help` to check that your shell finds the new executable. Go installs
-it in `GOBIN`, or the `bin` directory under `go env GOPATH` by default. If your
-client finds an older D2 on its `PATH`, use the absolute path to the new executable
-as the client’s launch command.
+The MCP server is built into D2 v0.10.0 and later. [Install D2](/tour/install/)
+and run `d2 mcp --help` to verify that the command is available. If your client
+finds an older D2 on its `PATH`, configure it with the absolute path to the D2
+executable you just installed.
 
 For Codex or Claude Code, register D2 from your terminal.
 
