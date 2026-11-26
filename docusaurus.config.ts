@@ -193,7 +193,15 @@ const config: Config = {
     },
     prism: {
       additionalLanguages: ["bash"],
-      theme: themes.github,
+      theme: {
+        ...themes.vsLight,
+        styles: [
+          ...themes.vsLight.styles,
+          { types: ["attr-name"], style: { color: "#a31515" } },
+          { types: ["attr-value"], style: { color: "#0451a5" } },
+          { types: ["function"], style: { color: "#795e26" } },
+        ],
+      },
       darkTheme: themes.dracula,
     },
     footer: {
