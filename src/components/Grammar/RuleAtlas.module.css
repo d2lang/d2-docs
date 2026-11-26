@@ -46,7 +46,7 @@
 }
 
 .sidebar {
-  padding: 1rem 0.65rem;
+  padding: 1rem 0.65rem 0.65rem;
   border-right: 1px solid var(--border);
   background: var(--atlas-inset);
   min-width: 0;
@@ -80,7 +80,6 @@
 }
 
 .list {
-  max-height: 23rem;
   margin-top: 0.6rem;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -246,6 +245,19 @@
 .panel pre code {
   font: inherit;
   white-space: inherit;
+}
+
+@container (width > 37rem) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    /* Let the selected rule determine the height of this grid row. */
+    contain: size;
+  }
+  .list {
+    flex: 1;
+    min-height: 0;
+  }
 }
 
 @container (max-width: 37rem) {
