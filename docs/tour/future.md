@@ -141,7 +141,8 @@ styles. And, there should be easy ways to create and modify themes.
 ## Developer Tooling
 
 The better support a dev tool has for existing workflows and familiar tools, the more
-useful it is. D2 has official Vim and VSCode extensions. Features within the language
+useful it is. D2 has official [Vim](/tour/vim/) and [VS Code](/tour/vscode/)
+extensions. Features within the language
 exist solely for bettering editor environments, such as autoformat and being able to parse
 broken syntax and output multiple, human-readable error messages.
 
@@ -166,9 +167,8 @@ unplanned usage.
 
 ### Plan
 
-1. Complete editor integrations. Currently, syntax highlighting is supported. But a
-   feature-complete integration for VSCode for example would allow rendering to its
-   built-in browser, autoformat, call out to LSP functions to refactor, and more.
+1. Continue improving editor integrations. The VS Code extension already supports
+   diagram previews, formatting, and refactoring with the D2 language server.
 1. Build out imports/exports. D2 exports to [SVG, PNG, PDF, PPTX, GIF, and ASCII](/tour/exports).
    It should have a transpiler to import other popular text-to-diagram languages. It
    should take in CSVs of schemas to make ERDs.

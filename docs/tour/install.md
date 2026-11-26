@@ -80,3 +80,6 @@ d2 -w input.d2 out.svg
 Watch mode opens a browser that refreshes when you change `input.d2`. If it doesn’t open,
 copy the full URL printed by `d2 -w` into your browser. Modify `input.d2` as you go through
 this tour to follow along.
+
+In VS Code, install the official [d2lang extension](/tour/vscode/) to preview the
+diagram beside your source.

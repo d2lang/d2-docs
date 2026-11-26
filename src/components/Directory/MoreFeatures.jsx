@@ -17,8 +17,8 @@ const moreFeatures = [
     href: "https://github.com/d2lang/d2/releases",
   },
   {
-    title: "VSCode and Vim",
-    description: "Official editor support for VSCode and Vim, with more coming soon.",
+    title: "VS Code and Vim",
+    description: "Install d2lang for VS Code or the official D2 plugin for Vim.",
     icon: "vscode.svg",
     href: "/tour/extensions/#official",
   },
