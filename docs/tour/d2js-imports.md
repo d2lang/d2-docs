@@ -3,7 +3,7 @@
 If your diagram [imports other D2 files](/tour/imports/), pass their paths and
 contents to `compile` in `fs`. Set `inputPath` to the file to render.
 
-In the [getting started example](/d2js/#render-a-diagram), replace the `compile`
+In the [getting started example](/tour/d2js/#render-a-diagram), replace the `compile`
 call with this one.
 
 ```js

@@ -148,11 +148,16 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "D2.js",
+      link: { type: "doc", id: "tour/d2js" },
+      items: ["tour/d2js", "tour/d2js-imports"],
+    },
+    {
+      type: "category",
       label: "API",
       link: { type: "doc", id: "tour/api" },
       items: ["tour/api"],
     },
-    { type: "ref", id: "d2js/index", label: "D2.js" },
     "tour/man",
     "tour/exports",
     "tour/cheat-sheet",
@@ -167,7 +172,6 @@ const sidebars: SidebarsConfig = {
       items: ["donors"],
     },
   ],
-  d2jsSidebar: ["d2js/index", "d2js/imports"],
   releasesSidebar: [
     {
       type: "category",

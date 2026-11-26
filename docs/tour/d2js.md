@@ -1,6 +1,6 @@
 ---
-slug: /d2js
 sidebar_label: Getting started
+pagination_next: tour/d2js-imports
 ---
 
 # D2.js
