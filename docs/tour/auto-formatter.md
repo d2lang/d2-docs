@@ -1,10 +1,10 @@
 # Autoformat
 
-You almost never have to think about style decisions like indentation, newlines,
-number of hyphens, or spacing. D2's auto-formatter will format your D2 file for you on
-compile, keeping all your declarations consistent and readable, effortlessly.
+Running `d2 file.d2` reads the diagram source and writes `file.svg`.
 
-If your file is
+## Running the formatter {#running-formatter}
+
+Suppose `file.d2` contains the following diagram.
 
 ```d2
 aws_s3:    AWS S3 California{
@@ -12,7 +12,7 @@ aws_s3:    AWS S3 California{
 }
 ```
 
-When you compile, it becomes
+Run `d2 fmt file.d2` to rewrite the source with standard spacing and arrow syntax.
 
 ```d2
 aws_s3: AWS S3 California {
@@ -20,13 +20,4 @@ aws_s3: AWS S3 California {
 }
 ```
 
-## Running formatter
-
-If you're using the `d2` CLI, you can run the formatter on files with
-
-```sh
-d2 fmt file.d2
-```
-
-The formatter is meant to be integrated into plugins and extensions which automatically
-call the formatter upon file writing. This functionality is dependent on the plugin.
+Some editor extensions can also run the formatter when you save a file.

@@ -4,8 +4,7 @@ pagination_next: tour/exports
 
 # CLI manual
 
-The following is a copy of the `man` (manual) for D2 v0.9.0. Run `man d2` to view the
-manual for your installed version.
+This is the CLI manual for D2 v0.10.0. Run `man d2` to see the manual for your installed version.
 
 ```text
 NAME
@@ -71,10 +70,12 @@ OPTIONS
 		 Center the SVG in the containing viewbox, such as your
 		 browser screen.
 
-     --scale -1  Scale the output. E.g., 0.5 to halve the default size.
-		 Default -1 means that SVG's will fit to screen and all others
-		 will use their default render size. Setting to 1 turns off
-		 SVG fitting to screen.
+     --scale -1  Scale the output. For example, 0.5 halves the default size.
+		 The default of -1 fits SVGs to the screen and uses the
+		 default render size for other exports.  Use 1 for an SVG with
+		 explicit dimensions.  Set the scale in the diagram with vars:
+		 {d2-config: {scale: 0.5}}.  An explicit flag or SCALE
+		 environment variable overrides the diagram..
 
      --font-regular
 		 Path to .ttf file to use for the regular font. If none
@@ -111,10 +112,41 @@ OPTIONS
      --pad 100	 Pixels padded around the rendered diagram.
 
      --animate-interval 0
-		 If given, multiple boards are packaged as 1 SVG which
-		 transitions through each board at the interval (in
-		 milliseconds). Can only be used with SVG or GIF exports. For
-		 GIF exports, defaults to 1000ms if not specified.
+		 Set the time each board is displayed in an animated SVG or
+		 GIF. The flag takes milliseconds.  Set the same interval in
+		 D2 source with vars: {d2-config: {animate-interval: 800ms}}.
+		 The source value accepts integer milliseconds or a duration
+		 such as 1.5s.	The flag takes precedence over
+		 D2_ANIMATE_INTERVAL, which takes precedence over the file.
+		 Zero selects ordinary SVG export or the default GIF interval
+		 of 1000ms..
+
+     --animate-duration 0
+		 Set the transition duration for changes to numeric
+		 properties, colors, and grid layouts between steps.  Changes
+		 can be authored directly or through variables.  Direct
+		 numeric changes include opacity, stroke-width, stroke-dash,
+		 border-radius, font-size, width, and height.  Compatible
+		 gradients have the same kind, direction, and number of stops.
+		 Each stop interpolates its color and position.  In grids,
+		 cells with the same ID move to their new positions.  New
+		 cells grow in and removed cells shrink away.  D2 also
+		 animates complete row or column changes, replacements in a
+		 fixed slot, and cells that expand or collapse a nested grid.
+		 In TALA steps, connections can draw toward arriving nodes,
+		 containers can form around their contents, and services can
+		 move between containers.  Appended SQL rows can drop into
+		 place and sequence messages can trace from sender to
+		 receiver.  The flag takes milliseconds. The file also accepts
+		 durations, for example vars: {d2-config: {animate-interval:
+		 800ms; animate-duration: 300ms}}.  All interpolated values
+		 change together for 300ms, then hold their values for the
+		 remaining 500ms.  A longer transition extends the step to its
+		 duration.  The duration defaults to zero, which disables
+		 interpolation, and accepts values up to ten minutes.  The
+		 flag takes precedence over D2_ANIMATE_DURATION, which takes
+		 precedence over the file.  Static exports show the authored
+		 values..
 
      --browser true
 		 Browser executable that watch opens. Setting to 0 opens no
@@ -124,13 +156,97 @@ OPTIONS
 		 Set the diagram layout engine to the passed string. For a
 		 list of available options, run layout.
 
+     --dagre-nodesep pixels
+		 Set the spacing between nodes in a Dagre rank.
+
+     --dagre-edgesep pixels
+		 Set the spacing between edges in a Dagre layout.  Both Dagre
+		 settings accept nonnegative whole pixels.  Values in the
+		 diagram take precedence over the corresponding flags, for
+		 example vars: {d2-config: {data: {dagre-nodesep: 200;
+		 dagre-edgesep: 30}}}.
+
+     --elk-algorithm algorithm
+		 Select the ELK layout algorithm. The default is layered.
+		 Other choices for connected diagrams are force, stress,
+		 mrtree and radial.
+
+     --elk-forceModel model
+		 Use the fruchterman_reingold (default) or eades force model.
+
+     --elk-forceRepulsion strength
+		 Set repulsion between unconnected nodes in the eades force
+		 model. The default is 5.
+
+     --elk-stressDesiredEdgeLength distance
+		 Set the target center-to-center distance between connected
+		 nodes in stress layout. The default is 100.
+
+     --elk-mrtreeSearchOrder order
+		 Build the spanning tree depth-first (dfs, the default) or
+		 breadth-first (bfs).
+
+     --elk-mrtreeWeighting order
+		 Order sibling branches by model_order (the default),
+		 descendants or fan.
+
+     --elk-radialRadius distance
+		 Set the initial spacing between tree levels in radial layout.
+		 The default, 0, chooses it automatically.
+
+     --elk-radialWedgeCriteria criterion
+		 Divide angular space between radial branches by node_size
+		 (the default) or leaf_number.
+
+     --elk-radialCompactor mode
+		 Pack radial rings with radial_compaction or individual
+		 branches with wedge_compaction. The default is none.
+
+     --elk-nodeNode, --elk-edgeNode, --elk-edgeEdge distance
+		 Minimum spacing between nodes, between edges and nodes, or
+		 between edges in the same ELK layer.
+
+     --elk-edgeRouting style
+		 Route ELK edges with orthogonal or polyline segments.
+
+     --elk-wrappingStrategy strategy
+		 Wrap a long ELK pipeline with single_edge or multi_edge. The
+		 default is off.
+
+     --elk-forceNodeModelOrder
+		 Preserve the declaration order of nodes within layers at the
+		 root of the diagram.
+
+     --elk-feedbackEdges
+		 Route backward connections around the main flow.
+
+     --elk-mergeEdges
+		 Share attachment points for ordinary incoming or outgoing
+		 edges.  Set these options in a diagram with the flag name
+		 inside vars.d2-config.data.  Diagram settings take precedence
+		 over the CLI.	Set elk-layer-constraint on a shape to first,
+		 last or none.	These option values are case-insensitive.
+
      -b, --bundle true
 		 Bundle all assets and layers into the output svg.
 
+     --allow-private-network false
+		 Allow remote image assets to access private, loopback, and
+		 link-local networks. Only enable this for trusted diagrams.
+
+     --allow-local-files true
+		 Allow the diagram to read local files: imports, and images
+		 bundled into or rendered in the output. Disable it to render
+		 untrusted diagrams.
+
      --force-appendix false
-		 An appendix for tooltips and links is added to PNG exports
-		 since they are not interactive. Setting this to true adds an
-		 appendix to SVG exports as well.
+		 Add a numbered appendix for tooltips and links to SVG
+		 exports, including each frame of an animated SVG.  PNG
+		 exports include an appendix by default.  Set the SVG
+		 preference in the diagram with vars: {d2-config:
+		 {force-appendix: true}}.  An explicit flag or
+		 D2_FORCE_APPENDIX environment variable overrides the
+		 diagram..
 
      --target	 Target board to render. Pass an empty string to target root
 		 board. If target ends with '*', it will be rendered with all
@@ -227,6 +343,12 @@ ENVIRONMENT VARIABLES
      D2_BUNDLE
 	     See -b[undle] flag.
 
+     D2_ALLOW_PRIVATE_NETWORK
+	     See --allow-private-network flag.
+
+     D2_ALLOW_LOCAL_FILES
+	     See --allow-local-files flag.
+
      D2_FORCE_APPENDIX
 	     See --force-appendix flag.
 
@@ -256,6 +378,9 @@ ENVIRONMENT VARIABLES
 
      D2_ANIMATE_INTERVAL
 	     See --animate-interval flag.
+
+     D2_ANIMATE_DURATION
+	     See --animate-duration flag.
 
      D2_TIMEOUT
 	     See --timeout flag.
