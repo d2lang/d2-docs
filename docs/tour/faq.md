@@ -48,6 +48,9 @@ way. To include D2 in your own browser projects, install D2.js:
 npm install @d2lang/d2
 ```
 
+For the nightly build, run `npm install @d2lang/d2@nightly`. It updates on days when
+D2.js or its WebAssembly engine changes.
+
 See the [D2.js docs](https://github.com/d2lang/d2/tree/master/d2js/js#readme) for
 instructions and examples.
 

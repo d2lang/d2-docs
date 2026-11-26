@@ -1,6 +1,7 @@
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 import { themes } from "prism-react-renderer";
+import { ruleNotes } from "./src/components/Grammar/ruleNotes";
 
 const config: Config = {
   title: "D2 Documentation",
@@ -8,12 +9,15 @@ const config: Config = {
   url: "https://d2lang.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: { onBrokenMarkdownLinks: "warn" },
+    mdx1Compat: { comments: true, headingIds: true, admonitions: true },
+  },
   favicon: "img/favicon.ico",
   trailingSlash: true,
 
   future: {
-    experimental_faster: true,
+    faster: true,
     v4: true,
   },
 
@@ -206,6 +210,7 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
 
   plugins: [
+    [require.resolve("./scripts/llms.cjs"), { ruleNotes }],
     "docusaurus-plugin-sass",
     [
       "@docusaurus/plugin-client-redirects",
