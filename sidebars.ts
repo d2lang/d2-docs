@@ -155,6 +155,7 @@ const sidebars: SidebarsConfig = {
     "tour/man",
     "tour/exports",
     "tour/cheat-sheet",
+    "tour/grammar",
     "tour/faq",
     "tour/troubleshoot",
     "tour/help",
