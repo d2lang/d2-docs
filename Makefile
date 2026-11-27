@@ -1,7 +1,11 @@
 .POSIX:
 
 .PHONY: all
-all: fmt build
+all: fmt test build
+
+.PHONY: test
+test:
+	node --test scripts/inline-svg-fonts.test.cjs
 
 .PHONY: fmt
 fmt: node_modules

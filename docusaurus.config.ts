@@ -235,7 +235,7 @@ const config: Config = {
     ],
     (ctx) => ({
       name: "wasm",
-      configureWebpack: () => ({
+      configureWebpack: (_config, isServer) => ({
         module: {
           rules: [
             {
@@ -261,6 +261,12 @@ const config: Config = {
             {
               test: /\.svg2$/,
               type: "asset/source",
+              use: [
+                {
+                  loader: require.resolve("./scripts/inline-svg-fonts.cjs"),
+                  options: { baseUrl: ctx.baseUrl, emitFiles: !isServer },
+                },
+              ],
             },
           ],
         },
