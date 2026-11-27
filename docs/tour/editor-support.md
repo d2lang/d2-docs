@@ -1,12 +1,7 @@
 # Editor Support
 
-We have first class language support for both Vim and VS Code.
+D2 maintains extensions for VS Code and Vim.
 
-Automatic indentation and syntax highlighting are fully supported and make working with
-the D2 language far more pleasant.
-
-- https://github.com/d2lang/d2-vim
-- https://github.com/d2lang/d2-vscode
-
-The syntax highlighting will even catch basic errors for you if your color theme
-highlights illegal syntax.
+- **VS Code** — Install [d2lang](https://marketplace.visualstudio.com/items?itemName=d2lang.d2lang)
+  for syntax highlighting, formatting, and diagram previews. See the [VS Code guide](/tour/vscode/).
+- **Vim** — Install the [D2 plugin](/tour/vim/) for syntax highlighting and automatic indentation.
