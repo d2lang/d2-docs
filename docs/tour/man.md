@@ -13,12 +13,13 @@ NAME
      d2 – compiles and renders d2 diagrams into svgs.
 
 SYNOPSIS
-     d2 [--watch false] [--theme 0] [--salt string] file.d2
+     d2 [--watch false] [--theme theme] [--salt string] file.d2
 	[file.svg | file.png | file.pdf | file.pptx | file.gif | file.txt]
      d2 layout [name]
-     d2 fmt file.d2 ...
+     d2 fmt [--check] [--diff] file.d2 | file.md | - ...
      d2 play file.d2
      d2 validate file.d2
+     d2 lsp [--stdio]
      d2 mcp [--root dir] [--no-ui] [--timeout seconds]
 
 DESCRIPTION
@@ -55,13 +56,16 @@ OPTIONS
      -p, --port 0
 		 Port listening address when used with watch.
 
-     -t, --theme 0
-		 Set the diagram theme ID.
+     -t, --theme theme
+		 Set the diagram theme by ID or name. For example, 300 and
+		 Terminal select the same theme.  The default is 0 (Neutral
+		 Default).  Run d2 themes to list the available names and IDs.
 
-     --dark-theme -1
-		 The theme to use when the viewer's browser is in dark mode.
-		 When left unset --theme is used for both light and dark mode.
-		 Be aware that explicit styles set in D2 code will still be
+     --dark-theme theme
+		 The theme ID or name to use when the viewer's browser is in
+		 dark mode.  The default of -1 leaves this option unset. When
+		 left unset --theme is used for both light and dark mode. Be
+		 aware that explicit styles set in D2 code will still be
 		 applied and this may produce unexpected results. We plan on
 		 resolving this by making style maps in D2 light/dark mode
 		 specific. See https://github.com/d2lang/d2/issues/831.
@@ -271,7 +275,11 @@ OPTIONS
 		 recommended to increase this value.
 
      --check false
-		 Check that the specified files are formatted correctly.
+		 With fmt, exit with status 1 if an input needs formatting.
+
+     --diff false
+		 With fmt, print a unified diff instead of writing formatted
+		 input.  Combine with --check to fail if changes are needed.
 
      --salt string
 		 Add a salt value to ensure the output uses unique IDs. This
@@ -310,8 +318,11 @@ SUBCOMMANDS
 
      themes	 Lists available themes.
 
-     fmt file.d2 ...
-		 Format all passed files
+     fmt file.d2 | file.md | - ...
+		 Format D2 source files in place.  For .md and .markdown
+		 files, format only fenced code blocks marked d2.  Pass - to
+		 read D2 from stdin and always print the formatted source on
+		 success.
 
      play file.d2
 		 Opens the file in playground, an online web viewer
@@ -320,10 +331,23 @@ SUBCOMMANDS
      validate file.d2
 		 Validates file.d2
 
-     mcp         Run the Model Context Protocol server on standard input and
-                 output. Use --root to allow diagram files and local images
-                 under a directory, --no-ui to disable the inline viewer, and
-                 --timeout to set the per-call deadline in seconds (default 60).
+     lsp [--stdio]
+		 Runs the D2 language server on standard input and output for
+		 editors.
+
+     mcp	 Run a Model Context Protocol server on standard input and
+		 standard output.  AI clients can read the D2 language guide,
+		 check diagrams for errors, and render PNG, SVG or text.  The
+		 server denies local file access by default.  Use --root dir
+		 or D2_MCP_ROOT to allow .d2 source files and local images
+		 beneath that directory.  Diagram paths and their symbolic
+		 link targets must end in .d2.	Use --no-ui or D2_MCP_NO_UI to
+		 disable the inline diagram viewer.  Set the per-call time
+		 limit with --timeout seconds or D2_MCP_TIMEOUT.  The default
+		 is 60 seconds and the accepted range is 1 through 600.  When
+		 a call reaches its deadline, the server asks the renderer to
+		 stop.	If the renderer finishes successfully, the server
+		 returns the completed diagram.
 
 ENVIRONMENT VARIABLES
      Many flags can also be set with environment variables.
