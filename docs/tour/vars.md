@@ -89,7 +89,7 @@ and text decorations between layers and scenarios. See the [animation configurat
 ### Output scale and SVG appendix
 
 On D2's development branch (`master`), you can set `scale` and `force-appendix`
-in the diagram. These source options will be available in the next release.
+in the diagram. These source options are available in D2 v0.10.0 and later.
 
 ```d2
 vars: {
