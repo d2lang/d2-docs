@@ -15,7 +15,7 @@ Dagre is D2's default layout engine.
 ## Spacing
 
 On D2's development branch (`master`), you can set Dagre spacing in
-`vars.d2-config.data`. These source options will be available in the next release.
+`vars.d2-config.data`. These source options are available in D2 v0.10.0 and later.
 
 ```d2
 vars: {
