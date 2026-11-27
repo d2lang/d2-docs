@@ -16,9 +16,8 @@ npm install @d2lang/d2
 ```
 
 For the nightly build, use `npm install @d2lang/d2@nightly`. A new nightly is
-published on days when D2.js or its WebAssembly engine changes. The
-[D2.js changelog](https://github.com/d2lang/d2/blob/master/d2js/js/CHANGELOG.md)
-lists the D2 engine version included in each recent release.
+published on days when D2.js or its WebAssembly engine changes.
+For changes in each version, see the [D2 release notes](/releases/intro/).
 
 ## Render a diagram
 
