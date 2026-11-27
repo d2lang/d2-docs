@@ -20,6 +20,10 @@ _bespoke() {
     animation_file=${animation_source##*/}
     sh_c d2 --omit-version --pad 8 "$animation_source" "$output_dir/${animation_file%.d2}.svg"
   done
+  for annotation_source in ./static/bespoke-d2/annotation-*.d2; do
+    annotation_file=${annotation_source##*/}
+    sh_c d2 --omit-version --pad 16 "$annotation_source" "$output_dir/${annotation_file%.d2}.svg"
+  done
   sh_c d2 --omit-version --pad 50 ./static/bespoke-d2/tiktok.d2 ${output_dir}/tiktok.pdf
   sh_c d2 --omit-version --pad 0 ./static/bespoke-d2/cat.d2 ${output_dir}/cat.pdf
   sh_c d2 --omit-version --pad 50 ./static/bespoke-d2/lotr.d2 ${output_dir}/lotr.pdf

@@ -1,0 +1,26 @@
+vars: {
+  d2-config: {
+    sketch: true
+  }
+}
+direction: right
+
+laptop: Your laptop
+resolver: Resolver
+root: Root servers
+tld: .com servers
+auth: "example.com\nname server"
+
+laptop -> resolver
+resolver -> root
+resolver -> tld
+resolver -> auth
+
+resolver.annotation: cached for 1 hour {shape: box}
+(resolver -> root)[0].annotation.shape: cross
+(resolver -> tld)[0].annotation.shape: cross
+(resolver -> auth)[0].annotation.shape: cross
+
+annotation: |md
+  The [resolver](resolver) remembers it, so next time it asks nobody.
+|

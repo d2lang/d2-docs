@@ -1,0 +1,9 @@
+direction: right
+
+client -> api
+api -> cache
+api -> db
+
+annotation: |md
+  The [API](api) asks the [cache](cache) before it reads the [database](db).
+|

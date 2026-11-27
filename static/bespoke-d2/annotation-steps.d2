@@ -1,0 +1,21 @@
+vars: {
+  d2-config: {
+    animate-interval: 1600ms
+  }
+}
+direction: right
+
+queue -> worker
+
+steps: {
+  1: {
+    queue.annotation: 40 jobs waiting
+  }
+  2: {
+    worker -> db
+    worker.annotation: one at a time
+  }
+  3: {
+    db.annotation: the bottleneck {shape: box}
+  }
+}
