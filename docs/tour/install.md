@@ -51,7 +51,11 @@ On x64 Windows, download an MSI from the [D2 releases page](https://github.com/d
 - **For all users.** Choose the file ending in `-windows-amd64.msi`. It requires
   administrator rights and installs in `%ProgramFiles%\D2`.
 
-After installation, open a new PowerShell or Command Prompt window and run `d2 --version`.
+When upgrading, choose the same installation scope as before. If both copies are installed,
+Windows normally finds the all-users copy first on `PATH`, even when the per-user copy is newer.
+Open a new PowerShell or Command Prompt window and run `where.exe d2` to see the search order,
+then `d2 --version` to check the version that runs. To run the per-user copy directly in PowerShell,
+use `& "$env:LOCALAPPDATA\Programs\D2\d2.exe" --version`.
 
 For native ARM64, extract the `-windows-arm64.tar.gz` archive and run `d2.exe` from its `bin` directory.
 
