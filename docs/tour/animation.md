@@ -125,9 +125,9 @@ and sketch mode.
 
 ## Animate connection icons
 
-On D2's development branch, `icon.style.animated: 3/s` sends three icons per
-second at the same speed, up to 64 icons in flight per connection. Set `0/s`
-to stop sending and let them arrive.
+`icon.style.animated: 3/s` sends three icons per second at the same speed, up
+to 64 icons in flight per connection. Set `0/s` to stop sending and let them
+arrive.
 
 ### One checkout, nine stock reads
 
