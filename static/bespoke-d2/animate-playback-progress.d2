@@ -1,0 +1,23 @@
+vars: {d2-config: {animate-interval: 1600ms; pad: 8}}
+direction: right
+
+classes: {
+  stage: {style: {fill: "#F1F4F6"; stroke: "#ABB7BF"; border-radius: 8}}
+  active: {style: {fill: "#225B50"; stroke: "#18463D"; font-color: white; border-radius: 8}}
+}
+
+queue: Queue backup {class: active}
+copy: Copy files {class: stage}
+verify: Verify archive {class: stage}
+queue -> copy -> verify
+
+steps: {
+  copying: {
+    queue.class: stage
+    copy.class: active
+  }
+  verifying: {
+    copy.class: stage
+    verify.class: active
+  }
+}

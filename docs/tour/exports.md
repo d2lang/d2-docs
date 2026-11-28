@@ -9,6 +9,7 @@ On the CLI, you may export `.d2` into
 * [PPTX](#pptx)
 * [WebM](#webm)
 * [GIF](#gif)
+* [MP4](#mp4)
 * [ASCII](#ascii)
 * [Stdout](#stdout)
 
@@ -79,11 +80,11 @@ with composition (e.g. diagram with multiple Layers, Scenarios, Steps).
 
 ## WebM
 
-Run `d2 in.d2 out.webm` to export a VP9 video.
+Run `d2 in.d2 out.webm` on D2’s development branch to export a VP9 video.
 Install FFmpeg 5.1 or newer with the `libvpx-vp9` encoder and make sure
 `ffmpeg` is on your `PATH`.
 
-WebM uses the same video settings as MP4. Choose `low`, `medium`, `high`
+WebM uses the same video settings as [MP4](#mp4). Choose `low`, `medium`, `high`
 (the default), or `best` with `--video-quality`. Lower settings produce smaller
 files. The canvas follows the diagram by default. Use `--video-size=1920x1080`
 to fit and center it at a specific resolution.
@@ -102,6 +103,9 @@ To reproduce the clip, download the <a href="/bespoke-d2/animate-icon-travel-tim
 d2 --video-quality=medium --video-duration=6s animate-icon-travel-time.d2 pricing.webm
 ```
 
+This single-board clip uses the default interval. Add `--animate-progress` to
+show the [playback progress line](./animation.md#playback-progress).
+
 ## GIF
 
 ```shell
@@ -112,6 +116,22 @@ This export format is useful for giving presentations when used with short compo
 For example, show two Scenarios, show a couple of steps. Something that the audience can
 digest in a loop that lasts a couple of seconds without needing to flip through it
 manually.
+
+## MP4
+
+On D2's development branch, use a `.mp4` output filename to play the boards once
+as an H.264 video. Install FFmpeg 5.1 or newer with the `libx264` encoder and make
+sure `ffmpeg` is on your `PATH`.
+
+```shell
+d2 in.d2 out.mp4
+d2 --video-size=1920x1080 --video-quality=medium in.d2 out.mp4
+```
+
+The default resolution follows the diagram. Choose `low`, `medium`, `high`
+(default), or `best` for quality. Use `--video-duration=10s` to trim or repeat
+the animation to ten seconds. See [Playback progress](./animation.md#playback-progress)
+to show elapsed time in the video.
 
 ## ASCII
 
@@ -185,3 +205,4 @@ echo "x -> y" | d2 --stdout-format=png - - > example.png
 ```
 
 Supported formats are `svg`, `png`, `pdf`, `pptx`, `gif`, and `ascii` (`txt` also works).
+The development branch also supports `--stdout-format=webm` and `--stdout-format=mp4`.
