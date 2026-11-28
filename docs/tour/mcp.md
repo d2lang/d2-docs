@@ -1,9 +1,14 @@
 # MCP server
 
-[Install D2](/tour/install/) v0.10.0 or later to let your AI client look up D2
-syntax, check diagrams for errors, and render them in chat.
+D2’s MCP server lets your AI client look up D2 syntax, check diagrams for
+errors, and render them in chat.
 
-Run the command for your client.
+In VS Code 1.101 or later, install the [D2 extension](/tour/vscode/) and open
+a trusted workspace. Run **MCP: List Servers** from the Command Palette and
+select **D2** to use the bundled server.
+
+For Codex or Claude Code, [install the D2 CLI](/tour/install/) v0.10.0 or
+later and run the command for your client.
 
 | Client | Command |
 | --- | --- |
