@@ -36,6 +36,8 @@ This example is an animated SVG you can embed in a GitHub README.
 
 To point at things and caption each step, see [annotations](./annotations.md).
 
+To share an animation as a video, see [WebM export](./exports.md#webm).
+
 ## Configuration
 
 ```d2-incomplete

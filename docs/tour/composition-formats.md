@@ -13,6 +13,8 @@ export options are different.
   - Set `animate-interval` in `vars.d2-config` to play the boards in a loop,
     or pass `--animate-interval=1200` on the CLI for a 1.2-second interval.
     Set `animate-duration` to animate changes between steps. See [Animation](./animation.md).
+- WebM video
+  - Use a `.webm` output filename to play the boards once as VP9 video. See [WebM export](./exports.md#webm) for quality, size, and duration settings.
 - Single animated GIF
   - Use a `.gif` output filename to export the animation as a GIF.
 - PDF

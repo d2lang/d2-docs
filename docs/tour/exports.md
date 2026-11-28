@@ -7,6 +7,7 @@ On the CLI, you may export `.d2` into
 * [PNG](#png)
 * [PDF](#pdf)
 * [PPTX](#pptx)
+* [WebM](#webm)
 * [GIF](#gif)
 * [ASCII](#ascii)
 * [Stdout](#stdout)
@@ -76,6 +77,31 @@ d2 in.d2 out.pptx
 Similar to PDF exports. This export format is useful for giving presentations when used
 with composition (e.g. diagram with multiple Layers, Scenarios, Steps).
 
+## WebM
+
+On D2's development branch, run `d2 in.d2 out.webm` to export a VP9 video.
+Install FFmpeg 5.1 or newer with the `libvpx-vp9` encoder and make sure
+`ffmpeg` is on your `PATH`.
+
+WebM uses the same video settings as MP4. Choose `low`, `medium`, `high`
+(the default), or `best` with `--video-quality`. Lower settings produce smaller
+files. The canvas follows the diagram by default. Use `--video-size=1920x1080`
+to fit and center it at a specific resolution.
+
+D2 plays the selected boards once. Use `--video-duration` to trim or repeat a
+tour, or to record motion on a single board. In this six-second clip, a dot
+reaches the price cache every 200 ms and the catalog database every 1.2 seconds.
+
+<video controls playsInline preload="metadata" width="542" height="416" style={{maxWidth: '100%', height: 'auto'}} aria-label="Pricing API sends requests to the price cache and catalog database at different speeds">
+  <source src="/img/animation/pricing.webm" type="video/webm" />
+</video>
+
+To reproduce the clip, download the [D2 source](/bespoke-d2/animate-icon-travel-time.d2) and run this command.
+
+```shell
+d2 --video-quality=medium --video-duration=6s animate-icon-travel-time.d2 pricing.webm
+```
+
 ## GIF
 
 ```shell
@@ -144,7 +170,8 @@ d2 --ascii-mode standard in.d2 out.txt
 ## Stdout
 
 D2 accepts `-` in place of the input and/or output arguments. SVG is the default format
-for stdout.
+for stdout. In addition to the released formats listed below, the development branch
+supports [WebM](#webm) with `d2 --stdout-format=webm in.d2 - > out.webm`.
 
 For example, this writes a D2 script of `x -> y` and outputs it to a file `example.svg`.
 
