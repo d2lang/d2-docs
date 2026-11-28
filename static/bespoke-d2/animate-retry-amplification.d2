@@ -1,0 +1,26 @@
+vars.d2-config: {layout-engine: tala; animate-interval: 5s; animate-progress-color: "#66847E"}
+style.fill: "#F7F9F7"
+
+classes: {
+  service: {width: 144; height: 70; style: {fill: "#FFFFFF"; stroke: "#66847E"; border-radius: 8}}
+  traffic: {icon.shape: circle; style: {stroke: "#287765"; font-color: "#24564D"; font-size: 16}}
+}
+
+phase: Retries in both services {shape: text; near: top-center; style: {bold: true; font-size: 22; font-color: "#213E39"}}
+storefront: Storefront {class: service; left: 0; top: 0}
+checkout: "Checkout API\n3 attempts" {class: service; left: 350; top: 0}
+inventory: "Inventory API\n3 attempts" {class: service; left: 350; top: 190}
+stock: Stock DB {class: service; shape: cylinder; label.near: center-center; height: 102; left: 0; top: 174; style: {fill: "#FBE9CE"; stroke: "#9C5B20"}}
+
+storefront -> checkout: 1 checkout/s {class: traffic; icon.style.animated: 1/s}
+checkout -> inventory: 3 calls/s {class: traffic; icon.style.animated: 3/s}
+inventory -> stock: 9 reads/s {class: traffic; icon.style.animated: 9/s; style: {stroke: "#A45816"; font-color: "#7D4311"}}
+
+steps: {
+  retry-in-one-place: {
+    phase.label: Only Inventory retries
+    checkout.label: "Checkout API\n1 attempt"
+    (checkout -> inventory)[0]: 1 call/s {icon.style.animated: 1/s}
+    (inventory -> stock)[0]: 3 reads/s {icon.style.animated: 3/s}
+  }
+}
