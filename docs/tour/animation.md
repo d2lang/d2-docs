@@ -232,6 +232,14 @@ in the same slot. Keep its size and style, and leave its neighbors in place.
 Use centered, single-line labels. The label rolls inside the outline.
 Equal-length monospace labels can keep a shared prefix in place.
 
+A new cell is appended after the surviving cells. For example, in a two-column
+grid, declare the fixed cell first and the cell you plan to replace second.
+The replacement then lands in the second slot. If you replace the first cell,
+its neighbor moves into that slot and the new cell grows in the second slot.
+A lone cell also shrinks away and its replacement grows into place. If the new
+label would resize the box, give the old cell and its replacement the same
+explicit width.
+
 <AnimationExample name="grid-consumers" width={754} height={284} alt="The end of a label rolls to a new value inside a fixed cell." />
 
 ### Expand or collapse a cell
