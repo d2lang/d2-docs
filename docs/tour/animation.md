@@ -152,8 +152,8 @@ own colors.
 
 <AnimationExample name="monitor-events" width={406} height={336} alt="A service monitor sends green heartbeat dots to a status page, blue log squares to a log store, and amber warning triangles to the on-call service." />
 
-To run the example, save [log-square.svg](/bespoke-d2/log-square.svg) and
-[alert-triangle.svg](/bespoke-d2/alert-triangle.svg) beside the D2 file.
+To run the example, save <a href="/bespoke-d2/log-square.svg" download="log-square.svg">log-square.svg</a> and
+<a href="/bespoke-d2/alert-triangle.svg" download="alert-triangle.svg">alert-triangle.svg</a> beside the D2 file.
 
 ## Change a gradient
 
