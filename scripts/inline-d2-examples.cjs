@@ -136,7 +136,7 @@ module.exports = function transform(
   }
 
   const components =
-    /^<CodeBlock\b[^>]*>\s*\{([\w$]+)\}\s*<\/CodeBlock>|^<(AnimationExample|ElkOptionExample|ExampleGrid|DonorList)\b[\s\S]*?\/>[ \t]*(?=\r?$)/gm;
+    /^<CodeBlock\b[^>]*>\s*\{([\w$]+)\}\s*<\/CodeBlock>|^<(AnimationExample|AnnotationExample|ElkOptionExample|ExampleGrid|DonorList)\b[\s\S]*?\/>[ \t]*(?=\r?$)/gm;
   // Consume each anchor as a unit so an image inside it keeps its link.
   // Skip inline code showing literal HTML. Block code is excluded by proseRanges.
   const mediaAndLinks =
@@ -167,6 +167,15 @@ module.exports = function transform(
           throw new Error("Unrecognized AnimationExample attributes");
         value =
           alt + "\n\n" + codeFence(read("bespoke-d2/animate-" + name + ".d2"));
+      } else if (component === "AnnotationExample") {
+        const name = /\bname="([\w-]+)"/.exec(block)?.[1];
+        const alt = /\balt="([^"]*)"/.exec(block)?.[1];
+        if (!name || !alt)
+          throw new Error("Unrecognized AnnotationExample attributes");
+        value =
+          alt +
+          "\n\n" +
+          codeFence(read("bespoke-d2/annotation-" + name + ".d2"));
       } else if (component === "ElkOptionExample") {
         value = expandElk(block, read);
       } else if (component === "DonorList") {

@@ -1,0 +1,15 @@
+direction: right
+
+classes: {
+  unit: {
+    annotation: deployed together {shape: lasso}
+  }
+}
+
+web -> api -> db
+api -> worker -> cron
+db.shape: cylinder
+
+api.class: unit
+worker.class: unit
+cron.class: unit
