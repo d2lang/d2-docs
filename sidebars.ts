@@ -149,6 +149,12 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "D2.js",
+      link: { type: "doc", id: "tour/d2js" },
+      items: ["tour/d2js", "tour/d2js-imports"],
+    },
+    {
+      type: "category",
       label: "API",
       link: { type: "doc", id: "tour/api" },
       items: ["tour/api"],

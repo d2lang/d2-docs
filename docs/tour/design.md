@@ -67,8 +67,7 @@ supports a wide variety of formats like PPT and GIF. It allows imports, such tha
 modularize your diagram into multiple files. There's a language API to programmatically
 edit and write D2.
 
-D2 also runs in browsers and Node.js through
-[D2.js](https://github.com/d2lang/d2/tree/master/d2js/js#readme), a JavaScript library
+D2 also runs in browsers and Node.js through [D2.js](/tour/d2js/), a JavaScript library
 powered by WebAssembly.
 
 ## Singular use case: documenting software
