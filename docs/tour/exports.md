@@ -170,7 +170,7 @@ d2 --ascii-mode standard in.d2 out.txt
 ## Stdout
 
 D2 accepts `-` in place of the input and/or output arguments. SVG is the default format
-for stdout.
+for stdout. To write a [WebM video](#webm), run `d2 --stdout-format=webm in.d2 - > out.webm`.
 
 For example, this writes a D2 script of `x -> y` and outputs it to a file `example.svg`.
 
@@ -178,11 +178,10 @@ For example, this writes a D2 script of `x -> y` and outputs it to a file `examp
 echo "x -> y" | d2 - - > example.svg
 ```
 
-To use a different format, pass `--stdout-format`:
+For image, document, or text output, select the format the same way. For example, this writes a PNG.
 
 ```shell
 echo "x -> y" | d2 --stdout-format=png - - > example.png
-d2 --stdout-format=webm in.d2 - > out.webm
 ```
 
-Supported formats are `svg`, `png`, `pdf`, `pptx`, `gif`, `webm`, and `ascii` (`txt` also works).
+Supported formats are `svg`, `png`, `pdf`, `pptx`, `gif`, and `ascii` (`txt` also works).
