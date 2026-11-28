@@ -43,3 +43,4 @@ issue and we're happy to include your's!
 - C# & dotnet SDK: [https://github.com/Stephanvs/d2lang-cs](https://github.com/Stephanvs/d2lang-cs)
 - Zed extension: [https://github.com/gabeidx/zed-d2](https://github.com/gabeidx/zed-d2)
 - Hexo blog extension: [https://github.com/leverimmy/hexo-d2](https://github.com/leverimmy/hexo-d2)
+- JetBrains Marketplace plugin: [https://github.com/TroodoNmike/d2](https://github.com/TroodoNmike/d2)
