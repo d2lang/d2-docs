@@ -2,7 +2,14 @@ import React from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import CodeBlock from "@theme/CodeBlock";
 
-export default function AnimationExample({ name, width, height, alt, open = false }) {
+export default function AnimationExample({
+  name,
+  width,
+  height,
+  alt,
+  backgroundColor,
+  open = false,
+}) {
   const source = require(`@site/static/bespoke-d2/animate-${name}.d2`);
   const image = useBaseUrl(`/img/generated/animate-${name}.svg`);
 
@@ -13,7 +20,7 @@ export default function AnimationExample({ name, width, height, alt, open = fals
         alt={alt}
         width={width}
         height={height}
-        style={{ height: "auto" }}
+        style={{ height: "auto", backgroundColor }}
         loading="lazy"
       />
       <details open={open}>

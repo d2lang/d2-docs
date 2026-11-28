@@ -69,7 +69,13 @@ The line sits at least 8 pixels below the diagram’s usual padding.
 
 <AnimationExample name="playback-progress" width={622} height={94} alt="A progress line fills as a backup is queued, files are copied, and the archive is verified." />
 
-The line uses the theme's B1 color, the usual stroke color for shapes and arrows.
+D2 inverts the footer’s background color as the animation plays. For example,
+a navy footer (`#101B2D`) gets a pale line (`#EFE4D2`).
+If the inverse has less than 3:1 contrast against the background, D2 uses black
+or white, whichever has higher contrast. A mid-gray background
+(`#808080`) gets a black line. A transparent SVG uses the theme’s canvas color
+as its reference.
+
 Set `vars.d2-config.animate-progress-color: "#E35B42"` to use your own color, or
 `vars.d2-config.animate-progress: false` to hide the line. The equivalent CLI flags
 are `--animate-progress-color="#E35B42"` and `--animate-progress=false`.
@@ -98,7 +104,7 @@ Set `style.fill` on the board to animate its background color.
 In sketch mode, changing a shape’s solid fill shades it in with pencil strokes.
 Changing the fill to `transparent` erases it.
 
-<AnimationExample name="sketch-shading" width={470} height={160} alt="A standby volume’s block ranges are shaded in as they are restored from a snapshot." />
+<AnimationExample name="sketch-shading" width={470} height={160} backgroundColor="#fff" alt="A standby volume’s block ranges are shaded in as they are restored from a snapshot." />
 
 ### Stroke
 
@@ -237,14 +243,14 @@ A grid fills in [declaration order](./grid-diagrams.md#dominant-direction).
 To move a cell later in that order, remove it with `null` and redeclare the
 same ID in the same step.
 
-<AnimationExample name="grid-restore" width={477} height={160} alt="Grid cells slide into new slots as one cell leaves and two enter." />
+<AnimationExample name="grid-restore" width={477} height={160} backgroundColor="#fff" alt="Grid cells slide into new slots as one cell leaves and two enter." />
 
 ### Add or remove a row or column
 
 Insert or remove a complete row or column in a filled grid. Keep the other
 cells in the same relative order. The row or column grows or shrinks as a group.
 
-<AnimationExample name="grid-ci" width={569} height={230} alt="A column opens between two existing columns. A second column shrinks away." />
+<AnimationExample name="grid-ci" width={569} height={230} backgroundColor="#fff" alt="A column opens between two existing columns. A second column shrinks away." />
 
 ### Replace a cell in place
 
@@ -253,7 +259,7 @@ in the same slot. Keep its size and style, and leave its neighbors in place.
 Use centered, single-line labels. The label rolls inside the outline.
 Equal-length monospace labels can keep a shared prefix in place.
 
-<AnimationExample name="grid-consumers" width={754} height={295} alt="The end of a label rolls to a new value inside a fixed cell." />
+<AnimationExample name="grid-consumers" width={754} height={295} backgroundColor="#fff" alt="The end of a label rolls to a new value inside a fixed cell." />
 
 ### Expand or collapse a cell
 
@@ -261,7 +267,7 @@ Keep a rectangular cell's ID and give it a larger nested grid. Each child
 appears when it fits. To collapse the cell, remove its children and restore
 its original dimensions.
 
-<AnimationExample name="grid-mirror" width={420} height={266} alt="A cell expands to reveal a nested grid, then folds closed." />
+<AnimationExample name="grid-mirror" width={420} height={266} backgroundColor="#fff" alt="A cell expands to reveal a nested grid, then folds closed." />
 
 ## Animated steps
 
