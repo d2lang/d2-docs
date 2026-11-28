@@ -1,0 +1,8 @@
+direction: right
+
+api: Pricing API
+cache: "Price cache\n200 ms" {width: 120}
+db: "Catalog DB\n1200 ms" {width: 120}
+
+api -> db: {icon.style.animated: 1200ms}
+api -> cache: {icon.style.animated: 200ms}

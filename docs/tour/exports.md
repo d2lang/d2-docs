@@ -7,6 +7,7 @@ On the CLI, you may export `.d2` into
 * [PNG](#png)
 * [PDF](#pdf)
 * [PPTX](#pptx)
+* [WebM](#webm)
 * [GIF](#gif)
 * [MP4](#mp4)
 * [ASCII](#ascii)
@@ -76,6 +77,34 @@ d2 in.d2 out.pptx
 
 Similar to PDF exports. This export format is useful for giving presentations when used
 with composition (e.g. diagram with multiple Layers, Scenarios, Steps).
+
+## WebM
+
+Run `d2 in.d2 out.webm` on D2’s development branch to export a VP9 video.
+Install FFmpeg 5.1 or newer with the `libvpx-vp9` encoder and make sure
+`ffmpeg` is on your `PATH`.
+
+WebM uses the same video settings as [MP4](#mp4). Choose `low`, `medium`, `high`
+(the default), or `best` with `--video-quality`. Lower settings produce smaller
+files. The canvas follows the diagram by default. Use `--video-size=1920x1080`
+to fit and center it at a specific resolution.
+
+D2 plays the selected boards once. Use `--video-duration` to trim or repeat a
+tour, or to record motion on a single board. In this six-second clip, a dot
+reaches the price cache every 200 ms and the catalog database every 1.2 seconds.
+
+<video autoPlay muted playsInline controls width="542" height="416" style={{maxWidth: '100%', height: 'auto'}} aria-label="Pricing API sends requests to the price cache and catalog database at different speeds">
+  <source src="/img/animation/pricing.webm" type="video/webm" />
+</video>
+
+To reproduce the clip, download the <a href="/bespoke-d2/animate-icon-travel-time.d2" download>D2 source</a> and run this command.
+
+```shell
+d2 --video-quality=medium --video-duration=6s animate-icon-travel-time.d2 pricing.webm
+```
+
+This single-board clip uses the default interval. Add `--animate-progress` to
+show the [playback progress line](./animation.md#playback-progress).
 
 ## GIF
 
@@ -161,7 +190,7 @@ d2 --ascii-mode standard in.d2 out.txt
 ## Stdout
 
 D2 accepts `-` in place of the input and/or output arguments. SVG is the default format
-for stdout.
+for stdout. To write a [WebM video](#webm), run `d2 --stdout-format=webm in.d2 - > out.webm`.
 
 For example, this writes a D2 script of `x -> y` and outputs it to a file `example.svg`.
 
@@ -169,11 +198,11 @@ For example, this writes a D2 script of `x -> y` and outputs it to a file `examp
 echo "x -> y" | d2 - - > example.svg
 ```
 
-To use a different format, pass `--stdout-format`:
+For image, document, or text output, select the format the same way. For example, this writes a PNG.
 
 ```shell
 echo "x -> y" | d2 --stdout-format=png - - > example.png
 ```
 
 Supported formats are `svg`, `png`, `pdf`, `pptx`, `gif`, and `ascii` (`txt` also works).
-The development branch also supports `--stdout-format=mp4`.
+The development branch also supports `--stdout-format=webm` and `--stdout-format=mp4`.

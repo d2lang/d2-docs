@@ -36,6 +36,8 @@ This example is an animated SVG you can embed in a GitHub README.
 
 To point at things and caption each step, see [annotations](./annotations.md).
 
+To share an animation as a video, see [WebM export](./exports.md#webm) or [MP4 export](./exports.md#mp4).
+
 ## Configuration
 
 ```d2-incomplete
@@ -50,7 +52,7 @@ vars: {
 The 1-second interval includes the transition. Each animated step spends 400 ms
 changing and holds its final state for the remaining 600 ms.
 
-Export to SVG, GIF, or [MP4](./exports.md#mp4). The CLI accepts durations in milliseconds.
+The CLI accepts durations in milliseconds.
 
 ```sh
 d2 input.d2 output.svg
@@ -60,7 +62,7 @@ d2 --animate-duration=300 input.d2 output.gif
 ### Playback progress
 
 On D2's development branch, setting a positive `animate-interval` in the source or on
-the CLI shows a thin line along the bottom of an animated SVG, GIF, or MP4. It fills
+the CLI shows a thin line along the bottom of an animated SVG, GIF, MP4, or WebM. It fills
 from left to right over the whole animation, including the time each board is held.
 At export size, the line is about 1% of the shorter side, from 2 to 6 pixels.
 The line sits at least 8 pixels below the diagram’s usual padding.
@@ -72,7 +74,7 @@ Set `vars.d2-config.animate-progress-color: "#E35B42"` to use your own color, or
 `vars.d2-config.animate-progress: false` to hide the line. The equivalent CLI flags
 are `--animate-progress-color="#E35B42"` and `--animate-progress=false`.
 
-If a GIF or MP4 uses its built-in one-second interval, pass `--animate-progress`
+If a GIF, MP4, or WebM uses its built-in one-second interval, pass `--animate-progress`
 to show the line.
 
 ## Animate styles
@@ -140,6 +142,38 @@ and sketch mode.
 ### Height
 
 <AnimationExample name="height" width={144} height={490} alt="A queue grows taller as its label counts up." />
+
+## Animate connection icons
+
+`icon.style.animated: 3/s` sends three icons per second at the same speed, up
+to 64 icons in flight per connection. Set `0/s` to stop sending and let them
+arrive.
+
+### One checkout, nine stock reads
+
+One checkout arrives each second. If every stock read times out, Checkout and
+Inventory each make three attempts. Turn off retries in Checkout and the
+database sees three reads per second.
+
+<AnimationExample name="retry-amplification" width={512} height={353} alt="One checkout per second triggers three inventory calls and nine stock reads. When only Inventory retries, the same checkout triggers one call and three reads." />
+
+### Set the travel time
+
+With `icon.style.animated: 200ms`, one icon crosses the connection in 200
+milliseconds, then starts again. Use `true` to loop one icon at the default speed.
+
+<AnimationExample name="icon-travel-time" width={358} height={232} alt="The cache icon makes six trips along its wire for each trip the database icon makes along an equally long wire." open />
+
+### Color and custom icons
+
+`circle` is the only built-in `icon.shape` for connections. Set `style.stroke` to
+color the circle and its wire. For other shapes, set `icon` to an image with its
+own colors.
+
+<AnimationExample name="monitor-events" width={406} height={336} alt="A service monitor sends green heartbeat dots to a status page, blue log squares to a log store, and amber warning triangles to the on-call service." />
+
+To run the example, save <a href="/bespoke-d2/log-square.svg" download="log-square.svg">log-square.svg</a> and
+<a href="/bespoke-d2/alert-triangle.svg" download="alert-triangle.svg">alert-triangle.svg</a> beside the D2 file.
 
 ## Change a gradient
 
