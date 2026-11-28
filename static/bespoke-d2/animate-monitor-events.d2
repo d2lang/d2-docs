@@ -1,0 +1,24 @@
+direction: right
+
+monitor: Service monitor
+status: Status page
+logs: Log store
+pager: On-call
+
+monitor -> status: {
+  style.stroke: "#11765F"
+  icon.shape: circle
+  icon.style.animated: 3/s
+}
+monitor -> logs: {
+  style.stroke: "#65717C"
+  icon: ./log-square.svg
+  icon.style.animated: 2/s
+}
+monitor -> pager: {
+  style.stroke: "#65717C"
+  icon: ./alert-triangle.svg
+  icon.style.animated: 1/s
+}
+
+*.style: {fill: "#F3F6F7"; stroke: "#788991"; border-radius: 6}
