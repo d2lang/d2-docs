@@ -10,7 +10,7 @@ phase: Retries in both services {shape: text; near: top-center; style: {bold: tr
 storefront: Storefront {class: service; left: 0; top: 0}
 checkout: "Checkout API\n3 attempts" {class: service; left: 350; top: 0}
 inventory: "Inventory API\n3 attempts" {class: service; left: 350; top: 190}
-stock: Stock DB {class: service; shape: cylinder; label.near: center-center; left: 0; top: 190; style: {fill: "#FBE9CE"; stroke: "#9C5B20"}}
+stock: Stock DB {class: service; shape: cylinder; label.near: center-center; height: 102; left: 0; top: 174; style: {fill: "#FBE9CE"; stroke: "#9C5B20"}}
 
 storefront -> checkout: 1 checkout/s {class: traffic; icon.style.animated: 1/s}
 checkout -> inventory: 3 calls/s {class: traffic; icon.style.animated: 3/s}

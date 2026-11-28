@@ -48,7 +48,7 @@ One checkout arrives each second. If every stock read times out, Checkout and
 Inventory each make three attempts. Turn off retries in Checkout and the
 database sees three reads per second.
 
-<AnimationExample name="retry-amplification" width={512} height={326} alt="One checkout per second triggers three inventory calls and nine stock reads. When only Inventory retries, the same checkout triggers one call and three reads." />
+<AnimationExample name="retry-amplification" width={512} height={342} alt="One checkout per second triggers three inventory calls and nine stock reads. When only Inventory retries, the same checkout triggers one call and three reads." />
 
 ### Set the travel time
 
