@@ -96,7 +96,7 @@ reaches the price cache every 200 ms and the catalog database every 1.2 seconds.
   <source src="/img/animation/pricing.webm" type="video/webm" />
 </video>
 
-To reproduce the clip, download the [D2 source](/bespoke-d2/animate-icon-travel-time.d2) and run this command.
+To reproduce the clip, download the <a href="/bespoke-d2/animate-icon-travel-time.d2" download>D2 source</a> and run this command.
 
 ```shell
 d2 --video-quality=medium --video-duration=6s animate-icon-travel-time.d2 pricing.webm
