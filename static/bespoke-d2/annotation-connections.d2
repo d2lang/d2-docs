@@ -1,0 +1,14 @@
+direction: right
+
+api -> cache: {
+  annotation: trace
+}
+api -> db: {
+  annotation: cross {shape: cross}
+}
+api -> queue: at most once {
+  annotation: highlight {shape: highlight}
+}
+api -> search: {
+  annotation: arrow {shape: arrow}
+}

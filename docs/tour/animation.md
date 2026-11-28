@@ -34,6 +34,8 @@ This example is an animated SVG you can embed in a GitHub README.
 
 </details>
 
+To point at things and caption each step, see [annotations](./annotations.md).
+
 ## Configuration
 
 ```d2-incomplete

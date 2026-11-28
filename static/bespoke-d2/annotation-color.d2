@@ -1,0 +1,13 @@
+direction: right
+
+web -> api -> db
+
+web.annotation.style.stroke: "#6741D9"
+api.annotation: healthy {
+  shape: box
+  style.stroke: "#2F9E44"
+}
+(api -> db)[0].annotation: 40 ms {
+  style.stroke: royalblue
+  style.font-color: black
+}

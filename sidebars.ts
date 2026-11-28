@@ -76,6 +76,7 @@ const sidebars: SidebarsConfig = {
         "tour/strings",
         "tour/vars",
         "tour/animation",
+        "tour/annotations",
         "tour/globs",
         "tour/comments",
         "tour/overrides",
