@@ -17,6 +17,8 @@ export options are different.
   - Use a `.webm` output filename to play the boards once as VP9 video. See [WebM export](./exports.md#webm) for quality, size, and duration settings.
 - Single animated GIF
   - Use a `.gif` output filename to export the animation as a GIF.
+- MP4 video
+  - Use a `.mp4` output filename to play the boards once. See [MP4 export](./exports.md#mp4).
 - PDF
   - PDF can be multiple pages, so this medium is suitable for multi-board diagrams.
     Each board is simply another page, and objects can be linked to those pages.
