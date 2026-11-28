@@ -79,7 +79,7 @@ with composition (e.g. diagram with multiple Layers, Scenarios, Steps).
 
 ## WebM
 
-On D2's development branch, run `d2 in.d2 out.webm` to export a VP9 video.
+Run `d2 in.d2 out.webm` to export a VP9 video.
 Install FFmpeg 5.1 or newer with the `libvpx-vp9` encoder and make sure
 `ffmpeg` is on your `PATH`.
 
@@ -92,7 +92,7 @@ D2 plays the selected boards once. Use `--video-duration` to trim or repeat a
 tour, or to record motion on a single board. In this six-second clip, a dot
 reaches the price cache every 200 ms and the catalog database every 1.2 seconds.
 
-<video controls playsInline preload="metadata" width="542" height="416" style={{maxWidth: '100%', height: 'auto'}} aria-label="Pricing API sends requests to the price cache and catalog database at different speeds">
+<video autoPlay muted playsInline controls width="542" height="416" style={{maxWidth: '100%', height: 'auto'}} aria-label="Pricing API sends requests to the price cache and catalog database at different speeds">
   <source src="/img/animation/pricing.webm" type="video/webm" />
 </video>
 
@@ -170,8 +170,7 @@ d2 --ascii-mode standard in.d2 out.txt
 ## Stdout
 
 D2 accepts `-` in place of the input and/or output arguments. SVG is the default format
-for stdout. In addition to the released formats listed below, the development branch
-supports [WebM](#webm) with `d2 --stdout-format=webm in.d2 - > out.webm`.
+for stdout. To write a [WebM video](#webm), run `d2 --stdout-format=webm in.d2 - > out.webm`.
 
 For example, this writes a D2 script of `x -> y` and outputs it to a file `example.svg`.
 
@@ -179,7 +178,7 @@ For example, this writes a D2 script of `x -> y` and outputs it to a file `examp
 echo "x -> y" | d2 - - > example.svg
 ```
 
-To use a different format, pass `--stdout-format`:
+For image, document, or text output, select the format the same way. For example, this writes a PNG.
 
 ```shell
 echo "x -> y" | d2 --stdout-format=png - - > example.png
