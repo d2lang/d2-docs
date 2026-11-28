@@ -50,12 +50,28 @@ vars: {
 The 1-second interval includes the transition. Each animated step spends 400 ms
 changing and holds its final state for the remaining 600 ms.
 
-Export to SVG or GIF. The CLI accepts durations in milliseconds.
+Export to SVG, GIF, or [MP4](./exports.md#mp4). The CLI accepts durations in milliseconds.
 
 ```sh
 d2 input.d2 output.svg
 d2 --animate-duration=300 input.d2 output.gif
 ```
+
+### Playback progress
+
+On D2's development branch, setting a positive `animate-interval` in the source or on
+the CLI shows a thin line along the bottom of an animated SVG, GIF, or MP4. It fills
+from left to right over the whole animation, including the time each board is held.
+
+<AnimationExample name="playback-progress" width={622} height={84} alt="A progress line fills as a backup is queued, files are copied, and the archive is verified." />
+
+The line uses the theme's B1 color, the usual stroke color for shapes and arrows.
+Set `vars.d2-config.animate-progress-color: "#E35B42"` to use your own color, or
+`vars.d2-config.animate-progress: false` to hide the line. The equivalent CLI flags
+are `--animate-progress-color="#E35B42"` and `--animate-progress=false`.
+
+If a GIF or MP4 uses its built-in one-second interval, pass `--animate-progress`
+to show the line.
 
 ## Animate styles
 

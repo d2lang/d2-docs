@@ -8,6 +8,7 @@ On the CLI, you may export `.d2` into
 * [PDF](#pdf)
 * [PPTX](#pptx)
 * [GIF](#gif)
+* [MP4](#mp4)
 * [ASCII](#ascii)
 * [Stdout](#stdout)
 
@@ -87,6 +88,22 @@ For example, show two Scenarios, show a couple of steps. Something that the audi
 digest in a loop that lasts a couple of seconds without needing to flip through it
 manually.
 
+## MP4
+
+On D2's development branch, use a `.mp4` output filename to play the boards once
+as an H.264 video. Install FFmpeg 5.1 or newer with the `libx264` encoder and make
+sure `ffmpeg` is on your `PATH`.
+
+```shell
+d2 in.d2 out.mp4
+d2 --video-size=1920x1080 --video-quality=medium in.d2 out.mp4
+```
+
+The default resolution follows the diagram. Choose `low`, `medium`, `high`
+(default), or `best` for quality. Use `--video-duration=10s` to trim or repeat
+the animation to ten seconds. See [Playback progress](./animation.md#playback-progress)
+to show elapsed time in the video.
+
 ## ASCII
 
 :::warning Beta
@@ -159,3 +176,4 @@ echo "x -> y" | d2 --stdout-format=png - - > example.png
 ```
 
 Supported formats are `svg`, `png`, `pdf`, `pptx`, `gif`, and `ascii` (`txt` also works).
+The development branch also supports `--stdout-format=mp4`.
