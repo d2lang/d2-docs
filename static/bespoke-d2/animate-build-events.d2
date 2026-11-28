@@ -1,0 +1,10 @@
+direction: right
+
+git: Git
+ci: CI runner
+registry: Image registry
+alerts: Build alerts
+
+git -> ci: {icon.shape: diamond; icon.style.animated: 2/s; style.stroke: "#7045A1"}
+ci -> registry: {icon.shape: square; icon.style.animated: 1500ms; style.stroke: "#315BB0"}
+ci -> alerts: {icon.shape: triangle; icon.style.animated: 2100ms; style.stroke: "#A45816"}

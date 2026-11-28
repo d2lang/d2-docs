@@ -148,9 +148,12 @@ milliseconds, then starts again. Use `true` to loop one icon at the default spee
 
 ### Color and custom icons
 
-`circle` is the only built-in `icon.shape` for connections. Set `style.stroke` to
-color the circle and its wire. For other shapes, set `icon` to an image with its
-own colors.
+Set `icon.shape` to `circle` (the default), `square`, `triangle`, or `diamond`.
+Each uses the connection's `style.stroke` color.
+
+<AnimationExample name="build-events" width={544} height={210} alt="Git sends commits as diamonds to a CI runner. The runner sends squares to the image registry and triangles to build alerts." />
+
+To send custom artwork with its own colors, set `icon` to an image.
 
 <AnimationExample name="monitor-events" width={406} height={336} alt="A service monitor sends green heartbeat dots to a status page, blue log squares to a log store, and amber warning triangles to the on-call service." />
 
