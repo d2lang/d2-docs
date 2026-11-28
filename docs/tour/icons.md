@@ -42,6 +42,9 @@ top-left and non-container icons in the center.
 Icons can be positioned with the `near` keyword [introduced later](/tour/positions/#label-and-icon-positioning).
 :::
 
+An [animated connection](./animation.md#animate-connection-icons) uses a circle
+by default. Set `icon` on the connection to send your own image.
+
 ## Add `shape: image` for standalone icon shapes
 
 <CodeBlock className="language-d2">

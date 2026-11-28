@@ -36,6 +36,27 @@ This example is an animated SVG you can embed in a GitHub README.
 
 To point at things and caption each step, see [annotations](./annotations.md).
 
+## Animate connection icons
+
+On D2's development branch, `icon.style.animated: 3/s` sends three icons per
+second at the same speed, up to 64 icons in flight per connection. Set `0/s`
+to stop sending and let them arrive.
+
+### One checkout, nine stock reads
+
+One checkout arrives each second. If every stock read times out, Checkout and
+Inventory each make three attempts. Turn off retries in Checkout and the
+database sees three reads per second.
+
+<AnimationExample name="retry-amplification" width={512} height={326} alt="One checkout per second triggers three inventory calls and nine stock reads. When only Inventory retries, the same checkout triggers one call and three reads." />
+
+### Set the travel time
+
+With `icon.style.animated: 200ms`, one icon crosses the connection in 200
+milliseconds, then starts again. Use `true` to loop one icon at the default speed.
+
+<AnimationExample name="icon-travel-time" width={358} height={232} alt="The cache icon makes six trips along its wire for each trip the database icon makes along an equally long wire." open />
+
 ## Configuration
 
 ```d2-incomplete

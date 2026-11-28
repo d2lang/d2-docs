@@ -249,7 +249,7 @@ controls other colors in the body).
 
 ## Animated
 
-`true` or `false`.
+`true` or `false`. To send a dot or image along a connection, [animate its icon](./animation.md#animate-connection-icons).
 
 <CodeBlock className="language-d2">
     {StylesAnimated}
