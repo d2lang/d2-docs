@@ -62,6 +62,7 @@ d2 --animate-duration=300 input.d2 output.gif
 On D2's development branch, setting a positive `animate-interval` in the source or on
 the CLI shows a thin line along the bottom of an animated SVG, GIF, or MP4. It fills
 from left to right over the whole animation, including the time each board is held.
+At export size, the line is about 1% of the shorter side, from 2 to 6 pixels.
 
 <AnimationExample name="playback-progress" width={622} height={84} alt="A progress line fills as a backup is queued, files are copied, and the archive is verified." />
 
